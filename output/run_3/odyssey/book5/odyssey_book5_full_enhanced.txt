@@ -1,0 +1,3451 @@
+Line 1
+ἠ		ὼς		δ’ἐκ		λεχ	έ	ων		παρ’	ἀγ	αυ		οῦ		Τιθ		ων		οῖ		ο	
+1	0	0	0	1	0	1	0	0	0	1	1	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	0	0	0	0	3	0	0	0	0	0	3	0	0	0
+1	1	1	1	2	2	3	3	3	3	4	5	5	5	5	5	6	6	6	6	6	6	6	6
+
+Line 2
+ὤρν		υθ’,	ἵν’	ἀθ		αν	άτ	οισ		ι	φό	ως		φέρ	οι	ἠδ		ὲ	βροτ	οῖσ		ιν·	
+1	0	0	1	1	0	0	0	0	0	0	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	2	0	0	0	1	0	0	0	1	0	0	1	0	0	0	0	0	3	0	0	0
+1	1	1	2	3	3	3	3	3	3	3	4	4	4	5	5	6	6	6	7	7	7	7	7
+
+Line 3
+οἱ		δὲ	θε	οὶ		θῶκ		όνδ		ε	καθ	ίζ		αν	ον,	ἐν		δ’ἄρ	α	τοῖσ		ι	
+1	0	1	1	0	0	1	0	0	0	0	1	0	0	0	0	1	0	1	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	3	0	1	0	0	0	1	0	0	0	0	0	1	0	3	0	0	0
+1	1	2	3	3	3	4	4	4	4	4	5	5	5	5	5	6	6	7	7	8	8	8	8
+
+Line 4
+Ζεὺς		ὑψ		ιβρ		εμ	έτ	ης,		οὗ		τε		κράτ	ος	ἐστ		ὶ	μέγ	ιστ		ον.	
+1	0	1	0	0	0	0	0	0	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	3	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	2	2	2	2	2	2	2	2	3	3	4	4	5	5	6	6	6	7	7	7	7	7
+
+Line 5
+τοῖσ		ι	δ’Ἀθ	ην		αί		η		λέγ	ε	κήδ		ε	α	πόλλ’		Ὀδ	υσ	ῆ		ος	
+1	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0	1	0	1	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	2	0	0	0	3	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	4	4	4	4	5	5	6	6	6	6	6	6
+
+Line 6
+μνησ		αμ	έν	η·		μέλ	ε	γάρ		οἱ		ἐὼν		ἐν		δώμ		ασ	ι	νύμφ		ης·	
+1	0	0	0	0	0	1	0	1	0	1	0	1	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	1	0	2	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	2	3	3	4	4	5	5	6	6	7	7	7	7	8	8	8	8
+
+Line 7
+Ζεῦ		πάτ	ερ	ἠδ’		ἄλλ		οι		μάκ	αρ	ες		θε	οὶ	αἰ		ὲν	ἐ	όντ		ες,	
+1	0	1	0	1	0	1	0	0	0	1	0	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	1	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	4	4	5	5	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 8
+μή		τις	ἔτ	ι		πρόφρ		ων		ἀγ	αν	ὸς		καὶ		ἤπ		ι	ος	ἔστ		ω	
+1	0	1	1	0	0	1	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+2	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	2	3	3	3	4	4	4	4	5	5	5	5	6	6	7	7	7	7	8	8	8	8
+
+Line 9
+σκηπτ		οῦχ		ος		βασ	ιλ	εύς,		μηδ		ὲ		φρεσ	ὶν	αἴσ		ιμ	α	εἰδ		ώς,	
+1	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	0	0	0	0	2	0	0	0	0	0	0	0	1	0	0	0	0	0	2	0
+1	1	1	1	1	1	2	2	2	2	3	3	3	3	4	4	5	5	5	5	6	6	6	6
+
+Line 10
+ἀλλ’		αἰ		εὶ		χαλ	επ	ός		τ’εἴ		η		καὶ		αἴσ		υλ	α	ῥέζ		οι·	
+1	0	1	0	0	0	1	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	0	2	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	3	3	4	4	4	4	5	5	6	6	6	6	7	7	7	7
+
+Line 11
+ὡς		οὔ		τις		μέμν		ητ		αι	Ὀδ	υσσ		ῆ		ος		θεί		οι		ο	
+1	0	1	0	1	0	1	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	long	long	long	long	long	long
+0	0	2	0	0	0	1	0	0	0	0	0	0	0	3	0	0	0	1	0	0	0	0	0
+1	1	2	2	3	3	4	4	4	4	4	5	5	5	5	5	5	5	6	6	6	6	6	6
+
+Line 12
+λα		ῶν		οἷσ		ιν	ἄν	ασσ		ε,	πατ	ὴρ		δ’ὣς		ἤπ		ι	ος	ἦ		εν.	
+1	0	0	0	1	0	0	1	0	0	0	1	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	3	0	3	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	3	0	0	0
+1	1	1	1	2	2	2	3	3	3	3	4	4	4	5	5	6	6	6	6	7	7	7	7
+
+Line 13
+ἀλλ’		ὁ	μὲν	ἐν		νήσ		ῳ		κεῖτ		αι		κρατ	έρ’	ἄλγ		ε	α	πάσχ		ων	
+1	0	1	1	1	0	1	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	3	0	0	0	0	2	1	0	0	0	1	0	0	0
+1	1	2	3	4	4	5	5	5	5	6	6	6	6	7	7	8	8	8	8	9	9	9	9
+
+Line 14
+νύμφ		ης		ἐν		μεγ	άρ	οισ		ι	Καλ	υψ		οῦς,		ἥ		μιν	ἀν	άγκ		ῃ	
+1	0	0	0	1	0	1	0	0	0	0	1	0	0	0	0	1	0	1	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	0	0	0	3	0	2	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	3	3	3	4	4	4	4	4	5	5	6	7	7	7	7	7
+
+Line 15
+ἴσχ		ει·	ὁ	δ’οὐ		δύν	ατ	αι		ἣν		πατρ		ίδ	α	γαῖ		αν	ἱκ	έσθ		αι·	
+1	0	0	1	1	0	1	0	0	0	1	0	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	3	0	0	0	1	0	0	0
+1	1	1	2	3	3	4	4	4	4	5	5	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 16
+οὐ		γάρ		οἱ		πάρ	α	νῆ		ες	ἐπ	ήρ		ετμ		οι		καὶ	ἑτ	αῖρ		οι,	
+1	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0	0	0	1	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	1	0	3	0	0	0	1	0	0	0	0	0	0	0	3	0	0	0
+1	1	2	2	3	3	4	4	5	5	5	6	6	6	6	6	6	6	7	8	8	8	8	8
+
+Line 17
+οἵ		κέν		μιν		πέμπ		οι		εν	ἐπ’	εὐρ		έ	α	νῶτ		α	θαλ	άσσ		ης.	
+1	0	1	0	1	0	1	0	0	0	0	1	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	2	0	0	0	1	0	0	0	0	0	0	0	1	0	3	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	4	4	4	5	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 18
+νῦν		αὖ		παῖδ’		ἀγ	απ	ητ		ὸν	ἀπ	οκτ		εῖν		αι		μεμ	ά	ασ		ιν	
+1	0	1	0	1	0	1	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	3	0	3	0	0	0	0	0	0	0	0	0	3	0	0	0	0	1	0	0	0	0
+1	1	2	2	3	3	4	4	4	4	4	5	5	5	5	5	5	5	6	6	6	6	6	6
+
+Line 19
+οἴκ		αδ	ε	νισ		όμ	εν	ον·		ὁ	δ’ἔβ	η		μετ	ὰ	πατρ		ὸς	ἀκ	ου		ὴν	
+1	0	0	0	1	0	0	0	0	0	1	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	4	4	4	5	5	6	6	6	7	7	7	7	7
+
+Line 20
+ἐς		Πύλ	ον	ἠγ		αθ	έ	ην		ἠδ’		ἐς		Λακ	εδ	αίμ		ον	α	δῖ		αν.	
+1	0	1	0	1	0	0	0	0	0	1	0	1	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	3	0	0	0
+1	1	2	2	3	3	3	3	3	3	4	4	5	5	6	6	6	6	6	6	7	7	7	7
+
+Line 21
+τὴν		δ’ἀπ	αμ	ειβ		όμ	εν	ος		προσ	έφ	η		νεφ	ελ	ηγ		ερ	έτ	α		Ζεύς·	
+1	0	1	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	1	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	2	0
+1	1	2	2	2	2	2	2	2	2	3	3	3	3	4	4	4	4	4	4	4	4	5	5
+
+Line 22
+τέκν		ον	ἐμ	όν,		ποῖ		όν		σε	ἔπ	ος		φύγ	εν	ἕρκ		ος	ὀδ	όντ		ων.	
+1	0	0	1	0	0	1	0	0	0	1	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	2	0	3	0	2	0	0	1	0	0	1	0	1	0	0	0	1	0	0	0
+1	1	1	2	2	2	3	3	3	3	4	5	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 23
+οὐ		γὰρ		δὴ		τοῦτ		ον		μὲν	ἐβ	ούλ		ευσ		ας		νό	ον	αὐτ		ή,	
+1	0	1	0	1	0	1	0	0	0	1	1	0	0	0	0	0	0	1	0	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	3	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	2	0
+1	1	2	2	3	3	4	4	4	4	5	6	6	6	6	6	6	6	7	7	8	8	8	8
+
+Line 24
+ὡς		ἤτ		οι		κείν		ους		Ὀδ	υσ	εὺς		ἀπ	οτ	ίσ		ετ	αι	ἐλθ		ών;	
+1	0	1	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	2	0
+1	1	2	2	2	2	3	3	3	3	4	4	4	4	5	5	5	5	5	5	6	6	6	6
+
+Line 25
+Τηλ		έμ	αχ	ον		δὲ	σὺ	πέμψ		ον	ἐπ	ιστ		αμ	έν	ως,		δύν	ασ	αι		γάρ,	
+1	0	0	0	0	0	1	1	1	0	0	1	0	0	0	0	0	0	1	0	0	0	1	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	1	0	0	0	2	0
+1	1	1	1	1	1	2	3	4	4	4	5	5	5	5	5	5	5	6	6	6	6	7	7
+
+Line 26
+ὥς		κε	μάλ’	ἀσκ		ηθ		ὴς		ἣν		πατρ		ίδ	α	γαῖ		αν	ἵκ	ητ		αι,	
+1	0	1	1	1	0	0	0	0	0	1	0	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	0	2	0	0	0	0	0	0	0	0	0	0	1	0	3	0	0	1	0	0	0	0
+1	1	2	3	4	4	4	4	4	4	5	5	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 27
+μνηστ		ῆρ		ες		δ’ἐν		νη		ὶ·	παλ	ιμπ		ετ	ὲς	ἀπ		ον	έ	ωντ		αι.	
+1	0	0	0	0	0	1	0	1	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0
+1	1	1	1	1	1	2	2	3	3	3	4	4	4	4	4	5	5	5	5	5	5	5	5
+
+Line 28
+ἦ		ῥα	καὶ	Ἑρμ		εί		αν,		υἱ		ὸν		φίλ	ον,	ἀντ		ί	ον	ηὔδ		α·	
+1	0	1	1	1	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0
+1	1	2	3	4	4	4	4	4	4	5	5	5	5	6	6	7	7	7	7	8	8	8	8
+
+Line 29
+Ἑρμ		εί		α,		σὺ	γὰρ	αὖτ		ε	τά	τ’ἄλλ		α	περ	ἄγγ		ελ	ός	ἐσσ		ι,	
+1	0	0	0	0	0	1	1	1	0	0	1	1	0	0	1	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	3	0	0	2	1	0	0	0	1	0	0	2	0	0	0	0
+1	1	1	1	1	1	2	3	4	4	4	5	6	6	6	7	8	8	8	8	9	9	9	9
+
+Line 30
+νύμφ		ῃ	ἐ	υπλ		οκ	άμ	ῳ		εἰπ		εῖν		νημ		ερτ		έ	α	βουλ		ήν,	
+1	0	0	1	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	0	3	0	0	0	0	0	1	0	0	0	2	0
+1	1	1	2	2	2	2	2	2	2	3	3	3	3	4	4	4	4	4	4	5	5	5	5
+
+Line 31
+νόστ		ον	Ὀδ	υσσ		ῆ		ος		ταλ	ασ	ίφρ		ον	ος,	ὥς		κε	νέ	ητ		αι	
+1	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	1	0	1	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	3	0	0	0	0	0	1	0	0	0	2	0	0	1	0	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	3	3	3	3	4	4	5	6	6	6	6	6
+
+Line 32
+οὔτ		ε	θε	ῶν		πομπ		ῇ		οὔτ		ε		θνητ		ῶν		ἀνθρ		ώπ		ων·	
+1	0	0	1	0	0	1	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	long	long	long	long	long	long	long	long	long	long
+1	0	0	0	3	0	0	0	3	0	1	0	0	0	0	0	3	0	0	0	1	0	0	0
+1	1	1	2	2	2	3	3	3	3	4	4	4	4	5	5	5	5	6	6	6	6	6	6
+
+Line 33
+ἀλλ’		ὅ	γ’ἐπ	ὶ		σχεδ	ί	ης		πολ	υδ	έσμ		ου		πήμ		ατ	α	πάσχ		ων	
+1	0	1	1	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0
+1	1	2	3	3	3	4	4	4	4	5	5	5	5	5	5	6	6	6	6	7	7	7	7
+
+Line 34
+ἤμ		ατ	ί	κ’εἰκ		οστ		ῷ		Σχερ	ί	ην		ἐρ	ίβ	ωλ		ον	ἵκ	οιτ		ο,	
+1	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	2	0	0	0	0	3	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	3	3	3	4	4	4	4	4	5	5	5	5	5
+
+Line 35
+Φαι		ήκ		ων		ἐς		γαῖ		αν,	οἳ	ἀγχ		ίθ	ε	οι		γεγ	ά	ασ		ιν,	
+1	0	0	0	0	0	1	0	1	0	0	1	1	0	0	0	0	0	1	0	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	3	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	1	1	1	1	2	2	3	3	3	4	5	5	5	5	5	5	6	6	6	6	6	6
+
+Line 36
+οἵ		κέν		μιν		περ	ὶ	κῆρ		ι	θε	ὸν		ὣς		τιμ		ήσ		ουσ		ι,	
+1	0	1	0	1	0	1	0	1	0	0	1	0	0	1	0	1	0	0	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long	long	long	long	long
+2	0	2	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0
+1	1	2	2	3	3	4	4	5	5	5	6	6	6	7	7	8	8	8	8	8	8	8	8
+
+Line 37
+πέμψ		ουσ		ιν		δ’ἐν		νη		ὶ	φίλ	ην		ἐς		πατρ		ίδ	α	γαῖ		αν,	
+1	0	0	0	0	0	1	0	1	0	0	1	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	3	0	0	0
+1	1	1	1	1	1	2	2	3	3	3	4	4	4	5	5	6	6	6	6	7	7	7	7
+
+Line 38
+χαλκ		όν		τε		χρυσ		όν		τε	ἅλ	ις		ἐσθ		ῆτ		ά	τε	δόντ		ες,	
+1	0	0	0	1	0	1	0	0	0	1	1	0	0	1	0	0	0	0	1	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	0	0	2	0	0	1	0	0	0	0	3	0	2	0	1	0	0	0
+1	1	1	1	2	2	3	3	3	3	4	5	5	5	6	6	6	6	6	7	8	8	8	8
+
+Line 39
+πόλλ’,		ὅσ’	ἂν	οὐδ		έ	ποτ	ε		Τροί		ης		ἐξ		ήρ		ατ’	Ὀδ	υσσ		εύς,	
+1	0	1	1	1	0	0	1	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+2	0	2	0	0	0	2	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	2	0
+1	1	2	3	4	4	4	5	5	5	6	6	6	6	7	7	7	7	7	8	8	8	8	8
+
+Line 40
+εἴ		περ	ἀπ	ήμ		ων		ἦλθ		ε,	λαχ	ὼν		ἀπ	ὸ	λη		ίδ	ος	αἶσ		αν.	
+1	0	1	1	0	0	0	0	1	0	0	1	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	0	0	1	0	0	0	3	0	0	0	0	0	0	0	0	0	1	0	3	0	0	0
+1	1	2	3	3	3	3	3	4	4	4	5	5	5	6	6	7	7	7	7	8	8	8	8
+
+Line 41
+ὣς		γάρ		οἱ		μοῖρ’		ἐστ		ὶ	φίλ	ους		τ’ἰδ	έ	ειν		καὶ	ἱκ	έσθ		αι	
+1	0	1	0	1	0	1	0	1	0	0	1	0	0	1	0	0	0	1	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	3	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	5	5	5	6	6	6	7	7	7	7	8	9	9	9	9	9
+
+Line 42
+οἶκ		ον	ἐς	ὑψ		όρ	οφ	ον		καὶ	ἑ	ὴν		ἐς		πατρ		ίδ	α	γαῖ		αν.	
+1	0	0	1	1	0	0	0	0	0	1	1	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	3	0	0	0
+1	1	1	2	3	3	3	3	3	3	4	5	5	5	6	6	7	7	7	7	8	8	8	8
+
+Line 43
+ὣς		ἔφ	ατ’,	οὐδ’		ἀπ	ίθ	ησ		ε	δι	άκτ		ορ	ος	ἀργ		ε	ϊφ	όντ		ης.	
+1	0	1	0	1	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	4	4	4	5	5	5	5	5	6	6	6	6	6	6	6	6
+
+Line 44
+αὐτ		ίκ’	ἔπ	ειθ’		ὑπ	ὸ	ποσσ		ὶν	ἐδ	ήσ		ατ	ο	καλ		ὰ	πέδ	ιλ		α,	
+1	0	0	1	0	0	1	0	1	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0
+1	1	1	2	2	2	3	3	4	4	4	5	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 45
+ἀμβρ		όσ	ι	α		χρύσ		ει		α,	τά	μιν		φέρ	ον	ἠμ		ὲν	ἐφ’	ὑγρ		ὴν	
+1	0	0	0	0	0	1	0	0	0	0	1	1	0	1	0	1	0	0	1	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	0	2	0	0	1	0	0	0	0	0	0	0	0	0
+1	1	1	1	1	1	2	2	2	2	2	3	4	4	5	5	6	6	6	7	8	8	8	8
+
+Line 46
+ἠδ’		ἐπ’	ἀπ	είρ		ον	α	γαῖ		αν	ἅμ	α		πνοι		ῇς		ἀν	έμ	οι		ο.	
+1	0	1	1	0	0	0	0	1	0	0	1	0	0	1	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	1	0	0	0	3	0	0	1	0	0	0	0	3	0	0	1	0	0	0	0
+1	1	2	3	3	3	3	3	4	4	4	5	5	5	6	6	6	6	7	7	7	7	7	7
+
+Line 47
+εἵλ		ετ	ο	δὲ		ῥάβδ		ον,		τῇ		τ’ἀνδρ		ῶν		ὄμμ		ατ	α	θέλγ		ει,	
+1	0	0	0	1	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	3	0	0	0	3	0	1	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	3	3	4	4	5	5	5	5	6	6	6	6	7	7	7	7
+
+Line 48
+ὧν		ἐθ	έλ	ει,		τοὺς		δ’αὖτ		ε	καὶ	ὑπν		ώ		οντ		ας	ἐγ	είρ		ει.	
+1	0	1	0	0	0	1	0	1	0	0	1	1	0	0	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	0	1	0	0	0	0	3	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	4	4	4	5	6	6	6	6	6	6	6	7	7	7	7	7
+
+Line 49
+τὴν		μετ	ὰ	χερσ		ὶν	ἔχ	ων		πέτ	ετ	ο		κρατ	ὺς	ἀργ		ε	ϊφ	όντ		ης.	
+1	0	1	0	1	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	4	4	4	5	5	5	5	6	6	7	7	7	7	7	7	7	7
+
+Line 50
+Πι		ερ	ί	ην		δ’ἐπ	ιβ	ὰς		ἐξ		αἰθ		έρ	ος	ἔμπ		εσ	ε	πόντ		ῳ·	
+1	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	2	2	2	3	3	4	4	4	4	5	5	5	5	6	6	6	6
+
+Line 51
+σεύ		ατ’	ἔπ	ειτ’		ἐπ	ὶ	κῦμ		α	λάρ	ῳ		ὄρν		ιθ		ι	ἐ	οικ		ώς,	
+1	0	0	1	0	0	1	0	1	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	1	0	0	0	0	3	0	0	1	0	0	1	0	0	0	0	0	0	0	2	0
+1	1	1	2	2	2	3	3	4	4	4	5	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 52
+ὅς		τε	κατ	ὰ		δειν		οὺς		κόλπ		ους		ἁλ	ὸς	ἀτρ		υγ	έτ	οι		ο	
+1	0	1	1	0	0	1	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0
+1	1	2	3	3	3	4	4	4	4	5	5	5	5	6	6	7	7	7	7	7	7	7	7
+
+Line 53
+ἰχθ		ῦς		ἀγρ		ώσσ		ων		πυκ	ιν	ὰ		πτερ	ὰ	δεύ		ετ	αι	ἅλμ		ῃ·	
+1	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	3	3	3	4	4	5	5	5	5	6	6	6	6
+
+Line 54
+τῷ		ἴκ	ελ	ος		πολ	έ	εσσ		ιν	ὀχ	ήσ		ατ	ο	κύμ		ασ	ιν	Ἑρμ		ῆς.	
+1	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0	0	0	3	0
+1	1	2	2	2	2	3	3	3	3	3	4	4	4	4	4	5	5	5	5	6	6	6	6
+
+Line 55
+ἀλλ’		ὅτ	ε	δὴ		τὴν		νῆσ		ον	ἀφ	ίκ		ετ	ο	τηλ		όθ’	ἐ	οῦσ		αν,	
+1	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	3	0	0	0	1	0	0	0	0	0	2	0	3	0	0	0
+1	1	2	2	3	3	4	4	5	5	5	6	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 56
+ἔνθ’		ἐκ		πόντ		ου		βὰς		ἰ	ο	ειδ		έ	ος	ἤπ		ειρ		όνδ		ε	
+1	0	1	0	1	0	0	0	1	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long
+2	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	3	4	4	5	5	5	5	5	5	6	6	6	6	6	6	6	6
+
+Line 57
+ἤ		ι	εν,	ὄφρ		α	μέγ	α		σπέ	ος	ἵκ		ετ	ο,	τῷ		ἔν	ι	νύμφ		η	
+1	0	0	0	1	0	0	1	0	0	1	0	1	0	0	0	1	0	1	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	1	0	0	1	0	0	1	0	1	0	0	0	3	0	1	0	1	0	0	0
+1	1	1	1	2	2	2	3	3	3	4	4	5	5	5	5	6	6	7	7	8	8	8	8
+
+Line 58
+ναῖ		εν	ἐ	υπλ		όκ	αμ	ος·		τὴν		δ’ἔνδ		οθ	ι	τέτμ		εν	ἐ	οῦσ		αν.	
+1	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	3	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	4	4	4	4	5	5	5	6	6	6	6	6
+
+Line 59
+πῦρ		μὲν	ἐπ’	ἐσχ		αρ	όφ	ιν		μέγ	α	καί		ετ	ο,	τηλ		όσ	ε	δ’ὀδμ		ὴ	
+1	0	1	1	1	0	0	0	0	0	1	0	1	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	0	1	0	0	1	0	1	0	0	0	0	0	1	0	0	0	0	0
+1	1	2	3	4	4	4	4	4	4	5	5	6	6	6	6	7	7	7	7	8	8	8	8
+
+Line 60
+κέδρ		ου		τ’εὐκ		ε	άτ	οι		ο	θύ	ου		τ’ἀν	ὰ	νῆσ		ον	ὀδ	ώδ		ει	
+1	0	0	0	1	0	0	0	0	0	0	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	3	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	2	2	2	2	3	3	3	4	4	5	5	5	6	6	6	6	6
+
+Line 61
+δαι		ομ	έν	ων·		ἡ		δ’ἔνδ		ον	ἀ	οιδ		ι	ά	ουσ’		ὀπ	ὶ	καλ		ῇ	
+1	0	0	0	0	0	1	0	1	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	3	0
+1	1	1	1	1	1	2	2	3	3	3	4	4	4	4	4	4	4	5	5	6	6	6	6
+
+Line 62
+ἱστ		ὸν	ἐπ	οιχ		ομ	έν	η		χρυσ		εί		ῃ		κερκ		ίδ’	ὕφ	αιν		εν.	
+1	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	2	1	0	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	3	3	3	3	4	4	4	5	5	5	5	5
+
+Line 63
+ὕλ		η		δὲ		σπέ	ος	ἀμφ		ὶ	πεφ	ύκ		ει		τηλ		εθ	ό	ωσ		α,	
+1	0	0	0	1	0	1	0	1	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0
+1	1	1	1	2	2	3	3	4	4	4	5	5	5	5	5	6	6	6	6	6	6	6	6
+
+Line 64
+κλήθρ		η		τ’αἴγ		ειρ		ός		τε	καὶ	εὐ		ώδ		ης		κυπ	άρ	ισσ		ος.	
+1	0	0	0	1	0	0	0	0	0	1	1	1	0	0	0	0	0	1	0	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	1	0	0	0	2	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	4	5	5	5	5	5	5	6	6	6	6	6	6
+
+Line 65
+ἔνθ		α	δέ	τ’ὄρν		ιθ		ες		ταν	υσ	ίπτ		ερ	οι	εὐν		άζ		οντ		ο,	
+1	0	0	1	1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long
+1	0	0	2	1	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0
+1	1	1	2	3	3	3	3	3	3	4	4	4	4	4	4	5	5	5	5	5	5	5	5
+
+Line 66
+σκῶπ		ές		τ’ἴρ		ηκ		ές		τε	ταν	ύγλ		ωσσ		οί		τε	κορ	ῶν		αι	
+1	0	0	0	1	0	0	0	0	0	1	1	0	0	0	0	0	0	1	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	2	0	1	0	0	0	2	0	0	0	1	0	0	0	2	0	0	0	3	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	4	4	4	4	4	4	4	5	6	6	6	6	6
+
+Line 67
+εἰν		άλ	ι	αι,		τῇσ		ίν		τε	θαλ	άσσ		ι	α	ἔργ		α	μέμ	ηλ		εν.	
+1	0	0	0	0	0	1	0	0	0	1	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	3	0	2	0	0	0	1	0	0	0	1	0	0	1	0	0	0	0
+1	1	1	1	1	1	2	2	2	2	3	4	4	4	4	4	5	5	5	6	6	6	6	6
+
+Line 68
+ἡ		δ’αὐτ		οῦ		τετ	άν	υστ		ο	περ	ὶ		σπεί		ους		γλαφ	υρ	οῖ		ο	
+1	0	1	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	1	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	3	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	3	0	0	0
+1	1	2	2	2	2	3	3	3	3	3	4	4	4	5	5	5	5	6	6	6	6	6	6
+
+Line 69
+ἡμ		ερ	ὶς	ἡβ		ώ		ωσ		α,	τεθ	ήλ		ει		δὲ		σταφ	υλ	ῇσ		ι.	
+1	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	1	0	1	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	3	0	0	0
+1	1	1	1	2	2	2	2	2	2	2	3	3	3	3	3	4	4	5	5	5	5	5	5
+
+Line 70
+κρῆν		αι		δ’ἑξ		εί		ης		πίσ	υρ	ες		ῥέ	ον	ὕδ		ατ	ι	λευκ		ῷ,	
+1	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	3	0
+1	1	1	1	2	2	2	2	2	2	3	3	3	3	4	4	5	5	5	5	6	6	6	6
+
+Line 71
+πλησ		ί	αι	ἀλλ		ήλ		ων		τετρ		αμμ		έν	αι	ἄλλ		υδ	ις	ἄλλ		η.	
+1	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	0	0	0	0	1	0	1	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	3	3	3	3	3	4	4	4	4	5	5	5	5
+
+Line 72
+ἀμφ		ὶ	δὲ	λειμ		ῶν		ες		μαλ	ακ	οὶ		ἴ	ου	ἠδ		ὲ	σελ	ίν		ου	
+1	0	0	1	1	0	0	0	0	0	1	0	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	3	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	1	2	3	3	3	3	3	3	4	4	4	4	5	5	6	6	6	7	7	7	7	7
+
+Line 73
+θήλ		ε	ον.	ἔνθ		α	κ’ἔπ	ειτ		α	καὶ	ἀθ		άν	ατ	ός		περ	ἐπ	ελθ		ὼν	
+1	0	0	0	1	0	0	1	0	0	0	1	1	0	0	0	0	0	1	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	1	0	0	1	0	0	0	0	0	0	1	0	2	0	0	0	0	0	0	0
+1	1	1	1	2	2	2	3	3	3	3	4	5	5	5	5	5	5	6	7	7	7	7	7
+
+Line 74
+θη		ήσ		αιτ		ο	ἰδ	ὼν		καὶ		τερφθ		εί		η		φρεσ	ὶν	ᾗσ		ιν.	
+1	0	0	0	0	0	0	1	0	0	1	0	1	0	0	0	0	0	1	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	3	0	0	0
+1	1	1	1	1	1	1	2	2	2	3	3	4	4	4	4	4	4	5	5	6	6	6	6
+
+Line 75
+ἔνθ		α		στὰς		θη		εῖτ		ο	δι	άκτ		ορ	ος	ἀργ		ε	ϊφ	όντ		ης.	
+1	0	0	0	1	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	0	3	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	3	3	3	4	4	4	4	4	5	5	5	5	5	5	5	5
+
+Line 76
+αὐτ		ὰρ	ἐπ	εὶ		δὴ		πάντ		α		ἑῷ		θη		ήσ		ατ	ο	θυμ		ῷ,	
+1	0	0	1	0	0	1	0	1	0	0	0	1	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	0	1	0	0	0	3	0	0	0	1	0	0	0	0	0	3	0
+1	1	1	2	2	2	3	3	4	4	4	4	5	5	6	6	6	6	6	6	7	7	7	7
+
+Line 77
+αὐτ		ίκ’	ἄρ’	εἰς		εὐρ		ὺ		σπέ	ος	ἤλ		υθ	εν.	οὐδ		έ	μιν	ἄντ		ην	
+1	0	0	1	1	0	1	0	0	0	1	0	1	0	0	0	1	0	0	1	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	2	0	0	0	0	0	0	1	0	1	0	0	0	0	0	2	0	1	0	0	0
+1	1	1	2	3	3	4	4	4	4	5	5	6	6	6	6	7	7	7	8	9	9	9	9
+
+Line 78
+ἠγν		οί		ησ		εν	ἰδ	οῦσ		α	Καλ	υψ		ώ,		δῖ		α	θε	ά		ων·	
+1	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	3	0	0	0	0	0	2	0	3	0	0	0	1	0	0	0
+1	1	1	1	1	1	1	2	2	2	2	3	3	3	3	3	4	4	4	5	5	5	5	5
+
+Line 79
+οὐ		γάρ		τ’ἀγν		ῶτ		ες		θε	οὶ	ἀλλ		ήλ		οισ		ι	πέλ	οντ		αι	
+1	0	1	0	1	0	0	0	0	0	1	0	1	0	0	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	3	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	2	2	3	3	3	3	3	3	4	4	5	5	5	5	5	5	5	6	6	6	6	6
+
+Line 80
+ἀθ		άν	ατ	οι,		οὐδ’		εἴ		τις	ἀπ	όπρ		οθ	ι	δώμ		ατ	α	ναί		ει.	
+1	0	0	0	0	0	1	0	1	0	1	1	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	2	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	2	3	3	4	5	5	5	5	5	6	6	6	6	7	7	7	7
+
+Line 81
+οὐδ’		ἄρ’	Ὀδ	υσσ		ῆ		α		μεγ	αλ	ήτ		ορ	α	ἔνδ		ον	ἔτ	ετμ		εν,	
+1	0	1	1	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	3	0	0	0	0	0	1	0	0	0	1	0	0	1	0	0	0	0
+1	1	2	3	3	3	3	3	3	3	4	4	4	4	4	4	5	5	5	6	6	6	6	6
+
+Line 82
+ἀλλ’		ὅ	γ’ἐπ’	ἀκτ		ῆς		κλαῖ		ε	καθ	ήμ		εν	ος,	ἔνθ		α	πάρ	ος		περ,	
+1	0	1	1	1	0	0	0	1	0	0	1	0	0	0	0	1	0	0	1	0	0	1	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	3	0	3	0	0	0	1	0	0	0	1	0	0	1	0	0	0	0
+1	1	2	3	4	4	4	4	5	5	5	6	6	6	6	6	7	7	7	8	8	8	9	9
+
+Line 83
+δάκρ		υσ	ι	καὶ		στον	αχ	ῇσ		ι	καὶ	ἄλγ		εσ	ι	θυμ		ὸν	ἐρ	έχθ		ων.	
+1	0	0	0	1	0	1	0	0	0	0	1	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	0	3	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	3	3	3	4	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 84
+πόντ		ον	ἐπ’	ἀτρ		ύγ	ετ	ον		δερκ		έσκ		ετ	ο	δάκρ		υ	α	λείβ		ων.	
+1	0	0	1	1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	2	3	3	3	3	3	3	4	4	4	4	4	4	5	5	5	5	6	6	6	6
+
+Line 85
+Ἑρμ		εί		αν		δ’ἐρ	έ	ειν		ε	Καλ	υψ		ώ,		δῖ		α	θε	ά		ων,	
+1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	1	0	0	0	0	0	0	2	0	3	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	2	2	2	2	3	3	3	3	3	4	4	4	5	5	5	5	5
+
+Line 86
+ἐν		θρόν	ῳ	ἱδρ		ύσ		ασ		α	φα	ειν		ῷ		σιγ		αλ	ό	εντ		ι·	
+1	0	1	0	1	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	0	0	0	0	3	0	0	0	0	1	0	0	0	0
+1	1	2	2	3	3	3	3	3	3	3	4	4	4	4	4	5	5	5	5	5	5	5	5
+
+Line 87
+τίπτ		ε	μοι,	Ἑρμ		εί		α		χρυσ		όρρ		απ	ι,	εἰλ		ήλ		ουθ		ας	
+1	0	0	1	1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0
+1	1	1	2	3	3	3	3	3	3	4	4	4	4	4	4	5	5	5	5	5	5	5	5
+
+Line 88
+αἰδ		οῖ		ός		τε	φίλ	ος		τε;	πάρ	ος		γε	μὲν	οὔ		τι	θαμ	ίζ		εις.	
+1	0	0	0	0	0	1	1	0	0	1	1	0	0	1	1	1	0	1	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	2	0	0	1	0	0	0	1	0	0	0	0	2	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	3	3	3	4	5	5	5	6	7	8	8	9	10	10	10	10	10
+
+Line 89
+αὔδ		α	ὅ	τι		φρον	έ	εις·		τελ	έσ	αι		δέ	με	θυμ		ὸς	ἄν	ωγ		εν,	
+1	0	0	1	1	0	1	0	0	0	1	0	0	0	1	1	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	2	0	0	0	1	0	0	0	1	0	0	2	0	0	0	0	1	0	0	0	0
+1	1	1	2	3	3	4	4	4	4	5	5	5	5	6	7	8	8	8	9	9	9	9	9
+
+Line 90
+εἰ		δύν	αμ	αι		τελ	έσ	αι		γε	καὶ	εἰ		τετ	ελ	εσμ		έν	ον	ἐστ		ίν.	
+1	0	1	0	0	0	1	0	0	0	1	1	1	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	1	0	0	0	2	0
+1	1	2	2	2	2	3	3	3	3	4	5	6	6	7	7	7	7	7	7	8	8	8	8
+
+Line 91
+ἀλλ’		ἕπ	ε	ο		προτ	έρ	ω,		ἵν	α	τοι		πὰρ		ξείν		ι	α	θεί		ω.	
+1	0	1	0	0	0	1	0	0	0	1	0	1	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	3	3	4	4	5	5	6	6	7	7	7	7	8	8	8	8
+
+Line 92
+ὥς		ἄρ	α	φων		ήσ		ασ		α	θε	ὰ		παρ	έθ	ηκ		ε	τράπ	εζ		αν	
+1	0	1	0	1	0	0	0	0	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	1	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0
+1	1	2	2	3	3	3	3	3	3	3	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 93
+ἀμβρ		οσ	ί	ης		πλήσ		ασ		α,	κέρ	ασσ		ε	δὲ	νέκτ		αρ	ἐρ	υθρ		όν.	
+1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	1	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	2	0
+1	1	1	1	1	1	2	2	2	2	2	3	3	3	3	4	5	5	5	6	6	6	6	6
+
+Line 94
+αὐτ		ὰρ	ὁ	πῖν		ε	καὶ	ἦσθ		ε	δι	άκτ		ορ	ος	ἀργ		ε	ϊφ	όντ		ης.	
+1	0	0	1	1	0	0	1	1	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	3	0	0	0	3	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0
+1	1	1	2	3	3	3	4	5	5	5	6	6	6	6	6	7	7	7	7	7	7	7	7
+
+Line 95
+αὐτ		ὰρ	ἐπ	εὶ		δείπν		ησ		ε	καὶ	ἤρ		αρ	ε	θυμ		ὸν	ἐδ	ωδ		ῇ,	
+1	0	0	1	0	0	1	0	0	0	0	1	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	3	0
+1	1	1	2	2	2	3	3	3	3	3	4	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 96
+καὶ		τότ	ε	δή		μιν	ἔπ	εσσ		ιν	ἀμ	ειβ		όμ	εν	ος		προσ	έ	ειπ		εν·	
+1	0	1	0	1	0	1	1	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	2	0	0	1	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	2	2	3	3	4	5	5	5	5	6	6	6	6	6	6	6	7	7	7	7	7	7
+
+Line 97
+εἰρ		ωτ		ᾷς		μ’ἐλθ		όντ		α	θε	ὰ		θε	όν·	αὐτ		ὰρ	ἐγ	ώ		τοι	
+1	0	0	0	0	0	1	0	0	0	0	1	0	0	1	0	1	0	0	1	0	0	1	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	3	0	0	0	1	0	0	0	0	0	0	2	0	0	0	0	2	0	0	0
+1	1	1	1	1	1	2	2	2	2	2	3	3	3	4	4	5	5	5	6	6	6	7	7
+
+Line 98
+νημ		ερτ		έως		τὸν		μῦθ		ον	ἐν	ισπ		ήσ		ω·		κέλ	ε	αι		γάρ.	
+1	0	0	0	0	0	1	0	1	0	0	1	0	0	0	0	0	0	1	0	0	0	1	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	2	0	0	0	3	0	0	0	0	0	1	0	0	0	1	0	0	0	2	0
+1	1	1	1	1	1	2	2	3	3	3	4	4	4	4	4	4	4	5	5	5	5	6	6
+
+Line 99
+Ζεὺς		ἐμ	έ	γ’ἠν		ώγ		ει		δεῦρ’		ἐλθ		έμ	εν	οὐκ		ἐθ	έλ	οντ		α·	
+1	0	1	0	1	0	0	0	0	0	1	0	1	0	0	0	1	0	1	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	2	0	0	1	0	0	0	3	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	2	2	3	3	3	3	3	3	4	4	5	5	5	5	6	6	7	7	7	7	7	7
+
+Line 100
+τίς		δ’ἂν	ἑκ	ὼν		τοσσ		όνδ		ε	δι	αδρ		άμ	οι	ἁλμ		υρ	ὸν	ὕδ		ωρ	
+1	0	1	1	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	2	3	3	3	4	4	4	4	4	5	5	5	5	5	6	6	6	6	7	7	7	7
+
+Line 101
+ἄσπ		ετ	ον;	οὐδ		έ	τις	ἄγχ		ι	βροτ	ῶν		πόλ	ις,	οἵ		τε	θε	οῖσ		ιν	
+1	0	0	0	1	0	0	1	1	0	0	1	0	0	1	0	1	0	1	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	2	0	1	0	0	0	3	0	1	0	2	0	0	0	3	0	0	0
+1	1	1	1	2	2	2	3	4	4	4	5	5	5	6	6	7	7	8	9	9	9	9	9
+
+Line 102
+ἱ		ερ	ά	τε		ῥέζ		ουσ		ι	καὶ	ἐξ		αίτ		ους		ἑκ	ατ	όμβ		ας.	
+1	0	0	0	1	0	1	0	0	0	0	1	1	0	0	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	2	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	3	3	3	4	5	5	5	5	5	5	6	6	6	6	6	6
+
+Line 103
+ἀλλ		ὰ	μάλ’	οὔ		πως		ἔστ		ι	Δι	ὸς		νό	ον	αἰγ		ι	όχ	οι		ο	
+1	0	0	1	1	0	1	0	1	0	0	1	0	0	1	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	2	2	0	0	0	1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	1	2	3	3	4	4	5	5	5	6	6	6	7	7	8	8	8	8	8	8	8	8
+
+Line 104
+οὔτ		ε	παρ	εξ		ελθ		εῖν		ἄλλ		ον		θε	ὸν	οὔθ’		ἁλ	ι	ῶσ		αι.	
+1	0	0	1	0	0	0	0	0	0	1	0	0	0	1	0	1	0	1	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	0	3	0	1	0	0	0	0	0	2	0	0	0	3	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	3	3	4	4	5	5	6	6	6	6	6	6
+
+Line 105
+φησ		ί	τοι	ἄνδρ		α	παρ	εῖν		αι	ὀ	ιζ		υρ		ώτ		ατ	ον	ἄλλ		ων,	
+1	0	0	1	1	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	2	0	1	0	0	0	3	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	2	3	3	3	4	4	4	4	5	5	5	5	5	5	5	5	5	6	6	6	6
+
+Line 106
+τῶν		ἀνδρ		ῶν,		οἳ		ἄστ		υ	πέρ	ι		Πρι	άμ	οι		ο	μάχ	οντ		ο	
+1	0	1	0	0	0	1	0	1	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	3	0	0	0	1	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0
+1	1	2	2	2	2	3	3	4	4	4	5	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 107
+εἰν		ά	ετ	ες,		δεκ	άτ	ῳ		δὲ	πόλ	ιν		πέρσ		αντ		ες	ἔβ	ησ		αν	
+1	0	0	0	0	0	1	0	0	0	1	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	1	0	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	1	1	1	1	2	2	2	2	3	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 108
+οἴκ		αδ’·	ἀτ	ὰρ		ἐν		νόστ		ῳ	Ἀθ	ην		αί		ην		ἀλ	ίτ	οντ		ο,	
+1	0	0	1	0	0	1	0	1	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	1	2	2	2	3	3	4	4	4	5	5	5	5	5	5	5	6	6	6	6	6	6
+
+Line 109
+ἥ		σφιν	ἐπ	ῶρσ’		ἄν	εμ	όν		τε	κακ	ὸν		καὶ		κύμ		ατ	α	μακρ		ά.	
+1	0	1	1	0	0	1	0	0	0	1	1	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+2	0	0	0	3	0	1	0	2	0	0	0	0	0	0	0	1	0	0	0	0	0	2	0
+1	1	2	3	3	3	4	4	4	4	5	6	6	6	7	7	8	8	8	8	9	9	9	9
+
+Line 110
+ἔνθ’		ἄλλ		οι		μὲν		πάντ		ες	ἀπ	έφθ		ιθ	εν	ἐσθλ		οὶ	ἑτ	αῖρ		οι,	
+1	0	1	0	0	0	1	0	1	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	3	0	0	0
+1	1	2	2	2	2	3	3	4	4	4	5	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 111
+τὸν		δ’ἄρ	α	δεῦρ’		ἄν	εμ	ός		τε	φέρ	ων		καὶ		κῦμ		α	πέλ	ασσ		ε.	
+1	0	1	0	1	0	1	0	0	0	1	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	3	0	1	0	2	0	0	1	0	0	0	0	3	0	0	1	0	0	0	0
+1	1	2	2	3	3	4	4	4	4	5	6	6	6	7	7	8	8	8	9	9	9	9	9
+
+Line 112
+τὸν		νῦν		σ’ἠν		ώγ		ει		ἀπ	οπ	εμπ		έμ	εν	ὅττ		ι	τάχ	ιστ		α·	
+1	0	1	0	1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	0	0	1	0	0	0	0	0	0	0	1	0	1	0	0	1	0	0	0	0
+1	1	2	2	3	3	3	3	3	3	4	4	4	4	4	4	5	5	5	6	6	6	6	6
+
+Line 113
+οὐ		γάρ		οἱ		τῇδ’		αἶσ		α	φίλ	ων		ἀπ	ον	όσφ		ιν	ὀλ	έσθ		αι,	
+1	0	1	0	1	0	1	0	1	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	3	0	3	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	5	5	5	6	6	6	7	7	7	7	7	8	8	8	8	8
+
+Line 114
+ἀλλ’		ἔτ	ι	οἱ		μοῖρ’		ἐστ		ὶ	φίλ	ους		τ’ἰδ	έ	ειν		καὶ	ἱκ	έσθ		αι	
+1	0	1	0	1	0	1	0	1	0	0	1	0	0	1	0	0	0	1	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	3	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	5	5	5	6	6	6	7	7	7	7	8	9	9	9	9	9
+
+Line 115
+οἶκ		ον	ἐς	ὑψ		όρ	οφ	ον		καὶ	ἑ	ὴν		ἐς		πατρ		ίδ	α	γαῖ		αν.	
+1	0	0	1	1	0	0	0	0	0	1	1	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	3	0	0	0
+1	1	1	2	3	3	3	3	3	3	4	5	5	5	6	6	7	7	7	7	8	8	8	8
+
+Line 116
+ὣς		φάτ	ο,	ῥίγ		ησ		εν		δὲ	Καλ	υψ		ώ,		δῖ		α	θε	ά		ων,	
+1	0	1	0	1	0	0	0	0	0	1	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	1	0	0	0	0	0	0	0	0	0	2	0	3	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	3	3	3	4	5	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 117
+καί		μιν		φων		ήσ		ασ’		ἔπ	ε	α		πτερ	ό	εντ		α	προσ	ηύδ		α·	
+1	0	1	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	3	3	3	4	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 118
+σχέτλ		ι	οί	ἐστ		ε,	θε	οί,		ζηλ		ήμ		ον	ες	ἔξ		οχ	ον	ἄλλ		ων,	
+1	0	0	0	1	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	2	0	0	0	0	2	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	3	3	3	4	4	4	4	4	4	5	5	5	5	6	6	6	6
+
+Line 119
+οἵ		τε	θε	αῖς		ἀγ	ά	ασθ		ε	παρ’	ἀνδρ		άσ	ιν	εὐν		άζ		εσθ		αι	
+1	0	1	1	0	0	1	0	0	0	0	1	1	0	0	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long
+2	0	0	0	3	0	0	1	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0
+1	1	2	3	3	3	4	4	4	4	4	5	6	6	6	6	7	7	7	7	7	7	7	7
+
+Line 120
+ἀμφ		αδ	ί	ην,		ἤν		τίς		τε	φίλ	ον		ποι		ήσ		ετ’	ἀκ	οίτ		ην.	
+1	0	0	0	0	0	1	0	1	0	1	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	2	0	2	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	2	3	3	4	5	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 121
+ὣς		μὲν	ὅτ’	Ὠρ		ί		ων’		ἕλ	ετ	ο		ῥοδ	οδ	άκτ		υλ	ος	Ἠ		ώς,	
+1	0	1	1	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	2	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	2	0
+1	1	2	3	4	4	4	4	4	4	5	5	5	5	6	6	6	6	6	6	7	7	7	7
+
+Line 122
+τόφρ		α	οἱ	ἠγ		ά		ασθ		ε	θε	οὶ		ῥεῖ		α		ζώ		οντ		ες,	
+1	0	0	1	1	0	0	0	0	0	0	1	0	0	1	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	long	long	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	0	0	0	3	0	0	0	1	0	0	0	0	0
+1	1	1	2	3	3	3	3	3	3	3	4	4	4	5	5	5	5	6	6	6	6	6	6
+
+Line 123
+ἕως		μιν	ἐν	Ὀρτ		υγ	ί	ῃ		χρυσ		όθρ		ον	ος	Ἄρτ		εμ	ις	ἁγν		ὴ	
+1	0	1	1	1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0
+1	1	2	3	4	4	4	4	4	4	5	5	5	5	5	5	6	6	6	6	7	7	7	7
+
+Line 124
+οἷς		ἀγ	αν	οῖς		βελ	έ	εσσ		ιν	ἐπ	οιχ		ομ	έν	η		κατ	έπ	εφν		εν.	
+1	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	3	0	0	1	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0
+1	1	2	2	2	2	3	3	3	3	3	4	4	4	4	4	4	4	5	5	5	5	5	5
+
+Line 125
+ὣς		δ’ὁπ	ότ’	Ἰ		ασ	ί	ων		ι	ἐ	υπλ		όκ	αμ	ος		Δημ		ήτ		ηρ,	
+1	0	1	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long
+0	0	0	2	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	3	3	3	3	4	4	4	4	4	4	4	5	5	5	5	5	5
+
+Line 126
+ᾧ		θυμ		ῷ		εἴξ		ασ		α,	μίγ	η		φιλ	ότ	ητ		ι	καὶ	εὐν		ῇ	
+1	0	1	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0	1	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	3	0	1	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	3	0
+1	1	2	2	2	2	3	3	3	3	3	4	4	4	5	5	5	5	5	6	7	7	7	7
+
+Line 127
+νει		ῷ	ἔν	ι		τριπ	όλ	ῳ·		οὐδ		ὲ		δὴν		ἦ		εν	ἄπ	υστ		ος	
+1	0	0	1	0	0	1	0	0	0	1	0	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	3	1	0	0	0	1	0	0	0	0	0	0	0	0	3	0	0	1	0	0	0	0
+1	1	1	2	2	2	3	3	3	3	4	4	4	4	5	5	6	6	6	7	7	7	7	7
+
+Line 128
+Ζεύς,		ὅς		μιν		κατ	έπ	εφν		ε	βαλ	ὼν		ἀργ		ῆτ		ι	κερ	αυν		ῷ.	
+1	0	1	0	1	0	1	0	0	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+2	0	2	0	0	0	0	1	0	0	0	0	0	0	0	0	3	0	0	0	0	0	3	0
+1	1	2	2	3	3	4	4	4	4	4	5	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 129
+ὥς		δ’αὖ		νῦν		μοι	ἄγ	ασθ		ε,	θε	οί,		βροτ	ὸν	ἄνδρ		α	παρ	εῖν		αι.	
+1	0	1	0	1	0	1	1	0	0	0	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	3	0	3	0	0	1	0	0	0	0	2	0	0	0	1	0	0	0	3	0	0	0
+1	1	2	2	3	3	4	5	5	5	5	6	6	6	7	7	8	8	8	9	9	9	9	9
+
+Line 130
+τὸν		μὲν	ἐγ	ὼν		ἐσ	ά	ωσ		α	περ	ὶ		τρόπ	ι	ος		βεβ	α	ῶτ		α	
+1	0	1	1	0	0	1	0	0	0	0	1	0	0	1	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	3	0	0	0
+1	1	2	3	3	3	4	4	4	4	4	5	5	5	6	6	6	6	7	7	7	7	7	7
+
+Line 131
+οἶ		ον,	ἐπ	εί		οἱ		νῆ		α	θο	ὴν		ἀργ		ῆτ		ι	κερ	αυν		ῷ	
+1	0	0	1	0	0	1	0	1	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	0	0	2	0	0	0	3	0	0	0	0	0	0	0	3	0	0	0	0	0	3	0
+1	1	1	2	2	2	3	3	4	4	4	5	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 132
+Ζεὺς		ἐλ	άσ	ας		ἐκ	έ	ασσ		ε	μέσ	ῳ		ἐν	ὶ	οἴν		οπ	ι	πόντ		ῳ.	
+1	0	1	0	0	0	1	0	0	0	0	1	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	3	3	3	4	4	4	5	5	6	6	6	6	7	7	7	7
+
+Line 133
+ἔνθ’		ἄλλ		οι		μὲν		πάντ		ες	ἀπ	έφθ		ιθ	εν	ἐσθλ		οὶ	ἑτ	αῖρ		οι,	
+1	0	1	0	0	0	1	0	1	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	3	0	0	0
+1	1	2	2	2	2	3	3	4	4	4	5	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 134
+τὸν		δ’ἄρ	α	δεῦρ’		ἄν	εμ	ός		τε	φέρ	ων		καὶ		κῦμ		α	πέλ	ασσ		ε.	
+1	0	1	0	1	0	1	0	0	0	1	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	3	0	1	0	2	0	0	1	0	0	0	0	3	0	0	1	0	0	0	0
+1	1	2	2	3	3	4	4	4	4	5	6	6	6	7	7	8	8	8	9	9	9	9	9
+
+Line 135
+τὸν		μὲν	ἐγ	ὼ		φίλ	ε	όν		τε	καὶ	ἔτρ		εφ	ον,	ἠδ		ὲ	ἔφ	ασκ		ον	
+1	0	1	1	0	0	1	0	0	0	1	1	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	2	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0
+1	1	2	3	3	3	4	4	4	4	5	6	7	7	7	7	8	8	8	9	9	9	9	9
+
+Line 136
+θήσ		ειν		ἀθ		άν	ατ	ον		καὶ	ἀγ	ήρ		α	ον	ἤμ		ατ	α	πάντ		α.	
+1	0	0	0	1	0	0	0	0	0	1	1	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	4	4	4	4	4	5	5	5	5	6	6	6	6
+
+Line 137
+ἀλλ’		ἐπ	εὶ	οὔ		πως		ἔστ		ι	Δι	ὸς		νό	ον	αἰγ		ι	όχ	οι		ο	
+1	0	1	0	1	0	1	0	1	0	0	1	0	0	1	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	2	0	0	0	1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	2	2	3	3	4	4	5	5	5	6	6	6	7	7	8	8	8	8	8	8	8	8
+
+Line 138
+οὔτ		ε	παρ	εξ		ελθ		εῖν		ἄλλ		ον		θε	ὸν	οὔθ’		ἁλ	ι	ῶσ		αι,	
+1	0	0	1	0	0	0	0	0	0	1	0	0	0	1	0	1	0	1	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	0	3	0	1	0	0	0	0	0	2	0	0	0	3	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	3	3	4	4	5	5	6	6	6	6	6	6
+
+Line 139
+ἐρρ		έτ	ω,	εἴ		μιν		κεῖν		ος	ἐπ	οτρ		ύν		ει		καὶ	ἀν	ώγ		ει,	
+1	0	0	0	1	0	1	0	1	0	0	1	0	0	0	0	0	0	1	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	2	0	0	0	3	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	4	4	4	5	5	5	5	5	5	5	6	7	7	7	7	7
+
+Line 140
+πόντ		ον	ἐπ’	ἀτρ		ύγ	ετ	ον·		πέμψ		ω		δέ	μιν	οὔ		πῃ	ἔγ	ωγ		ε·	
+1	0	0	1	1	0	0	0	0	0	1	0	0	0	1	1	1	0	1	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	1	0	0	0	2	0	2	0	0	1	0	0	0	0
+1	1	1	2	3	3	3	3	3	3	4	4	4	4	5	6	7	7	8	9	9	9	9	9
+
+Line 141
+οὐ		γάρ		μοι		πάρ	α	νῆ		ες	ἐπ	ήρ		ετμ		οι		καὶ	ἑτ	αῖρ		οι,	
+1	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0	0	0	1	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	1	0	3	0	0	0	1	0	0	0	0	0	0	0	3	0	0	0
+1	1	2	2	3	3	4	4	5	5	5	6	6	6	6	6	6	6	7	8	8	8	8	8
+
+Line 142
+οἵ		κέν		μιν		πέμπ		οι		εν	ἐπ’	εὐρ		έ	α	νῶτ		α	θαλ	άσσ		ης.	
+1	0	1	0	1	0	1	0	0	0	0	1	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	2	0	0	0	1	0	0	0	0	0	0	0	1	0	3	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	4	4	4	5	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 143
+αὐτ		άρ		οἱ		πρόφρ		ων		ὑπ	οθ	ήσ		ομ	αι,	οὐδ’		ἐπ	ικ	εύσ		ω,	
+1	0	0	0	1	0	1	0	0	0	1	0	0	0	0	0	1	0	1	0	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	3	3	4	4	4	4	4	4	5	5	6	6	6	6	6	6
+
+Line 144
+ὥς		κε	μάλ’	ἀσκ		ηθ		ὴς		ἣν		πατρ		ίδ	α	γαῖ		αν	ἵκ	ητ		αι.	
+1	0	1	1	1	0	0	0	0	0	1	0	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	0	2	0	0	0	0	0	0	0	0	0	0	1	0	3	0	0	1	0	0	0	0
+1	1	2	3	4	4	4	4	4	4	5	5	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 145
+τὴν		δ’αὖτ		ε		προσ	έ	ειπ		ε	δι	άκτ		ορ	ος	ἀργ		ε	ϊφ	όντ		ης·	
+1	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	3	3	3	4	4	4	4	4	5	5	5	5	5	5	5	5
+
+Line 146
+οὕτ		ω		νῦν		ἀπ	όπ	εμπ		ε,	Δι	ὸς		δ’ἐπ	οπ	ίζ		ε	ο	μῆν		ιν,	
+1	0	0	0	1	0	1	0	0	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	3	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	3	0	0	0
+1	1	1	1	2	2	3	3	3	3	3	4	4	4	5	5	5	5	5	5	6	6	6	6
+
+Line 147
+μή		πώς		τοι		μετ	όπ	ισθ		ε	κοτ	εσσ		άμ	εν	ος		χαλ	επ	ήν		ῃ.	
+1	0	1	0	1	0	1	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	2	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	4	4	4	5	5	5	5	5	5	5	6	6	6	6	6	6
+
+Line 148
+ὣς		ἄρ	α	φων		ήσ		ας		ἀπ	έβ	η		κρατ	ὺς	ἀργ		ε	ϊφ	όντ		ης·	
+1	0	1	0	1	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	3	3	3	4	4	4	4	5	5	6	6	6	6	6	6	6	6
+
+Line 149
+ἡ		δ’ἐπ’	Ὀδ	υσσ		ῆ		α		μεγ	αλ	ήτ		ορ	α	πότν		ι	α	νύμφ		η	
+1	0	1	1	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	3	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0
+1	1	2	3	3	3	3	3	3	3	4	4	4	4	4	4	5	5	5	5	6	6	6	6
+
+Line 150
+ἤ		ι’,	ἐπ	εὶ		δὴ		Ζην		ὸς	ἐπ	έκλ		υ	εν	ἀγγ		ελ	ι	ά		ων.	
+1	0	0	1	0	0	1	0	1	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0
+1	1	1	2	2	2	3	3	4	4	4	5	5	5	5	5	6	6	6	6	6	6	6	6
+
+Line 151
+τὸν		δ’ἄρ’	ἐπ’	ἀκτ		ῆς		εὗρ		ε	καθ	ήμ		εν	ον·	οὐδ		έ	ποτ’	ὄσσ		ε	
+1	0	1	1	1	0	0	0	1	0	0	1	0	0	0	0	1	0	0	1	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	3	0	3	0	0	0	1	0	0	0	0	0	2	0	1	0	0	0
+1	1	2	3	4	4	4	4	5	5	5	6	6	6	6	6	7	7	7	8	9	9	9	9
+
+Line 152
+δακρ		υ	όφ	ιν		τέρσ		οντ		ο,	κατ	είβ		ετ	ο	δὲ		γλυκ	ὺς	αἰ		ὼν	
+1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	0	1	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0
+1	1	1	1	1	1	2	2	2	2	2	3	3	3	3	3	4	4	5	5	6	6	6	6
+
+Line 153
+νόστ		ον	ὀδ	υρ		ομ	έν	ῳ,		ἐπ	εὶ	οὐκ		έτ	ι	ἥνδ		αν	ε	νύμφ		η.	
+1	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0	1	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	4	4	4	4	5	5	5	5	6	6	6	6
+
+Line 154
+ἀλλ’		ἤτ		οι		νύκτ		ας		μὲν	ἰ	αύ		εσκ		εν		καὶ	ἀν	άγκ		ῃ	
+1	0	1	0	0	0	1	0	0	0	1	1	0	0	0	0	0	0	1	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	3	3	4	5	5	5	5	5	5	5	6	7	7	7	7	7
+
+Line 155
+ἐν		σπέσσ		ι		γλαφ	υρ	οῖσ		ι	παρ’	οὐκ		ἐθ	έλ	ων		ἐθ	ελ	ούσ		ῃ·	
+1	0	1	0	0	0	1	0	0	0	0	1	1	0	1	0	0	0	1	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	3	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	3	3	3	4	5	5	6	6	6	6	7	7	7	7	7	7
+
+Line 156
+ἤμ		ατ	α	δ’ἐν		πέτρ		ῃσ		ι	καὶ	ἠ		ι	όν	εσσ		ι	καθ	ίζ		ων	
+1	0	0	0	1	0	1	0	0	0	0	1	1	0	0	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	3	3	3	4	5	5	5	5	5	5	5	6	6	6	6	6
+
+Line 157
+δάκρ		υσ	ι	καὶ		στον	αχ	ῇσ		ι	καὶ	ἄλγ		εσ	ι	θυμ		ὸν	ἐρ	έχθ		ων	
+1	0	0	0	1	0	1	0	0	0	0	1	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	0	3	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	3	3	3	4	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 158
+πόντ		ον	ἐπ’	ἀτρ		ύγ	ετ	ον		δερκ		έσκ		ετ	ο	δάκρ		υ	α	λείβ		ων.	
+1	0	0	1	1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	2	3	3	3	3	3	3	4	4	4	4	4	4	5	5	5	5	6	6	6	6
+
+Line 159
+ἀγχ		οῦ		δ’ἱστ		αμ	έν	η		προσ	εφ	ών		ε	ε	δῖ		α	θε	ά		ων·	
+1	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	0	0	0	1	0	0	0	0	1	0	0	0	3	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	3	3	3	3	3	4	4	4	5	5	5	5	5
+
+Line 160
+κάμμ		ορ	ε,	μή		μοι	ἔτ’	ἐνθ		άδ’	ὀδ	ύρ		ε	ο,	μηδ		έ	τοι	αἰ		ὼν	
+1	0	0	0	1	0	1	1	1	0	0	1	0	0	0	0	1	0	0	1	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	2	0	0	2	0	0	2	0	1	0	0	0	0	0	2	0	0	0	0	0
+1	1	1	1	2	2	3	4	5	5	5	6	6	6	6	6	7	7	7	8	9	9	9	9
+
+Line 161
+φθιν		έτ	ω·	ἤδ		η		γάρ		σε	μάλ	α		πρόφρ		ασσ’		ἀπ	οπ	έμψ		ω.	
+1	0	0	0	1	0	0	0	1	0	1	1	0	0	1	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	1	0	0	0	2	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	2	3	3	4	5	5	5	6	6	6	6	7	7	7	7	7	7
+
+Line 162
+ἀλλ’		ἄγ	ε	δούρ		ατ	α	μακρ		ὰ	ταμ	ὼν		ἁρμ		όζ		ε	ο	χαλκ		ῷ	
+1	0	1	0	1	0	0	0	1	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	3	0
+1	1	2	2	3	3	3	3	4	4	4	5	5	5	6	6	6	6	6	6	7	7	7	7
+
+Line 163
+εὐρ		εῖ		αν		σχεδ	ί	ην·		ἀτ	ὰρ	ἴκρ		ι	α	πῆξ		αι	ἐπ’	αὐτ		ῆς	
+1	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	1	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	0	0	0	1	0	0	0	0	1	0	0	0	3	0	0	0	0	0	3	0
+1	1	1	1	1	1	2	2	2	2	3	3	4	4	4	4	5	5	5	6	7	7	7	7
+
+Line 164
+ὑψ		οῦ,		ὥς		σε	φέρ	ῃσ		ιν	ἐπ’	ἠ		ερ	ο	ειδ		έ	α	πόντ		ον.	
+1	0	0	0	1	0	1	1	0	0	0	1	1	0	0	0	0	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	2	0	0	1	0	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0
+1	1	1	1	2	2	3	4	4	4	4	5	6	6	6	6	6	6	6	6	7	7	7	7
+
+Line 165
+αὐτ		ὰρ	ἐγ	ὼ		σῖτ		ον		καὶ	ὕδ	ωρ		καὶ		οἶν		ον	ἐρ	υθρ		ὸν	
+1	0	0	1	0	0	1	0	0	0	1	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	3	0	0	0	0	1	0	0	0	0	3	0	0	0	0	0	0	0
+1	1	1	2	2	2	3	3	3	3	4	5	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 166
+ἐνθ		ήσ		ω		μεν	ο	εικ		έ’,	ἅ	κέν		τοι		λιμ		ὸν	ἐρ	ύκ		οι,	
+1	0	0	0	0	0	1	0	0	0	0	1	1	0	1	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	0	0	2	2	2	0	0	0	0	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	2	2	2	2	3	4	4	5	5	6	6	6	7	7	7	7	7
+
+Line 167
+εἵμ		ατ	ά	τ’ἀμφ		ι	έσ	ω·		πέμψ		ω		δέ	τοι	οὖρ		ον	ὄπ	ισθ		εν,	
+1	0	0	0	1	0	0	0	0	0	1	0	0	0	1	1	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	2	0	0	0	1	0	0	1	0	0	0	2	0	3	0	0	1	0	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	3	3	3	4	5	6	6	6	7	7	7	7	7
+
+Line 168
+ὥς		κε	μάλ’	ἀσκ		ηθ		ὴς		σὴν		πατρ		ίδ	α	γαῖ		αν	ἵκ	η		αι,	
+1	0	1	1	1	0	0	0	0	0	1	0	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	0	2	0	0	0	0	0	0	0	0	0	0	1	0	3	0	0	1	0	0	0	0
+1	1	2	3	4	4	4	4	4	4	5	5	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 169
+αἴ		κε	θε	οί		γ’ἐθ	έλ	ωσ		ι,	τοὶ	οὐρ		αν	ὸν	εὐρ		ὺν	ἔχ	ουσ		ιν,	
+1	0	1	1	0	0	1	0	0	0	0	1	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	0	0	2	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0
+1	1	2	3	3	3	4	4	4	4	4	5	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 170
+οἵ		μευ		φέρτ		ερ	οί	εἰσ		ι	νο	ῆσ		αί		τε		κρῆν		αί		τε.	
+1	0	1	0	1	0	0	0	1	0	0	1	0	0	0	0	1	0	1	0	0	0	1	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long	long	long	long	long
+2	0	0	0	1	0	0	2	0	0	0	0	3	0	2	0	0	0	3	0	2	0	0	0
+1	1	2	2	3	3	3	3	4	4	4	5	5	5	5	5	6	6	7	7	7	7	8	8
+
+Line 171
+ὣς		φάτ	ο,	ῥίγ		ησ		εν		δὲ	πολ	ύτλ		ας		δῖ		ος	Ὀδ	υσσ		εύς,	
+1	0	1	0	1	0	0	0	0	0	1	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	1	0	0	0	0	0	0	0	1	0	0	0	3	0	0	0	0	0	2	0
+1	1	2	2	3	3	3	3	3	3	4	5	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 172
+καί		μιν		φων		ήσ		ας		ἔπ	ε	α		πτερ	ό	εντ		α	προσ	ηύδ		α·	
+1	0	1	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	3	3	3	4	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 173
+ἄλλ		ο	τι	δὴ		σύ,	θε	ά,		τόδ	ε	μήδ		ε	αι,	οὐδ		έ	τι	πομπ		ήν,	
+1	0	0	1	1	0	1	1	0	0	1	0	1	0	0	0	1	0	0	1	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	2	0	2	0	1	0	1	0	0	0	0	0	2	0	0	0	2	0
+1	1	1	2	3	3	4	5	5	5	6	6	7	7	7	7	8	8	8	9	10	10	10	10
+
+Line 174
+ἥ		με	κέλ	εαι		σχεδ	ί	ῃ		περ	ά	αν		μέγ	α	λαῖτμ		α	θαλ	άσσ		ης,	
+1	0	1	1	0	0	1	0	0	0	1	0	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	0	1	0	0	0	1	0	0	0	1	0	0	1	0	3	0	0	0	1	0	0	0
+1	1	2	3	3	3	4	4	4	4	5	5	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 175
+δειν		όν		τ’ἀργ		αλ	έ	ον		τε·	τὸ	δ’οὐδ’		ἐπ	ὶ	νῆ		ες	ἐ	ῖσ		αι	
+1	0	0	0	1	0	0	0	0	0	1	1	1	0	1	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	0	1	0	0	0	0	0	0	0	0	3	0	0	0	3	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	4	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 176
+ὠκ		ύπ	ορ	οι		περ	ό	ωσ		ιν,	ἀγ	αλλ		όμ	εν	αι		Δι	ὸς	οὔρ		ῳ.	
+1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	2	2	2	2	3	3	3	3	3	3	3	4	4	5	5	5	5
+
+Line 177
+οὐδ’		ἂν	ἔγ	ωγ’		ἀ	έκ	ητ		ι	σέθ	εν		σχεδ	ί	ης		ἐπ	ιβ	αί		ην,	
+1	0	1	1	0	0	1	0	0	0	0	1	0	0	1	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	2	3	3	3	4	4	4	4	4	5	5	5	6	6	6	6	7	7	7	7	7	7
+
+Line 178
+εἰ		μή		μοι		τλαί		ης		γε,	θε	ά,		μέγ	αν	ὅρκ		ον	ὀμ	όσσ		αι	
+1	0	1	0	1	0	1	0	0	0	1	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	1	0	0	0	0	0	2	0	1	0	1	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	4	4	5	6	6	6	7	7	8	8	8	9	9	9	9	9
+
+Line 179
+μή		τί	μοι	αὐτ		ῷ		πῆμ		α	κακ	ὸν		βουλ		ευσ		έμ	εν	ἄλλ		ο.	
+1	0	1	1	1	0	0	0	1	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+2	0	2	0	0	0	3	0	3	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0
+1	1	2	3	4	4	4	4	5	5	5	6	6	6	7	7	7	7	7	7	8	8	8	8
+
+Line 180
+ὣς		φάτ	ο,	μείδ		ησ		εν		δὲ	Καλ	υψ		ὼ		δῖ		α	θε	ά		ων,	
+1	0	1	0	1	0	0	0	0	0	1	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	3	3	3	4	5	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 181
+χειρ		ί	τέ	μιν		κατ	έρ	εξ		εν	ἔπ	ος		τ’ἔφ	ατ’	ἔκ		τ’ὀν	όμ	αζ		εν·	
+1	0	0	1	1	0	1	0	0	0	0	1	0	0	1	0	1	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	2	0	0	0	1	0	0	0	1	0	0	1	0	2	0	0	1	0	0	0	0
+1	1	1	2	3	3	4	4	4	4	4	5	5	5	6	6	7	7	8	8	8	8	8	8
+
+Line 182
+ἦ		δὴ	ἀλ	ιτρ		ός		γ’ἐσσ		ὶ	καὶ	οὐκ		ἀπ	οφ	ώλ		ι	α	εἰδ		ώς,	
+1	0	1	1	0	0	0	0	1	0	0	1	1	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	2	0
+1	1	2	3	3	3	3	3	4	4	4	5	6	6	7	7	7	7	7	7	8	8	8	8
+
+Line 183
+οἷ		ον		δὴ		τὸν		μῦθ		ον	ἐπ	εφρ		άσθ		ης		ἀγ	ορ	εῦσ		αι.	
+1	0	0	0	1	0	1	0	1	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	0	0	3	0	0	0	0	0	1	0	0	0	0	0	3	0	0	0
+1	1	1	1	2	2	3	3	4	4	4	5	5	5	5	5	5	5	6	6	6	6	6	6
+
+Line 184
+ἴστ		ω		νῦν		τόδ	ε	γαῖ		α	καὶ	οὐρ		αν	ὸς	εὐρ		ὺς	ὕπ	ερθ		ε	
+1	0	0	0	1	0	1	0	1	0	0	1	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	3	0	1	0	3	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0
+1	1	1	1	2	2	3	3	4	4	4	5	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 185
+καὶ		τὸ	κατ	ειβ		όμ	εν	ον		Στυγ	ὸς	ὕδ		ωρ,		ὅς		τε	μέγ	ιστ		ος	
+1	0	1	1	0	0	0	0	0	0	1	0	1	0	0	0	1	0	1	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	2	0	0	1	0	0	0	0
+1	1	2	3	3	3	3	3	3	3	4	4	5	5	5	5	6	6	7	8	8	8	8	8
+
+Line 186
+ὅρκ		ος		δειν		ότ	ατ	ός		τε	πέλ	ει		μακ	άρ	εσσ		ι	θε	οῖσ		ι,	
+1	0	0	0	1	0	0	0	0	0	1	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	2	0	0	1	0	0	0	1	0	0	0	0	3	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 187
+μή		τί	τοι	αὐτ		ῷ		πῆμ		α	κακ	ὸν		βουλ		ευσ		έμ	εν	ἄλλ		ο.	
+1	0	1	1	1	0	0	0	1	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+2	0	2	0	0	0	3	0	3	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0
+1	1	2	3	4	4	4	4	5	5	5	6	6	6	7	7	7	7	7	7	8	8	8	8
+
+Line 188
+ἀλλ		ὰ	τὰ	μὲν		νο	έ	ω		καὶ		φράσσ		ομ	αι,	ἅσσ’		ἂν	ἐμ	οί		περ	
+1	0	0	1	1	0	1	0	0	0	1	0	1	0	0	0	1	0	1	1	0	0	1	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	2	0	0	0	2	0	0	0
+1	1	1	2	3	3	4	4	4	4	5	5	6	6	6	6	7	7	8	9	9	9	10	10
+
+Line 189
+αὐτ		ῇ		μηδ		οίμ		ην,		ὅτ	ε	με		χρει		ὼ		τόσ	ον	ἵκ		οι·	
+1	0	0	0	1	0	0	0	0	0	1	0	1	0	1	0	0	0	1	0	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	3	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	1	0	1	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	3	4	4	5	5	5	5	6	6	7	7	7	7
+
+Line 190
+καὶ		γὰρ	ἐμ	οὶ		νό	ος	ἐστ		ὶν	ἐν	αίσ		ιμ	ος,	οὐδ		έ	μοι	αὐτ		ῇ	
+1	0	1	1	0	0	1	0	1	0	0	1	0	0	0	0	1	0	0	1	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	2	0	0	0	3	0
+1	1	2	3	3	3	4	4	5	5	5	6	6	6	6	6	7	7	7	8	9	9	9	9
+
+Line 191
+θυμ		ὸς	ἐν	ὶ		στήθ		εσσ		ι	σιδ	ήρ		ε	ος,	ἀλλ’		ἐλ	ε	ήμ		ων.	
+1	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0	1	0	1	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0
+1	1	1	2	2	2	3	3	3	3	3	4	4	4	4	4	5	5	6	6	6	6	6	6
+
+Line 192
+ὣς		ἄρ	α	φων		ήσ		ασ’		ἡγ		ήσ		ατ	ο	δῖ		α	θε	ά		ων	
+1	0	1	0	1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0	3	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	3	3	3	4	4	4	4	4	4	5	5	5	6	6	6	6	6
+
+Line 193
+καρπ		αλ	ίμ	ως·		ὁ	δ’ἔπ	ειτ		α	μετ’	ἴχν		ι	α	βαῖν		ε	θε	οῖ		ο.	
+1	0	0	0	0	0	1	1	0	0	0	1	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	3	0	0	0	3	0	0	0
+1	1	1	1	1	1	2	3	3	3	3	4	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 194
+ἷξ		ον		δὲ		σπεῖ		ος		γλαφ	υρ	ὸν		θε	ὸς	ἠδ		ὲ	καὶ	ἀν		ήρ,	
+1	0	0	0	1	0	1	0	0	0	1	0	0	0	1	0	1	0	0	1	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+1	1	1	1	2	2	3	3	3	3	4	4	4	4	5	5	6	6	6	7	8	8	8	8
+
+Line 195
+καί		ῥ’ὁ	μὲν	ἔνθ		α	καθ	έζ		ετ’	ἐπ	ὶ		θρόν	ου	ἔνθ		εν	ἀν	έστ		η	
+1	0	1	1	1	0	0	1	0	0	0	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	0	0	1	0	0	0	1	0	0	0	0	0	1	0	1	0	0	0	1	0	0	0
+1	1	2	3	4	4	4	5	5	5	5	6	6	6	7	7	8	8	8	9	9	9	9	9
+
+Line 196
+Ἑρμ		εί		ας,		νύμφ		η		δ’ἐτ	ίθ	ει		πάρ	α	πᾶσ		αν	ἐδ	ωδ		ήν,	
+1	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	0	1	0	0	1	0	3	0	0	0	0	0	2	0
+1	1	1	1	1	1	2	2	2	2	3	3	3	3	4	4	5	5	5	6	6	6	6	6
+
+Line 197
+ἔσθ		ειν		καὶ		πίν		ειν,		οἷ		α		βροτ	οὶ	ἄνδρ		ες	ἔδ	ουσ		ιν·	
+1	0	0	0	1	0	1	0	0	0	1	0	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	3	0	0	0	0	0	1	0	0	1	0	0	0	0
+1	1	1	1	2	2	3	3	3	3	4	4	4	4	5	5	6	6	6	7	7	7	7	7
+
+Line 198
+αὐτ		ὴ		δ’ἀντ		ί	ον	ἷζ		εν	Ὀδ	υσσ		ῆ		ος		θεί		οι		ο,	
+1	0	0	0	1	0	0	0	1	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long	long	long	long	long
+0	0	0	0	0	0	1	0	3	0	0	0	0	0	3	0	0	0	1	0	0	0	0	0
+1	1	1	1	2	2	2	2	3	3	3	4	4	4	4	4	4	4	5	5	5	5	5	5
+
+Line 199
+τῇ		δὲ	παρ’	ἀμβρ		οσ	ί	ην		δμῳ		αὶ		καὶ		νέκτ		αρ	ἔθ	ηκ		αν.	
+1	0	1	1	1	0	0	0	0	0	1	0	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0
+1	1	2	3	4	4	4	4	4	4	5	5	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 200
+οἱ		δ’ἐπ’	ὀν	εί		αθ’	ἑτ	οῖμ		α	προκ	είμ		εν	α	χεῖρ		ας	ἴ	αλλ		ον.	
+1	0	1	1	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	1	0	0	0	3	0	0	0	1	0	0	0	3	0	0	1	0	0	0	0
+1	1	2	3	3	3	3	4	4	4	4	5	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 201
+αὐτ		ὰρ	ἐπ	εὶ		τάρπ		ησ		αν	ἐδ	ητ		ύ	ος	ἠδ		ὲ	ποτ	ῆτ		ος,	
+1	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	3	0	0	0
+1	1	1	2	2	2	3	3	3	3	3	4	4	4	4	4	5	5	5	6	6	6	6	6
+
+Line 202
+τοῖς		ἄρ	α	μύθ		ων		ἦρχ		ε	Καλ	υψ		ώ,		δῖ		α	θε	ά		ων·	
+1	0	1	0	1	0	0	0	1	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	1	0	1	0	0	0	3	0	0	0	0	0	2	0	3	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	3	4	4	4	5	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 203
+δι		ογ	εν	ὲς		Λα		ερτ		ι	άδ	η,		πολ	υμ	ήχ		αν’	Ὀδ	υσσ		εῦ,	
+1	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	3	0
+1	1	1	1	1	1	2	2	2	2	2	2	2	2	3	3	3	3	3	4	4	4	4	4
+
+Line 204
+οὕτ		ω		δὴ		οἶκ		όνδ		ε	φίλ	ην		ἐς		πατρ		ίδ	α	γαῖ		αν	
+1	0	0	0	1	0	1	0	0	0	0	1	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	3	0	1	0	0	1	0	0	0	0	0	0	1	0	3	0	0	0
+1	1	1	1	2	2	3	3	3	3	3	4	4	4	5	5	6	6	6	6	7	7	7	7
+
+Line 205
+αὐτ		ίκ	α	νῦν		ἐθ	έλ	εις		ἰ	έν	αι;		σὺ	δὲ	χαῖρ		ε	καὶ	ἔμπ		ης.	
+1	0	0	0	1	0	1	0	0	0	1	0	0	0	1	1	1	0	0	1	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	3	0	0	1	0	0	0	1	0	0	0	0	3	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	3	3	4	4	4	4	5	6	7	7	7	8	9	9	9	9
+
+Line 206
+εἴ		γε	μὲν	εἰδ		εί		ης		σῇσ		ι		φρεσ	ὶν	ὅσσ		α	τοι	αἶσ		α	
+1	0	1	1	1	0	0	0	0	0	1	0	0	0	1	0	1	0	0	1	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	0	0	0	0	1	0	0	0	3	0	0	0	0	0	1	0	0	0	3	0	0	0
+1	1	2	3	4	4	4	4	4	4	5	5	5	5	6	6	7	7	7	8	9	9	9	9
+
+Line 207
+κήδ		ε’	ἀν	απλ		ῆσ		αι,		πρὶν		πατρ		ίδ	α	γαῖ		αν	ἱκ	έσθ		αι,	
+1	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	3	0	0	0	0	0	0	0	1	0	3	0	0	0	1	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	4	4	4	4	5	5	5	6	6	6	6	6
+
+Line 208
+ἐνθ		άδ	ε	κ’αὖθ		ι	μέν	ων		σὺν	ἐμ	οὶ		τόδ	ε	δῶμ		α	φυλ	άσσ		οις	
+1	0	0	0	1	0	0	1	0	0	1	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	3	0	0	1	0	0	0	0	0	0	1	0	3	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	3	3	3	4	5	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 209
+ἀθ		άν	ατ	ός		τ’εἴ		ης,		ἱμ		ειρ		όμ	εν	ός		περ	ἰδ	έσθ		αι	
+1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	1	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	2	0	1	0	0	0	0	0	0	0	1	0	2	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	2	2	2	3	3	3	3	3	3	3	3	4	5	5	5	5	5
+
+Line 210
+σὴν		ἄλ	οχ	ον,		τῆς		τ’αἰ		ὲν	ἐ	έλδ		ε	αι	ἤμ		ατ	α	πάντ		α.	
+1	0	1	0	0	0	1	0	1	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	3	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	4	4	4	5	5	5	5	5	6	6	6	6	7	7	7	7
+
+Line 211
+οὐ		μέν		θην		κείν		ης		γε	χερ	εί		ων		εὔχ		ομ	αι	εἶν		αι,	
+1	0	1	0	1	0	1	0	0	0	1	1	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	3	0	0	0
+1	1	2	2	3	3	4	4	4	4	5	6	6	6	6	6	7	7	7	7	8	8	8	8
+
+Line 212
+οὐ		δέμ	ας	οὐδ		ὲ	φυ	ήν,		ἐπ	εὶ	οὔ		πως		οὐδ		ὲ	ἔ	οικ		ε	
+1	0	1	0	1	0	0	1	0	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	2	0	0	0	2	0	0	0	0	0	0	1	0	0	0	0
+1	1	2	2	3	3	3	4	4	4	5	5	6	6	7	7	8	8	8	9	9	9	9	9
+
+Line 213
+θνητ		ὰς		ἀθ		αν	άτ	ῃσ		ι	δέμ	ας		καὶ		εἶδ		ος	ἐρ	ίζ		ειν.	
+1	0	0	0	1	0	0	0	0	0	0	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	3	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	2	2	2	2	3	3	3	4	4	5	5	5	6	6	6	6	6
+
+Line 214
+τὴν		δ’ἀπ	αμ	ειβ		όμ	εν	ος		προσ	έφ	η		πολ	ύμ	ητ		ις	Ὀδ	υσσ		εύς·	
+1	0	1	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	2	0
+1	1	2	2	2	2	2	2	2	2	3	3	3	3	4	4	4	4	4	5	5	5	5	5
+
+Line 215
+πότν		α	θε	ά,		μή		μοι		τόδ	ε	χώ		ε	ο·	οἶδ		α	καὶ	αὐτ		ὸς	
+1	0	0	1	0	0	1	0	1	0	1	0	1	0	0	0	1	0	0	1	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	2	0	2	0	0	0	1	0	1	0	0	0	3	0	0	0	0	0	0	0
+1	1	1	2	2	2	3	3	4	4	5	5	6	6	6	6	7	7	7	8	9	9	9	9
+
+Line 216
+πάντ		α	μάλ’,	οὕν		εκ	α	σεῖ		ο	περ	ίφρ		ων		Πην		ελ	όπ	ει		α	
+1	0	0	1	1	0	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	2	1	0	0	0	3	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0
+1	1	1	2	3	3	3	3	4	4	4	5	5	5	5	5	6	6	6	6	6	6	6	6
+
+Line 217
+εἶδ		ος	ἀκ	ιδν		οτ	έρ	η		μέγ	εθ	ός		τ’εἰσ		άντ		α	ἰδ	έσθ		αι·	
+1	0	0	1	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	0	1	0	0	1	0	2	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	3	3	4	4	4	4	4	5	5	5	5	5
+
+Line 218
+ἡ		μὲν		γὰρ		βροτ	ός	ἐστ		ι,	σὺ	δ’ἀθ		άν	ατ	ος		καὶ	ἀγ	ήρ		ως.	
+1	0	1	0	1	0	1	0	1	0	0	1	1	0	0	0	0	0	1	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	2	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	5	5	5	6	7	7	7	7	7	7	8	9	9	9	9	9
+
+Line 219
+ἀλλ		ὰ	καὶ	ὣς		ἐθ	έλ	ω		καὶ	ἐ	έλδ		ομ	αι	ἤμ		ατ	α	πάντ		α	
+1	0	0	1	1	0	1	0	0	0	1	1	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	2	3	3	4	4	4	4	5	6	6	6	6	6	7	7	7	7	8	8	8	8
+
+Line 220
+οἴκ		αδ	έ	τ’ἐλθ		έμ	εν	αι		καὶ		νόστ		ιμ	ον	ἦμ		αρ	ἰδ	έσθ		αι.	
+1	0	0	0	1	0	0	0	0	0	1	0	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	2	0	0	1	0	0	0	0	0	1	0	0	0	3	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	3	4	4	4	4	5	5	5	6	6	6	6	6
+
+Line 221
+εἰ		δ’αὖ		τις		ῥαί		ῃσ		ι	θε	ῶν		ἐν	ὶ	οἴν		οπ	ι	πόντ		ῳ,	
+1	0	1	0	1	0	1	0	0	0	0	1	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	0	0	1	0	0	0	0	0	3	0	0	0	1	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	4	4	4	5	5	5	6	6	7	7	7	7	8	8	8	8
+
+Line 222
+τλήσ		ομ	αι	ἐν		στήθ		εσσ		ιν	ἔχ	ων		ταλ	απ	ενθ		έ	α	θυμ		όν·	
+1	0	0	0	1	0	1	0	0	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	2	0
+1	1	1	1	2	2	3	3	3	3	3	4	4	4	5	5	5	5	5	5	6	6	6	6
+
+Line 223
+ἤδ		η		γὰρ		μάλ	α	πόλλ’		ἔπ	αθ	ον		καὶ		πόλλ’		ἐμ	όγ	ησ		α	
+1	0	0	0	1	0	1	0	1	0	1	0	0	0	1	0	1	0	1	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	2	0	1	0	0	0	0	0	2	0	0	1	0	0	0	0
+1	1	1	1	2	2	3	3	4	4	5	5	5	5	6	6	7	7	8	8	8	8	8	8
+
+Line 224
+κύμ		ασ	ι	καὶ		πολ	έμ	ῳ·		μετ	ὰ	καὶ		τόδ	ε	τοῖσ		ι	γεν	έσθ		ω.	
+1	0	0	0	1	0	1	0	0	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	3	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	3	3	4	4	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 225
+ὣς		ἔφ	ατ’,	ἠ		έλ	ι	ος		δ’ἄρ’	ἔδ	υ		καὶ	ἐπ	ὶ		κνέφ	ας	ἦλθ		εν·	
+1	0	1	0	1	0	0	0	0	0	1	1	0	0	1	1	0	0	1	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	2	1	0	0	0	0	0	0	1	0	3	0	0	0
+1	1	2	2	3	3	3	3	3	3	4	5	5	5	6	7	7	7	8	8	9	9	9	9
+
+Line 226
+ἐλθ		όντ		ες		δ’ἄρ	α	τώ		γε	μυχ	ῷ		σπεί		ους		γλαφ	υρ	οῖ		ο	
+1	0	0	0	0	0	1	0	1	0	1	1	0	0	1	0	0	0	1	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	2	0	0	0	3	0	1	0	0	0	0	0	3	0	0	0
+1	1	1	1	1	1	2	2	3	3	4	5	5	5	6	6	6	6	7	7	7	7	7	7
+
+Line 227
+τερπ		έσθ		ην		φιλ	ότ	ητ		ι,	παρ’	ἀλλ		ήλ		οισ		ι	μέν	οντ		ες.	
+1	0	0	0	0	0	1	0	0	0	0	1	1	0	0	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	1	1	1	1	2	2	2	2	2	3	4	4	4	4	4	4	4	5	5	5	5	5
+
+Line 228
+ἦμ		ος		δ’ἠρ		ιγ	έν	ει		α	φάν	η		ῥοδ	οδ	άκτ		υλ	ος	Ἠ		ώς,	
+1	0	0	0	1	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0	0	2	0
+1	1	1	1	2	2	2	2	2	2	2	3	3	3	4	4	4	4	4	4	5	5	5	5
+
+Line 229
+αὐτ		ίχ’	ὁ	μὲν		χλαῖν		άν		τε	χιτ	ῶν		ά	τε	ἕνν		υτ’	Ὀδ	υσσ		εύς,	
+1	0	0	1	1	0	1	0	0	0	1	1	0	0	0	1	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	3	0	2	0	0	0	3	0	2	0	1	0	0	0	0	0	2	0
+1	1	1	2	3	3	4	4	4	4	5	6	6	6	6	7	8	8	8	9	9	9	9	9
+
+Line 230
+αὐτ		ὴ		δ’ἀργ		ύφ	ε	ον		φᾶρ		ος		μέγ	α	ἕνν		υτ	ο	νύμφ		η,	
+1	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	3	0	0	0	1	0	1	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	3	3	3	4	4	5	5	5	5	6	6	6	6
+
+Line 231
+λεπτ		ὸν		καὶ		χαρ	ί	εν,		περ	ὶ	δὲ		ζών		ην		βάλ	ετ’	ἰξ		υῖ	
+1	0	0	0	1	0	1	0	0	0	1	0	1	0	1	0	0	0	1	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	1	0	0	0	3	0
+1	1	1	1	2	2	3	3	3	3	4	4	5	5	6	6	6	6	7	7	8	8	8	8
+
+Line 232
+καλ		ὴν		χρυσ		εί		ην,		κεφ	αλ	ῇ		δ’ἐπ	έθ	ηκ		ε	καλ	ύπτρ		ην.	
+1	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	0	3	0	0	1	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	3	3	3	4	4	4	4	4	5	5	5	5	5
+
+Line 233
+καὶ		τότ’	Ὀδ	υσσ		ῆ		ι		μεγ	αλ	ήτ		ορ	ι	μήδ		ετ	ο	πομπ		ήν·	
+1	0	1	1	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	3	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	2	0
+1	1	2	3	3	3	3	3	3	3	4	4	4	4	4	4	5	5	5	5	6	6	6	6
+
+Line 234
+δῶκ		ε	μέν	οἱ		πέλ	εκ	υν		μέγ	αν,	ἄρμ		εν	ον	ἐν		παλ	άμ	ῃσ		ι,	
+1	0	0	1	1	0	1	0	0	0	1	0	1	0	0	0	1	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	2	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0	1	0	0	0	0
+1	1	1	2	3	3	4	4	4	4	5	5	6	6	6	6	7	7	8	8	8	8	8	8
+
+Line 235
+χάλκ		ε	ον,	ἀμφ		οτ	έρ	ωθ		εν	ἀκ	αχμ		έν	ον·	αὐτ		ὰρ	ἐν	αὐτ		ῷ	
+1	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	1	0	0	1	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	3	0
+1	1	1	1	2	2	2	2	2	2	2	3	3	3	3	3	4	4	4	5	6	6	6	6
+
+Line 236
+στειλ		ει		ὸν		περ	ικ	αλλ		ὲς	ἐλ	ά		ιν	ον,	εὖ		ἐν	αρ	ηρ		ός·	
+1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	0	1	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	3	0	0	0	0	0	2	0
+1	1	1	1	1	1	2	2	2	2	2	3	3	3	3	3	4	4	5	5	5	5	5	5
+
+Line 237
+δῶκ		ε	δ’ἔπ	ειτ		α	σκέπ	αρν		ον	ἐ	ύξ		ο	ον·	ἦρχ		ε	δ’ὁδ	οῖ		ο	
+1	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	3	0	0	0	3	0	0	0
+1	1	1	2	2	2	2	3	3	3	3	4	4	4	4	4	5	5	5	6	6	6	6	6
+
+Line 238
+νήσ		ου	ἐπ’	ἐσχ		ατ	ι	ήν,		ὅθ	ι	δένδρ		ε	α	μακρ		ὰ	πεφ	ύκ		ει,	
+1	0	0	1	1	0	0	0	0	0	1	0	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	0	2	0	1	0	1	0	0	0	0	0	0	0	1	0	0	0
+1	1	1	2	3	3	3	3	3	3	4	4	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 239
+κλήθρ		η		τ’αἴγ		ειρ		ός		τ’,ἐλ	άτ	η		τ’ἦν		οὐρ		αν	ομ	ήκ		ης,	
+1	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	1	0	0	0	2	0	0	1	0	0	3	0	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	3	3	3	4	4	5	5	5	5	5	5	5	5
+
+Line 240
+αὖ		α	πάλ	αι,		περ	ίκ	ηλ		α,	τά	οἱ		πλώ		οι		εν	ἐλ	αφρ		ῶς.	
+1	0	0	1	0	0	1	0	0	0	0	1	1	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	0	1	0	0	0	1	0	0	0	2	0	0	1	0	0	0	0	0	0	0	3	0
+1	1	1	2	2	2	3	3	3	3	3	4	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 241
+αὐτ		ὰρ	ἐπ	εὶ		δὴ		δεῖξ’,		ὅθ	ι	δένδρ		ε	α	μακρ		ὰ	πεφ	ύκ		ει,	
+1	0	0	1	0	0	1	0	1	0	1	0	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	0	3	0	1	0	1	0	0	0	0	0	0	0	1	0	0	0
+1	1	1	2	2	2	3	3	4	4	5	5	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 242
+ἡ		μὲν	ἔβ	η		πρὸς		δῶμ		α	Καλ	υψ		ώ,		δῖ		α	θε	ά		ων,	
+1	0	1	1	0	0	1	0	1	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	0	3	0	0	0	0	0	2	0	3	0	0	0	1	0	0	0
+1	1	2	3	3	3	4	4	5	5	5	6	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 243
+αὐτ		ὰρ	ὁ	τάμν		ετ	ο	δοῦρ		α·	θο	ῶς		δέ	οἱ	ἤν		υτ	ο	ἔργ		ον.	
+1	0	0	1	1	0	0	0	1	0	0	1	0	0	1	1	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	1	0	0	0	3	0	0	0	3	0	2	0	1	0	0	0	1	0	0	0
+1	1	1	2	3	3	3	3	4	4	4	5	5	5	6	7	8	8	8	8	9	9	9	9
+
+Line 244
+εἴκ		οσ	ι	δ’ἔκβ		αλ	ε	πάντ		α,	πελ	έκκ		ησ		εν		δ’ἄρ	α	χαλκ		ῷ,	
+1	0	0	0	1	0	0	0	1	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0	3	0
+1	1	1	1	2	2	2	2	3	3	3	4	4	4	4	4	4	4	5	5	6	6	6	6
+
+Line 245
+ξέσσ		ε	δ’ἐπ	ιστ		αμ	έν	ως		καὶ	ἐπ	ὶ		στάθμ		ην		ἴθ		υν		ε.	
+1	0	0	1	0	0	0	0	0	0	1	1	0	0	1	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	4	4	4	5	5	5	5	6	6	6	6	6	6
+
+Line 246
+τόφρ		α	δ’ἔν	εικ		ε	τέρ	ετρ		α	Καλ	υψ		ώ,		δῖ		α	θε	ά		ων·	
+1	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	1	0	0	0	1	0	0	0	0	0	0	2	0	3	0	0	0	1	0	0	0
+1	1	1	2	2	2	2	3	3	3	3	4	4	4	4	4	5	5	5	6	6	6	6	6
+
+Line 247
+τέτρ		ην		εν		δ’ἄρ	α	πάντ		α	καὶ	ἥρμ		οσ	εν	ἀλλ		ήλ		οισ		ι,	
+1	0	0	0	0	0	1	0	1	0	0	1	1	0	0	0	1	0	0	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long
+1	0	0	0	0	0	1	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0
+1	1	1	1	1	1	2	2	3	3	3	4	5	5	5	5	6	6	6	6	6	6	6	6
+
+Line 248
+γόμφ		οισ		ιν		δ’ἄρ	α	τήν		γε	καὶ	ἁρμ		ον	ί	ῃσ		ιν	ἄρ	ασσ		εν.	
+1	0	0	0	0	0	1	0	1	0	1	1	1	0	0	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	2	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0
+1	1	1	1	1	1	2	2	3	3	4	5	6	6	6	6	6	6	6	7	7	7	7	7
+
+Line 249
+ὅσσ		ον		τίς		τ’ἔδ	αφ	ος		νη		ὸς		τορν		ώσ		ετ	αι	ἀν		ὴρ	
+1	0	0	0	1	0	1	0	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	2	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+1	1	1	1	2	2	3	3	3	3	4	4	4	4	5	5	5	5	5	5	6	6	6	6
+
+Line 250
+φορτ		ίδ	ος	εὐρ		εί		ης,		ἐ	ὺ	εἰδ		ὼς		τεκτ		οσ	υν	ά		ων,	
+1	0	0	0	1	0	0	0	0	0	1	0	1	0	0	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	3	4	4	4	4	5	5	5	5	5	5	5	5
+
+Line 251
+τόσσ		ον	ἔπ’	εὐρ		εῖ		αν		σχεδ	ί	ην		ποι		ήσ		ατ’	Ὀδ	υσσ		εύς.	
+1	0	0	1	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	2	0	0	3	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	2	0
+1	1	1	2	3	3	3	3	3	3	4	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 252
+ἴκρ		ι	α	δὲ		στήσ		ας,		ἀρ	αρ	ὼν		θαμ	έσ	ι		σταμ	ίν	εσσ		ι,	
+1	0	0	0	1	0	1	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0
+1	1	1	1	2	2	3	3	3	3	4	4	4	4	5	5	5	5	6	6	6	6	6	6
+
+Line 253
+ποί		ει·	ἀτ	ὰρ		μακρ		ῇσ		ιν	ἐπ	ηγκ		εν	ίδ	εσσ		ι	τελ	εύτ		α.	
+1	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	0	3	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	1	2	2	2	3	3	3	3	3	4	4	4	4	4	4	4	4	5	5	5	5	5
+
+Line 254
+ἐν		δ’ἱστ		ὸν		ποί		ει		καὶ	ἐπ	ίκρ		ι	ον	ἄρμ		εν	ον	αὐτ		ῷ·	
+1	0	1	0	0	0	1	0	0	0	1	1	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	3	0
+1	1	2	2	2	2	3	3	3	3	4	5	5	5	5	5	6	6	6	6	7	7	7	7
+
+Line 255
+πρὸς		δ’ἄρ	α	πηδ		άλ	ι	ον		ποι		ήσ		ατ	ο,	ὄφρ’		ἰθ		ύν		οι.	
+1	0	1	0	1	0	0	0	0	0	1	0	0	0	0	0	1	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0	2	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	3	3	3	4	4	4	4	4	4	5	5	6	6	6	6	6	6
+
+Line 256
+φράξ		ε	δέ	μιν		ῥίπ		εσσ		ι	δι	αμπ		ερ	ὲς	οἰσ		υ	ΐν	ῃσ		ι	
+1	0	0	1	1	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	2	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0
+1	1	1	2	3	3	4	4	4	4	4	5	5	5	5	5	6	6	6	6	6	6	6	6
+
+Line 257
+κύμ		ατ	ος	εἶλ		αρ	ἔμ	εν·		πολλ		ὴν		δ’ἐπ	εχ	εύ		ατ	ο	ὕλ		ην.	
+1	0	0	0	1	0	0	1	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	3	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	3	3	3	4	4	4	4	5	5	5	5	5	5	6	6	6	6
+
+Line 258
+τόφρ		α	δὲ	φάρ		ε’	ἔν	εικ		ε	Καλ	υψ		ώ,		δῖ		α	θε	ά		ων,	
+1	0	0	1	1	0	0	1	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	1	0	0	1	0	0	0	0	0	0	2	0	3	0	0	0	1	0	0	0
+1	1	1	2	3	3	3	4	4	4	4	5	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 259
+ἱστ		ί	α	ποι		ήσ		ασθ		αι·	ὁ	δ’εὖ		τεχν		ήσ		ατ	ο	καὶ		τά.	
+1	0	0	0	1	0	0	0	0	0	0	1	1	0	1	0	0	0	0	0	1	0	1	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	0	0	3	0	0	0	1	0	0	0	0	0	2	0
+1	1	1	1	2	2	2	2	2	2	2	3	4	4	5	5	5	5	5	5	6	6	7	7
+
+Line 260
+ἐν		δ’ὑπ	έρ	ας		τε	κάλ	ους		τε	πόδ	ας		τ’ἐν	έδ	ησ		εν	ἐν	αὐτ		ῇ,	
+1	0	1	0	0	0	1	1	0	0	1	1	0	0	1	0	0	0	0	1	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	0	0	3	0
+1	1	2	2	2	2	3	4	4	4	5	6	6	6	7	7	7	7	7	8	9	9	9	9
+
+Line 261
+μοχλ		οῖσ		ιν		δ’ἄρ	α	τήν		γε	κατ	είρ		υσ	εν	εἰς		ἅλ	α	δῖ		αν.	
+1	0	0	0	0	0	1	0	1	0	1	1	0	0	0	0	1	0	1	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	0	0	1	0	2	0	0	0	1	0	0	0	0	0	1	0	3	0	0	0
+1	1	1	1	1	1	2	2	3	3	4	5	5	5	5	5	6	6	7	7	8	8	8	8
+
+Line 262
+τέτρ		ατ	ον	ἦμ		αρ	ἔ	ην,		καὶ		τῷ		τετ	έλ	εστ		ο	ἅπ	αντ		α·	
+1	0	0	0	1	0	0	1	0	0	1	0	1	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	3	0	0	1	0	0	0	0	3	0	0	1	0	0	0	1	0	0	0	0
+1	1	1	1	2	2	2	3	3	3	4	4	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 263
+τῷ		δ’ἄρ	α	πέμπτ		ῳ		πέμπ’		ἀπ	ὸ	νήσ		ου		δῖ		α	Καλ	υψ		ώ,	
+1	0	1	0	1	0	0	0	1	0	1	0	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	1	0	1	0	0	0	2	0	0	0	1	0	0	0	3	0	0	0	0	0	2	0
+1	1	2	2	3	3	3	3	4	4	5	5	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 264
+εἵμ		ατ	ά	τ’ἀμφ		ι	έσ	ασ		α	θυ	ώδ		ε	α	καὶ		λούσ		ασ		α.	
+1	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	1	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long
+1	0	0	2	0	0	0	1	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0
+1	1	1	1	2	2	2	2	2	2	2	3	3	3	3	3	4	4	5	5	5	5	5	5
+
+Line 265
+ἐν		δέ	οἱ	ἀσκ		ὸν	ἔθ	ηκ		ε	θε	ὰ		μέλ	αν	ος		οἴν		οι		ο	
+1	0	1	1	1	0	0	1	0	0	0	1	0	0	1	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long
+0	0	2	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0
+1	1	2	3	4	4	4	5	5	5	5	6	6	6	7	7	7	7	8	8	8	8	8	8
+
+Line 266
+τὸν		ἕτ	ερ	ον,		ἕτ	ερ	ον		δ’ὕδ	ατ	ος		μέγ	αν,	ἐν		δὲ	καὶ	ηἴ		α	
+1	0	1	0	0	0	1	0	0	0	1	0	0	0	1	0	1	0	1	1	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	3	3	4	4	4	4	5	5	6	6	7	8	9	9	9	9
+
+Line 267
+κωρ		ύκ	ῳ·	ἐν		δέ	οἱ	ὄψ		α	τίθ	ει		μεν	ο	εικ		έ	α	πολλ		ά·	
+1	0	0	0	1	0	1	1	1	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	2	0	1	0	0	1	0	0	0	0	0	0	1	0	0	0	2	0
+1	1	1	1	2	2	3	4	5	5	5	6	6	6	7	7	7	7	7	7	8	8	8	8
+
+Line 268
+οὖρ		ον		δὲ		προ	έ	ηκ		εν	ἀπ	ήμ		ον	ά	τε		λι	αρ	όν		τε.	
+1	0	0	0	1	0	1	0	0	0	0	1	0	0	0	0	1	0	1	0	0	0	1	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	0	1	0	0	0	0	1	0	0	2	0	0	0	0	2	0	0	0
+1	1	1	1	2	2	3	3	3	3	3	4	4	4	4	4	5	5	6	6	6	6	7	7
+
+Line 269
+γηθ		όσ	υν	ος		δ’οὔρ		ῳ		πέτ	ασ’	ἱστ		ί	α	δῖ		ος	Ὀδ	υσσ		εύς.	
+1	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	1	0	0	0	1	0	3	0	0	0	0	0	2	0
+1	1	1	1	1	1	2	2	2	2	3	3	4	4	4	4	5	5	5	6	6	6	6	6
+
+Line 270
+αὐτ		ὰρ	ὁ	πηδ		αλ	ί	ῳ		ἰθ		ύν		ετ	ο	τεχν		η		έντ		ως	
+1	0	0	1	1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0
+1	1	1	2	3	3	3	3	3	3	4	4	4	4	4	4	5	5	5	5	5	5	5	5
+
+Line 271
+ἥμ		εν	ος,	οὐδ		έ	οἱ	ὕπν		ος	ἐπ	ὶ		βλεφ	άρ	οισ		ιν	ἔπ	ιπτ		ε	
+1	0	0	0	1	0	0	1	1	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	2	0	1	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0
+1	1	1	1	2	2	2	3	4	4	4	5	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 272
+Πλη		ι	άδ	ας		τ’ἐσ	ορ	ῶντ		ι	καὶ	ὀψ		ὲ	δύ	οντ		α	Βο	ώτ		ην	
+1	0	0	0	0	0	1	0	0	0	0	1	1	0	0	1	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	0	3	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	2	2	2	2	3	4	4	4	5	5	5	5	6	6	6	6	6
+
+Line 273
+Ἄρκτ		ον		θ’,ἣν		καὶ	ἄμ	αξ		αν	ἐπ	ίκλ		ησ		ιν		καλ	έ	ουσ		ιν,	
+1	0	0	0	1	0	1	1	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0
+1	1	1	1	2	2	3	4	4	4	4	5	5	5	5	5	5	5	6	6	6	6	6	6
+
+Line 274
+ἥ		τ’αὐτ		οῦ		στρέφ	ετ	αι		καί		τ’Ὠρ		ί		ων		α	δοκ	εύ		ει,	
+1	0	1	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+2	0	0	0	3	0	1	0	0	0	2	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	3	3	4	4	5	5	5	5	5	5	5	6	6	6	6	6
+
+Line 275
+οἴ		η		δ’ἄμμ		ορ	ός	ἐστ		ι	λο	ετρ		ῶν		Ὠκ		ε	αν	οῖ		ο·	
+1	0	0	0	1	0	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	1	0	0	2	0	0	0	0	0	0	3	0	0	0	0	0	3	0	0	0
+1	1	1	1	2	2	2	2	3	3	3	4	4	4	4	4	5	5	5	5	5	5	5	5
+
+Line 276
+τὴν		γὰρ		δή		μιν	ἄν	ωγ		ε	Καλ	υψ		ώ,		δῖ		α	θε	ά		ων,	
+1	0	1	0	1	0	1	1	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	2	0	0	1	0	0	0	0	0	0	2	0	3	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	5	5	5	5	6	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 277
+ποντ		οπ	ορ	ευ		έμ	εν	αι		ἐπ’	ἀρ	ιστ		ερ	ὰ	χειρ		ὸς	ἔχ	οντ		α.	
+1	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0
+1	1	1	1	1	1	1	1	1	1	2	3	3	3	3	3	4	4	4	5	5	5	5	5
+
+Line 278
+ἑπτ		ὰ	δὲ	καὶ		δέκ	α	μὲν		πλέ	εν	ἤμ		ατ	α	ποντ		οπ	ορ	εύ		ων,	
+1	0	0	1	1	0	1	0	1	0	1	0	1	0	0	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0	0	1	0	0	0
+1	1	1	2	3	3	4	4	5	5	6	6	7	7	7	7	8	8	8	8	8	8	8	8
+
+Line 279
+ὀκτ		ωκ		αιδ		εκ	άτ	ῃ		δ’ἐφ	άν	η		ὄρ	ε	α		σκι	ό	εντ		α	
+1	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	1	1	1	1	1	1	1	1	2	2	2	2	3	3	3	3	4	4	4	4	4	4
+
+Line 280
+γαί		ης		Φαι		ήκ		ων,		ὅθ	ι	τ’ἄγχ		ιστ		ον		πέλ	εν	αὐτ		ῷ·	
+1	0	0	0	1	0	0	0	0	0	1	0	1	0	0	0	0	0	1	0	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	1	0	0	0	3	0
+1	1	1	1	2	2	2	2	2	2	3	3	4	4	4	4	4	4	5	5	6	6	6	6
+
+Line 281
+εἴσ		ατ	ο	δ’ὡς		ὅτ	ε	ῥιν		ὸν	ἐν	ἠ		ερ	ο	ειδ		έ	ι	πόντ		ῳ.	
+1	0	0	0	1	0	1	0	1	0	0	1	1	0	0	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0
+1	1	1	1	2	2	3	3	4	4	4	5	6	6	6	6	6	6	6	6	7	7	7	7
+
+Line 282
+τὸν		δ’ἐξ		Αἰθ		ι	όπ	ων		ἀν	ι	ὼν		κρεί		ων		ἐν	οσ	ίχθ		ων	
+1	0	1	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	3	3	3	4	4	4	4	5	5	5	5	6	6	6	6	6	6
+
+Line 283
+τηλ		όθ	εν	ἐκ		Σολ	ύμ	ων		ὀρ	έ	ων		ἴδ	εν·	εἴσ		ατ	ο	γάρ		οἱ	
+1	0	0	0	1	0	1	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	1	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	1	0	0	0	1	0	0	1	0	1	0	0	0	2	0	0	0
+1	1	1	1	2	2	3	3	3	3	4	4	4	4	5	5	6	6	6	6	7	7	8	8
+
+Line 284
+πόντ		ον	ἐπ	ιπλ		εί		ων.		ὁ	δ’ἐχ	ώσ		ατ	ο	κηρ		όθ	ι	μᾶλλ		ον,	
+1	0	0	1	0	0	0	0	0	0	1	1	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	1	0	3	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	4	4	4	4	4	5	5	5	5	6	6	6	6
+
+Line 285
+κιν		ήσ		ας		δὲ	κάρ	η		προτ	ὶ	ὃν		μυθ		ήσ		ατ	ο	θυμ		όν·	
+1	0	0	0	0	0	1	1	0	0	1	0	1	0	1	0	0	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	2	0
+1	1	1	1	1	1	2	3	3	3	4	4	5	5	6	6	6	6	6	6	7	7	7	7
+
+Line 286
+ὢ		πόπ	οι,	ἦ		μάλ	α	δὴ		μετ	εβ	ούλ		ευσ		αν		θε	οὶ	ἄλλ		ως	
+1	0	1	0	1	0	1	0	1	0	1	0	0	0	0	0	0	0	1	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	3	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	5	5	6	6	6	6	6	6	6	6	7	7	8	8	8	8
+
+Line 287
+ἀμφ’		Ὀδ	υσ	ῆ		ι	ἐμ	εῖ		ο	μετ’	Αἰθ		ι	όπ	εσσ		ιν	ἐ	όντ		ος,	
+1	0	1	0	0	0	0	1	0	0	0	1	1	0	0	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	3	0	0	0	3	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	2	2	2	2	2	3	3	3	3	4	5	5	5	5	5	5	5	6	6	6	6	6
+
+Line 288
+καὶ		δὴ		Φαι		ήκ		ων		γαί		ης		σχεδ	όν,	ἔνθ		α	οἱ	αἶσ		α	
+1	0	1	0	1	0	0	0	0	0	1	0	0	0	1	0	1	0	0	1	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	2	1	0	0	0	3	0	0	0
+1	1	2	2	3	3	3	3	3	3	4	4	4	4	5	5	6	6	6	7	8	8	8	8
+
+Line 289
+ἐκφ		υγ	έ	ειν		μέγ	α	πεῖρ		αρ	ὀ	ιζ		ύ	ος,	ἥ		μιν	ἱκ	άν		ει.	
+1	0	0	0	0	0	1	0	1	0	0	1	0	0	0	0	1	0	1	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	1	0	3	0	0	0	0	0	1	0	2	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	2	3	3	3	4	4	4	4	4	5	5	6	7	7	7	7	7
+
+Line 290
+ἀλλ’		ἔτ	ι	μέν		μίν		φημ		ι	ἅδ	ην		ἐλ	ά	αν		κακ	ότ	ητ		ος.	
+1	0	1	0	1	0	1	0	1	0	0	1	0	0	1	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	2	0	2	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0
+1	1	2	2	3	3	4	4	5	5	5	6	6	6	7	7	7	7	8	8	8	8	8	8
+
+Line 291
+ὣς		εἰπ		ὼν		σύν	αγ	εν		νεφ	έλ	ας,		ἐτ	άρ	αξ		ε	δὲ	πόντ		ον	
+1	0	1	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	1	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	3	3	4	4	4	4	5	5	5	5	5	6	7	7	7	7
+
+Line 292
+χερσ		ὶ	τρί	αιν		αν	ἑλ	ών·		πάσ		ας		δ’ὀρ	όθ	υν		εν	ἀ	έλλ		ας	
+1	0	0	1	0	0	0	1	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	0	2	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	1	2	2	2	2	3	3	3	4	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 293
+παντ		οί		ων		ἀν	έμ	ων,		σὺν		δὲ		νεφ	έ	εσσ		ι	κάλ	υψ		ε	
+1	0	0	0	0	0	1	0	0	0	1	0	1	0	1	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0
+1	1	1	1	1	1	2	2	2	2	3	3	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 294
+γαῖ		αν	ὁμ	οῦ		καὶ		πόντ		ον·	ὀρ	ώρ		ει		δ’οὐρ		αν	όθ	εν		νύξ.	
+1	0	0	1	0	0	1	0	1	0	0	1	0	0	0	0	1	0	0	0	0	0	1	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	0	0	3	0	0	0	1	0	0	0	1	0	0	0	0	0	0	1	0	0	2	0
+1	1	1	2	2	2	3	3	4	4	4	5	5	5	5	5	6	6	6	6	6	6	7	7
+
+Line 295
+σὺν		δ’Εὖρ		ός		τε	Νότ	ος		τ’ἔπ	εσ	ον		Ζέφ	υρ	ός		τε	δυσ	α		ὴς	
+1	0	1	0	0	0	1	1	0	0	1	0	0	0	1	0	0	0	1	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	2	0	0	1	0	0	1	0	0	0	1	0	2	0	0	0	0	0	0	0
+1	1	2	2	2	2	3	4	4	4	5	5	5	5	6	6	6	6	7	8	8	8	8	8
+
+Line 296
+καὶ		Βορ	έ	ης		αἰθρ		ηγ		εν	έτ	ης,		μέγ	α	κῦμ		α	κυλ	ίνδ		ων.	
+1	0	1	0	0	0	1	0	0	0	0	0	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	0	0	0	0	1	0	0	1	0	3	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	3	3	3	3	3	3	4	4	5	5	5	6	6	6	6	6
+
+Line 297
+καὶ		τότ’	Ὀδ	υσσ		ῆ		ος		λύτ	ο	γούν		ατ	α	καὶ		φίλ	ον	ἦτ		ορ,	
+1	0	1	1	0	0	0	0	0	0	1	0	1	0	0	0	1	0	1	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	3	0	0	0	1	0	1	0	0	0	0	0	1	0	3	0	0	0
+1	1	2	3	3	3	3	3	3	3	4	4	5	5	5	5	6	6	7	7	8	8	8	8
+
+Line 298
+ὀχθ		ήσ		ας		δ’ἄρ	α	εἶπ		ε	πρὸς	ὃν		μεγ	αλ	ήτ		ορ	α	θυμ		όν·	
+1	0	0	0	0	0	1	0	1	0	0	1	1	0	1	0	0	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	3	0	0	0	0	0	0	0	1	0	0	0	0	0	2	0
+1	1	1	1	1	1	2	2	3	3	3	4	5	5	6	6	6	6	6	6	7	7	7	7
+
+Line 299
+ὤ		μοι	ἐγ	ὼ		δειλ		ός,		τί	νύ	μοι		μήκ		ιστ		α	γέν	ητ		αι;	
+1	0	1	1	0	0	1	0	0	0	1	1	1	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+2	0	0	0	0	0	0	0	2	0	2	2	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	2	3	3	3	4	4	4	4	5	6	7	7	8	8	8	8	8	9	9	9	9	9
+
+Line 300
+δείδ		ω		μὴ		δὴ		πάντ		α	θε	ὰ		νημ		ερτ		έ	α	εἶπ		εν,	
+1	0	0	0	1	0	1	0	1	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	3	0	0	0
+1	1	1	1	2	2	3	3	4	4	4	5	5	5	6	6	6	6	6	6	7	7	7	7
+
+Line 301
+ἥ		μ’ἔφ	ατ’	ἐν		πόντ		ῳ,		πρὶν		πατρ		ίδ	α	γαῖ		αν	ἱκ	έσθ		αι,	
+1	0	1	0	1	0	1	0	0	0	1	0	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	1	0	0	0	1	0	0	0	0	0	0	0	1	0	3	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	4	4	5	5	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 302
+ἄλγ		ε’	ἀν	απλ		ήσ		ειν·		τάδ	ὲ	δὴ		νῦν		πάντ		α	τελ	εῖτ		αι.	
+1	0	0	1	0	0	0	0	0	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	1	0	0	0	3	0	1	0	0	0	3	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	4	4	5	5	6	6	6	7	7	7	7	7
+
+Line 303
+οἵ		οισ		ιν		νεφ	έ	εσσ		ι	περ	ιστ		έφ	ει	οὐρ		αν	ὸν	εὐρ		ὺν	
+1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0
+1	1	1	1	1	1	2	2	2	2	2	3	3	3	3	3	4	4	4	4	5	5	5	5
+
+Line 304
+Ζεύς,		ἐτ	άρ	αξ		ε	δὲ	πόντ		ον,	ἐπ	ισπ		έρχ		ουσ		ι	δ’ἄ	ελλ		αι	
+1	0	1	0	0	0	0	1	1	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+2	0	0	1	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	2	2	2	2	2	3	4	4	4	5	5	5	5	5	5	5	5	6	6	6	6	6
+
+Line 305
+παντ		οί		ων		ἀν	έμ	ων.		νῦν		μοι		σῶς		αἰπ		ὺς	ὄλ	εθρ		ος.	
+1	0	0	0	0	0	1	0	0	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	1	0	0	3	0	0	0	3	0	0	0	0	1	0	0	0	0
+1	1	1	1	1	1	2	2	2	2	3	3	4	4	5	5	6	6	6	7	7	7	7	7
+
+Line 306
+τρὶς		μάκ	αρ	ες		Δαν	α	οὶ		καὶ		τετρ		άκ	ις,	οἳ		τότ’	ὄλ	οντ		ο	
+1	0	1	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	1	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	2	1	0	0	0	0
+1	1	2	2	2	2	3	3	3	3	4	4	5	5	5	5	6	6	7	8	8	8	8	8
+
+Line 307
+Τροί		ῃ	ἐν	εὐρ		εί		ῃ		χάρ	ιν	Ἀτρ		ε	ΐδ	ῃσ		ι	φέρ	οντ		ες.	
+1	0	0	1	1	0	0	0	0	0	1	0	1	0	0	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0	0
+1	1	1	2	3	3	3	3	3	3	4	4	5	5	5	5	5	5	5	6	6	6	6	6
+
+Line 308
+ὡς		δὴ	ἔγ	ωγ’		ὄφ	ελ	ον		θαν	έ	ειν		καὶ		πότμ		ον	ἐπ	ισπ		εῖν	
+1	0	1	1	0	0	1	0	0	0	1	0	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	3	0
+1	1	2	3	3	3	4	4	4	4	5	5	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 309
+ἤμ		ατ	ι	τῷ		ὅτ	ε	μοι		πλεῖστ		οι		χαλκ		ήρ		ε	α	δοῦρ		α	
+1	0	0	0	1	0	1	0	1	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	3	0	1	0	0	0	3	0	0	0	0	0	1	0	0	0	3	0	0	0
+1	1	1	1	2	2	3	3	4	4	5	5	5	5	6	6	6	6	6	6	7	7	7	7
+
+Line 310
+Τρῶ		ες	ἐπ	έρρ		ιψ		αν		περ	ὶ	Πηλ		ε	ΐ	ων		ι	θαν	όντ		ι.	
+1	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	1	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	4	4	4	4	4	4	4	5	5	5	5	5
+
+Line 311
+τῶ		κ’ἔλ	αχ	ον		κτερ	έ	ων,		καί		μευ		κλέ	ος	ἦγ		ον	Ἀχ	αι		οί·	
+1	0	1	0	0	0	1	0	0	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	1	0	0	0	0	1	0	0	2	0	0	0	1	0	3	0	0	0	0	0	2	0
+1	1	2	2	2	2	3	3	3	3	4	4	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 312
+νῦν		δέ	με	λευγ		αλ	έ	ῳ		θαν	άτ	ῳ		εἵμ		αρτ		ο	ἁλ	ῶν		αι.	
+1	0	1	1	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	2	0	0	0	0	1	0	0	0	1	0	0	1	0	0	0	0	0	3	0	0	0
+1	1	2	3	4	4	4	4	4	4	5	5	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 313
+ὣς		ἄρ	α	μιν		εἰπ		όντ’		ἔλ	ασ	εν		μέγ	α	κῦμ		α	κατ’	ἄκρ		ης	
+1	0	1	0	1	0	1	0	0	0	1	0	0	0	1	0	1	0	0	1	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	2	0	1	0	0	0	1	0	3	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	4	4	5	5	5	5	6	6	7	7	7	8	9	9	9	9
+
+Line 314
+δειν		ὸν	ἐπ	εσσ		ύμ	εν	ον,		περ	ὶ	δὲ		σχεδ	ί	ην		ἐλ	έλ	ιξ		ε.	
+1	0	0	1	0	0	0	0	0	0	1	0	1	0	1	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	4	4	5	5	5	5	6	6	6	6	6	6
+
+Line 315
+τῆλ		ε	δ’ἀπ	ὸ		σχεδ	ί	ης		αὐτ		ὸς		πέσ	ε,	πηδ		άλ	ι	ον		δὲ	
+1	0	0	1	0	0	1	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	1	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0
+1	1	1	2	2	2	3	3	3	3	4	4	4	4	5	5	6	6	6	6	6	6	7	7
+
+Line 316
+ἐκ		χειρ		ῶν		προ	έ	ηκ		ε·	μέσ	ον		δέ	οἱ	ἱστ		ὸν	ἔ	αξ		ε	
+1	0	1	0	0	0	1	0	0	0	0	1	0	0	1	1	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	3	0	0	1	0	0	0	1	0	0	2	0	0	0	0	1	0	0	0	0
+1	1	2	2	2	2	3	3	3	3	3	4	4	4	5	6	7	7	7	8	8	8	8	8
+
+Line 317
+δειν		ὴ		μισγ		ομ	έν	ων		ἀν	έμ	ων		ἐλθ		οῦσ		α	θύ	ελλ		α,	
+1	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	3	0	0	1	0	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	3	3	3	4	4	4	4	4	5	5	5	5	5
+
+Line 318
+τηλ		οῦ		δὲ		σπεῖρ		ον		καὶ	ἐπ	ίκρ		ι	ον	ἔμπ		εσ	ε	πόντ		ῳ.	
+1	0	0	0	1	0	1	0	0	0	1	1	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	0	0	3	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	3	3	4	5	5	5	5	5	6	6	6	6	7	7	7	7
+
+Line 319
+τὸν		δ’ἄρ’	ὑπ	όβρ		υχ	α	θῆκ		ε	πολ	ὺν		χρόν	ον,	οὐδ		ὲ	δυν	άσθ		η	
+1	0	1	1	0	0	0	0	1	0	0	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	1	0	0	0	3	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	2	3	3	3	3	3	4	4	4	5	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 320
+αἶψ		α	μάλ’	ἀνσχ		εθ	έ	ειν		μεγ	άλ	ου		ὑπ	ὸ	κύμ		ατ	ος	ὁρμ		ῆς·	
+1	0	0	1	1	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	2	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0	0	3	0
+1	1	1	2	3	3	3	3	3	3	4	4	4	4	5	5	6	6	6	6	7	7	7	7
+
+Line 321
+εἵμ		ατ	α	γάρ		ἐβ	άρ	υν		ε,	τά	οἱ		πόρ	ε	δῖ		α	Καλ	υψ		ώ.	
+1	0	0	0	1	0	1	0	0	0	0	1	1	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	2	0	0	1	0	0	0	2	0	0	1	0	3	0	0	0	0	0	2	0
+1	1	1	1	2	2	3	3	3	3	3	4	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 322
+ὀψ		ὲ	δὲ	δή		ῥ’ἀν	έδ	υ,		στόμ	ατ	ος		δ’ἐξ		έπτ		υσ	εν	ἅλμ		ην	
+1	0	0	1	1	0	1	0	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	2	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	2	3	3	4	4	4	4	5	5	5	5	6	6	6	6	6	6	7	7	7	7
+
+Line 323
+πικρ		ήν,		ἥ		οἱ		πολλ		ὴ	ἀπ	ὸ		κρατ		ὸς		κελ	άρ	υζ		εν.	
+1	0	0	0	1	0	1	0	1	0	0	1	0	0	1	0	0	0	1	0	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	2	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0
+1	1	1	1	2	2	3	3	4	4	4	5	5	5	6	6	6	6	7	7	7	7	7	7
+
+Line 324
+ἀλλ’		οὐδ’		ὣς		σχεδ	ί	ης		ἐπ	ελ	ήθ		ετ	ο,	τειρ		όμ	εν	ός		περ,	
+1	0	1	0	1	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	1	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	1	0	2	0	0	0
+1	1	2	2	3	3	4	4	4	4	5	5	5	5	5	5	6	6	6	6	6	6	7	7
+
+Line 325
+ἀλλ		ὰ	μεθ	ορμ		ηθ		εὶς		ἐν	ὶ	κύμ		ασ	ιν	ἐλλ		άβ	ετ’	αὐτ		ῆς,	
+1	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	3	0
+1	1	1	2	2	2	2	2	2	2	3	3	4	4	4	4	5	5	5	5	6	6	6	6
+
+Line 326
+ἐν		μέσσ		ῃ		δ’ἐκ	αθ	ῖζ		ε	τέλ	ος		θαν	άτ	ου		ἀλ	ε	είν		ων.	
+1	0	1	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	1	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	3	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	3	3	3	4	4	4	5	5	5	5	6	6	6	6	6	6
+
+Line 327
+τὴν		δ’ἐφ	όρ	ει		μέγ	α	κῦμ		α	κατ	ὰ		ῥό	ον	ἔνθ		α	καὶ	ἔνθ		α.	
+1	0	1	0	0	0	1	0	1	0	0	1	0	0	1	0	1	0	0	1	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	1	0	3	0	0	0	0	0	1	0	1	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	4	4	4	5	5	5	6	6	7	7	7	8	9	9	9	9
+
+Line 328
+ὡς		δ’ὅτ’	ὀπ	ωρ		ιν		ὸς		Βορ	έ	ης		φορ	έ	ῃσ		ιν	ἀκ	άνθ		ας	
+1	0	1	1	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	2	3	3	3	3	3	3	3	4	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 329
+ἂμ		πεδ	ί	ον,		πυκ	ιν	αὶ		δὲ	πρὸς	ἀλλ		ήλ		ῃσ		ιν	ἔχ	οντ		αι,	
+1	0	1	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	2	2	2	2	3	3	3	3	4	5	6	6	6	6	6	6	6	7	7	7	7	7
+
+Line 330
+ὣς		τὴν		ἂμ		πέλ	αγ	ος		ἄν	εμ	οι		φέρ	ον	ἔνθ		α	καὶ	ἔνθ		α·	
+1	0	1	0	1	0	1	0	0	0	1	0	0	0	1	0	1	0	0	1	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	4	4	5	5	5	5	6	6	7	7	7	8	9	9	9	9
+
+Line 331
+ἄλλ		οτ	ε	μέν		τε	Νότ	ος		Βορ	έ	ῃ		προβ	άλ	εσκ		ε	φέρ	εσθ		αι,	
+1	0	0	0	1	0	1	1	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	2	0	0	1	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0
+1	1	1	1	2	2	3	4	4	4	5	5	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 332
+ἄλλ		οτ	ε	δ’αὖτ’		Εὖρ		ος		Ζεφ	ύρ	ῳ		εἴξ		ασκ		ε	δι	ώκ		ειν.	
+1	0	0	0	1	0	1	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	3	0	3	0	0	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	3	3	4	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 333
+τὸν		δὲ	ἴδ	εν		Κάδμ		ου		θυγ	άτ	ηρ,		καλλ		ίσφ		υρ	ος	Ἰν		ώ,	
+1	0	1	1	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	2	0
+1	1	2	3	3	3	4	4	4	4	5	5	5	5	6	6	6	6	6	6	7	7	7	7
+
+Line 334
+Λευκ		οθ	έ	η,		ἣ		πρὶν		μὲν	ἔ	ην		βροτ	ὸς	αὐδ		ή		εσσ		α,	
+1	0	0	0	0	0	1	0	1	0	1	1	0	0	1	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long
+0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+1	1	1	1	1	1	2	2	3	3	4	5	5	5	6	6	7	7	7	7	7	7	7	7
+
+Line 335
+νῦν		δ’ἁλ	ὸς	ἐν		πελ	άγ	εσσ		ι	θε	ῶν		ἒξ		ἔμμ		ορ	ε	τιμ		ῆς.	
+1	0	1	0	1	0	1	0	0	0	0	1	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	0	1	0	0	0	0	3	0	0	0	1	0	0	0	0	0	3	0
+1	1	2	2	3	3	4	4	4	4	4	5	5	5	6	6	7	7	7	7	8	8	8	8
+
+Line 336
+ἥ		ῥ’Ὀδ	υσ	ῆ’		ἐλ	έ	ησ		εν	ἀλ	ώμ		εν	ον,	ἄλγ		ε’	ἔχ	οντ		α,	
+1	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	0	0	3	0	0	1	0	0	0	0	1	0	0	0	1	0	0	1	0	0	0	0
+1	1	2	2	2	2	3	3	3	3	3	4	4	4	4	4	5	5	5	6	6	6	6	6
+
+Line 337
+αἰθ		υί		ῃ		δ’ἐ	ικ	υῖ		α	ποτ	ῇ		ἀν	εδ	ύσ		ατ	ο	λίμν		ης,	
+1	0	0	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	3	0	0	0	3	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	2	2	2	2	3	3	3	4	4	4	4	4	4	5	5	5	5
+
+Line 338
+ἷζ		ε	δ’ἐπ	ὶ		σχεδ	ί	ης		καί		μιν		πρὸς		μῦθ		ον	ἔ	ειπ		ε·	
+1	0	0	1	0	0	1	0	0	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	0	1	0	0	2	0	0	0	0	0	3	0	0	1	0	0	0	0
+1	1	1	2	2	2	3	3	3	3	4	4	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 339
+κάμμ		ορ	ε,	τίπτ		ε	τοι	ὧδ		ε	Ποσ	ειδ		ά		ων		ἐν	οσ	ίχθ		ων	
+1	0	0	0	1	0	0	1	1	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	1	0	0	0	3	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	3	4	4	4	5	5	5	5	5	5	5	6	6	6	6	6	6
+
+Line 340
+ὠδ		ύσ	ατ’	ἐκπ		άγλ		ως,		ὅτ	ι	τοι		κακ	ὰ	πολλ		ὰ	φυτ	εύ		ει;	
+1	0	0	0	1	0	0	0	0	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	3	4	4	5	5	6	6	6	7	7	7	7	7
+
+Line 341
+οὐ		μὲν		δή		σε	κατ	αφθ		ίσ		ει		μάλ	α	περ		μεν	ε	αίν		ων.	
+1	0	1	0	1	0	1	1	0	0	0	0	0	0	1	0	1	0	1	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	2	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	5	5	5	5	5	5	5	6	6	7	7	8	8	8	8	8	8
+
+Line 342
+ἀλλ		ὰ	μάλ’	ὧδ’		ἔρξ		αι,		δοκ	έ	εις		δέ	μοι	οὐκ		ἀπ	ιν	ύσσ		ειν·	
+1	0	0	1	1	0	1	0	0	0	1	0	0	0	1	1	1	0	1	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	2	3	0	1	0	0	0	0	1	0	0	2	0	0	0	0	0	1	0	0	0
+1	1	1	2	3	3	4	4	4	4	5	5	5	5	6	7	8	8	9	9	9	9	9	9
+
+Line 343
+εἵμ		ατ	α	ταῦτ’		ἀπ	οδ	ὺς		σχεδ	ί	ην		ἀν	έμ	οισ		ι	φέρ	εσθ		αι	
+1	0	0	0	1	0	1	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	3	0	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0
+1	1	1	1	2	2	3	3	3	3	4	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 344
+κάλλ		ιπ’,	ἀτ	ὰρ		χείρ		εσσ		ι	νέ	ων		ἐπ	ιμ	αί		ε	ο	νόστ		ου	
+1	0	0	1	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	2	2	2	3	3	3	3	3	4	4	4	5	5	5	5	5	5	6	6	6	6
+
+Line 345
+γαί		ης		Φαι		ήκ		ων,		ὅθ	ι	τοι		μοῖρ’		ἐστ		ὶν	ἀλ	ύξ		αι.	
+1	0	0	0	1	0	0	0	0	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	1	0	0	0	3	0	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	3	4	4	5	5	6	6	6	7	7	7	7	7
+
+Line 346
+τῆ		δέ,	τόδ	ε		κρήδ		εμν		ον	ὑπ	ὸ		στέρν		οι		ο	ταν	ύσσ		αι	
+1	0	1	1	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	2	1	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	2	3	3	3	4	4	4	4	4	5	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 347
+ἄμβρ		οτ	ον·	οὐδ		έ	τί	τοι		παθ	έ	ειν		δέ	ος	οὐδ’		ἀπ	ολ	έσθ		αι.	
+1	0	0	0	1	0	0	1	1	0	1	0	0	0	1	0	1	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	2	2	0	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	3	4	4	5	5	5	5	6	6	7	7	8	8	8	8	8	8
+
+Line 348
+αὐτ		ὰρ	ἐπ	ὴν		χείρ		εσσ		ιν	ἐφ	άψ		ε	αι	ἠπ		είρ		οι		ο,	
+1	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0
+1	1	1	2	2	2	3	3	3	3	3	4	4	4	4	4	5	5	5	5	5	5	5	5
+
+Line 349
+ἂψ		ἀπ	ολ	υσ		άμ	εν	ος		βαλ	έ	ειν		εἰς		οἴν		οπ	α	πόντ		ον	
+1	0	1	0	0	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	2	2	2	2	2	2	2	2	3	3	3	3	4	4	5	5	5	5	6	6	6	6
+
+Line 350
+πολλ		ὸν	ἀπ’	ἠπ		είρ		ου,		αὐτ		ὸς		δ’ἀπ	ον	όσφ		ι	τραπ	έσθ		αι.	
+1	0	0	1	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	2	3	3	3	3	3	3	4	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 351
+ὣς		ἄρ	α	φων		ήσ		ασ		α	θε	ὰ		κρήδ		εμν		ον	ἔδ	ωκ		εν,	
+1	0	1	0	1	0	0	0	0	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	2	2	3	3	3	3	3	3	3	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 352
+αὐτ		ὴ		δ’ἂψ		ἐς		πόντ		ον	ἐδ	ύσ		ατ	ο	κυμ		αίν		οντ		α	
+1	0	0	0	1	0	1	0	1	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long
+0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0
+1	1	1	1	2	2	3	3	4	4	4	5	5	5	5	5	6	6	6	6	6	6	6	6
+
+Line 353
+αἰθ		υί		ῃ		ἐ	ικ	υῖ		α·	μέλ	αν		δέ	ἑ	κῦμ’		ἐκ	άλ	υψ		εν.	
+1	0	0	0	0	0	1	0	0	0	0	1	0	0	1	1	1	0	1	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	3	0	0	1	0	0	2	0	3	0	0	1	0	0	0	0
+1	1	1	1	1	1	2	2	2	2	2	3	3	3	4	5	6	6	7	7	7	7	7	7
+
+Line 354
+αὐτ		ὰρ	ὁ	μερμ		ήρ		ιξ		ε	πολ	ύτλ		ας		δῖ		ος	Ὀδ	υσσ		εύς,	
+1	0	0	1	1	0	0	0	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	3	0	0	0	0	0	2	0
+1	1	1	2	3	3	3	3	3	3	3	4	4	4	4	4	5	5	5	6	6	6	6	6
+
+Line 355
+ὀχθ		ήσ		ας		δ’ἄρ	α	εἶπ		ε	πρὸς	ὃν		μεγ	αλ	ήτ		ορ	α	θυμ		όν·	
+1	0	0	0	0	0	1	0	1	0	0	1	1	0	1	0	0	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	3	0	0	0	0	0	0	0	1	0	0	0	0	0	2	0
+1	1	1	1	1	1	2	2	3	3	3	4	5	5	6	6	6	6	6	6	7	7	7	7
+
+Line 356
+ὤ		μοι	ἐγ	ώ,		μή		τίς		μοι	ὑφ	αίν		ῃσ		ιν		δόλ	ον	αὖτ		ε	
+1	0	1	1	0	0	1	0	1	0	1	1	0	0	0	0	0	0	1	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+2	0	0	0	2	0	2	0	2	0	0	0	1	0	0	0	0	0	1	0	3	0	0	0
+1	1	2	3	3	3	4	4	5	5	6	7	7	7	7	7	7	7	8	8	9	9	9	9
+
+Line 357
+ἀθ		αν	άτ	ων,		ὅτ	ε	με		σχεδ	ί	ης		ἀπ	οβ	ῆν		αι	ἀν	ώγ		ει.	
+1	0	0	0	0	0	1	0	1	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0	3	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	2	3	3	4	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 358
+ἀλλ		ὰ	μάλ’	οὔ		πω		πείσ		ομ’,	ἐπ	εὶ		ἑκ	ὰς	ὀφθ		αλμ		οῖσ		ι	
+1	0	0	1	1	0	1	0	1	0	0	1	0	0	1	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long
+0	0	0	2	2	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0
+1	1	1	2	3	3	4	4	5	5	5	6	6	6	7	7	8	8	8	8	8	8	8	8
+
+Line 359
+γαῖ		αν	ἐγ	ὼν		ἰδ	όμ	ην,		ὅθ	ι	μοι		φάτ	ο	φύξ		ιμ	ον	εἶν		αι.	
+1	0	0	1	0	0	1	0	0	0	1	0	1	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0	3	0	0	0
+1	1	1	2	2	2	3	3	3	3	4	4	5	5	6	6	7	7	7	7	8	8	8	8
+
+Line 360
+ἀλλ		ὰ	μάλ’	ὧδ’		ἔρξ		ω,		δοκ	έ	ει		δέ	μοι	εἶν		αι	ἄρ	ιστ		ον·	
+1	0	0	1	1	0	1	0	0	0	1	0	0	0	1	1	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	2	3	0	1	0	0	0	0	1	0	0	2	0	3	0	0	1	0	0	0	0
+1	1	1	2	3	3	4	4	4	4	5	5	5	5	6	7	8	8	8	9	9	9	9	9
+
+Line 361
+ὄφρ’		ἂν		μέν		κεν		δούρ		ατ’	ἐν	ἁρμ		ον	ί	ῃσ		ιν	ἀρ	ήρ		ῃ,	
+1	0	1	0	1	0	1	0	1	0	0	1	1	0	0	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	0	0	2	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	5	5	5	6	7	7	7	7	7	7	7	8	8	8	8	8
+
+Line 362
+τόφρ’		αὐτ		οῦ		μεν	έ	ω		καὶ		τλήσ		ομ	αι	ἄλγ		ε	α	πάσχ		ων·	
+1	0	1	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	0	0	3	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	3	3	4	4	5	5	5	5	6	6	6	6	7	7	7	7
+
+Line 363
+αὐτ		ὰρ	ἐπ	ὴν		δή		μοι		σχεδ	ί	ην		δι	ὰ	κῦμ		α	τιν	άξ		ῃ,	
+1	0	0	1	0	0	1	0	1	0	1	0	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	2	0	0	0	0	1	0	0	0	0	3	0	0	0	1	0	0	0
+1	1	1	2	2	2	3	3	4	4	5	5	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 364
+νήξ		ομ’,	ἐπ	εὶ		οὐ		μέν		τι	πάρ	α		προν	ο	ῆσ		αι	ἄμ	ειν		ον.	
+1	0	0	1	0	0	1	0	1	0	1	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	0	2	0	0	1	0	0	0	0	3	0	0	1	0	0	0	0
+1	1	1	2	2	2	3	3	4	4	5	6	6	6	7	7	7	7	7	8	8	8	8	8
+
+Line 365
+ἦ		ος	ὁ	ταῦθ’		ὥρμ		αιν		ε	κατ	ὰ		φρέν	α	καὶ		κατ	ὰ	θυμ		όν,	
+1	0	0	1	1	0	1	0	0	0	0	1	0	0	1	0	1	0	1	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	3	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	2	0
+1	1	1	2	3	3	4	4	4	4	4	5	5	5	6	6	7	7	8	8	9	9	9	9
+
+Line 366
+ὦρσ		ε	δ’ἐπ	ὶ		μέγ	α	κῦμ		α	Ποσ	ειδ		ά		ων		ἐν	οσ	ίχθ		ων,	
+1	0	0	1	0	0	1	0	1	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	1	0	3	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	1	2	2	2	3	3	4	4	4	5	5	5	5	5	5	5	6	6	6	6	6	6
+
+Line 367
+δειν		όν		τ’ἀργ		αλ	έ	ον		τε,	κατ	ηρ		εφ	ές,	ἤλ		ασ	ε	δ’αὐτ		όν.	
+1	0	0	0	1	0	0	0	0	0	1	1	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	0	1	0	0	0	0	0	0	0	2	1	0	0	0	0	0	2	0
+1	1	1	1	2	2	2	2	2	2	3	4	4	4	4	4	5	5	5	5	6	6	6	6
+
+Line 368
+ὡς		δ’ἄν	εμ	ος		ζα		ὴς		ηἴ		ων		θημ		ῶν		α	τιν	άξ		ῃ	
+1	0	1	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	3	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	3	3	4	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 369
+καρφ		αλ	έ	ων·		τὰ	μὲν	ἄρ		τε	δι	εσκ		έδ	ασ’	ἄλλ		υδ	ις	ἄλλ		ῃ·	
+1	0	0	0	0	0	1	1	1	0	1	1	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	0	2	0	0	0	0	0	1	0	1	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	3	4	4	5	6	6	6	6	6	7	7	7	7	8	8	8	8
+
+Line 370
+ὣς		τῆς		δούρ		ατ	α	μακρ		ὰ	δι	εσκ		έδ	ασ’.	αὐτ		ὰρ	Ὀδ	υσσ		εὺς	
+1	0	1	0	1	0	0	0	1	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0
+1	1	2	2	3	3	3	3	4	4	4	5	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 371
+ἀμφ’		ἑν	ὶ	δούρ		ατ	ι	βαῖν		ε,	κέλ	ηθ’		ὡς		ἵππ		ον	ἐλ	αύν		ων,	
+1	0	1	0	1	0	0	0	1	0	0	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	1	0	0	0	3	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	3	4	4	4	5	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 372
+εἵμ		ατ	α	δ’ἐξ		απ	έδ	υν		ε,	τά	οἱ		πόρ	ε	δῖ		α	Καλ	υψ		ώ.	
+1	0	0	0	1	0	0	0	0	0	0	1	1	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	2	0	0	1	0	3	0	0	0	0	0	2	0
+1	1	1	1	2	2	2	2	2	2	2	3	4	4	5	5	6	6	6	7	7	7	7	7
+
+Line 373
+αὐτ		ίκ	α	δὲ		κρήδ		εμν		ον	ὑπ	ὸ		στέρν		οι		ο	τάν	υσσ		εν,	
+1	0	0	0	1	0	1	0	0	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	1	1	2	2	3	3	3	3	3	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 374
+αὐτ		ὸς		δὲ		πρην		ὴς		ἁλ	ὶ	κάππ		εσ	ε,	χεῖρ		ε	πετ	άσσ		ας,	
+1	0	0	0	1	0	1	0	0	0	1	0	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	3	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	3	3	4	4	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 375
+νηχ		έμ	εν	αι		μεμ	α	ώς.		ἴδ	ε	δὲ		κρεί		ων		ἐν	οσ	ίχθ		ων,	
+1	0	0	0	0	0	1	0	0	0	1	0	1	0	1	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	2	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	2	2	2	3	3	4	4	5	5	5	5	6	6	6	6	6	6
+
+Line 376
+κιν		ήσ		ας		δὲ	κάρ	η		προτ	ὶ	ὃν		μυθ		ήσ		ατ	ο	θυμ		όν·	
+1	0	0	0	0	0	1	1	0	0	1	0	1	0	1	0	0	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	2	0
+1	1	1	1	1	1	2	3	3	3	4	4	5	5	6	6	6	6	6	6	7	7	7	7
+
+Line 377
+οὕτ		ω		νῦν		κακ	ὰ	πολλ		ὰ	παθ	ὼν		ἀλ	ό	ω		κατ	ὰ	πόντ		ον,	
+1	0	0	0	1	0	1	0	1	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	3	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	4	4	4	5	5	5	6	6	6	6	7	7	8	8	8	8
+
+Line 378
+εἰς		ὅ	κεν	ἀνθρ		ώπ		οισ		ι	δι	οτρ		εφ	έ	εσσ		ι	μιγ	ή		ῃς.	
+1	0	1	1	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	2	3	4	4	4	4	4	4	4	5	5	5	5	5	5	5	5	6	6	6	6	6
+
+Line 379
+ἀλλ’		οὐδ’		ὥς		σε	ἔ	ολπ		α	ὀν	όσσ		εσθ		αι		κακ	ότ	ητ		ος.	
+1	0	1	0	1	0	1	1	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	2	0	0	1	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0
+1	1	2	2	3	3	4	5	5	5	5	6	6	6	6	6	6	6	7	7	7	7	7	7
+
+Line 380
+ὣς		ἄρ	α	φων		ήσ		ας		ἵμ	ασ	εν		καλλ		ίτρ		ιχ	ας	ἵππ		ους,	
+1	0	1	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	3	3	3	4	4	4	4	5	5	5	5	5	5	6	6	6	6
+
+Line 381
+ἵκ		ετ	ο	δ’εἰς		Αἰγ		άς,		ὅθ	ι	οἱ		κλυτ	ὰ	δώμ		ατ’	ἔ	ασ		ιν.	
+1	0	0	0	1	0	1	0	0	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	0	2	0	1	0	0	0	0	0	1	0	0	1	0	0	0	0
+1	1	1	1	2	2	3	3	3	3	4	4	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 382
+αὐτ		ὰρ	Ἀθ	ην		αί		η		κούρ		η		Δι	ὸς	ἄλλ’		ἐν	ό	ησ		εν.	
+1	0	0	1	0	0	0	0	0	0	1	0	0	0	1	0	1	0	1	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	2	0	0	1	0	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	3	3	4	4	5	5	6	6	6	6	6	6
+
+Line 383
+ἤτ		οι		τῶν		ἄλλ		ων		ἀν	έμ	ων		κατ	έδ	ησ		ε	κελ	εύθ		ους,	
+1	0	0	0	1	0	1	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	3	0	1	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	3	3	4	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 384
+παύσ		ασθ		αι		δ’ἐκ	έλ	ευσ		ε	καὶ	εὐν		ηθ		ῆν		αι	ἅπ	αντ		ας·	
+1	0	0	0	0	0	1	0	0	0	0	1	1	0	0	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	3	0	0	1	0	0	0	0
+1	1	1	1	1	1	2	2	2	2	2	3	4	4	4	4	4	4	4	5	5	5	5	5
+
+Line 385
+ὦρσ		ε	δ’ἐπ	ὶ		κραιπν		ὸν		Βορ	έ	ην,		πρὸ	δὲ	κύμ		ατ’	ἔ	αξ		εν,	
+1	0	0	1	0	0	1	0	0	0	1	0	0	0	1	1	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+1	1	1	2	2	2	3	3	3	3	4	4	4	4	5	6	7	7	7	8	8	8	8	8
+
+Line 386
+ἕως		ὅ	γε	Φαι		ήκ		εσσ		ι	φιλ	ηρ		έτμ		οισ		ι	μιγ	εί		η	
+1	0	1	1	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+2	0	2	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	2	3	4	4	4	4	4	4	4	5	5	5	5	5	5	5	5	6	6	6	6	6
+
+Line 387
+δι		ογ	εν	ὴς		Ὀδ	υσ	εὺς		θάν	ατ	ον		καὶ		κῆρ		ας	ἀλ	ύξ		ας.	
+1	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	3	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	2	2	2	3	3	3	3	4	4	5	5	5	6	6	6	6	6
+
+Line 388
+ἔνθ		α	δύ	ω		νύκτ		ας		δύ	ο	τ’ἤμ		ατ	α	κύμ		ατ	ι	πηγ		ῷ	
+1	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0	0	0	3	0
+1	1	1	2	2	2	3	3	3	3	4	4	5	5	5	5	6	6	6	6	7	7	7	7
+
+Line 389
+πλάζ		ετ	ο,	πολλ		ὰ	δέ	οἱ		κραδ	ί	η		προτ	ι	όσσ		ετ’	ὄλ	εθρ		ον.	
+1	0	0	0	1	0	0	1	1	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	2	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+1	1	1	1	2	2	2	3	4	4	5	5	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 390
+ἀλλ’		ὅτ	ε	δὴ		τρίτ	ον	ἦμ		αρ	ἐ	υπλ		όκ	αμ	ος		τέλ	εσ’	Ἠ		ώς,	
+1	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	3	0	0	0	0	0	1	0	0	0	1	0	0	0	2	0
+1	1	2	2	3	3	4	4	5	5	5	6	6	6	6	6	6	6	7	7	8	8	8	8
+
+Line 391
+καὶ		τότ’	ἔπ	ειτ’		ἄν	εμ	ος		μὲν	ἐπ	αύσ		ατ	ο	ἠδ		ὲ	γαλ	ήν		η	
+1	0	1	1	0	0	1	0	0	0	1	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	1	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0
+1	1	2	3	3	3	4	4	4	4	5	6	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 392
+ἔπλ		ετ	ο	νην		εμ	ί	η·		ὁ	δ’ἄρ	α		σχεδ	ὸν	εἴσ		ιδ	ε	γαῖ		αν	
+1	0	0	0	1	0	0	0	0	0	1	1	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	3	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	4	4	4	5	5	6	6	6	6	7	7	7	7
+
+Line 393
+ὀξ		ὺ	μάλ	α		προ	ϊδ	ών,		μεγ	άλ	ου		ὑπ	ὸ	κύμ		ατ	ος	ἀρθ		είς.	
+1	0	0	1	0	0	1	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	0	2	0	0	1	0	0	0	0	1	0	0	0	0	0	2	0
+1	1	1	2	2	2	3	3	3	3	4	4	4	4	5	5	6	6	6	6	7	7	7	7
+
+Line 394
+ὡς		δ’ὅτ’	ἂν	ἀσπ		άσ	ι	ος		βί	οτ	ος		παίδ		εσσ		ι	φαν	ή		ῃ	
+1	0	1	1	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	2	3	4	4	4	4	4	4	5	5	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 395
+πατρ		ός,	ὃς	ἐν		νούσ		ῳ		κεῖτ		αι		κρατ	έρ’	ἄλγ		ε	α	πάσχ		ων,	
+1	0	0	1	1	0	1	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	1	0	0	0	3	0	0	0	0	2	1	0	0	0	1	0	0	0
+1	1	1	2	3	3	4	4	4	4	5	5	5	5	6	6	7	7	7	7	8	8	8	8
+
+Line 396
+δηρ		ὸν		τηκ		όμ	εν	ος,		στυγ	ερ	ὸς		δέ	οἱ	ἔχρ		α	ε	δαίμ		ων,	
+1	0	0	0	1	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	0	0	0	2	0	1	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	3	3	3	4	5	6	6	6	6	7	7	7	7
+
+Line 397
+ἀσπ		άσ	ι	ον		δ’ἄρ	α	τόν		γε	θε	οὶ		κακ	ότ	ητ		ος	ἔλ	υσ		αν,	
+1	0	0	0	0	0	1	0	1	0	1	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	2	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0
+1	1	1	1	1	1	2	2	3	3	4	5	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 398
+ὣς		Ὀδ	υσ	ῆ’		ἀσπ		αστ		ὸν	ἐ	είσ		ατ	ο	γαῖ		α	καὶ	ὕλ		η,	
+1	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	1	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	3	0	0	0	0	0	0	0	1	0	0	0	3	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	3	3	3	4	4	4	4	4	5	5	5	6	7	7	7	7
+
+Line 399
+νῆχ		ε	δ’ἐπ	ειγ		όμ	εν	ος		ποσ	ὶν	ἠπ		είρ		ου		ἐπ	ιβ	ῆν		αι.	
+1	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	3	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	4	4	4	4	4	4	5	5	5	5	5	5
+
+Line 400
+ἀλλ’		ὅτ	ε	τόσσ		ον	ἀπ	ῆν		ὅσσ		ον		τε	γέγ	ων		ε	βο	ήσ		ας,	
+1	0	1	0	1	0	0	1	0	0	1	0	0	0	1	1	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	1	0	0	0	3	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	4	4	4	5	5	5	5	6	7	7	7	7	8	8	8	8	8
+
+Line 401
+καὶ		δὴ		δοῦπ		ον	ἄκ	ουσ		ε	ποτ	ὶ		σπιλ	άδ	εσσ		ι	θαλ	άσσ		ης·	
+1	0	1	0	1	0	0	1	0	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	3	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	4	4	4	4	5	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 402
+ῥόχθ		ει		γὰρ		μέγ	α	κῦμ		α	ποτ	ὶ		ξερ	ὸν	ἠπ		είρ		οι		ο	
+1	0	0	0	1	0	1	0	1	0	0	1	0	0	1	0	1	0	0	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long
+1	0	0	0	0	0	1	0	3	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0
+1	1	1	1	2	2	3	3	4	4	4	5	5	5	6	6	7	7	7	7	7	7	7	7
+
+Line 403
+δειν		ὸν	ἐρ	ευγ		όμ	εν	ον,		εἴλ		υτ		ο	δὲ	πάνθ’		ἁλ	ὸς	ἄχν		ῃ·	
+1	0	0	1	0	0	0	0	0	0	1	0	0	0	0	1	1	0	1	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	2	0	0	0	1	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	3	3	3	4	5	5	6	6	7	7	7	7
+
+Line 404
+οὐ		γὰρ	ἔσ	αν		λιμ	έν	ες		νη		ῶν		ὄχ	οι,	οὐδ’		ἐπ	ι	ωγ		αί.	
+1	0	1	1	0	0	1	0	0	0	1	0	0	0	1	0	1	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	1	0	0	0	0	3	0	1	0	0	0	0	0	0	0	2	0
+1	1	2	3	3	3	4	4	4	4	5	5	5	5	6	6	7	7	8	8	8	8	8	8
+
+Line 405
+ἀλλ’		ἀκτ		αὶ		προβλ		ῆτ		ες	ἔσ	αν		σπιλ	άδ	ες		τε	πάγ	οι		τε·	
+1	0	1	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	1	1	0	0	1	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	0	3	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0
+1	1	2	2	2	2	3	3	3	3	3	4	4	4	5	5	5	5	6	7	7	7	8	8
+
+Line 406
+καὶ		τότ’	Ὀδ	υσσ		ῆ		ος		λύτ	ο	γούν		ατ	α	καὶ		φίλ	ον	ἦτ		ορ,	
+1	0	1	1	0	0	0	0	0	0	1	0	1	0	0	0	1	0	1	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	3	0	0	0	1	0	1	0	0	0	0	0	1	0	3	0	0	0
+1	1	2	3	3	3	3	3	3	3	4	4	5	5	5	5	6	6	7	7	8	8	8	8
+
+Line 407
+ὀχθ		ήσ		ας		δ’ἄρ	α	εἶπ		ε	πρὸς	ὃν		μεγ	αλ	ήτ		ορ	α	θυμ		όν·	
+1	0	0	0	0	0	1	0	1	0	0	1	1	0	1	0	0	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	3	0	0	0	0	0	0	0	1	0	0	0	0	0	2	0
+1	1	1	1	1	1	2	2	3	3	3	4	5	5	6	6	6	6	6	6	7	7	7	7
+
+Line 408
+ὤ		μοι,	ἐπ	εὶ		δὴ		γαῖ		αν	ἀ	ελπ		έ	α	δῶκ		εν	ἰδ	έσθ		αι	
+1	0	1	1	0	0	1	0	1	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	0	0	0	0	0	0	3	0	0	0	0	0	1	0	3	0	0	0	1	0	0	0
+1	1	2	3	3	3	4	4	5	5	5	6	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 409
+Ζεύς,		καὶ		δὴ		τόδ	ε	λαῖτμ		α	δι	ατμ		ήξ		ας		ἐτ	έλ	εσσ		α,	
+1	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+2	0	0	0	0	0	1	0	3	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	2	2	3	3	4	4	5	5	5	6	6	6	6	6	6	6	7	7	7	7	7	7
+
+Line 410
+ἔκβ		ασ	ις	οὔ		πῃ		φαίν		εθ’	ἁλ	ὸς		πολ	ι	οῖ		ο	θύρ	αζ		ε·	
+1	0	0	0	1	0	1	0	1	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	2	0	0	0	1	0	0	0	0	0	0	0	3	0	0	1	0	0	0	0
+1	1	1	1	2	2	3	3	4	4	4	5	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 411
+ἔκτ		οσθ		εν		μὲν		γὰρ		πάγ	οι	ὀξ		έ	ες,	ἀμφ		ὶ	δὲ	κῦμ		α	
+1	0	0	0	0	0	1	0	1	0	1	0	1	0	0	0	1	0	0	1	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	3	0	0	0
+1	1	1	1	1	1	2	2	3	3	4	4	5	5	5	5	6	6	6	7	8	8	8	8
+
+Line 412
+βέβρ		υχ		εν		ῥόθ	ι	ον,		λισσ		ὴ		δ’ἀν	αδ	έδρ		ομ	ε	πέτρ		η,	
+1	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	2	2	2	3	3	3	3	4	4	4	4	4	4	5	5	5	5
+
+Line 413
+ἀγχ		ιβ	αθ	ὴς		δὲ	θάλ	ασσ		α,	καὶ	οὔ		πως		ἔστ		ι	πόδ	εσσ		ι	
+1	0	0	0	0	0	1	1	0	0	0	1	1	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	0	0	2	0	0	0	1	0	0	1	0	0	0	0
+1	1	1	1	1	1	2	3	3	3	3	4	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 414
+στήμ		εν	αι	ἀμφ		οτ	έρ	οισ		ι	καὶ	ἐκφ		υγ	έ	ειν		κακ	ότ	ητ		α·	
+1	0	0	0	1	0	0	0	0	0	0	1	1	0	0	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0
+1	1	1	1	2	2	2	2	2	2	2	3	4	4	4	4	4	4	5	5	5	5	5	5
+
+Line 415
+μή		πώς		μ’ἐκβ		αίν		οντ		α	βάλ	ῃ		λίθ	ακ	ι		ποτ	ὶ	πέτρ		ῃ	
+1	0	1	0	1	0	0	0	0	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	2	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	3	3	3	3	4	4	4	5	5	5	5	6	6	7	7	7	7
+
+Line 416
+κῦμ		α	μέγ’	ἁρπ		άξ		αν·		μελ	έ	η		δέ	μοι	ἔσσ		ετ	αι	ὁρμ		ή.	
+1	0	0	1	1	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	2	0	0	1	0	0	0	0	1	0	0	2	0	1	0	0	0	0	0	2	0
+1	1	1	2	3	3	3	3	3	3	4	4	4	4	5	6	7	7	7	7	8	8	8	8
+
+Line 417
+εἰ		δέ	κ’ἔτ	ι		προτ	έρ	ω		παρ	αν	ήξ		ομ	αι,	ἤν		που	ἐφ	εύρ		ω	
+1	0	1	1	0	0	1	0	0	0	1	0	0	0	0	0	1	0	1	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	1	0	0	0	1	0	0	0	0	1	0	0	0	2	0	0	0	1	0	0	0
+1	1	2	3	3	3	4	4	4	4	5	5	5	5	5	5	6	6	7	8	8	8	8	8
+
+Line 418
+ἠ		ι	όν	ας		τε	παρ	απλ		ῆγ		ας		λιμ	έν	ας		τε	θαλ	άσσ		ης,	
+1	0	0	0	0	0	1	1	0	0	0	0	0	0	1	0	0	0	1	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	0	0	0	3	0	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	3	3	3	3	3	3	3	4	4	4	4	5	6	6	6	6	6
+
+Line 419
+δείδ		ω		μή		μ’ἐξ		αῦτ		ις	ἀν	αρπ		άξ		ασ		α	θύ	ελλ		α	
+1	0	0	0	1	0	1	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	2	0	0	0	3	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	1	1	2	2	3	3	3	3	3	4	4	4	4	4	4	4	4	5	5	5	5	5
+
+Line 420
+πόντ		ον	ἐπ’	ἰχθ		υ	ό	εντ		α	φέρ	ῃ		βαρ	έ	α		στεν	άχ	οντ		α,	
+1	0	0	1	1	0	0	0	0	0	0	1	0	0	1	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0
+1	1	1	2	3	3	3	3	3	3	3	4	4	4	5	5	5	5	6	6	6	6	6	6
+
+Line 421
+ἠ		έ	τί	μοι		καὶ		κῆτ		ος	ἐπ	ισσ		εύ		ῃ		μέγ	α	δαίμ		ων	
+1	0	0	1	1	0	1	0	1	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	2	2	0	0	0	0	3	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0
+1	1	1	2	3	3	4	4	5	5	5	6	6	6	6	6	6	6	7	7	8	8	8	8
+
+Line 422
+ἐξ		ἁλ	ός,	οἷ		ά	τε	πολλ		ὰ	τρέφ	ει		κλυτ	ὸς	Ἀμφ		ιτρ		ίτ		η·	
+1	0	1	0	1	0	0	1	1	0	0	1	0	0	1	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long
+0	0	0	2	3	0	2	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	4	5	5	5	6	6	6	7	7	8	8	8	8	8	8	8	8
+
+Line 423
+οἶδ		α	γάρ,	ὥς		μοι	ὀδ	ώδ		υστ		αι		κλυτ	ὸς	ἐνν		οσ	ίγ	αι		ος.	
+1	0	0	1	1	0	1	1	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	2	2	0	0	0	1	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0
+1	1	1	2	3	3	4	5	5	5	5	5	5	5	6	6	7	7	7	7	7	7	7	7
+
+Line 424
+ἦ		ος	ὁ	ταῦθ’		ὥρμ		αιν		ε	κατ	ὰ		φρέν	α	καὶ		κατ	ὰ	θυμ		όν,	
+1	0	0	1	1	0	1	0	0	0	0	1	0	0	1	0	1	0	1	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	3	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	2	0
+1	1	1	2	3	3	4	4	4	4	4	5	5	5	6	6	7	7	8	8	9	9	9	9
+
+Line 425
+τόφρ		α	δέ	μιν		μέγ	α	κῦμ		α	φέρ	εν		τρηχ		εῖ		αν	ἐπ’	ἀκτ		ήν.	
+1	0	0	1	1	0	1	0	1	0	0	1	0	0	1	0	0	0	0	1	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	2	0	0	1	0	3	0	0	1	0	0	0	0	3	0	0	0	0	0	2	0
+1	1	1	2	3	3	4	4	5	5	5	6	6	6	7	7	7	7	7	8	9	9	9	9
+
+Line 426
+ἔνθ		α		κ’ἀπ		ὸ	ῥιν	οὺς		δρύφθ		η,		σὺν		δ’ὀστ		έ’	ἀρ	άχθ		η,	
+1	0	0	0	1	0	0	1	0	0	1	0	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	2	0	1	0	0	0
+1	1	1	1	2	2	2	3	3	3	4	4	4	4	5	5	6	6	6	7	7	7	7	7
+
+Line 427
+εἰ		μὴ	ἐπ	ὶ		φρεσ	ὶ	θῆκ		ε	θε	ά,		γλαυκ		ῶπ		ις	Ἀθ	ήν		η·	
+1	0	1	1	0	0	1	0	1	0	0	1	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	0	3	0	0	0	2	0	0	0	3	0	0	0	1	0	0	0
+1	1	2	3	3	3	4	4	5	5	5	6	6	6	7	7	7	7	7	8	8	8	8	8
+
+Line 428
+ἀμφ		οτ	έρ	ῃσ		ι	δὲ	χερσ		ὶν	ἐπ	εσσ		ύμ	εν	ος		λάβ	ε	πέτρ		ης,	
+1	0	0	0	0	0	0	1	1	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0
+1	1	1	1	1	1	1	2	3	3	3	4	4	4	4	4	4	4	5	5	6	6	6	6
+
+Line 429
+τῆς		ἔχ	ετ	ο		στεν	άχ	ων,		εἵ		ως		μέγ	α	κῦμ		α	παρ	ῆλθ		ε.	
+1	0	1	0	0	0	1	0	0	0	1	0	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	1	0	0	0	0	1	0	0	1	0	0	0	1	0	3	0	0	0	3	0	0	0
+1	1	2	2	2	2	3	3	3	3	4	4	4	4	5	5	6	6	6	7	7	7	7	7
+
+Line 430
+καὶ		τὸ	μὲν	ὣς		ὑπ	άλ	υξ		ε,	παλ	ιρρ		όθ	ι	ον		δέ	μιν	αὖτ		ις	
+1	0	1	1	1	0	1	0	0	0	0	1	0	0	0	0	0	0	1	1	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	2	0	3	0	0	0
+1	1	2	3	4	4	5	5	5	5	5	6	6	6	6	6	6	6	7	8	9	9	9	9
+
+Line 431
+πλῆξ		εν	ἐπ	εσσ		ύμ	εν	ον,		τηλ		οῦ		δέ	μιν	ἔμβ		αλ	ε	πόντ		ῳ.	
+1	0	0	1	0	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	1	0	0	0	0	0	3	0	2	0	1	0	0	0	1	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	3	3	4	5	6	6	6	6	7	7	7	7
+
+Line 432
+ὡς		δ’ὅτ	ε	πουλ		ύπ	οδ	ος		θαλ	άμ	ης		ἐξ		ελκ		ομ	έν	οι		ο	
+1	0	1	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0
+1	1	2	2	3	3	3	3	3	3	4	4	4	4	5	5	5	5	5	5	5	5	5	5
+
+Line 433
+πρὸς		κοτ	υλ	ηδ		ον	όφ	ιν		πυκ	ιν	αὶ		λά		ιγγ		ες	ἔχ	οντ		αι,	
+1	0	1	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	2	2	2	2	2	2	2	2	3	3	3	3	4	4	4	4	4	5	5	5	5	5
+
+Line 434
+ὣς		τοῦ		πρὸς		πέτρ		ῃσ		ι	θρασ	ει		ά		ων		ἀπ	ὸ	χειρ		ῶν	
+1	0	1	0	1	0	1	0	0	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	3	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	3	0
+1	1	2	2	3	3	4	4	4	4	4	5	5	5	5	5	5	5	6	6	7	7	7	7
+
+Line 435
+ῥιν		οὶ	ἀπ	έδρ		υφθ		εν·		τὸν		δὲ		μέγ	α	κῦμ’		ἐκ	άλ	υψ		εν.	
+1	0	0	1	0	0	0	0	0	0	1	0	1	0	1	0	1	0	1	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	3	0	0	1	0	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	4	4	5	5	6	6	7	7	7	7	7	7
+
+Line 436
+ἔνθ		α	κε	δὴ		δύστ		ην		ος	ὑπ	ὲρ		μόρ	ον	ὤλ		ετ’	Ὀδ	υσσ		εύς,	
+1	0	0	1	1	0	1	0	0	0	0	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	2	0
+1	1	1	2	3	3	4	4	4	4	4	5	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 437
+εἰ		μὴ	ἐπ	ιφρ		οσ	ύν	ην		δῶκ		ε		γλαυκ		ῶπ		ις	Ἀθ	ήν		η.	
+1	0	1	1	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	3	0	0	0	0	0	3	0	0	0	1	0	0	0
+1	1	2	3	3	3	3	3	3	3	4	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 438
+κύμ		ατ	ος	ἐξ		αν	αδ	ύς,		τά	τ’ἐρ	εύγ		ετ	αι	ἤπ		ειρ		όνδ		ε,	
+1	0	0	0	1	0	0	0	0	0	1	1	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long
+1	0	0	0	0	0	0	0	2	0	2	0	1	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	4	4	4	4	4	5	5	5	5	5	5	5	5
+
+Line 439
+νῆχ		ε	παρ	έξ,		ἐς		γαῖ		αν	ὁρ	ώμ		εν	ος,	εἴ		που	ἐφ	εύρ		οι	
+1	0	0	1	0	0	1	0	1	0	0	1	0	0	0	0	1	0	1	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	2	0	0	0	3	0	0	0	1	0	0	0	2	0	0	0	1	0	0	0
+1	1	1	2	2	2	3	3	4	4	4	5	5	5	5	5	6	6	7	8	8	8	8	8
+
+Line 440
+ἠ		ι	όν	ας		τε	παρ	απλ		ῆγ		ας		λιμ	έν	ας		τε	θαλ	άσσ		ης.	
+1	0	0	0	0	0	1	1	0	0	0	0	0	0	1	0	0	0	1	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	0	0	0	3	0	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	3	3	3	3	3	3	3	4	4	4	4	5	6	6	6	6	6
+
+Line 441
+ἀλλ’		ὅτ	ε	δὴ		ποτ	αμ	οῖ		ο	κατ	ὰ		στόμ	α	καλλ		ιρ	ό	οι		ο	
+1	0	1	0	1	0	1	0	0	0	0	1	0	0	1	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	3	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	2	2	3	3	4	4	4	4	4	5	5	5	6	6	7	7	7	7	7	7	7	7
+
+Line 442
+ἷξ		ε	νέ	ων,		τῇ		δή		οἱ	ἐ	είσ		ατ	ο	χῶρ		ος	ἄρ	ιστ		ος,	
+1	0	0	1	0	0	1	0	1	0	1	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	1	0	0	3	0	2	0	0	0	1	0	0	0	3	0	0	1	0	0	0	0
+1	1	1	2	2	2	3	3	4	4	5	6	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 443
+λεῖ		ος		πετρ		ά		ων,		καὶ	ἐπ	ὶ		σκέπ	ας	ἦν		ἀν	έμ	οι		ο,	
+1	0	0	0	1	0	0	0	0	0	1	1	0	0	1	0	1	0	1	0	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	3	0	0	1	0	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	4	4	4	5	5	6	6	7	7	7	7	7	7
+
+Line 444
+ἔγν		ω		δὲ		προρ	έ	οντ		α	καὶ	εὔξ		ατ	ο	ὃν		κατ	ὰ	θυμ		όν·	
+1	0	0	0	1	0	1	0	0	0	0	1	1	0	0	0	1	0	1	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	0	2	0
+1	1	1	1	2	2	3	3	3	3	3	4	5	5	5	5	6	6	7	7	8	8	8	8
+
+Line 445
+κλῦθ		ι,	ἄν	αξ,		ὅτ	ις	ἐσσ		ί·	πολ	ύλλ		ιστ		ον		δέ	σ’ἱκ	άν		ω,	
+1	0	0	1	0	0	1	0	1	0	0	1	0	0	0	0	0	0	1	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	0	1	0	0	1	0	0	0	2	0	1	0	0	0	0	0	2	0	1	0	0	0
+1	1	1	2	2	2	3	3	4	4	4	5	5	5	5	5	5	5	6	7	7	7	7	7
+
+Line 446
+φεύγ		ων		ἐκ		πόντ		οι		ο	Ποσ	ειδ		ά		ων		ος	ἐν	ιπ		άς.	
+1	0	0	0	1	0	1	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	2	0
+1	1	1	1	2	2	3	3	3	3	3	4	4	4	4	4	4	4	4	5	5	5	5	5
+
+Line 447
+αἰδ		οῖ		ος		μέν		τ’ἐστ		ὶ	καὶ	ἀθ		αν	άτ	οισ		ι	θε	οῖσ		ιν	
+1	0	0	0	0	0	1	0	1	0	0	1	1	0	0	0	0	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	0	0	2	0	0	0	0	0	0	0	0	1	0	0	0	0	3	0	0	0
+1	1	1	1	1	1	2	2	3	3	3	4	5	5	5	5	5	5	5	6	6	6	6	6
+
+Line 448
+ἀνδρ		ῶν		ὅς		τις	ἵκ	ητ		αι	ἀλ	ώμ		εν	ος,	ὡς		καὶ	ἐγ	ὼ		νῦν	
+1	0	0	0	1	0	1	1	0	0	0	1	0	0	0	0	1	0	1	1	0	0	1	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	2	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	0	3	0
+1	1	1	1	2	2	3	4	4	4	4	5	5	5	5	5	6	6	7	8	8	8	9	9
+
+Line 449
+σόν		τε	ῥό	ον		σά	τε	γούν		αθ’	ἱκ	άν		ω		πολλ		ὰ	μογ	ήσ		ας.	
+1	0	1	1	0	0	1	1	1	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+2	0	0	1	0	0	2	0	1	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0
+1	1	2	3	3	3	4	5	6	6	6	7	7	7	7	7	8	8	8	9	9	9	9	9
+
+Line 450
+ἀλλ’		ἐλ	έ	αιρ		ε,	ἄν	αξ·		ἱκ	έτ	ης		δέ	τοι	εὔχ		ομ	αι	εἶν		αι.	
+1	0	1	0	0	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	1	0	0	0	1	0	0	2	0	1	0	0	0	3	0	0	0
+1	1	2	2	2	2	2	3	3	3	4	4	4	4	5	6	7	7	7	7	8	8	8	8
+
+Line 451
+ὣς		φάθ’,	ὁ	δ’αὐτ		ίκ	α	παῦσ		εν	ἑ	ὸν		ῥό	ον,	ἔσχ		ε	δὲ	κῦμ		α,	
+1	0	1	1	1	0	0	0	1	0	0	1	0	0	1	0	1	0	0	1	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	1	0	3	0	0	0	0	0	1	0	1	0	0	0	3	0	0	0
+1	1	2	3	4	4	4	4	5	5	5	6	6	6	7	7	8	8	8	9	10	10	10	10
+
+Line 452
+πρόσθ		ε	δέ	οἱ		ποί		ησ		ε	γαλ	ήν		ην,		τὸν		δ’ἐσ	ά	ωσ		εν	
+1	0	0	1	1	0	1	0	0	0	0	1	0	0	0	0	1	0	1	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	2	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0
+1	1	1	2	3	3	4	4	4	4	4	5	5	5	5	5	6	6	7	7	7	7	7	7
+
+Line 453
+ἐς		ποτ	αμ	οῦ		προχ	ο	άς.		ὁ	δ’ἄρ’	ἄμφ		ω		γούν		ατ’	ἔκ	αμψ		ε	
+1	0	1	0	0	0	1	0	0	0	1	1	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	3	0	0	0	2	0	0	2	1	0	0	0	1	0	0	1	0	0	0	0
+1	1	2	2	2	2	3	3	3	3	4	5	6	6	6	6	7	7	7	8	8	8	8	8
+
+Line 454
+χεῖρ		άς		τε		στιβ	αρ	άς.		ἁλ	ὶ	γὰρ		δέδμ		ητ		ο	φίλ	ον		κῆρ.	
+1	0	0	0	1	0	1	0	0	0	1	0	1	0	1	0	0	0	0	1	0	0	1	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+3	0	2	0	0	0	0	0	2	0	0	0	0	0	1	0	0	0	0	1	0	0	3	0
+1	1	1	1	2	2	3	3	3	3	4	4	5	5	6	6	6	6	6	7	7	7	8	8
+
+Line 455
+ᾤδ		ε	ε	δὲ		χρό	α	πάντ		α,	θάλ	ασσ		α	δὲ	κήκ		ι	ε	πολλ		ὴ	
+1	0	0	0	1	0	1	0	1	0	0	1	0	0	0	1	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	1	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0
+1	1	1	1	2	2	3	3	4	4	4	5	5	5	5	6	7	7	7	7	8	8	8	8
+
+Line 456
+ἂν		στόμ	α	τε		ῥῖν		άς		θ’·ὁ	δ’ἄρ’	ἄπν		ευστ		ος		καὶ	ἄν	αυδ		ος	
+1	0	1	0	1	0	1	0	0	0	1	1	1	0	0	0	0	0	1	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	3	0	2	0	0	2	1	0	0	0	0	0	0	1	0	0	0	0
+1	1	2	2	3	3	4	4	4	4	5	6	7	7	7	7	7	7	8	9	9	9	9	9
+
+Line 457
+κεῖτ’		ὀλ	ιγ	ηπ		ελ	έ	ων,		κάμ	ατ	ος		δέ	μιν	αἰν		ὸς	ἵκ	αν		εν.	
+1	0	1	0	0	0	0	0	0	0	1	0	0	0	1	1	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	0	1	0	0	1	0	0	0	2	0	0	0	0	1	0	0	0	0
+1	1	2	2	2	2	2	2	2	2	3	3	3	3	4	5	6	6	6	7	7	7	7	7
+
+Line 458
+ἀλλ’		ὅτ	ε	δή		ῥ’ἄμπν		υτ		ο	καὶ	ἐς		φρέν	α	θυμ		ὸς	ἀγ	έρθ		η,	
+1	0	1	0	1	0	1	0	0	0	0	1	1	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	2	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	4	4	4	5	6	6	7	7	8	8	8	9	9	9	9	9
+
+Line 459
+καὶ		τότ	ε	δὴ		κρήδ		εμν		ον	ἀπ	ὸ		ἕ	ο	λῦσ		ε	θε	οῖ		ο.	
+1	0	1	0	1	0	1	0	0	0	0	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	0	0	0	0	0	0	1	0	3	0	0	0	3	0	0	0
+1	1	2	2	3	3	4	4	4	4	4	5	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 460
+καὶ		τὸ	μὲν	ἐς		ποτ	αμ	ὸν		ἁλ	ιμ	υρ		ή		εντ		α	μεθ	ῆκ		εν,	
+1	0	1	1	1	0	1	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	3	0	0	0
+1	1	2	3	4	4	5	5	5	5	6	6	6	6	6	6	6	6	6	7	7	7	7	7
+
+Line 461
+ἂψ		δ’ἔφ	ερ	εν		μέγ	α	κῦμ		α	κατ	ὰ		ῥό	ον,	αἶψ		α	δ’ἄρ’	Ἰν		ὼ	
+1	0	1	0	0	0	1	0	1	0	0	1	0	0	1	0	1	0	0	1	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	3	0	0	0	0	0	1	0	3	0	0	2	0	0	0	0
+1	1	2	2	2	2	3	3	4	4	4	5	5	5	6	6	7	7	7	8	9	9	9	9
+
+Line 462
+δέξ		ατ	ο	χερσ		ὶ	φίλ	ῃσ		ιν·	ὁ	δ’ἐκ		ποτ	αμ	οῖ		ο	λι	ασθ		εὶς	
+1	0	0	0	1	0	0	1	0	0	0	1	1	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+1	1	1	1	2	2	2	3	3	3	3	4	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 463
+σχοίν		ῳ	ὑπ	εκλ		ίνθ		η,		κύσ	ε	δὲ		ζείδ		ωρ		ον	ἄρ	ουρ		αν.	
+1	0	0	1	0	0	0	0	0	0	1	0	1	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 464
+ὀχθ		ήσ		ας		δ’ἄρ	α	εἶπ		ε	πρὸς	ὃν		μεγ	αλ	ήτ		ορ	α	θυμ		όν·	
+1	0	0	0	0	0	1	0	1	0	0	1	1	0	1	0	0	0	0	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	1	0	3	0	0	0	0	0	0	0	1	0	0	0	0	0	2	0
+1	1	1	1	1	1	2	2	3	3	3	4	5	5	6	6	6	6	6	6	7	7	7	7
+
+Line 465
+ὤ		μοι	ἐγ	ώ,		τί	πάθ	ω;		τί	νύ	μοι		μήκ		ιστ		α	γέν	ητ		αι;	
+1	0	1	1	0	0	1	1	0	0	1	1	1	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+2	0	0	0	2	0	2	1	0	0	2	2	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	2	3	3	3	4	5	5	5	6	7	8	8	9	9	9	9	9	10	10	10	10	10
+
+Line 466
+εἰ		μέν		κ’ἐν		ποτ	αμ	ῷ		δυσκ		ηδ		έ	α	νύκτ		α	φυλ	άσσ		ω,	
+1	0	1	0	1	0	1	0	0	0	1	0	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	0	0	3	0	0	0	0	0	1	0	1	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	4	4	5	5	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 467
+μή		μ’ἄμ	υδ	ις		στίβ		η		τε	κακ	ὴ		καὶ		θῆλ		υς	ἐ	έρσ		η	
+1	0	1	0	0	0	1	0	0	0	1	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+2	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0	3	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	3	3	4	5	5	5	6	6	7	7	7	8	8	8	8	8
+
+Line 468
+ἐξ		ὀλ	ιγ	ηπ		ελ	ί	ης		δαμ	άσ	ῃ		κεκ	αφ	η		ότ	α	θυμ		όν·	
+1	0	1	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	1	0	0	0	2	0
+1	1	2	2	2	2	2	2	2	2	3	3	3	3	4	4	4	4	4	4	5	5	5	5
+
+Line 469
+αὔρ		η		δ’ἐκ		ποτ	αμ	οῦ		ψυχρ		ὴ		πνέ	ει	ἠ		ῶθ		ι		πρό.	
+1	0	0	0	1	0	1	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	1	0
+long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	long	long
+1	0	0	0	0	0	0	0	3	0	0	0	0	0	1	0	0	0	3	0	0	0	2	0
+1	1	1	1	2	2	3	3	3	3	4	4	4	4	5	5	6	6	6	6	6	6	7	7
+
+Line 470
+εἰ		δέ	κεν	ἐς		κλιτ		ὺν		ἀν	αβ	ὰς		καὶ		δάσκ		ι	ον	ὕλ		ην	
+1	0	1	1	1	0	1	0	0	0	1	0	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	2	3	4	4	5	5	5	5	6	6	6	6	7	7	8	8	8	8	9	9	9	9
+
+Line 471
+θάμν		οις		ἐν		πυκ	ιν	οῖσ		ι	κατ	αδρ		άθ	ω,	εἴ		με	μεθ	εί		η	
+1	0	0	0	1	0	1	0	0	0	0	1	0	0	0	0	1	0	1	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	0	3	0	0	0	0	0	1	0	2	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	3	3	3	4	4	4	4	4	5	5	6	7	7	7	7	7
+
+Line 472
+ῥῖγ		ος		καὶ		κάμ	ατ	ος,		γλυκ	ερ	ὸς		δέ	μοι	ὕπν		ος	ἐπ	έλθ		ῃ,	
+1	0	0	0	1	0	1	0	0	0	1	0	0	0	1	1	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	1	0	0	0	0	0	0	0	2	0	1	0	0	0	1	0	0	0
+1	1	1	1	2	2	3	3	3	3	4	4	4	4	5	6	7	7	7	8	8	8	8	8
+
+Line 473
+δείδ		ω,		μὴ		θήρ		εσσ		ιν	ἕλ	ωρ		καὶ		κύρμ		α	γέν	ωμ		αι.	
+1	0	0	0	1	0	1	0	0	0	0	1	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+1	1	1	1	2	2	3	3	3	3	3	4	4	4	5	5	6	6	6	7	7	7	7	7
+
+Line 474
+ὣς		ἄρ	α	οἱ		φρον	έ	οντ		ι	δο	άσσ		ατ	ο	κέρδ		ι	ον	εἶν		αι·	
+1	0	1	0	1	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0	3	0	0	0
+1	1	2	2	3	3	4	4	4	4	4	5	5	5	5	5	6	6	6	6	7	7	7	7
+
+Line 475
+βῆ		ῥ’ἴμ	εν	εἰς		ὕλ		ην·		τὴν		δὲ		σχεδ	ὸν	ὕδ		ατ	ος	εὗρ		εν	
+1	0	1	0	1	0	1	0	0	0	1	0	1	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	3	0	0	0
+1	1	2	2	3	3	4	4	4	4	5	5	6	6	7	7	8	8	8	8	9	9	9	9
+
+Line 476
+ἐν		περ	ιφ	αιν		ομ	έν	ῳ·		δοι		οὺς		δ’ἄρ’	ὑπ	ήλ		υθ	ε	θάμν		ους,	
+1	0	1	0	0	0	0	0	0	0	1	0	0	0	1	1	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	0	1	0	0	0	0	0	0	2	0	1	0	0	0	1	0	0	0
+1	1	2	2	2	2	2	2	2	2	3	3	3	3	4	5	5	5	5	5	6	6	6	6
+
+Line 477
+ἐξ		ὁμ	όθ	εν		πεφ	υ	ῶτ		ας·	ὁ	μὲν		φυλ	ί	ης,		ὁ	δ’ἐλ	αί		ης.	
+1	0	1	0	0	0	1	0	0	0	0	1	1	0	1	0	0	0	1	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	0	3	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0
+1	1	2	2	2	2	3	3	3	3	3	4	5	5	6	6	6	6	7	8	8	8	8	8
+
+Line 478
+τοὺς		μὲν	ἄρ’	οὔτ’		ἀν	έμ	ων		δι	ά	η		μέν	ος	ὑγρ		ὸν	ἀ	έντ		ων,	
+1	0	1	1	1	0	1	0	0	0	1	0	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	2	2	0	0	1	0	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	2	3	4	4	5	5	5	5	6	6	6	6	7	7	8	8	8	9	9	9	9	9
+
+Line 479
+οὐδ		έ	ποτ’	ἠ		έλ	ι	ος		φα	έθ	ων		ἀκτ		ῖσ		ιν	ἔβ	αλλ		εν,	
+1	0	0	1	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	2	0	0	0	1	0	0	0	0	1	0	0	0	0	3	0	0	1	0	0	0	0
+1	1	1	2	3	3	3	3	3	3	4	4	4	4	5	5	5	5	5	6	6	6	6	6
+
+Line 480
+οὔτ’		ὄμβρ		ος		περ	ά	ασκ		ε	δι	αμπ		ερ	ές·	ὣς		ἄρ	α	πυκν		οὶ	
+1	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0	1	0	1	0	1	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	1	0	0	0	0	1	0	0	0	0	0	0	0	2	0	0	1	0	0	0	0	0
+1	1	2	2	2	2	3	3	3	3	3	4	4	4	4	4	5	5	6	6	7	7	7	7
+
+Line 481
+ἀλλ		ήλ		οισ		ιν	ἔφ	υν		ἐπ	αμ	οιβ		αδ	ίς·	οὓς		ὑπ’	Ὀδ	υσσ		εὺς	
+1	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	1	0	1	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0
+1	1	1	1	1	1	1	2	2	2	3	3	3	3	3	3	4	4	5	6	6	6	6	6
+
+Line 482
+δύσ		ετ’.	ἄφ	αρ		δ’εὐν		ὴν		ἐπ	αμ	ήσ		ατ	ο	χερσ		ὶ	φίλ	ῃσ		ιν	
+1	0	0	1	0	0	1	0	0	0	1	0	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0
+1	1	1	2	2	2	3	3	3	3	4	4	4	4	4	4	5	5	5	6	6	6	6	6
+
+Line 483
+εὐρ		εῖ		αν·		φύλλ		ων		γὰρ	ἔ	ην		χύσ	ις	ἤλ		ιθ	α	πολλ		ή,	
+1	0	0	0	0	0	1	0	0	0	1	1	0	0	1	0	1	0	0	0	1	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	0	0	1	0	0	0	0	1	0	0	1	0	1	0	0	0	0	0	2	0
+1	1	1	1	1	1	2	2	2	2	3	4	4	4	5	5	6	6	6	6	7	7	7	7
+
+Line 484
+ὅσσ		ον		τ’ἠ		ὲ	δύ	ω		ἠ		ὲ		τρεῖς		ἄνδρ		ας	ἔρ	υσθ		αι	
+1	0	0	0	1	0	0	1	0	0	1	0	0	0	1	0	1	0	0	1	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	long	long	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	0	0	0	3	0	1	0	0	1	0	0	0	0
+1	1	1	1	2	2	2	3	3	3	4	4	4	4	5	5	6	6	6	7	7	7	7	7
+
+Line 485
+ὥρ		ῃ		χειμ		ερ	ί	ῃ,		εἰ		καὶ		μάλ	α	περ		χαλ	επ	αίν		οι.	
+1	0	0	0	1	0	0	0	0	0	1	0	1	0	1	0	1	0	1	0	0	0	0	0
+long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	1	1	2	2	2	2	2	2	3	3	4	4	5	5	6	6	7	7	7	7	7	7
+
+Line 486
+τὴν		μὲν	ἰδ	ὼν		γήθ		ησ		ε	πολ	ύτλ		ας		δῖ		ος	Ὀδ	υσσ		εύς,	
+1	0	1	1	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	3	0	0	0	0	0	2	0
+1	1	2	3	3	3	4	4	4	4	4	5	5	5	5	5	6	6	6	7	7	7	7	7
+
+Line 487
+ἐν		δ’ἄρ	α	μέσσ		ῃ		λέκτ		ο,	χύσ	ιν		δ’ἐπ	εχ	εύ		ατ	ο	φύλλ		ων.	
+1	0	1	0	1	0	0	0	1	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	1	0	0	0	1	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0
+1	1	2	2	3	3	3	3	4	4	4	5	5	5	6	6	6	6	6	6	7	7	7	7
+
+Line 488
+ὡς		δ’ὅτ	ε	τις		δαλ		ὸν		σποδ	ι	ῇ		ἐν	έκρ	υψ		ε	μελ	αίν		ῃ	
+1	0	1	0	1	0	1	0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	1	0	0	0	0	0	0	0	0	0	3	0	0	1	0	0	0	0	1	0	0	0
+1	1	2	2	3	3	4	4	4	4	5	5	5	5	6	6	6	6	6	7	7	7	7	7
+
+Line 489
+ἀγρ		οῦ	ἐπ’	ἐσχ		ατ	ι	ῆς,		ᾧ		μὴ		πάρ	α	γείτ		ον	ες	ἄλλ		οι,	
+1	0	0	1	1	0	0	0	0	0	1	0	1	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	3	0	0	0	0	0	3	0	3	0	0	0	1	0	1	0	0	0	1	0	0	0
+1	1	1	2	3	3	3	3	3	3	4	4	5	5	6	6	7	7	7	7	8	8	8	8
+
+Line 490
+σπέρμ		α	πυρ	ὸς		σῴζ		ων,		ἵν	α	μή		ποθ	εν	ἄλλ		οθ	εν	αὔ		οι,	
+1	0	0	1	0	0	1	0	0	0	1	0	1	0	1	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	1	0	2	0	0	0	1	0	0	0	1	0	0	0
+1	1	1	2	2	2	3	3	3	3	4	4	5	5	6	6	7	7	7	7	8	8	8	8
+
+Line 491
+ὣς		Ὀδ	υσ	εὺς		φύλλ		οισ		ι	καλ	ύψ		ατ	ο·	τῷ		δ’ἄρ’	Ἀθ	ήν		η	
+1	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0	1	0	1	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	3	0	2	0	1	0	0	0
+1	1	2	2	2	2	3	3	3	3	3	4	4	4	4	4	5	5	6	7	7	7	7	7
+
+Line 492
+ὕπν		ον	ἐπ’	ὄμμ		ασ	ι	χεῦ’,		ἵν	α	μιν		παύσ		ει		ε	τάχ	ιστ		α	
+1	0	0	1	1	0	0	0	1	0	1	0	1	0	1	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	1	0	0	0	3	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	1	2	3	3	3	3	4	4	5	5	6	6	7	7	7	7	7	8	8	8	8	8
+
+Line 493
+δυσπ		ον	έ	ος		καμ	άτ	οι		ο	φίλ	α		βλέφ	αρ’	ἀμφ		ικ	αλ	ύψ		ας.	
+1	0	0	0	0	0	1	0	0	0	0	1	0	0	1	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+0	0	0	1	0	0	0	1	0	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0
+1	1	1	1	1	1	2	2	2	2	2	3	3	3	4	4	5	5	5	5	5	5	5	5
+

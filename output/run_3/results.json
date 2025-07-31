@@ -1,0 +1,307 @@
+{
+  "iliad": {
+    "book1": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 611,
+      "time": 61.26099920272827
+    },
+    "book2": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 877,
+      "time": 109.51678895950317
+    },
+    "book3": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 461,
+      "time": 45.020591735839844
+    },
+    "book4": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 544,
+      "time": 52.79274249076843
+    },
+    "book5": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 909,
+      "time": 113.38075566291809
+    },
+    "book6": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 529,
+      "time": 50.897339820861816
+    },
+    "book7": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 482,
+      "time": 46.14503812789917
+    },
+    "book8": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 561,
+      "time": 55.37896537780762
+    },
+    "book9": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 709,
+      "time": 74.98692655563354
+    },
+    "book10": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 579,
+      "time": 58.35425519943237
+    },
+    "book11": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 847,
+      "time": 96.11808776855469
+    },
+    "book12": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 471,
+      "time": 43.97771763801575
+    },
+    "book13": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 837,
+      "time": 98.81734347343445
+    },
+    "book14": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 521,
+      "time": 48.82693576812744
+    },
+    "book15": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 746,
+      "time": 78.94649744033813
+    },
+    "book16": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 867,
+      "time": 98.98458552360535
+    },
+    "book17": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 761,
+      "time": 81.05552506446838
+    },
+    "book18": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 616,
+      "time": 61.79207944869995
+    },
+    "book19": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 424,
+      "time": 37.342899799346924
+    },
+    "book20": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 503,
+      "time": 46.86601448059082
+    },
+    "book21": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 611,
+      "time": 57.42629957199097
+    },
+    "book22": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 515,
+      "time": 47.52252459526062
+    },
+    "book23": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 897,
+      "time": 106.12312984466553
+    },
+    "book24": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 804,
+      "time": 92.17090892791748
+    }
+  },
+  "odyssey": {
+    "book1": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 444,
+      "time": 41.51247215270996
+    },
+    "book2": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 433,
+      "time": 39.22342658042908
+    },
+    "book3": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 497,
+      "time": 47.43307638168335
+    },
+    "book4": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 847,
+      "time": 98.07608199119568
+    },
+    "book5": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 493,
+      "time": 45.783063888549805
+    },
+    "book6": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 331,
+      "time": 28.86135506629944
+    },
+    "book7": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 347,
+      "time": 29.772899627685547
+    },
+    "book8": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 586,
+      "time": 57.190407276153564
+    },
+    "book9": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 566,
+      "time": 56.211588621139526
+    },
+    "book10": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 574,
+      "time": 56.45354747772217
+    },
+    "book11": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 640,
+      "time": 62.55385375022888
+    },
+    "book12": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 453,
+      "time": 42.00955867767334
+    },
+    "book13": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 440,
+      "time": 39.62392592430115
+    },
+    "book14": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 533,
+      "time": 50.94515562057495
+    },
+    "book15": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 557,
+      "time": 53.90496230125427
+    },
+    "book16": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 481,
+      "time": 46.15381622314453
+    },
+    "book17": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 606,
+      "time": 58.22597360610962
+    },
+    "book18": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 428,
+      "time": 39.56693363189697
+    },
+    "book19": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 604,
+      "time": 58.54557251930237
+    },
+    "book20": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 394,
+      "time": 35.77619934082031
+    },
+    "book21": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 434,
+      "time": 38.70821809768677
+    },
+    "book22": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 501,
+      "time": 46.5104615688324
+    },
+    "book23": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 372,
+      "time": 32.62463593482971
+    },
+    "book24": {
+      "success": true,
+      "validation": 100.0,
+      "lines": 548,
+      "time": 53.683879137039185
+    }
+  },
+  "summary": {
+    "run": 3,
+    "total_books": 48,
+    "books_passed": 48,
+    "iliad_passed": 24,
+    "odyssey_passed": 24,
+    "total_lines_validated": 27791,
+    "iliad_lines": 15682,
+    "odyssey_lines": 12109,
+    "run_time_seconds": 2823.056470632553,
+    "run_time_minutes": 47.05094117720922,
+    "timestamp": "2025-07-31T17:17:54.782261"
+  }
+}
