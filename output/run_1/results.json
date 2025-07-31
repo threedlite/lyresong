@@ -1,0 +1,305 @@
+{
+  "iliad": {
+    "1": {
+      "validation": 100.0,
+      "lines": 611,
+      "runtime": 60.90049505233765,
+      "passed": true
+    },
+    "2": {
+      "validation": 100.0,
+      "lines": 877,
+      "runtime": 109.51079106330872,
+      "passed": true
+    },
+    "3": {
+      "validation": 100.0,
+      "lines": 461,
+      "runtime": 46.74772357940674,
+      "passed": true
+    },
+    "4": {
+      "validation": 100.0,
+      "lines": 544,
+      "runtime": 55.32152843475342,
+      "passed": true
+    },
+    "5": {
+      "validation": 100.0,
+      "lines": 909,
+      "runtime": 116.94259214401245,
+      "passed": true
+    },
+    "6": {
+      "validation": 100.0,
+      "lines": 529,
+      "runtime": 53.15179181098938,
+      "passed": true
+    },
+    "7": {
+      "validation": 100.0,
+      "lines": 482,
+      "runtime": 48.949082374572754,
+      "passed": true
+    },
+    "8": {
+      "validation": 100.0,
+      "lines": 561,
+      "runtime": 58.69140267372131,
+      "passed": true
+    },
+    "9": {
+      "validation": 100.0,
+      "lines": 709,
+      "runtime": 77.73921155929565,
+      "passed": true
+    },
+    "10": {
+      "validation": 100.0,
+      "lines": 579,
+      "runtime": 62.898356914520264,
+      "passed": true
+    },
+    "11": {
+      "validation": 100.0,
+      "lines": 847,
+      "runtime": 105.92836332321167,
+      "passed": true
+    },
+    "12": {
+      "validation": 100.0,
+      "lines": 471,
+      "runtime": 48.10491895675659,
+      "passed": true
+    },
+    "13": {
+      "validation": 100.0,
+      "lines": 837,
+      "runtime": 108.02820253372192,
+      "passed": true
+    },
+    "14": {
+      "validation": 100.0,
+      "lines": 521,
+      "runtime": 53.63836050033569,
+      "passed": true
+    },
+    "15": {
+      "validation": 100.0,
+      "lines": 746,
+      "runtime": 86.7111759185791,
+      "passed": true
+    },
+    "16": {
+      "validation": 100.0,
+      "lines": 867,
+      "runtime": 115.19801354408264,
+      "passed": true
+    },
+    "17": {
+      "validation": 100.0,
+      "lines": 761,
+      "runtime": 84.68419289588928,
+      "passed": true
+    },
+    "18": {
+      "validation": 100.0,
+      "lines": 616,
+      "runtime": 65.99439191818237,
+      "passed": true
+    },
+    "19": {
+      "validation": 100.0,
+      "lines": 424,
+      "runtime": 39.21742844581604,
+      "passed": true
+    },
+    "20": {
+      "validation": 100.0,
+      "lines": 503,
+      "runtime": 49.447935819625854,
+      "passed": true
+    },
+    "21": {
+      "validation": 100.0,
+      "lines": 611,
+      "runtime": 61.449681997299194,
+      "passed": true
+    },
+    "22": {
+      "validation": 100.0,
+      "lines": 515,
+      "runtime": 49.92134404182434,
+      "passed": true
+    },
+    "23": {
+      "validation": 100.0,
+      "lines": 897,
+      "runtime": 114.14450025558472,
+      "passed": true
+    },
+    "24": {
+      "validation": 100.0,
+      "lines": 804,
+      "runtime": 97.05561256408691,
+      "passed": true
+    }
+  },
+  "odyssey": {
+    "1": {
+      "validation": 100.0,
+      "lines": 444,
+      "runtime": 44.52769660949707,
+      "passed": true
+    },
+    "2": {
+      "validation": 100.0,
+      "lines": 433,
+      "runtime": 41.09294867515564,
+      "passed": true
+    },
+    "3": {
+      "validation": 100.0,
+      "lines": 497,
+      "runtime": 50.48416328430176,
+      "passed": true
+    },
+    "4": {
+      "validation": 100.0,
+      "lines": 847,
+      "runtime": 113.62464189529419,
+      "passed": true
+    },
+    "5": {
+      "validation": 100.0,
+      "lines": 493,
+      "runtime": 50.25150799751282,
+      "passed": true
+    },
+    "6": {
+      "validation": 100.0,
+      "lines": 331,
+      "runtime": 29.966413497924805,
+      "passed": true
+    },
+    "7": {
+      "validation": 100.0,
+      "lines": 347,
+      "runtime": 31.30189871788025,
+      "passed": true
+    },
+    "8": {
+      "validation": 100.0,
+      "lines": 586,
+      "runtime": 59.73963403701782,
+      "passed": true
+    },
+    "9": {
+      "validation": 100.0,
+      "lines": 566,
+      "runtime": 58.346757650375366,
+      "passed": true
+    },
+    "10": {
+      "validation": 100.0,
+      "lines": 574,
+      "runtime": 57.528090476989746,
+      "passed": true
+    },
+    "11": {
+      "validation": 100.0,
+      "lines": 640,
+      "runtime": 65.42028594017029,
+      "passed": true
+    },
+    "12": {
+      "validation": 100.0,
+      "lines": 453,
+      "runtime": 43.2522132396698,
+      "passed": true
+    },
+    "13": {
+      "validation": 100.0,
+      "lines": 440,
+      "runtime": 40.21867227554321,
+      "passed": true
+    },
+    "14": {
+      "validation": 100.0,
+      "lines": 533,
+      "runtime": 53.183109521865845,
+      "passed": true
+    },
+    "15": {
+      "validation": 100.0,
+      "lines": 557,
+      "runtime": 55.821399450302124,
+      "passed": true
+    },
+    "16": {
+      "validation": 100.0,
+      "lines": 481,
+      "runtime": 49.42687201499939,
+      "passed": true
+    },
+    "17": {
+      "validation": 100.0,
+      "lines": 606,
+      "runtime": 62.85908007621765,
+      "passed": true
+    },
+    "18": {
+      "validation": 100.0,
+      "lines": 428,
+      "runtime": 41.8047878742218,
+      "passed": true
+    },
+    "19": {
+      "validation": 100.0,
+      "lines": 604,
+      "runtime": 61.20812702178955,
+      "passed": true
+    },
+    "20": {
+      "validation": 100.0,
+      "lines": 394,
+      "runtime": 36.462345123291016,
+      "passed": true
+    },
+    "21": {
+      "validation": 100.0,
+      "lines": 434,
+      "runtime": 41.83769083023071,
+      "passed": true
+    },
+    "22": {
+      "validation": 100.0,
+      "lines": 501,
+      "runtime": 47.98251175880432,
+      "passed": true
+    },
+    "23": {
+      "validation": 100.0,
+      "lines": 372,
+      "runtime": 34.09920597076416,
+      "passed": true
+    },
+    "24": {
+      "validation": 100.0,
+      "lines": 548,
+      "runtime": 56.989641427993774,
+      "passed": true
+    }
+  },
+  "summary": {
+    "run": 1,
+    "timestamp": "2025-07-31T14:12:59.500322",
+    "total_passed": 48,
+    "iliad_passed": 24,
+    "odyssey_passed": 24,
+    "total_lines": 27791,
+    "iliad_lines": 15682,
+    "odyssey_lines": 12109,
+    "runtime": 2997.806958913803
+  }
+}
