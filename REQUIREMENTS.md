@@ -150,4 +150,30 @@ The pipeline generates:
 3. **MIDI Timing**: Each line should take approximately 6 seconds to perform
 
 
+### Harmony Generation System
+- **Method**: `_generate_harmony_for_melody()` (lines 1508-1566)
+- **Theory**: Each melody note is harmonized with a triad built on its scale degree
+- **Scale Degree Mapping**:
+  ```
+  E (i)   → E minor (E-G-B)
+  F (ii)  → F major (F-A-C)
+  G (iii) → G major (G-B-D)
+  A (iv)  → A minor (A-C-E)
+  B (v)   → B diminished (B-D-F)
+  C (VI)  → C major (C-E-G)
+  D (VII) → D major (D-F-A)
+  ```
+
+### Chord Notation Implementation
+- **Tabulature**: Chords represented with `+` separator (e.g., `G4+B4+D5`)
+- **MIDI**: Method `_add_chord_to_track()` handles simultaneous notes
+- **LilyPond**: Method `_convert_note_or_chord_to_lily()` creates `<g' b' d''>` syntax
+
+### Dual MIDI Output
+- **Two versions per line**:
+  - `*_melody.mid`: Melody only (single track)
+  - `*_full.mid`: Melody + harmony (two tracks)
+- **Two concatenated files**:
+  - `*_concat_melody.mid`: All lines melody-only
+  - `*_concat_full.mid`: All lines with harmony
 

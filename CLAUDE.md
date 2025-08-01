@@ -1,5 +1,44 @@
 # Important Environment Notes for Claude
 
+## Recent Updates (Session: 2025-01-31)
+
+### Harmony Generation System
+The system now generates chord harmony accompaniment for all melodies:
+
+1. **Chord Theory**: 
+   - Uses triads built on each degree of the ancient Dorian scale (E-F-G-A-B-C-D)
+   - Each melody note is harmonized with its corresponding scale degree chord:
+     - E → E minor (E-G-B)
+     - F → F major (F-A-C)
+     - G → G major (G-B-D)
+     - A → A minor (A-C-E)
+     - B → B diminished (B-D-F)
+     - C → C major (C-E-G)
+     - D → D major (D-F-A)
+
+2. **Chord Notation**:
+   - Tabulature format: Notes separated by `+` (e.g., `G4+B4+D5`)
+   - LilyPond format: Standard chord syntax `<g' b' d''>8`
+   - MIDI: Multiple simultaneous note_on messages
+
+3. **MIDI Output Changes**:
+   - Two versions of each MIDI file:
+     - `*_melody.mid`: Melody only
+     - `*_full.mid`: Melody + chord harmony
+   - Two concatenated files:
+     - `*_concat_melody.mid`: All lines melody-only
+     - `*_concat_full.mid`: All lines with harmony
+   - Volume increased to velocity 96 (50% louder than original 64)
+
+4. **Title Format Changes**:
+   - Removed "Lyresong A4-G4-E4-A4" pattern from title
+   - Removed subtitle entirely
+   - Title now shows: "Iliad Book N for scale E4,F4,G4,A4,B4,C5,D5"
+
+5. **Staff Configuration**:
+   - Both melody and harmony use treble clef for readability
+   - Harmony labeled as "Harmony" in small text
+
 ## CRITICAL: Enhanced File Format (DO NOT CHANGE)
 The enhanced text file (`*_full_enhanced.txt`) uses a **MORA-BASED** grid with exactly 24 columns representing the 24 time units (morae) in a Greek hexameter line:
 
@@ -80,11 +119,14 @@ The script now supports processing all 48 books of Homer's epics with full HTML 
 
 ## Output Files (per book)
 Each book generates the following in `output/[epic]/book[N]/`:
-- `[epic]_book[N].tab` - Tabulature with pleasantness scores
-- `[epic]_book[N].ly` - LilyPond notation file
-- `[epic]_book[N].pdf` - Final PDF with Greek lyrics and pleasantness scores
-- `midi_files/` - Directory with individual MIDI files for each line
-- `[epic]_[NN]_concat.mid` - Concatenated MIDI file with all lines
+- `[epic]_book[N].tab` - Tabulature with melody and harmony notes
+- `[epic]_book[N].ly` - LilyPond notation file with two staves
+- `[epic]_book[N].pdf` - Final PDF with Greek lyrics, melody, and harmony
+- `midi_files/` - Directory with individual MIDI files:
+  - `[epic]_[NN]_[NNN]_melody.mid` - Melody-only version
+  - `[epic]_[NN]_[NNN]_full.mid` - Melody + harmony version
+- `[epic]_[NN]_concat_melody.mid` - Concatenated melody-only MIDI
+- `[epic]_[NN]_concat_full.mid` - Concatenated MIDI with harmony
 
 ## Key Features
 - **100% Validation**: All lines pass Greek prosody rules
@@ -145,12 +187,29 @@ timidity iliad_01_concat.mid
 - HTML source files are in `homer_texts/iliad/html/` and `homer_texts/odyssey/html/`
 - Processed outputs go to `output/[epic]/book[N]/` or `output/run_[N]/[epic]/book[N]/`
 - Each book's output includes:
-  - `[epic]_book[N].tab` - Tabulature with pleasantness scores
-  - `[epic]_book[N].ly` - LilyPond notation
+  - `[epic]_book[N].tab` - Tabulature with melody and harmony
+  - `[epic]_book[N].ly` - LilyPond notation (two staves)
   - `[epic]_book[N].pdf` - Final PDF with Greek text
-  - `midi_files/` - Individual MIDI files for each line
-  - `[epic]_[NN]_concat.mid` - Concatenated MIDI of all lines
+  - `midi_files/` - Individual MIDI files (melody and full versions)
+  - Concatenated MIDI files (melody-only and full)
 - All processing logic is in the single `lyresong_complete.py` file
+
+## Harmony Implementation Details
+
+### Key Methods Added/Modified:
+1. **`_generate_harmony_for_melody()`** (lines 1508-1566): Creates chord harmony based on scale degree
+2. **`_add_chord_to_track()`** (lines 518-534): Handles simultaneous MIDI notes for chords
+3. **`_convert_note_or_chord_to_lily()`** (lines 2023-2043): Converts chord notation to LilyPond format
+
+### Tabulature Format:
+- Melody and harmony columns separated by `|`
+- Chord notes use `+` separator (e.g., `G4+B4+D5`)
+- Duration markers (`=`) apply to entire chord
+
+### MIDI Generation:
+- Creates two files per line: melody-only and full version
+- Velocity set to 96 for 50% louder volume
+- Proper timing for simultaneous chord notes
 
 ## Technical Implementation Details
 
