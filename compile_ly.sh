@@ -1,5 +1,6 @@
 #!/bin/bash
 # Compile a LilyPond file to PDF and MIDI
+#   brew install lilypond
 
 if [ -z "$1" ]; then
     echo "Usage: $0 <file.ly>"
