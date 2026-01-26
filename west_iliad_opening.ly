@@ -15,6 +15,7 @@
 \paper {
   #(set-paper-size "a4")
   indent = 0
+  ragged-right = ##f
 }
 
 % Instrumental introduction
@@ -23,29 +24,20 @@ intro = {
   \time 7/16
   a8. e8[ e8] | f8. a4 | d'8. a8[ a8] | f8. a8[ f8] |
   \grace { a16( f16 } e8.) a8[ d'8] | \grace { a16( f16 } e8.) f4 |
-  f8. f8[ a8]
-  \bar "||"
+  f8. f8[ a8] |
 }
 
 % Line 1: μῆνιν ἄειδε θεά Πηληϊάδεω Ἀχιλῆος
 lineOne = {
   \clef "treble_8"
   \time 7/16
-  % μῆ-νιν (circumflex descends)
   a16.[ f16.] f8[ a8] |
-  % ἄ-ει-δε (acute on ἄ)
   f8. f8[ a8] |
-  % θε-ά  
   d'8. a4
-  % Πη-λη-ι-ά  
   f8. f8[ a8] |
-  % δε-ω-Ἀ-χι
   f8. f8[ f8] |
-  % λῆ-ος
   a16.[ f16.] e8. r16 |
-  % Instrumental flourish (τοφλαττοθρατ)
-  \grace { a16( f16 } e8.) \grace { a16( f16 } e8)[ a8] 
-  \bar "||"
+  \grace { a16( f16 } e8.) \grace { a16( f16 } e8)[ a8] |
 }
 
 textOne = \lyricmode {
@@ -70,12 +62,11 @@ lineTwo = {
   f8. a8([ f8]) |
   a8. f8[ a8] |
   e8. e8. r16 |
-  \grace { a16( f16 } e8.) \grace { a16( f16 } e8)[ a8]
-  \bar "||"
+  \grace { a16( f16 } e8.) \grace { a16( f16 } e8)[ a8] |
 }
 
 textTwo = \lyricmode {
-  οὐ -- λο -- μέ -- νην ἣ μυ -- ρί'
+  οὐ -- λο -- μέ -- νην, ἣ μυ -- ρί'
   Ἀ -- χαι -- οῖς ἄλ -- γε' ἔ -- θη -- κεν, _ _ _
 }
 
@@ -99,20 +90,13 @@ textTwo = \lyricmode {
 lineThree = {
   \clef "treble_8"
   \time 7/16
-  % πολ-λὰς-δ'ἰ
   a8. d'4 |
-  % φθί-μους-ψυ
   a8. d'4 |
-  % χὰς-Ἄ-ϊ
   a8. f4 |
-  % δι-προ-ΐ
   a8. a8[ f8] |
   f8. f8[ a8] |
-  % α-ψεν
   e8. e8. r16 |
-  % flourish
-  \acciaccatura { f8( } e8.) \grace { a16 f16 } e8[ a8]
-  \bar "||"
+  \acciaccatura { f8( } e8.) \grace { a16 f16 } e8[ a8] |
 }
 
 textThree = \lyricmode {
@@ -137,13 +121,11 @@ lineFour = {
   a8. f8[ f8] |
   a16.[ f16.] e8[ a8] |
   e8. e8. r16 |
-  % rest + flourish
-   \acciaccatura { f8( } e8.) a8[ a8]
-  \bar "||"
+  \acciaccatura { f8( } e8.) a8[ a8] |
 }
 
 textFour = \lyricmode {
-  ἡ -- ρώ -- ων αὐ -- τοὺς δὲ ἑ -- λώ -- ρι -- α τε -- ῦ -- χε κύ -- νεσ -- σιν _ _ _
+  ἡ -- ρώ -- ων, αὐ -- τοὺς δὲ ἑ -- λώ -- ρι -- α τε -- ῦ -- χε κύ -- νεσ -- σιν _ _ _
 }
 
 \score {
@@ -165,12 +147,11 @@ lineFive = {
   a8. f8[ f8] |
   e8. a8. r16 |
   d'8. a8[ f8] |
-  \grace { a16([ f16] } e8.) a4
-  \bar "||"
+  \grace { a16([ f16] } e8.) a4 |
 }
 
 textFive = \lyricmode {
-  οἰ -- ω -- νοῖ -- σί τε πᾶ -- σι Δι -- ὸς δ'ἐ -- τε -- λεί -- ε -- το βου -- λή _ _ _
+  οἰ -- ω -- νοῖ -- σί τε πᾶ -- σι· Δι -- ὸς δ'ἐ -- τε -- λεί -- ε -- το βου -- λή. _ _ _
 }
 
 \score {
