@@ -1,0 +1,44 @@
+Analysis: Four Natural Notes Maximizing Fourths and Fifths
+==========================================================
+
+The key structure is the chain of fifths for natural notes:
+
+    F — C — G — D — A — E — B
+
+Each adjacent pair is a perfect fifth (7 semitones) / perfect fourth
+(5 semitones). These are the ONLY fourth/fifth pairs among natural notes
+(F-B is a tritone, not a perfect fifth).
+
+With 4 notes, you're choosing 4 nodes from this path graph and want to
+maximize edges (fourth/fifth pairs). Since it's a linear chain, the best
+you can do is pick 4 consecutive nodes, yielding 3 fourths/fifths out of
+6 possible pairs.
+
+
+The four optimal sets (all tied at 3)
+--------------------------------------
+
+  Notes          Fourths/Fifths
+  -------------  ----------------------------------------
+  C, D, F, G     C-F (4th), C-G (5th), D-G (4th)
+  C, D, G, A     C-G (5th), D-G (4th), D-A (5th)
+  D, E, G, A     D-G (4th), D-A (5th), E-A (4th)
+  D, E, A, B     D-A (5th), E-A (4th), E-B (5th)
+
+All four fit comfortably within an octave span (7-9 semitones total range).
+
+
+Bonus: if you allow the same letter in two octaves
+---------------------------------------------------
+
+If you can pick both a note and its octave (e.g., C and C'), then you can
+reach 4 fourths/fifths with sets like:
+
+  {C, F, G, C'}   C-F (4th), C-G (5th), F-C' (5th), G-C' (4th)
+  {D, G, A, D'}   D-G (4th), D-A (5th), G-D' (5th), A-D' (4th)
+  {E, A, B, E'}   E-A (4th), E-B (5th), A-E' (5th), B-E' (4th)
+
+The pattern is: a note, its fourth, its fifth, and itself an octave up —
+spanning exactly 12 semitones. 4 out of 6 pairs are fourths/fifths (the
+remaining two are a major 2nd and an octave). This is the theoretical
+maximum; 5 out of 6 is impossible within an octave span.
