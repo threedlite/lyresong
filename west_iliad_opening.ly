@@ -8,6 +8,7 @@
     \center-column {
       "Source: M. L. West, 'The Singing of Homer and the Modes of Early Greek Music',"
       "The Journal of Hellenic Studies, Vol. 101 (1981), pp. 113-129"
+      "Transposed from the 1981 original using West 1992, Ancient Greek Music (AGM), p. 328"
     }
   }
 }
@@ -22,22 +23,22 @@
 intro = {
   \clef "treble_8"
   \time 7/16
-  a8. e8[ e8] | f8. a4 | d'8. a8[ a8] | f8. a8[ f8] |
-  \grace { a16( f16 } e8.) a8[ d'8] | \grace { a16( f16 } e8.) f4 |
-  f8. f8[ a8] |
+  c'8. a8[ a8] | b8. c'4 | e'8. c'8[ c'8] | b8. c'8[ b8] |
+  \grace { c'16( b16 } a8.) c'8[ e'8] | \grace { c'16( b16 } a8.) b4 |
+  b8. b8[ c'8] |
 }
 
 % Line 1: μῆνιν ἄειδε θεά Πηληϊάδεω Ἀχιλῆος
 lineOne = {
   \clef "treble_8"
   \time 7/16
-  a16.\([ f16.]\) f8[ a8] |
-  f8. f8[ a8] |
-  d'8. a4
-  f8. f8[ a8] |
-  f8. f8[ f8] |
-  a16.\([ f16.]\) e8. r16 |
-  \grace { a16( f16 } e8.) \grace { a16( f16 } e8)[ a8] |
+  c'16.\([ b16.]\) b8[ c'8] |
+  b8. b8[ c'8] |
+  e'8. c'4
+  b8. b8[ c'8] |
+  b8. b8[ b8] |
+  c'16.\([ b16.]\) a8. r16 |
+  \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
 }
 
 textOne = \lyricmode {
@@ -56,13 +57,13 @@ textOne = \lyricmode {
 lineTwo = {
   \clef "treble_8"
   \time 7/16
-  a8. a8[ d'8] |
-  a8. d'4 |
-  a8. d'8[ a8] |
-  f8. a8([ f8]) |
-  a8. f8[ a8] |
-  e8. e8. r16 |
-  \grace { a16( f16 } e8.) \grace { a16( f16 } e8)[ a8] |
+  c'8. c'8[ e'8] |
+  c'8. e'4 |
+  c'8. e'8[ c'8] |
+  b8. c'8([ b8]) |
+  c'8. b8[ c'8] |
+  a8. a8. r16 |
+  \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
 }
 
 textTwo = \lyricmode {
@@ -90,13 +91,13 @@ textTwo = \lyricmode {
 lineThree = {
   \clef "treble_8"
   \time 7/16
-  a8. d'4 |
-  a8. d'4 |
-  a8. f4 |
-  a8. a8[ f8] |
-  f8. f8[ a8] |
-  e8. e8. r16 |
-  \acciaccatura { f8( } e8.) \grace { a16 f16 } e8[ a8] |
+  c'8. e'4 |
+  c'8. e'4 |
+  c'8. b4 |
+  c'8. c'8[ b8] |
+  b8. b8[ c'8] |
+  a8. a8. r16 |
+  \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
 }
 
 textThree = \lyricmode {
@@ -115,13 +116,13 @@ textThree = \lyricmode {
 lineFour = {
   \clef "treble_8"
   \time 7/16
-  a8. d'4 |
-  a8. a4 |
-  d'8. a8[ f8] |
-  a8. f8[ f8] |
-  a16.\([ f16.]\) e8[ a8] |
-  e8. e8. r16 |
-  \acciaccatura { f8( } e8.) a8[ a8] |
+  c'8. e'4 |
+  c'8. c'4 |
+  e'8. c'8[ b8] |
+  c'8. b8[ b8] |
+  c'16.\([ b16.]\) a8[ c'8] |
+  a8. a8. r16 |
+  \acciaccatura { b8( } a8.) c'8[ c'8] |
 }
 
 textFour = \lyricmode {
@@ -140,14 +141,14 @@ textFour = \lyricmode {
 lineFive = {
   \clef "treble_8"
   \time 7/16
-  a8. a4 |
-  d'16.([ a16.]) d'8[ a8] |
-  d'16.([ a16.]) f8[ f8] |
-  a8. f8[ f8] |
-  a8. f8[ f8] |
-  e8. a8. r16 |
-  d'8. a8[ f8] |
-  \grace { a16([ f16] } e8.) a4 |
+  c'8. c'4 |
+  e'16.([ c'16.]) e'8[ c'8] |
+  e'16.([ c'16.]) b8[ b8] |
+  c'8. b8[ b8] |
+  c'8. b8[ b8] |
+  a8. c'8. r16 |
+  e'8. c'8[ b8] |
+  \grace { c'16([ b16] } a8.) c'4 |
 }
 
 textFive = \lyricmode {
