@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
 """Generate West-style melodies for Homer's Iliad hexameter lines.
 
-Uses the generalized rules from west_continuation_proposals.md,
+Uses the prosody rules from west_prosody_rules.md (derived from West 1981/1992),
 with POS data from the Perseus Ancient Greek Dependency Treebank (AGDT).
+
+Key rules implemented:
+- H1-H6: Hard constraints (circumflex descent, acute peak, c' opening, etc.)
+- E1-E4: Elevation rules (foot position gate, POS-based, circumflex form)
+- F2: Circumflex stricter position gate (feet 1-2 only, vs 1-3 for acute)
+- G2: One e' per word maximum
+- CAD1/CAD2: Cadence patterns
 
 Output: LilyPond (.ly) and MusicXML (.musicxml) files.
 
@@ -69,6 +76,151 @@ CONTENT_POS_CHARS = {'n', 'a', 'p'}  # noun, adjective, pronoun
 TREEBANK_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                             'data-sources', 'treebank_data', 'v1.6', 'greek', 'data')
 
+# === West-style Melodic Interludes (from west_iliad_opening.ly) ===
+#
+# These are the interlude patterns West uses between hexameter lines.
+# CAD1: After lines ending on 'a' (standard cadence)
+# CAD2: After lines ending on c' (final acute cadence)
+#
+# Each interlude is one 7/16 measure, except CAD2 which spans 2 measures.
+#
+# === Interlude Selection Modes ===
+#
+# Two approaches for selecting CAD1 interlude patterns, both fully deterministic:
+#
+# 1. CYCLE MODE ('cycle'):
+#    Reproduces West's actual pattern sequence from west_iliad_opening.ly.
+#    West's choices for the first 4 CAD1 lines: 0, 0, 1, 2
+#    Extended cycle (length 5): 0, 0, 1, 2, 3, 0, 0, 1, 2, 3, ...
+#    Rationale: West (1981, p.122-123) describes interludes as "decorative figures"
+#    providing variety. His actual choices suggest a performance practice of
+#    starting ornate (repeat for emphasis), then progressing through simpler
+#    patterns. Formula: max(0, (cad1_index % 5) - 1)
+#
+# 2. MELODIC MODE ('melodic'):
+#    Selection based on the melodic approach to the cadence (penultimate pitch).
+#    Rationale: West (1981, p.121) describes melodic progression from Mese (c')
+#    toward Hypate (a) as the cadence pattern. The interlude reverses this,
+#    returning from Hypate to Mese. When melody descends to cadence (penultimate
+#    b or c'), ornate patterns echo that descent. When melody is already at
+#    cadence level (penultimate a), simpler patterns suffice.
+#    - Penultimate b/c' (descending) + even line → Pattern 0 (double-grace)
+#    - Penultimate b/c' (descending) + odd line  → Pattern 1 (acciaccatura+grace)
+#    - Penultimate a (level) + even line         → Pattern 2 (simple)
+#    - Penultimate a (level) + odd line          → Pattern 3 (rising)
+#
+INTERLUDE_MODE_CYCLE = 'cycle'
+INTERLUDE_MODE_MELODIC = 'melodic'
+DEFAULT_INTERLUDE_MODE = INTERLUDE_MODE_CYCLE
+
+# CAD1 interludes: grace-note ornaments descending to 'a', then rising to c'
+# Pattern variations from West's lines 1-4
+CAD1_INTERLUDES = [
+    # Pattern 0: double grace descent (lines 1, 2)
+    # \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8]
+    r"\grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |",
+    # Pattern 1: acciaccatura + grace (line 3)
+    # \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8]
+    r"\acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |",
+    # Pattern 2: simple acciaccatura (line 4)
+    # \acciaccatura { b8( } a8.) c'8[ c'8]
+    r"\acciaccatura { b8( } a8.) c'8[ c'8] |",
+    # Pattern 3: rising variation (simple)
+    r"\grace { c'16( b16 } a8.) b8[ c'8] |",
+]
+
+# CAD2 interlude: after lines ending on c' (final acute cadence, e.g., βουλή)
+# Spans 2 measures (14 sixteenths total):
+#   e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
+CAD2_INTERLUDE = r"e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |"
+
+# Instrumental introduction (7 measures before line 1)
+WEST_INTRO = r"""c'8. a8[ a8] | b8. c'4 | e'8. c'8[ c'8] | b8. c'8[ b8] |
+  \grace { c'16( b16 } a8.) c'8[ e'8] | \grace { c'16( b16 } a8.) b4 |
+  b8. b8[ c'8] |"""
+
+# Interlude note data for MusicXML/MIDI generation
+# Each entry: (pitch_letter, octave, duration_sixteenths, is_grace, grace_type)
+# grace_type: None, 'grace', 'acciaccatura'
+# Octave: 3 = small octave (a, b), 4 = one-line octave (c', e')
+CAD1_INTERLUDE_NOTES = [
+    # Pattern 0: double grace descent
+    # \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8]
+    [
+        ('C', 4, 0, True, 'grace'),      # grace c'16
+        ('B', 3, 0, True, 'grace'),      # grace b16 (slurred)
+        ('A', 3, 3, False, None),        # a8.
+        ('C', 4, 0, True, 'grace'),      # grace c'16
+        ('B', 3, 0, True, 'grace'),      # grace b16 (slurred)
+        ('A', 3, 2, False, None),        # a8
+        ('C', 4, 2, False, None),        # c'8
+    ],
+    # Pattern 1: acciaccatura + grace
+    # \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8]
+    [
+        ('B', 3, 0, True, 'acciaccatura'),  # acciaccatura b8
+        ('A', 3, 3, False, None),           # a8.
+        ('C', 4, 0, True, 'grace'),         # grace c'16
+        ('B', 3, 0, True, 'grace'),         # grace b16
+        ('A', 3, 2, False, None),           # a8
+        ('C', 4, 2, False, None),           # c'8
+    ],
+    # Pattern 2: simple acciaccatura
+    # \acciaccatura { b8( } a8.) c'8[ c'8]
+    [
+        ('B', 3, 0, True, 'acciaccatura'),  # acciaccatura b8
+        ('A', 3, 3, False, None),           # a8.
+        ('C', 4, 2, False, None),           # c'8
+        ('C', 4, 2, False, None),           # c'8
+    ],
+    # Pattern 3: rising variation
+    # \grace { c'16( b16 } a8.) b8[ c'8]
+    [
+        ('C', 4, 0, True, 'grace'),      # grace c'16
+        ('B', 3, 0, True, 'grace'),      # grace b16
+        ('A', 3, 3, False, None),        # a8.
+        ('B', 3, 2, False, None),        # b8
+        ('C', 4, 2, False, None),        # c'8
+    ],
+]
+
+# CAD2 interlude notes (2 measures)
+# e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4
+CAD2_INTERLUDE_NOTES = [
+    # Measure 1: e'8. c'8[ b8]
+    ('E', 4, 3, False, None),        # e'8.
+    ('C', 4, 2, False, None),        # c'8
+    ('B', 3, 2, False, None),        # b8
+    # Measure 2: \grace { c'16([ b16] } a8.) c'4
+    ('C', 4, 0, True, 'grace'),      # grace c'16
+    ('B', 3, 0, True, 'grace'),      # grace b16
+    ('A', 3, 3, False, None),        # a8.
+    ('C', 4, 4, False, None),        # c'4
+]
+
+# Instrumental introduction notes (7 measures)
+# c'8. a8[ a8] | b8. c'4 | e'8. c'8[ c'8] | b8. c'8[ b8] |
+# \grace { c'16( b16 } a8.) c'8[ e'8] | \grace { c'16( b16 } a8.) b4 |
+# b8. b8[ c'8]
+WEST_INTRO_NOTES = [
+    # Measure 1: c'8. a8[ a8]
+    [('C', 4, 3, False, None), ('A', 3, 2, False, None), ('A', 3, 2, False, None)],
+    # Measure 2: b8. c'4
+    [('B', 3, 3, False, None), ('C', 4, 4, False, None)],
+    # Measure 3: e'8. c'8[ c'8]
+    [('E', 4, 3, False, None), ('C', 4, 2, False, None), ('C', 4, 2, False, None)],
+    # Measure 4: b8. c'8[ b8]
+    [('B', 3, 3, False, None), ('C', 4, 2, False, None), ('B', 3, 2, False, None)],
+    # Measure 5: \grace { c'16( b16 } a8.) c'8[ e'8]
+    [('C', 4, 0, True, 'grace'), ('B', 3, 0, True, 'grace'),
+     ('A', 3, 3, False, None), ('C', 4, 2, False, None), ('E', 4, 2, False, None)],
+    # Measure 6: \grace { c'16( b16 } a8.) b4
+    [('C', 4, 0, True, 'grace'), ('B', 3, 0, True, 'grace'),
+     ('A', 3, 3, False, None), ('B', 3, 4, False, None)],
+    # Measure 7: b8. b8[ c'8]
+    [('B', 3, 3, False, None), ('B', 3, 2, False, None), ('C', 4, 2, False, None)],
+]
+
 
 # === Treebank POS Lookup ===
 
@@ -123,6 +275,77 @@ class TreebankPOS:
         if pos == 'v' and len(postag) > 4 and postag[4] == 'p':
             return True  # Participle
         return False
+
+
+# === Chamberlain HTML Parser ===
+
+class ChamberlainHTML:
+    """Parse hemistich and metrical data from Chamberlain's HTML files."""
+
+    def __init__(self, book=1, epic='iliad'):
+        self.syllables_by_line = {}
+        html_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                'homer_texts', epic, 'html')
+        filename = f'{epic}{book}.html'
+        filepath = os.path.join(html_dir, filename)
+
+        if not os.path.exists(filepath):
+            print(f"Warning: HTML file not found: {filepath}")
+            return
+
+        with open(filepath, 'r', encoding='utf-8') as f:
+            html = f.read()
+
+        # Parse all lines
+        line_pattern = r'<div class="line" id="line(\d+)">(.*?)</div>'
+        for match in re.finditer(line_pattern, html, re.DOTALL):
+            line_num = int(match.group(1))
+            line_html = match.group(2)
+            self.syllables_by_line[line_num] = self._parse_line(line_html)
+
+    def _parse_line(self, line_html):
+        """Parse syllables from a line's HTML."""
+        span_pattern = r'<span class="([^"]+)"[^>]*>([^<]+)</span>'
+        spans = re.findall(span_pattern, line_html)
+
+        syllables = []
+        for classes, text in spans:
+            cls_set = set(classes.split())
+            foot = None
+            word = None
+            for c in cls_set:
+                if c.startswith('foot') and c[4:].isdigit():
+                    foot = int(c[4:])
+                if c.startswith('word') and c[4:].isdigit():
+                    word = int(c[4:])
+
+            syllables.append({
+                'text': text,
+                'foot': foot,
+                'hemi': 1 if 'hemi1' in cls_set else 2,
+                'is_long': 'long' in cls_set,
+                'wordend': 'wordend' in cls_set,
+                'footend': 'footend' in cls_set,
+                'word_num': word,
+            })
+        return syllables
+
+    def get_hemistich_for_syllable(self, line_num, syllable_text):
+        """Get hemistich (1 or 2) for a syllable by text matching."""
+        syllables = self.syllables_by_line.get(line_num, [])
+        clean_text = syllable_text.rstrip(".,;·:'᾽'")
+
+        for syl in syllables:
+            syl_clean = syl['text'].rstrip(".,;·:'᾽'")
+            if clean_text == syl_clean or clean_text in syl_clean or syl_clean in clean_text:
+                return syl['hemi']
+
+        # Fallback: not found
+        return None
+
+    def get_line_data(self, line_num):
+        """Get all syllable data for a line."""
+        return self.syllables_by_line.get(line_num, [])
 
 
 # === Enhanced Mora Grid Parser ===
@@ -218,15 +441,73 @@ class MoraGrid:
 
 # === POS Matching ===
 
+def _normalize_word(word):
+    """Normalize a Greek word for comparison, stripping elision marks."""
+    elision_chars = "'᾽''\u1fbd\u2019"
+    w = unicodedata.normalize('NFC', word)
+    return w.rstrip(elision_chars).lower()
+
+
+def find_pos_for_word_in_line(target_word, tb_line_words):
+    """Find POS tag for a word using text similarity matching.
+
+    This is the primary POS lookup method, using word text similarity
+    rather than word number alignment (which fails when mora grid and
+    treebank tokenize elided words differently).
+
+    Returns (postag, treebank_word_dict) or (None, None).
+    """
+    target_norm = _normalize_word(target_word)
+    if not target_norm:
+        return None, None
+
+    for tb_word in tb_line_words:
+        tb_norm = _normalize_word(tb_word['form'])
+
+        # Exact match
+        if target_norm == tb_norm:
+            return tb_word['postag'], tb_word
+
+        # Elided match: target is prefix or suffix of treebank word
+        if tb_norm.startswith(target_norm) or tb_norm.endswith(target_norm):
+            return tb_word['postag'], tb_word
+
+        # Substring match (for partial forms)
+        if target_norm in tb_norm or tb_norm in target_norm:
+            return tb_word['postag'], tb_word
+
+    return None, None
+
+
+def find_pos_for_word(word_num, tb_words):
+    """Look up POS tag by word number (1-indexed).
+
+    Returns (postag, treebank_word_dict) or (None, None).
+    Note: Word numbering may not align perfectly when mora grid combines
+    elided words (e.g., δ'ἰφθίμους) that treebank keeps separate.
+    """
+    idx = word_num - 1  # Convert to 0-indexed
+    if 0 <= idx < len(tb_words):
+        return tb_words[idx]['postag'], tb_words[idx]
+    return None, None
+
+
 def find_pos_for_accented_syllable(syllable_text, tb_words, used_indices):
     """Find the POS tag for the treebank word containing this accented syllable.
 
     Searches treebank words by substring match on the syllable text.
+    Handles elided syllables (e.g., ρί' matching μυρί᾽).
     Returns (postag, treebank_word_dict) or (None, None).
     """
     clean_syl = syllable_text.rstrip('.,;·:')
     if not clean_syl:
         return None, None
+
+    # Normalize elision marks for comparison
+    # Includes: ' (U+0027), ᾽ (U+1FBD KORONIS), ' (U+2019 RIGHT SINGLE QUOTE)
+    elision_chars = "'᾽''"
+    clean_syl_no_elision = clean_syl.rstrip(elision_chars)
+    syl_is_elided = len(clean_syl_no_elision) < len(clean_syl)
 
     for idx, tw in enumerate(tb_words):
         if idx in used_indices:
@@ -237,14 +518,27 @@ def find_pos_for_accented_syllable(syllable_text, tb_words, used_indices):
             used_indices.add(idx)
             return tw['postag'], tw
 
+    # Try elision match: elided syllable matches END of treebank word
+    # e.g., ρί' matches μυρί᾽ because μυρί ends with ρί
+    if syl_is_elided:
+        for idx, tw in enumerate(tb_words):
+            if idx in used_indices:
+                continue
+            form = tw['form']
+            form_no_elision = form.rstrip(elision_chars)
+            if form_no_elision.endswith(clean_syl_no_elision):
+                used_indices.add(idx)
+                return tw['postag'], tw
+
     # Fallback: try normalized match (strip diacritical differences)
     for idx, tw in enumerate(tb_words):
         if idx in used_indices:
             continue
         form = tw['form']
         # Try with trailing punctuation stripped from treebank form too
-        clean_form = re.sub(r'[,;.·᾽\']', '', form)
-        if clean_syl in clean_form or clean_form in clean_syl:
+        clean_form = re.sub(r"[,;.·᾽'']", '', form)
+        clean_syl_normalized = re.sub(r"[,;.·᾽'']", '', clean_syl)
+        if clean_syl_normalized in clean_form or clean_form in clean_syl_normalized:
             used_indices.add(idx)
             return tw['postag'], tw
 
@@ -256,14 +550,18 @@ def find_pos_for_accented_syllable(syllable_text, tb_words, used_indices):
 class WestMelodyGenerator:
     """Generate melodies using West's style rules."""
 
-    def __init__(self, treebank, mora_grid):
+    def __init__(self, treebank, mora_grid, html_data=None):
         self.treebank = treebank
+        self.html_data = html_data  # ChamberlainHTML for hemistich data
         self.mora_grid = mora_grid
+        self.last_analysis = None  # Store analysis from most recent generation
 
-    def generate_line(self, line_num):
+    def generate_line(self, line_num, track_reasons=False):
         """Generate a complete melody for one hexameter line.
 
         Returns list of note dicts ready for output, or None on failure.
+        If track_reasons=True, also populates self.last_analysis with
+        detailed reasoning for each pitch assignment.
         """
         syllables = self.mora_grid.get_syllable_data(line_num)
         if not syllables:
@@ -279,25 +577,30 @@ class WestMelodyGenerator:
         n = len(syllables)
         pitches = [None] * n
         circ_second = {}  # syllable index → second pitch for circumflex
+        reasons = [None] * n if track_reasons else None
+        circ_reasons = {} if track_reasons else None
 
         # Step 1: Cadence (CAD1/CAD2)
-        self._apply_cadence(syllables, pitches)
+        self._apply_cadence(syllables, pitches, reasons)
 
         # Step 2: Open on c' (H3)
         if pitches[0] is None:
             pitches[0] = "c'"
+            if reasons is not None:
+                reasons[0] = "H3: line opens on c'"
 
         # Step 3: Elevate accents (E1-E4, unified for acutes and circumflexes)
-        self._elevate_accents(syllables, pitches, circ_second, tb_words)
+        self._elevate_accents(syllables, pitches, circ_second, tb_words,
+                              line_num, reasons, circ_reasons)
 
         # Step 4: Fill unaccented syllables (U1-U6)
-        self._fill_unaccented(syllables, pitches, circ_second)
+        self._fill_unaccented(syllables, pitches, circ_second, reasons)
 
         # Step 5: Post-check repair loop — enforce all prosody constraints
-        self._repair_violations(syllables, pitches, circ_second)
+        self._repair_violations(syllables, pitches, circ_second, reasons)
 
         # Step 5b: Strict H2 — make accent strictly highest when possible
-        self._enforce_strict_h2(syllables, pitches, circ_second)
+        self._enforce_strict_h2(syllables, pitches, circ_second, reasons)
 
         # Step 6: Final validate (must produce zero errors)
         errors = self._validate(syllables, pitches, circ_second)
@@ -314,6 +617,18 @@ class WestMelodyGenerator:
 
         # Step 7: Assign rhythm and build note list
         notes = self._assign_rhythm(syllables, pitches, circ_second)
+
+        # Store analysis if tracking
+        if track_reasons:
+            self.last_analysis = {
+                'line_num': line_num,
+                'syllables': syllables,
+                'pitches': pitches,
+                'circ_second': circ_second,
+                'reasons': reasons,
+                'circ_reasons': circ_reasons,
+                'tb_words': tb_words,
+            }
 
         return notes
 
@@ -333,7 +648,7 @@ class WestMelodyGenerator:
             # Grave found — this is a word-final acute written as grave
             syl['accent'] = 2
 
-    def _apply_cadence(self, syllables, pitches):
+    def _apply_cadence(self, syllables, pitches, reasons=None):
         """Apply cadence rules (CAD1/CAD2).
 
         Does NOT override the penultimate syllable if it has a circumflex —
@@ -345,10 +660,16 @@ class WestMelodyGenerator:
         n = len(syllables)
         if syllables[-1]['accent'] == 2:  # Final acute (CAD2)
             pitches[-1] = "c'"
+            if reasons is not None:
+                reasons[-1] = "CAD2: final acute → c'"
             if n > 1 and syllables[-2]['accent'] != 3:
                 pitches[-2] = "b"
+                if reasons is not None:
+                    reasons[-2] = "CAD2: penultimate before final acute → b"
         else:  # Standard cadence (CAD1)
             pitches[-1] = "a"
+            if reasons is not None:
+                reasons[-1] = "CAD1: standard cadence → a"
             if n > 1:
                 if syllables[-2]['accent'] == 3:
                     pass  # Circumflex: let circumflex rules handle it
@@ -356,13 +677,37 @@ class WestMelodyGenerator:
                     # Accent at penultimate: use 'b' so the word's other
                     # syllables can stay at 'b' without violating H4
                     pitches[-2] = "b"
+                    if reasons is not None:
+                        reasons[-2] = "CAD1: penultimate accent → b (H4 compat)"
                 else:
                     pitches[-2] = "a"
+                    if reasons is not None:
+                        reasons[-2] = "CAD1: penultimate unaccented → a"
 
-    def _elevate_accents(self, syllables, pitches, circ_second, tb_words):
-        """Apply accent elevation rules E1-E4 (unified for acutes and circumflexes)."""
+    def _elevate_accents(self, syllables, pitches, circ_second, tb_words,
+                         line_num, reasons=None, circ_reasons=None):
+        """Apply accent elevation rules E1-E4, F2, G2 (unified for acutes and circumflexes).
+
+        Position gating:
+        - E1: Accents in feet 4-6 (or hemistich 2) → c'
+        - F2: Circumflex accents have STRICTER cutoff: feet 1-2 only (not 1-3)
+        - G2: Maximum one e' per word
+
+        POS-based elevation (E3):
+        - Content words (nouns, adjectives, participles, pronouns) → e'
+        - Function words (verbs, particles, conjunctions, etc.) → c'
+        """
         e_count = 0
         used_tb = set()
+        words_with_e = set()  # G2: track words that already have e'
+
+        # First pass: collect word texts for POS lookup
+        word_texts = {}
+        for syl in syllables:
+            wn = syl['word_num']
+            if wn not in word_texts:
+                word_texts[wn] = []
+            word_texts[wn].append(syl['text'])
 
         for i, syl in enumerate(syllables):
             if syl['accent'] == 0:
@@ -374,39 +719,118 @@ class WestMelodyGenerator:
                 if syl['accent'] == 3:
                     if pitches[i] in STEP_BELOW:
                         circ_second[i] = STEP_BELOW[pitches[i]]
+                        if circ_reasons is not None:
+                            circ_reasons[i] = f"H1: circumflex descent {pitches[i]}→{circ_second[i]}"
                     else:
                         # Can't descend from 'a'; raise to 'b'
                         pitches[i] = "b"
                         circ_second[i] = "a"
+                        if reasons is not None:
+                            reasons[i] = (reasons[i] or "") + " + raised to b for circ descent"
+                        if circ_reasons is not None:
+                            circ_reasons[i] = "H1: circumflex descent b→a (raised from a)"
                 continue
 
             foot = syl['foot']
+            is_circumflex = (syl['accent'] == 3)
+            accent_type = 'circumflex' if is_circumflex else ('final-acute' if syl['accent'] == 2 else 'acute')
 
-            # Determine base pitch
-            if foot > 3:
-                base_pitch = "c'"  # E1: feet 4-6 always c'
+            # Get hemistich from Chamberlain HTML (primary source for position)
+            hemi = None
+            if self.html_data:
+                hemi = self.html_data.get_hemistich_for_syllable(line_num, syl['text'])
+
+            # Determine position gating
+            # E1: Accents in second half (hemi2 or feet 4-6) → c'
+            # F2: Circumflex has stricter cutoff — feet 1-2 only for e'
+            in_second_half = False
+            if hemi is not None:
+                in_second_half = (hemi == 2)
+            else:
+                in_second_half = (foot > 3)
+
+            # F2: Circumflex stricter position gate
+            circ_position_blocks = is_circumflex and foot > 2
+
+            reason = None
+            if in_second_half:
+                base_pitch = "c'"  # E1: second half always c'
+                reason = f"E1: {accent_type} in foot {foot} (second half) → c'"
+            elif circ_position_blocks:
+                base_pitch = "c'"  # F2: circumflex in foot 3+ → c'
+                reason = f"F2: circumflex in foot {foot} > 2 → c'"
             elif e_count >= 3:
                 base_pitch = "c'"  # E2: cap reached
+                reason = f"E2: e' cap (3) reached → c'"
             elif i == 0:
                 base_pitch = "c'"  # H3: first syllable
+                reason = f"H3: first syllable {accent_type} → c'"
+            elif syl['word_num'] in words_with_e:
+                base_pitch = "c'"  # G2: word already has e'
+                reason = f"G2: word already has e' → c'"
             else:
-                # E3: POS-based decision
-                postag, _ = find_pos_for_accented_syllable(
-                    syl['text'], tb_words, used_tb)
+                # E3: POS-based decision (within eligible position)
+                # Reconstruct word text for similarity matching
+                word_text = ''.join(word_texts.get(syl['word_num'], []))
+
+                # Primary: word text similarity matching
+                postag, tb_word = find_pos_for_word_in_line(word_text, tb_words)
+                lookup_method = "word-text"
+
+                if postag is None:
+                    # Fallback 1: word number lookup
+                    postag, tb_word = find_pos_for_word(syl['word_num'], tb_words)
+                    lookup_method = "word-num"
+
+                if postag is None:
+                    # Fallback 2: syllable text matching
+                    postag, tb_word = find_pos_for_accented_syllable(
+                        syl['text'], tb_words, used_tb)
+                    lookup_method = "syl-text"
+
+                pos_desc = self._describe_pos(postag) if postag else "unknown"
+                tb_form = tb_word['form'] if tb_word else word_text
+
                 if postag and TreebankPOS.is_content_word(postag):
                     base_pitch = "e'"
                     e_count += 1
+                    words_with_e.add(syl['word_num'])  # G2: mark word as having e'
+                    reason = f"E3: {accent_type} on content word '{tb_form}' ({pos_desc}) → e'"
                 else:
                     base_pitch = "c'"
+                    reason = f"E3: {accent_type} on function word '{tb_form}' ({pos_desc}) → c'"
 
             # Apply circumflex descent (E4)
-            if syl['accent'] == 3:  # Circumflex
+            if is_circumflex:
                 pitches[i] = base_pitch
                 circ_second[i] = STEP_BELOW[base_pitch]
+                if reasons is not None:
+                    reasons[i] = reason
+                if circ_reasons is not None:
+                    circ_reasons[i] = f"H1/E4: circumflex descent {base_pitch}→{circ_second[i]}"
             else:
                 pitches[i] = base_pitch
+                if reasons is not None:
+                    reasons[i] = reason
 
-    def _fill_unaccented(self, syllables, pitches, circ_second):
+    def _describe_pos(self, postag):
+        """Return human-readable POS description."""
+        if not postag or len(postag) < 1:
+            return "unknown"
+        pos_char = postag[0]
+        pos_names = {
+            'n': 'noun', 'v': 'verb', 'a': 'adjective', 'p': 'pronoun',
+            'd': 'adverb', 'l': 'article', 'g': 'particle', 'c': 'conjunction',
+            'r': 'preposition', 'i': 'interjection', 'e': 'exclamation',
+            'm': 'numeral', 'u': 'punctuation',
+        }
+        base = pos_names.get(pos_char, f"pos={pos_char}")
+        # Check for participle (verb with mood='p')
+        if pos_char == 'v' and len(postag) > 4 and postag[4] == 'p':
+            return "participle"
+        return base
+
+    def _fill_unaccented(self, syllables, pitches, circ_second, reasons=None):
         """Apply unaccented syllable rules U1-U6."""
         n = len(syllables)
 
@@ -415,42 +839,51 @@ class WestMelodyGenerator:
                 continue
 
             foot = syllables[i]['foot']
+            reason = None
 
             # U1: Launch pad — next syllable is e'
             if i + 1 < n and pitches[i + 1] == "e'":
                 pitches[i] = "c'"
-                continue
-
+                reason = "U1/H6: launch pad before e' → c'"
             # U2: Post-e' descent
-            if i > 0 and pitches[i - 1] == "e'":
+            elif i > 0 and pitches[i - 1] == "e'":
                 pitches[i] = "c'"
-                continue
-
+                reason = "U2: post-e' descent → c'"
             # U3: Post-circumflex continuation
-            if i > 0 and syllables[i - 1]['accent'] == 3 and (i - 1) in circ_second:
+            elif i > 0 and syllables[i - 1]['accent'] == 3 and (i - 1) in circ_second:
                 landing = circ_second[i - 1]
                 pitches[i] = landing  # Stay at circumflex landing pitch
-                continue
-
+                reason = f"U3: post-circumflex continuation → {landing}"
             # U4: Position-based default
-            if foot <= 2:
+            elif foot <= 2:
                 pitches[i] = "c'"
+                reason = f"U4: unaccented in foot {foot} ≤ 2 → c'"
             elif foot == 3:
                 # Before next accent in foot 3 → c'; after → b
                 has_later_accent = any(
                     syllables[j]['accent'] > 0 and syllables[j]['foot'] == 3
                     for j in range(i + 1, n)
                 )
-                pitches[i] = "c'" if has_later_accent else "b"
+                if has_later_accent:
+                    pitches[i] = "c'"
+                    reason = "U4: foot 3 before accent → c'"
+                else:
+                    pitches[i] = "b"
+                    reason = "U4: foot 3 after accent → b"
             elif foot <= 5:
                 pitches[i] = "b"
+                reason = f"U4: unaccented in foot {foot} (4-5) → b"
             else:
                 pitches[i] = "b"  # Foot 6; cadence usually handles this
+                reason = "U4: foot 6 unaccented → b"
+
+            if reasons is not None and reason:
+                reasons[i] = reason
 
         # U6: Fix any illegal transitions
-        self._fix_transitions(pitches, circ_second)
+        self._fix_transitions(pitches, circ_second, reasons)
 
-    def _repair_violations(self, syllables, pitches, circ_second):
+    def _repair_violations(self, syllables, pitches, circ_second, reasons=None):
         """Post-check repair loop: fix all prosody violations iteratively.
 
         Repairs acute-is-highest, circumflex descent, and transition violations
@@ -467,13 +900,18 @@ class WestMelodyGenerator:
                 c_val = PITCH_ORDER.get(circ_second[i], 0)
                 if p_val <= c_val:
                     if pitches[i] in STEP_BELOW:
+                        old_circ = circ_second[i]
                         circ_second[i] = STEP_BELOW[pitches[i]]
                         changed = True
+                        if reasons is not None:
+                            reasons[i] = (reasons[i] or "") + f" [repair: circ {old_circ}→{circ_second[i]}]"
                     else:
                         # Pitch too low for descent (a); raise to b
                         pitches[i] = "b"
                         circ_second[i] = "a"
                         changed = True
+                        if reasons is not None:
+                            reasons[i] = (reasons[i] or "") + " [repair: raised a→b for circ]"
 
             # 2. Repair acute-is-highest per word
             word_groups = {}
@@ -503,21 +941,24 @@ class WestMelodyGenerator:
                         continue  # Circumflex peak ≥ acute is valid
                     p_val = PITCH_ORDER.get(pitches[i], 0)
                     if p_val > accent_max:
+                        old_pitch = pitches[i]
                         pitches[i] = VALUE_TO_PITCH[accent_max]
                         changed = True
+                        if reasons is not None:
+                            reasons[i] = (reasons[i] or "") + f" [repair H2: {old_pitch}→{pitches[i]}]"
 
             if not changed:
                 break
 
             # 3. Re-fix transitions after repairs
-            self._fix_transitions(pitches, circ_second)
+            self._fix_transitions(pitches, circ_second, reasons)
         else:
             # Exhausted iterations without converging
             pitch_str = ' '.join(p or '?' for p in pitches)
             print(f"  WARNING: Repair loop did not converge after 20 iterations")
             print(f"    Pitches: {pitch_str}")
 
-    def _fix_transitions(self, pitches, circ_second=None):
+    def _fix_transitions(self, pitches, circ_second=None, reasons=None):
         """Fix illegal transitions (H5) with minimal changes.
 
         When circ_second is provided, transitions from circumflex syllables
@@ -535,6 +976,7 @@ class WestMelodyGenerator:
                 p1_out = circ_second.get(i, pitches[i])
                 p2 = pitches[i + 1]
                 if p1_out and p2 and p2 not in ALLOWED_TRANSITIONS.get(p1_out, set()):
+                    old_p2 = p2
                     # Fix the transition from the outgoing pitch
                     if p1_out == "b" and p2 == "e'":
                         # Can't change circ_second easily; change next to c'
@@ -564,6 +1006,9 @@ class WestMelodyGenerator:
                                 pitches[i] = "c'"
                         changed = True
 
+                    if changed and reasons is not None:
+                        reasons[i + 1] = (reasons[i + 1] or "") + f" [H5 fix: {p1_out}→{old_p2} illegal, now {pitches[i+1]}]"
+
                 # Also check transition INTO circumflex first note
                 # (pitches[i-1] or circ_second[i-1] → pitches[i])
                 # This is handled by the next iteration when i-1 is processed
@@ -571,13 +1016,16 @@ class WestMelodyGenerator:
             if not changed:
                 break
 
-    def _enforce_strict_h2(self, syllables, pitches, circ_second):
+    def _enforce_strict_h2(self, syllables, pitches, circ_second, reasons=None):
         """Try to make accented syllables strictly highest in their word.
 
         For each word where an acute accent ties with unaccented syllables:
         1. Try raising the accent pitch (c'→e') if all rules still pass.
         2. If that fails, try lowering the tied unaccented syllables (c'→b).
         3. Only keep changes that pass full validation.
+
+        IMPORTANT: Respects G2 (one e' per word) - won't raise an accent to e'
+        if the word already has e' at another position (e.g., circumflex).
         """
         STEP_ABOVE = {"a": "b", "b": "c'", "c'": "e'"}
         n = len(syllables)
@@ -600,6 +1048,10 @@ class WestMelodyGenerator:
             accent_max = max(PITCH_ORDER.get(pitches[i], 0)
                              for i in accent_indices)
 
+            # G2 check: does this word already have e' at any position?
+            # (including circumflex first notes)
+            word_has_e = any(pitches[i] == "e'" for i in indices)
+
             # Find unaccented non-circumflex syllables that tie with accent
             tied = [i for i in indices
                     if syllables[i]['accent'] not in (1, 2, 3)
@@ -616,6 +1068,8 @@ class WestMelodyGenerator:
                 # Quick pre-checks
                 if new_pitch == "e'" and syllables[ai]['foot'] > 3:
                     continue  # E1: no e' in feet 4-6
+                if new_pitch == "e'" and word_has_e:
+                    continue  # G2: word already has e'
                 if new_pitch == "e'":
                     e_count = sum(1 for p in pitches if p == "e'")
                     e_count += sum(1 for v in circ_second.values()
@@ -631,6 +1085,8 @@ class WestMelodyGenerator:
                 errors = self._validate(syllables, pitches, circ_second)
                 if not errors:
                     resolved = True
+                    if reasons is not None:
+                        reasons[ai] = (reasons[ai] or "") + f" [strict H2: raised {old_pitch}→{new_pitch}]"
                     break
                 # Revert
                 pitches[ai] = old_pitch
@@ -657,6 +1113,12 @@ class WestMelodyGenerator:
                 # Revert all
                 for i, orig in originals.items():
                     pitches[i] = orig
+            else:
+                # Record the lowering
+                if reasons is not None:
+                    for i in tied:
+                        if pitches[i] != originals[i]:
+                            reasons[i] = (reasons[i] or "") + f" [strict H2: lowered {originals[i]}→{pitches[i]}]"
 
     def _validate(self, syllables, pitches, circ_second):
         """Validate ALL prosody rules. Returns list of error strings.
@@ -871,6 +1333,183 @@ class WestMelodyGenerator:
                 measure += 1
 
 
+# === Interlude Selection ===
+
+def _get_cadence_type(notes):
+    """Determine cadence type from a line's notes.
+
+    Returns 'CAD2' if line ends on c' (final acute), otherwise 'CAD1'.
+    """
+    # Find the last non-rest note
+    for note in reversed(notes):
+        if not note.get('is_rest'):
+            return 'CAD2' if note.get('pitch') == "c'" else 'CAD1'
+    return 'CAD1'
+
+
+def _count_circumflexes(notes):
+    """Count circumflex accents in a line's notes."""
+    count = 0
+    for note in notes:
+        syl = note.get('syllable')
+        if syl and syl.get('accent') == 3 and not note.get('is_melisma'):
+            count += 1
+    return count
+
+
+def _get_penultimate_pitch(notes):
+    """Get the pitch of the second-to-last non-rest note.
+
+    Returns pitch letter like 'a', 'b', 'c' or None if not enough notes.
+    """
+    # Filter out rests and get pitched notes only
+    pitched_notes = [n for n in notes if n.get('pitch') and not n.get('is_rest')]
+    if len(pitched_notes) < 2:
+        return None
+    penultimate = pitched_notes[-2]
+    # Extract just the pitch letter (strip octave marks)
+    pitch = penultimate.get('pitch', '')
+    return pitch.lower().rstrip("'") if pitch else None
+
+
+def _select_cad1_pattern_cycle(cad1_index):
+    """Select CAD1 pattern using West's sequence: 0, 0, 1, 2, 3, 0, 0, 1, 2, 3, ...
+
+    Rationale: West (1981, p.122-123) describes interludes as "decorative figures"
+    providing variety between verses. His actual choices for lines 1-4 (all CAD1):
+      - CAD1 #1 (line 1): Pattern 0 (most ornate, double-grace)
+      - CAD1 #2 (line 2): Pattern 0 (repeat ornate for emphasis)
+      - CAD1 #3 (line 3): Pattern 1 (acciaccatura + grace)
+      - CAD1 #4 (line 4): Pattern 2 (simple acciaccatura)
+
+    This suggests a performance practice: start with the most elaborate pattern,
+    repeat it for emphasis, then progress through simpler patterns for variety.
+    The cycle length is 5: [0, 0, 1, 2, 3] then repeats.
+
+    Formula: max(0, (cad1_index % 5) - 1)
+      - Index 0: max(0, -1) = 0
+      - Index 1: max(0,  0) = 0
+      - Index 2: max(0,  1) = 1
+      - Index 3: max(0,  2) = 2
+      - Index 4: max(0,  3) = 3
+      - Index 5: wraps to 0, etc.
+
+    Args:
+        cad1_index: 0-based count of CAD1 lines seen so far
+
+    Returns:
+        Pattern index 0-3, cycling: 0, 0, 1, 2, 3, 0, 0, 1, 2, 3, ...
+    """
+    return max(0, (cad1_index % 5) - 1)
+
+
+def _select_cad1_pattern_melodic(notes, line_num):
+    """Select CAD1 pattern based on melodic approach to cadence.
+
+    Rationale: West (1981, p.121) describes the melodic progression from Mese (c')
+    toward Hypate (a) as the cadence pattern. The interlude's function is to reverse
+    this, returning from Hypate to Mese (p.122: "filled the hiatus with instrumental
+    flourishes").
+
+    When the melody DESCENDS to the cadence (penultimate pitch is b or c'), the
+    interlude echoes that descending motion with ornate grace-note figures (patterns
+    0 and 1 both feature c'→b→a descent gestures).
+
+    When the melody is already at cadence level (penultimate is a), there is no
+    descent to echo, so simpler patterns suffice (patterns 2 and 3).
+
+    Line number (even/odd) provides variation within each category.
+
+    Args:
+        notes: list of note dicts for the line
+        line_num: line number for even/odd variation
+
+    Returns:
+        Pattern index 0-3
+    """
+    penult = _get_penultimate_pitch(notes)
+
+    if penult in ('b', 'c'):
+        # Descending approach to cadence - ornate patterns echo the descent
+        if line_num % 2 == 1:
+            return 0  # Double-grace descent: both figures have c'→b→a (odd lines)
+        else:
+            return 1  # Acciaccatura + grace: b→a then c'→b→a (even lines)
+    else:
+        # Level approach (penultimate is 'a' or unknown) - simpler patterns
+        if line_num % 2 == 0:
+            return 2  # Simple acciaccatura: just b→a then rise
+        else:
+            return 3  # Rising variation: c'→b→a then stepwise rise
+
+
+def _select_cad1_pattern(notes, line_num, mode=None, cad1_index=None):
+    """Select CAD1 interlude pattern based on the specified mode.
+
+    Args:
+        notes: list of note dicts for the line
+        line_num: line number
+        mode: 'cycle' or 'melodic' (default: melodic)
+        cad1_index: 0-based CAD1 line count (required for cycle mode)
+
+    Returns:
+        Pattern index 0-3
+    """
+    if mode is None:
+        mode = DEFAULT_INTERLUDE_MODE
+
+    if mode == INTERLUDE_MODE_CYCLE:
+        if cad1_index is None:
+            raise ValueError("cad1_index required for cycle mode")
+        return _select_cad1_pattern_cycle(cad1_index)
+    else:
+        return _select_cad1_pattern_melodic(notes, line_num)
+
+
+def _select_interlude(notes, line_num, mode=None, cad1_index=None):
+    """Select an interlude pattern based on cadence type and mode.
+
+    Args:
+        notes: list of note dicts for the line
+        line_num: line number
+        mode: 'cycle' or 'melodic' (default: melodic)
+        cad1_index: 0-based CAD1 line count (for cycle mode)
+
+    Returns:
+        tuple: (lily_string, is_cad2) where lily_string is the LilyPond interlude
+               and is_cad2 indicates whether this is a 2-measure CAD2 interlude
+    """
+    cadence_type = _get_cadence_type(notes)
+
+    if cadence_type == 'CAD2':
+        return CAD2_INTERLUDE, True
+    else:
+        idx = _select_cad1_pattern(notes, line_num, mode=mode, cad1_index=cad1_index)
+        return CAD1_INTERLUDES[idx], False
+
+
+def _get_interlude_notes(notes, line_num, mode=None, cad1_index=None):
+    """Get the note data for an interlude pattern.
+
+    Args:
+        notes: list of note dicts for the line
+        line_num: line number
+        mode: 'cycle' or 'melodic' (default: melodic)
+        cad1_index: 0-based CAD1 line count (for cycle mode)
+
+    Returns:
+        tuple: (note_list, is_cad2) where note_list contains
+               (pitch_letter, octave, duration_sixteenths, is_grace, grace_type)
+    """
+    cadence_type = _get_cadence_type(notes)
+
+    if cadence_type == 'CAD2':
+        return CAD2_INTERLUDE_NOTES, True
+    else:
+        idx = _select_cad1_pattern(notes, line_num, mode=mode, cad1_index=cad1_index)
+        return CAD1_INTERLUDE_NOTES[idx], False
+
+
 # === LilyPond Output ===
 
 def _notes_to_lily_measures(notes):
@@ -902,12 +1541,20 @@ def _notes_to_lily_measures(notes):
     return measures
 
 
-def write_lilypond(lines_data, output_path, book=1, line_range=(6, 7)):
+def write_lilypond(lines_data, output_path, book=1, line_range=(6, 7),
+                   with_intro=False, interlude_mode=None):
     """Write LilyPond file for the generated melodies.
 
     Each Iliad line gets its own \\score block with 6 melody measures plus
-    a 7th interlude measure of rests.  Lines are grouped into bookparts of 5.
+    a 7th interlude measure.  Lines are grouped into bookparts of 5.
+
+    Args:
+        with_intro: If True, prepend West's 7-measure instrumental introduction
+                   before line 1.
+        interlude_mode: 'cycle' or 'melodic' for CAD1 pattern selection.
     """
+    if interlude_mode is None:
+        interlude_mode = DEFAULT_INTERLUDE_MODE
     start, end = line_range
     available_lines = sorted(ln for ln in range(start, end + 1)
                              if ln in lines_data)
@@ -919,6 +1566,33 @@ def write_lilypond(lines_data, output_path, book=1, line_range=(6, 7)):
 
     # Build bookpart blocks — one bookpart per page, one \score per line
     bookparts = []
+
+    # Optional: Add intro score before the first bookpart
+    intro_score = None
+    if with_intro and available_lines and available_lines[0] == 1:
+        intro_score = (
+            f'  \\score {{\n'
+            f'    <<\n'
+            f'      \\new Voice = "intro" {{\n'
+            f'        \\clef "treble_8"\n'
+            f'        \\time 7/16\n'
+            f'  \\mark \\markup {{ "Intro" }}\n'
+            f'  {WEST_INTRO}\n'
+            f'      }}\n'
+            f'    >>\n'
+            f'    \\layout {{\n'
+            f'      \\context {{\n'
+            f'        \\Score\n'
+            f'        \\override RehearsalMark.self-alignment-X = #LEFT\n'
+            f'        \\override RehearsalMark.font-size = #-2\n'
+            f'      }}\n'
+            f'    }}\n'
+            f'  }}'
+        )
+
+    # Track CAD1 count for cycle mode (counts only CAD1 lines, not CAD2)
+    cad1_count = 0
+
     for page_lines in pages:
         page_start = page_lines[0]
         page_end = page_lines[-1]
@@ -929,6 +1603,10 @@ def write_lilypond(lines_data, output_path, book=1, line_range=(6, 7)):
             greek_text = _reconstruct_greek_line(notes)
             measures = _notes_to_lily_measures(notes)
 
+            # Determine cadence type for CAD1 counting
+            cadence_type = _get_cadence_type(notes)
+            current_cad1_index = cad1_count if cadence_type == 'CAD1' else None
+
             # Build melody: measures joined with \noBreak, plus interlude rest
             melody_lines = [
                 f'    % Line {line_num}: {greek_text}',
@@ -936,8 +1614,14 @@ def write_lilypond(lines_data, output_path, book=1, line_range=(6, 7)):
             ]
             for m in measures:
                 melody_lines.append(f'    {m} | \\noBreak')
-            # 7th measure: interlude rests  (r4 r8. = 4+3 = 7 sixteenths)
-            melody_lines.append('    r4 r8. |')
+            # 7th measure: melodic interlude (West style)
+            interlude, is_cad2 = _select_interlude(
+                notes, line_num, mode=interlude_mode, cad1_index=current_cad1_index)
+            melody_lines.append(f'    {interlude}')
+
+            # Increment CAD1 count after using it
+            if cadence_type == 'CAD1':
+                cad1_count += 1
             melody_body = '\n'.join(melody_lines)
 
             # Build lyrics
@@ -971,6 +1655,10 @@ def write_lilypond(lines_data, output_path, book=1, line_range=(6, 7)):
             )
             scores.append(score)
 
+        # Insert intro before the first score on the first page
+        if intro_score and page_lines[0] == available_lines[0]:
+            scores.insert(0, intro_score)
+
         scores_body = '\n'.join(scores)
         bookpart = (
             f'\\bookpart {{\n'
@@ -979,13 +1667,7 @@ def write_lilypond(lines_data, output_path, book=1, line_range=(6, 7)):
             f'    subtitle = "Iliad I, {page_start}-{page_end}'
             f' (continuation in West\'s style)"\n'
             f'    composer = "After M. L. West"\n'
-            f'    tagline = \\markup {{\n'
-            f'      \\center-column {{\n'
-            f'        "Generated by west_iliad_continuation.py"\n'
-            f'        "Pitch mapping: West 1992, Ancient Greek Music'
-            f' (AGM), p. 328"\n'
-            f'      }}\n'
-            f'    }}\n'
+            f"    tagline = \"After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328\"\n"
             f'  }}\n'
             f'{scores_body}\n'
             f'}}'
@@ -994,13 +1676,24 @@ def write_lilypond(lines_data, output_path, book=1, line_range=(6, 7)):
 
     # Build MIDI-only bookpart with all music concatenated
     all_midi_lines = []
+    # Add intro to MIDI if requested
+    if with_intro and available_lines and available_lines[0] == 1:
+        all_midi_lines.append(f'  {WEST_INTRO}')
+    # Reset CAD1 count for MIDI generation (same sequence as scores)
+    midi_cad1_count = 0
     for line_num in available_lines:
         notes = lines_data[line_num]
         measures = _notes_to_lily_measures(notes)
         for m in measures:
             all_midi_lines.append(f'    {m} |')
-        # Interlude rest between lines in MIDI too
-        all_midi_lines.append('    r4 r8. |')
+        # Melodic interlude between lines (West style)
+        cadence_type = _get_cadence_type(notes)
+        current_cad1_index = midi_cad1_count if cadence_type == 'CAD1' else None
+        interlude, is_cad2 = _select_interlude(
+            notes, line_num, mode=interlude_mode, cad1_index=current_cad1_index)
+        all_midi_lines.append(f'    {interlude}')
+        if cadence_type == 'CAD1':
+            midi_cad1_count += 1
 
     midi_body = '\n'.join(all_midi_lines)
     midi_bookpart = (
@@ -1105,11 +1798,19 @@ def _build_lyric_tokens(notes):
 
 # === MusicXML Output ===
 
-def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7)):
+def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7),
+                   with_intro=False, interlude_mode=None):
     """Write MusicXML file for the generated melodies.
 
     Groups lines into pages of 5, with page breaks and title credits per page.
+
+    Args:
+        with_intro: If True, prepend West's 7-measure instrumental introduction
+                   before line 1.
+        interlude_mode: 'cycle' or 'melodic' for CAD1 pattern selection.
     """
+    if interlude_mode is None:
+        interlude_mode = DEFAULT_INTERLUDE_MODE
     start, end = line_range
 
     # Determine page groupings (which line starts each page)
@@ -1153,10 +1854,11 @@ def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7)):
     ET.SubElement(page_layout, 'page-width').text = '1190'
     ET.SubElement(defaults, 'measure-numbering').text = 'none'
 
-    # Credit elements for each page title
+    # Credit elements for each page (title at top, citation at bottom)
     for pg_idx, page_lines in enumerate(pages):
         pg_start = page_lines[0]
         pg_end = page_lines[-1]
+        # Title credit (top)
         credit = ET.SubElement(root, 'credit', page=str(pg_idx + 1))
         credit_words = ET.SubElement(credit, 'credit-words')
         credit_words.set('default-x', '595')
@@ -1165,6 +1867,15 @@ def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7)):
         credit_words.set('valign', 'top')
         credit_words.set('font-size', '24')
         credit_words.text = f"The Singing of Homer - Iliad I, {pg_start}-{pg_end}"
+        # Citation credit (bottom)
+        citation = ET.SubElement(root, 'credit', page=str(pg_idx + 1))
+        citation_words = ET.SubElement(citation, 'credit-words')
+        citation_words.set('default-x', '595')
+        citation_words.set('default-y', '50')
+        citation_words.set('justify', 'center')
+        citation_words.set('valign', 'bottom')
+        citation_words.set('font-size', '8')
+        citation_words.text = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
 
     # Part list
     part_list = ET.SubElement(root, 'part-list')
@@ -1184,6 +1895,18 @@ def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7)):
     new_page_measures = set()
     line_num_at_measure = {}
 
+    interlude_measures = {}  # measure_num → (interlude_notes, is_cad2, line_num)
+    intro_measures = {}  # measure_num → list of note tuples (for intro)
+
+    # Add intro measures if requested
+    if with_intro and available_lines and available_lines[0] == 1:
+        for i, intro_m_notes in enumerate(WEST_INTRO_NOTES):
+            intro_measures[i + 1] = intro_m_notes
+        measure_offset = len(WEST_INTRO_NOTES)
+
+    # Track CAD1 count for cycle mode
+    cad1_count = 0
+
     for line_num in available_lines:
         notes = lines_data[line_num]
         max_m = max(n['measure'] for n in notes)
@@ -1197,7 +1920,22 @@ def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7)):
             n_copy = dict(n)
             n_copy['measure'] = n['measure'] + measure_offset
             all_notes.append(n_copy)
-        measure_offset += max_m
+        # Add melodic interlude measure(s) after each line
+        cadence_type = _get_cadence_type(notes)
+        current_cad1_index = cad1_count if cadence_type == 'CAD1' else None
+        interlude_notes, is_cad2 = _get_interlude_notes(
+            notes, line_num, mode=interlude_mode, cad1_index=current_cad1_index)
+        interlude_m = measure_offset + max_m + 1
+        interlude_measures[interlude_m] = (interlude_notes, is_cad2, line_num)
+        if is_cad2:
+            # CAD2 spans 2 measures
+            interlude_measures[interlude_m + 1] = (interlude_notes, is_cad2, line_num)
+            measure_offset += max_m + 2
+        else:
+            measure_offset += max_m + 1
+        # Increment CAD1 count after using it
+        if cadence_type == 'CAD1':
+            cad1_count += 1
 
     # Group notes by measure
     measures = {}
@@ -1210,7 +1948,12 @@ def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7)):
     lyric_idx = 0
     lyric_data = _build_musicxml_lyrics(all_notes)
 
-    for m_num in sorted(measures.keys()):
+    # Build complete list of measures including interludes and intro
+    all_measure_nums = sorted(
+        set(measures.keys()) | set(interlude_measures.keys()) | set(intro_measures.keys())
+    )
+
+    for m_num in all_measure_nums:
         m_elem = ET.SubElement(part, 'measure', number=str(m_num))
 
         if m_num == 1:
@@ -1233,7 +1976,7 @@ def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7)):
             print_elem = ET.SubElement(m_elem, 'print')
             print_elem.set('new-system', 'yes')
 
-        # Line number label (e.g., "5.201")
+        # Line number label (e.g., "5.201") or "Intro" for intro measures
         if m_num in line_num_at_measure:
             ln = line_num_at_measure[m_num]
             direction = ET.SubElement(m_elem, 'direction', placement='above')
@@ -1242,6 +1985,100 @@ def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7)):
             words.set('font-size', '9')
             words.set('font-style', 'italic')
             words.text = f"{book}.{ln}"
+        elif m_num == 1 and intro_measures:
+            direction = ET.SubElement(m_elem, 'direction', placement='above')
+            dt = ET.SubElement(direction, 'direction-type')
+            words = ET.SubElement(dt, 'words')
+            words.set('font-size', '9')
+            words.set('font-style', 'italic')
+            words.text = "Intro"
+
+        # Handle intro measures (instrumental introduction)
+        if m_num in intro_measures:
+            intro_m_notes = intro_measures[m_num]
+            for note_data in intro_m_notes:
+                pitch_letter, octave, dur_sixteenths, is_grace, grace_type = note_data
+                note_elem = ET.SubElement(m_elem, 'note')
+
+                if is_grace:
+                    grace_elem = ET.SubElement(note_elem, 'grace')
+                    if grace_type == 'acciaccatura':
+                        grace_elem.set('slash', 'yes')
+
+                pitch_elem = ET.SubElement(note_elem, 'pitch')
+                ET.SubElement(pitch_elem, 'step').text = pitch_letter
+                ET.SubElement(pitch_elem, 'octave').text = str(octave)
+
+                if not is_grace:
+                    ET.SubElement(note_elem, 'duration').text = str(dur_sixteenths * 12)
+
+                ET.SubElement(note_elem, 'voice').text = '1'
+
+                if is_grace:
+                    ET.SubElement(note_elem, 'type').text = '16th'
+                elif dur_sixteenths == 2:
+                    ET.SubElement(note_elem, 'type').text = 'eighth'
+                elif dur_sixteenths == 3:
+                    ET.SubElement(note_elem, 'type').text = 'eighth'
+                    ET.SubElement(note_elem, 'dot')
+                elif dur_sixteenths == 4:
+                    ET.SubElement(note_elem, 'type').text = 'quarter'
+                else:
+                    ET.SubElement(note_elem, 'type').text = '16th'
+
+            continue
+
+        # Handle interlude measures (melodic interludes in West style)
+        if m_num in interlude_measures:
+            interlude_notes, is_cad2, src_line = interlude_measures[m_num]
+            # Determine which notes go in this measure
+            if is_cad2:
+                # CAD2 spans 2 measures: first 3 notes in m1, rest in m2
+                # Find which measure of the pair this is
+                first_interlude_m = min(k for k, v in interlude_measures.items()
+                                        if v[2] == src_line and v[1])
+                if m_num == first_interlude_m:
+                    # First measure: e'8. c'8 b8
+                    measure_notes = interlude_notes[:3]
+                else:
+                    # Second measure: grace notes + a8. c'4
+                    measure_notes = interlude_notes[3:]
+            else:
+                measure_notes = interlude_notes
+
+            for note_data in measure_notes:
+                pitch_letter, octave, dur_sixteenths, is_grace, grace_type = note_data
+                note_elem = ET.SubElement(m_elem, 'note')
+
+                if is_grace:
+                    grace_elem = ET.SubElement(note_elem, 'grace')
+                    if grace_type == 'acciaccatura':
+                        grace_elem.set('slash', 'yes')
+
+                pitch_elem = ET.SubElement(note_elem, 'pitch')
+                ET.SubElement(pitch_elem, 'step').text = pitch_letter
+                ET.SubElement(pitch_elem, 'octave').text = str(octave)
+
+                if not is_grace:
+                    # Grace notes have no duration in MusicXML
+                    ET.SubElement(note_elem, 'duration').text = str(dur_sixteenths * 12)
+
+                ET.SubElement(note_elem, 'voice').text = '1'
+
+                # Determine note type
+                if is_grace:
+                    ET.SubElement(note_elem, 'type').text = '16th'
+                elif dur_sixteenths == 2:
+                    ET.SubElement(note_elem, 'type').text = 'eighth'
+                elif dur_sixteenths == 3:
+                    ET.SubElement(note_elem, 'type').text = 'eighth'
+                    ET.SubElement(note_elem, 'dot')
+                elif dur_sixteenths == 4:
+                    ET.SubElement(note_elem, 'type').text = 'quarter'
+                else:
+                    ET.SubElement(note_elem, 'type').text = '16th'
+
+            continue
 
         # Compute beam groups for this measure.
         # Beamable: 8th (non-dotted), 16th, dotted-16th.
@@ -1390,6 +2227,81 @@ def _build_musicxml_lyrics(all_notes):
     return lyrics
 
 
+# === Analysis Output ===
+
+def write_analysis(analyses, output_path, book=1):
+    """Write detailed pitch analysis file explaining each note assignment.
+
+    Args:
+        analyses: dict mapping line_num → analysis dict from generator
+        output_path: path for output .txt file
+        book: book number for headers
+    """
+    lines_out = []
+    lines_out.append(f"West-Style Melody Analysis - Iliad Book {book}")
+    lines_out.append("=" * 60)
+    lines_out.append("")
+    lines_out.append("Rule Key:")
+    lines_out.append("  H1: Circumflex descent (two notes, high→low)")
+    lines_out.append("  H3: Line opens on c'")
+    lines_out.append("  H5: Stepwise motion only")
+    lines_out.append("  E1: Feet 4-6 (second half) → c'")
+    lines_out.append("  E2: Maximum 3 e' per line")
+    lines_out.append("  E3: Content words (noun/adj/part/pron) → e'; function words → c'")
+    lines_out.append("  F2: Circumflex stricter gate (feet 1-2 only for e')")
+    lines_out.append("  G2: One e' per word maximum")
+    lines_out.append("  U1-U4: Unaccented syllable rules")
+    lines_out.append("  CAD1: Standard cadence (→ a,a)")
+    lines_out.append("  CAD2: Final acute cadence (→ b,c')")
+    lines_out.append("")
+
+    for line_num in sorted(analyses.keys()):
+        analysis = analyses[line_num]
+        syllables = analysis['syllables']
+        pitches = analysis['pitches']
+        circ_second = analysis['circ_second']
+        reasons = analysis['reasons']
+        circ_reasons = analysis.get('circ_reasons', {})
+
+        # Reconstruct Greek text
+        greek_text = ' '.join(s['text'] for s in syllables)
+
+        lines_out.append("-" * 60)
+        lines_out.append(f"Line {line_num}: {greek_text}")
+        lines_out.append("-" * 60)
+        lines_out.append("")
+
+        # Header
+        lines_out.append(f"{'#':<3} {'Syllable':<12} {'Foot':<5} {'Accent':<8} {'Pitch':<10} {'Reason'}")
+        lines_out.append(f"{'-'*3} {'-'*12} {'-'*5} {'-'*8} {'-'*10} {'-'*40}")
+
+        for i, syl in enumerate(syllables):
+            accent_names = {0: '-', 1: 'acute', 2: 'fin-acu', 3: 'circ'}
+            accent_str = accent_names.get(syl['accent'], '?')
+
+            # Format pitch (include circumflex second if applicable)
+            if i in circ_second:
+                pitch_str = f"{pitches[i]}→{circ_second[i]}"
+            else:
+                pitch_str = pitches[i] or '?'
+
+            reason = reasons[i] if reasons and reasons[i] else ""
+
+            lines_out.append(
+                f"{i:<3} {syl['text']:<12} {syl['foot']:<5} {accent_str:<8} {pitch_str:<10} {reason}"
+            )
+
+            # Add circumflex reason on separate line if present
+            if i in circ_reasons and circ_reasons[i]:
+                lines_out.append(f"{'':>42} ↳ {circ_reasons[i]}")
+
+        lines_out.append("")
+
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(lines_out))
+    print(f"Written analysis: {output_path}")
+
+
 # === PDF Compilation ===
 
 def compile_lilypond(ly_path):
@@ -1459,8 +2371,23 @@ def _print_line_summary(notes):
 
 
 def process_book(book, output_dir=None, lines=None, verbose=True,
-                 enhanced_path=None, output_basename=None):
-    """Process a single Iliad book. Returns (success, line_count)."""
+                 enhanced_path=None, output_basename=None, track_analysis=False,
+                 with_intro=False, interlude_mode=None):
+    """Process a single Iliad book. Returns (success, line_count).
+
+    Args:
+        book: Iliad book number (1-24)
+        output_dir: directory for output files
+        lines: tuple (start, end) or None for all lines
+        verbose: print per-line output
+        enhanced_path: path to enhanced mora grid file
+        output_basename: base name for output files
+        track_analysis: if True, write detailed analysis .txt file
+        with_intro: if True, prepend West's 7-measure instrumental introduction
+        interlude_mode: 'cycle' or 'melodic' for CAD1 pattern selection
+    """
+    if interlude_mode is None:
+        interlude_mode = DEFAULT_INTERLUDE_MODE
     if not enhanced_path:
         enhanced_path = find_enhanced_file(book)
     if not enhanced_path:
@@ -1485,14 +2412,16 @@ def process_book(book, output_dir=None, lines=None, verbose=True,
     # Generate melodies
     generator = WestMelodyGenerator(treebank, mora_grid)
     lines_data = {}
-    failed_lines = []
+    analyses = {}  # For analysis output
 
     for line_num in range(start, end + 1):
         if verbose:
             print(f"\nLine {line_num}:")
-        notes = generator.generate_line(line_num)
+        notes = generator.generate_line(line_num, track_reasons=track_analysis)
         if notes:
             lines_data[line_num] = notes
+            if track_analysis and generator.last_analysis:
+                analyses[line_num] = generator.last_analysis
             if verbose:
                 _print_line_summary(notes)
         elif verbose:
@@ -1514,10 +2443,16 @@ def process_book(book, output_dir=None, lines=None, verbose=True,
 
     ly_path = basename + '.ly'
     xml_path = basename + '.musicxml'
+    analysis_path = basename + '_analysis.txt'
 
-    write_lilypond(lines_data, ly_path, book=book, line_range=(start, end))
-    write_musicxml(lines_data, xml_path, book=book, line_range=(start, end))
+    write_lilypond(lines_data, ly_path, book=book, line_range=(start, end),
+                   with_intro=with_intro, interlude_mode=interlude_mode)
+    write_musicxml(lines_data, xml_path, book=book, line_range=(start, end),
+                   with_intro=with_intro, interlude_mode=interlude_mode)
     compile_lilypond(ly_path)
+
+    if track_analysis and analyses:
+        write_analysis(analyses, analysis_path, book=book)
 
     return True, len(lines_data)
 
@@ -1539,6 +2474,16 @@ def main():
                         help='Process all 24 books of the Iliad')
     parser.add_argument('--quiet', action='store_true',
                         help='Suppress per-line output')
+    parser.add_argument('--analysis', action='store_true',
+                        help='Output detailed analysis file explaining each note')
+    parser.add_argument('--with-intro', action='store_true',
+                        help='Prepend West\'s 7-measure instrumental introduction to each book')
+    parser.add_argument('--interlude-mode', type=str, default=DEFAULT_INTERLUDE_MODE,
+                        choices=[INTERLUDE_MODE_CYCLE, INTERLUDE_MODE_MELODIC],
+                        help=f'Interlude pattern selection mode: '
+                             f'"{INTERLUDE_MODE_CYCLE}" (reproduces West\'s 0,0,1,2,3 sequence) or '
+                             f'"{INTERLUDE_MODE_MELODIC}" (based on penultimate pitch). '
+                             f'Default: {DEFAULT_INTERLUDE_MODE}')
     args = parser.parse_args()
 
     if args.all_iliad:
@@ -1553,7 +2498,10 @@ def main():
             print(f"Book {book}")
             print(f"{'='*60}")
             success, count = process_book(
-                book, output_dir=output_dir, verbose=not args.quiet)
+                book, output_dir=output_dir, verbose=not args.quiet,
+                track_analysis=args.analysis,
+                with_intro=args.with_intro,
+                interlude_mode=args.interlude_mode)
             if success:
                 total_books += 1
                 total_lines += count
@@ -1589,7 +2537,9 @@ def main():
         success, count = process_book(
             args.book, output_dir=args.output_dir, lines=line_range,
             verbose=not args.quiet, enhanced_path=args.enhanced,
-            output_basename=args.output)
+            output_basename=args.output, track_analysis=args.analysis,
+            with_intro=args.with_intro,
+            interlude_mode=args.interlude_mode)
         if success:
             print(f"\nDone. {count} lines generated.")
         else:
