@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate West-style melodies for Homer's Iliad hexameter lines.
+"""Generate West-style melodies for Homer's Iliad and Odyssey hexameter lines.
 
 Uses the prosody rules from west_prosody_rules.md (derived from West 1981/1992),
 with POS data from the Perseus Ancient Greek Dependency Treebank (AGDT).
@@ -15,9 +15,12 @@ Output: LilyPond (.ly) and MusicXML (.musicxml) files.
 
 Usage:
     source venv/bin/activate
-    python3 west_iliad_continuation.py                    # Lines 6-7, Iliad Book 1
+    python3 west_iliad_continuation.py                    # All lines, Iliad Book 1
     python3 west_iliad_continuation.py --lines 6-20       # Lines 6-20
-    python3 west_iliad_continuation.py --lines 6-7 --book 2  # Book 2
+    python3 west_iliad_continuation.py --book 2           # Iliad Book 2
+    python3 west_iliad_continuation.py --epic odyssey --book 1  # Odyssey Book 1
+    python3 west_iliad_continuation.py --all-iliad        # All 24 books of Iliad
+    python3 west_iliad_continuation.py --all-odyssey      # All 24 books of Odyssey
 """
 
 import xml.etree.ElementTree as ET
@@ -567,6 +570,12 @@ class WestMelodyGenerator:
         if not syllables:
             return None
 
+        # Check for corrupted source data (hexameter should have 12-17 syllables)
+        if len(syllables) < 10:
+            print(f"  WARNING: Line {line_num} has only {len(syllables)} syllables "
+                  f"(corrupted source data). Outputting rests.")
+            return self._generate_rest_line(line_num)
+
         # Fix grave accents: upgrade accent=0 to accent=2 (word-final acute)
         # In continuous Greek text, word-final acutes become graves (θεά → θεὰ).
         # The enhanced file marks graves as accent=0, but West treats the
@@ -630,6 +639,32 @@ class WestMelodyGenerator:
                 'tb_words': tb_words,
             }
 
+        return notes
+
+    def _generate_rest_line(self, line_num):
+        """Generate a line of rests for corrupted source data.
+
+        Returns a list of rest notes spanning 6 measures in 7/16 time.
+        Each measure is 7 sixteenth notes.
+        Uses dotted-eighth (3) + quarter (4) = 7 sixteenths per measure.
+        """
+        notes = []
+        for measure in range(6):
+            # Dotted eighth rest (3 sixteenths)
+            notes.append({
+                'pitch': None, 'lily_dur': '8.', 'sixteenths': 3,
+                'is_rest': True, 'measure': measure + 1,
+            })
+            # Quarter rest (4 sixteenths)
+            notes.append({
+                'pitch': None, 'lily_dur': '4', 'sixteenths': 4,
+                'is_rest': True, 'measure': measure + 1,
+            })
+        # Final sixteenth rest (standard line ending)
+        notes.append({
+            'pitch': None, 'lily_dur': '16', 'sixteenths': 1,
+            'is_rest': True, 'measure': 0,
+        })
         return notes
 
     def _fix_graves(self, syllables):
@@ -1542,16 +1577,17 @@ def _notes_to_lily_measures(notes):
 
 
 def write_lilypond(lines_data, output_path, book=1, line_range=(6, 7),
-                   with_intro=False, interlude_mode=None):
+                   with_intro=False, interlude_mode=None, epic='iliad'):
     """Write LilyPond file for the generated melodies.
 
-    Each Iliad line gets its own \\score block with 6 melody measures plus
+    Each line gets its own \\score block with 6 melody measures plus
     a 7th interlude measure.  Lines are grouped into bookparts of 5.
 
     Args:
         with_intro: If True, prepend West's 7-measure instrumental introduction
                    before line 1.
         interlude_mode: 'cycle' or 'melodic' for CAD1 pattern selection.
+        epic: 'iliad' or 'odyssey'.
     """
     if interlude_mode is None:
         interlude_mode = DEFAULT_INTERLUDE_MODE
@@ -1664,7 +1700,7 @@ def write_lilypond(lines_data, output_path, book=1, line_range=(6, 7),
             f'\\bookpart {{\n'
             f'  \\header {{\n'
             f'    title = "The Singing of Homer"\n'
-            f'    subtitle = "Iliad I, {page_start}-{page_end}'
+            f'    subtitle = "{epic.title()} {book}, {page_start}-{page_end}'
             f' (continuation in West\'s style)"\n'
             f'    composer = "After M. L. West"\n'
             f"    tagline = \"After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328\"\n"
@@ -1799,7 +1835,7 @@ def _build_lyric_tokens(notes):
 # === MusicXML Output ===
 
 def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7),
-                   with_intro=False, interlude_mode=None):
+                   with_intro=False, interlude_mode=None, epic='iliad'):
     """Write MusicXML file for the generated melodies.
 
     Groups lines into pages of 5, with page breaks and title credits per page.
@@ -1808,6 +1844,7 @@ def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7),
         with_intro: If True, prepend West's 7-measure instrumental introduction
                    before line 1.
         interlude_mode: 'cycle' or 'melodic' for CAD1 pattern selection.
+        epic: 'iliad' or 'odyssey'.
     """
     if interlude_mode is None:
         interlude_mode = DEFAULT_INTERLUDE_MODE
@@ -1833,10 +1870,10 @@ def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7),
 
     # Work info (overall title uses full range)
     work = ET.SubElement(root, 'work')
-    ET.SubElement(work, 'work-title').text = f"The Singing of Homer - Iliad I, {start}-{end}"
+    ET.SubElement(work, 'work-title').text = f"The Singing of Homer - {epic.title()} {book}, {start}-{end}"
 
     ET.SubElement(root, 'movement-title').text = (
-        f"The Singing of Homer - Iliad I, {start}-{end}")
+        f"The Singing of Homer - {epic.title()} {book}, {start}-{end}")
 
     # Identification
     ident = ET.SubElement(root, 'identification')
@@ -1866,7 +1903,7 @@ def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7),
         credit_words.set('justify', 'center')
         credit_words.set('valign', 'top')
         credit_words.set('font-size', '24')
-        credit_words.text = f"The Singing of Homer - Iliad I, {pg_start}-{pg_end}"
+        credit_words.text = f"The Singing of Homer - {epic.title()} {book}, {pg_start}-{pg_end}"
         # Citation credit (bottom)
         citation = ET.SubElement(root, 'credit', page=str(pg_idx + 1))
         citation_words = ET.SubElement(citation, 'credit-words')
@@ -2229,16 +2266,17 @@ def _build_musicxml_lyrics(all_notes):
 
 # === Analysis Output ===
 
-def write_analysis(analyses, output_path, book=1):
+def write_analysis(analyses, output_path, book=1, epic='iliad'):
     """Write detailed pitch analysis file explaining each note assignment.
 
     Args:
         analyses: dict mapping line_num → analysis dict from generator
         output_path: path for output .txt file
         book: book number for headers
+        epic: 'iliad' or 'odyssey'
     """
     lines_out = []
-    lines_out.append(f"West-Style Melody Analysis - Iliad Book {book}")
+    lines_out.append(f"West-Style Melody Analysis - {epic.title()} Book {book}")
     lines_out.append("=" * 60)
     lines_out.append("")
     lines_out.append("Rule Key:")
@@ -2337,12 +2375,12 @@ def compile_lilypond(ly_path):
 
 # === Main ===
 
-def find_enhanced_file(book):
-    """Find the enhanced mora grid file for a given book number."""
+def find_enhanced_file(book, epic='iliad'):
+    """Find the enhanced mora grid file for a given book number and epic."""
     candidates = [
-        f'output/run_1/iliad/book{book}/iliad_book{book}_full_enhanced.txt',
-        f'output/iliad/book{book}/iliad_book{book}_full_enhanced.txt',
-        f'iliad_book{book}_full_enhanced.txt',
+        f'output/run_1/{epic}/book{book}/{epic}_book{book}_full_enhanced.txt',
+        f'output/{epic}/book{book}/{epic}_book{book}_full_enhanced.txt',
+        f'{epic}_book{book}_full_enhanced.txt',
     ]
     for c in candidates:
         if os.path.exists(c):
@@ -2372,11 +2410,11 @@ def _print_line_summary(notes):
 
 def process_book(book, output_dir=None, lines=None, verbose=True,
                  enhanced_path=None, output_basename=None, track_analysis=False,
-                 with_intro=False, interlude_mode=None):
-    """Process a single Iliad book. Returns (success, line_count).
+                 with_intro=False, interlude_mode=None, epic='iliad'):
+    """Process a single book. Returns (success, line_count).
 
     Args:
-        book: Iliad book number (1-24)
+        book: book number (1-24)
         output_dir: directory for output files
         lines: tuple (start, end) or None for all lines
         verbose: print per-line output
@@ -2385,17 +2423,18 @@ def process_book(book, output_dir=None, lines=None, verbose=True,
         track_analysis: if True, write detailed analysis .txt file
         with_intro: if True, prepend West's 7-measure instrumental introduction
         interlude_mode: 'cycle' or 'melodic' for CAD1 pattern selection
+        epic: 'iliad' or 'odyssey'
     """
     if interlude_mode is None:
         interlude_mode = DEFAULT_INTERLUDE_MODE
     if not enhanced_path:
-        enhanced_path = find_enhanced_file(book)
+        enhanced_path = find_enhanced_file(book, epic=epic)
     if not enhanced_path:
-        print(f"  Error: Cannot find enhanced file for book {book}.")
+        print(f"  Error: Cannot find enhanced file for {epic} book {book}.")
         return False, 0
 
     # Load data
-    treebank = TreebankPOS(book=book)
+    treebank = TreebankPOS(book=book, epic=epic)
     mora_grid = MoraGrid(enhanced_path)
 
     # Determine line range
@@ -2437,31 +2476,34 @@ def process_book(book, output_dir=None, lines=None, verbose=True,
         basename = output_basename
     elif output_dir:
         os.makedirs(output_dir, exist_ok=True)
-        basename = os.path.join(output_dir, f'west_iliad_book{book_str}')
+        basename = os.path.join(output_dir, f'west_{epic}_book{book_str}')
     else:
-        basename = f'west_iliad_book{book_str}_lines{start}-{end}'
+        basename = f'west_{epic}_book{book_str}_lines{start}-{end}'
 
     ly_path = basename + '.ly'
     xml_path = basename + '.musicxml'
     analysis_path = basename + '_analysis.txt'
 
     write_lilypond(lines_data, ly_path, book=book, line_range=(start, end),
-                   with_intro=with_intro, interlude_mode=interlude_mode)
+                   with_intro=with_intro, interlude_mode=interlude_mode, epic=epic)
     write_musicxml(lines_data, xml_path, book=book, line_range=(start, end),
-                   with_intro=with_intro, interlude_mode=interlude_mode)
+                   with_intro=with_intro, interlude_mode=interlude_mode, epic=epic)
     compile_lilypond(ly_path)
 
     if track_analysis and analyses:
-        write_analysis(analyses, analysis_path, book=book)
+        write_analysis(analyses, analysis_path, book=book, epic=epic)
 
     return True, len(lines_data)
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Generate West-style melodies for Iliad hexameter lines')
+        description='Generate West-style melodies for Homer hexameter lines')
     parser.add_argument('--book', type=int, default=1,
-                        help='Iliad book number (default: 1)')
+                        help='Book number (default: 1)')
+    parser.add_argument('--epic', type=str, default='iliad',
+                        choices=['iliad', 'odyssey'],
+                        help='Epic to process (default: iliad)')
     parser.add_argument('--lines', type=str, default=None,
                         help='Line range, e.g. "6-7" or "1-611" (default: all lines)')
     parser.add_argument('--enhanced', type=str, default=None,
@@ -2472,6 +2514,8 @@ def main():
                         help='Output directory for generated files')
     parser.add_argument('--all-iliad', action='store_true',
                         help='Process all 24 books of the Iliad')
+    parser.add_argument('--all-odyssey', action='store_true',
+                        help='Process all 24 books of the Odyssey')
     parser.add_argument('--quiet', action='store_true',
                         help='Suppress per-line output')
     parser.add_argument('--analysis', action='store_true',
@@ -2486,22 +2530,24 @@ def main():
                              f'Default: {DEFAULT_INTERLUDE_MODE}')
     args = parser.parse_args()
 
-    if args.all_iliad:
-        output_dir = args.output_dir or 'west_phorminx'
-        print(f"Processing all 24 books of the Iliad → {output_dir}/")
+    if args.all_iliad or args.all_odyssey:
+        epic = 'odyssey' if args.all_odyssey else 'iliad'
+        output_dir = args.output_dir or f'west_phorminx_{epic}'
+        print(f"Processing all 24 books of the {epic.title()} → {output_dir}/")
         total_lines = 0
         total_books = 0
         failed_books = []
 
         for book in range(1, 25):
             print(f"\n{'='*60}")
-            print(f"Book {book}")
+            print(f"{epic.title()} Book {book}")
             print(f"{'='*60}")
             success, count = process_book(
                 book, output_dir=output_dir, verbose=not args.quiet,
                 track_analysis=args.analysis,
                 with_intro=args.with_intro,
-                interlude_mode=args.interlude_mode)
+                interlude_mode=args.interlude_mode,
+                epic=epic)
             if success:
                 total_books += 1
                 total_lines += count
@@ -2530,7 +2576,7 @@ def main():
     if args.enhanced:
         print(f"Enhanced file: {args.enhanced}")
 
-    print(f"Generating melodies for Iliad Book {args.book}"
+    print(f"Generating melodies for {args.epic.title()} Book {args.book}"
           + (f", lines {line_range[0]}-{line_range[1]}" if line_range else
              " (all lines)"))
     try:
@@ -2539,7 +2585,8 @@ def main():
             verbose=not args.quiet, enhanced_path=args.enhanced,
             output_basename=args.output, track_analysis=args.analysis,
             with_intro=args.with_intro,
-            interlude_mode=args.interlude_mode)
+            interlude_mode=args.interlude_mode,
+            epic=args.epic)
         if success:
             print(f"\nDone. {count} lines generated.")
         else:

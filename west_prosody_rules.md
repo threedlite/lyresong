@@ -2,7 +2,7 @@
 
 ## Background
 
-This document describes the complete rule set for `west_iliad_continuation.py`, which generates melodies for the Iliad and Odyssey in the style of M. L. West's reconstruction of Homeric singing.
+This document describes the complete rule set for `west_iliad_continuation.py`, which generates melodies for both the **Iliad** (24 books, ~15,693 lines) and **Odyssey** (24 books, ~12,109 lines) in the style of M. L. West's reconstruction of Homeric singing.
 
 West's original reconstruction covers Iliad I, lines 1-5, from his 1981 paper "The Singing of Homer and the Modes of Early Greek Music" (JHS 101), using the pitch mapping from West 1992, *Ancient Greek Music* (AGM), p. 328.
 
@@ -27,10 +27,24 @@ POS tags from `data-sources/treebank_data/v1.6/greek/data/`:
 
 ### 1.3 Chamberlain HTML Metrical Annotations
 
-Rich syllable-level markup in `homer_texts/iliad/html/`:
+Rich syllable-level markup in `homer_texts/iliad/html/` and `homer_texts/odyssey/html/`:
 - `foot1`-`foot6`: metrical foot number
 - `hemi1`/`hemi2`: hemistich (half-line) position
 - `long`/`short`: syllable quantity
+
+### 1.4 Corrupted Source Data Handling
+
+Some lines in the Chamberlain HTML files are truncated (only 1-2 syllables instead of the expected 12-17 for a hexameter). Known corrupted lines:
+
+| Epic | Book | Line | Fragment |
+|------|------|------|----------|
+| Odyssey | 11 | 468 | καὶ |
+| Odyssey | 12 | 142 | ὣς |
+| Odyssey | 17 | 35 | καὶ |
+| Odyssey | 22 | 16 | ἀντ |
+| Odyssey | 22 | 98 | φασγ |
+
+**Handling**: Lines with fewer than 10 syllables are detected as corrupted and output as a line of rests (6 measures of 7/16 time). This preserves line numbering without skipping verses.
 
 ---
 
@@ -405,17 +419,25 @@ For each hexameter line:
 ```bash
 source venv/bin/activate
 
-# Generate specific lines
+# Generate specific lines (Iliad Book 1 by default)
 python3 west_iliad_continuation.py --lines 6-7
 
 # Generate full book
 python3 west_iliad_continuation.py --book 1
 
-# Generate all books
+# Generate Odyssey book
+python3 west_iliad_continuation.py --epic odyssey --book 1
+
+# Generate all 24 books of the Iliad
 python3 west_iliad_continuation.py --all-iliad
+
+# Generate all 24 books of the Odyssey
+python3 west_iliad_continuation.py --all-odyssey
 ```
 
-Output: `west_phorminx/west_iliad_bookNN.*`
+Output directories:
+- Iliad: `west_phorminx/west_iliad_bookNN.*`
+- Odyssey: `west_phorminx_odyssey/west_odyssey_bookNN.*`
 
 ---
 
