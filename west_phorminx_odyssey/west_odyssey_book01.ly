@@ -23,10 +23,10 @@
   \mark \markup { "1.1" }
     c'8. b8 c'8 | \noBreak
     e'8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line1" {
@@ -119,7 +119,7 @@
     c'8. c'8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 c'8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line4" {
@@ -248,8 +248,8 @@
     % Line 8: νήπιοι, οἳ κατὰ βοῦς Ὑπερίονος Ἠελίοιο
   \mark \markup { "1.8" }
     c'8. c'8 c'8 | \noBreak
-    e'8. c'8 e'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'8. c'8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -382,7 +382,7 @@
   \mark \markup { "1.12" }
     c'8. b8 c'8 | \noBreak
     c'8. e'8 c'8 | \noBreak
-    c'8. b8 b8 | \noBreak
+    e'8. c'8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     b8. c'8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -411,12 +411,12 @@
   
     % Line 13: τὸν δ’οἶον νόστου κεχρημένον ἠδὲ γυναικὸς
   \mark \markup { "1.13" }
-    c'8. c'8\( b8\) | \noBreak
+    c'8. e'8\( c'8\) | \noBreak
     c'8. e'4 | \noBreak
     c'8. b4 | \noBreak
     b8. c'8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line13" {
@@ -475,7 +475,7 @@
   \mark \markup { "1.15" }
     c'8. e'4 | \noBreak
     c'8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     b8. b8 c'8 | \noBreak
     b8. c'8 b8 | \noBreak
     c'16.\( b16.\) a8. r16 | \noBreak
@@ -679,7 +679,7 @@
   \mark \markup { "1.21" }
     c'8. c'8 e'8 | \noBreak
     c'8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     b8. c'4 | \noBreak
     c'16.\( b16.\) b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -965,9 +965,9 @@
   
     % Line 30: τόν ῥ’Ἀγαμεμνονίδης τηλεκλυτὸς ἔκταν’ Ὀρέστης·
   \mark \markup { "1.30" }
-    c'8. b8 b8 | \noBreak
-    b8. b8 c'8 | \noBreak
-    b8. b4 | \noBreak
+    c'8. c'8 c'8 | \noBreak
+    c'8. c'8 e'8 | \noBreak
+    c'8. b4 | \noBreak
     b8. b8 c'8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -1037,7 +1037,7 @@
     % Line 32: ὢ πόποι, οἷον δή νυ θεοὺς βροτοὶ αἰτιόωνται·
   \mark \markup { "1.32" }
     c'8. e'8 c'8 | \noBreak
-    e'16.\( c'16.\) c'4 | \noBreak
+    e'16.\( c'16.\) b4 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 c'8 | \noBreak
     b8. b8 c'8 | \noBreak
@@ -1072,7 +1072,7 @@
     c'8. c'8 e'8 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. c'8 c'8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line33" {
@@ -1499,7 +1499,7 @@
   \mark \markup { "1.46" }
     c'8. e'4 | \noBreak
     c'8. e'8\( c'8\) | \noBreak
-    c'8. b8 b8 | \noBreak
+    e'8. c'8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     c'16.\( b16.\) b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -1561,7 +1561,7 @@
   \mark \markup { "1.48" }
     c'8. e'8 c'8 | \noBreak
     c'8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'16.\( b16.\) a8. r16 | \noBreak
@@ -1728,7 +1728,7 @@
     c'16.\( b16.\) b8 c'8 | \noBreak
     b8. c'8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line53" {
@@ -1827,7 +1827,7 @@
   \mark \markup { "1.56" }
     c'8. e'4 | \noBreak
     c'8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     b8. b8 c'8 | \noBreak
     b8. b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -1861,7 +1861,7 @@
     c'8. b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line57" {
@@ -1951,10 +1951,10 @@
   \mark \markup { "1.60" }
     c'8. e'8 c'8 | \noBreak
     c'8. e'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line60" {
@@ -2056,7 +2056,7 @@
     c'8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
     b8. b8 c'8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line63" {
@@ -2084,8 +2084,8 @@
   \mark \markup { "1.64" }
     c'8. b8 b8 | \noBreak
     c'8. e'8\( c'8\) | \noBreak
-    c'8. c'8 e'8 | \noBreak
-    c'8. c'8 b8 | \noBreak
+    e'8. c'8 c'8 | \noBreak
+    b8. c'8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
@@ -2115,7 +2115,7 @@
   \mark \markup { "1.65" }
     c'16.\( b16.\) c'8 e'8 | \noBreak
     c'8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. c'4 | \noBreak
     b8. b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -2220,7 +2220,7 @@
     c'8. b4 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. b8 c'8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line68" {
@@ -2381,7 +2381,7 @@
   \mark \markup { "1.73" }
     c'8. e'4 | \noBreak
     c'8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     b8. c'4 | \noBreak
     b8. b8 b8 | \noBreak
     c'16.\( b16.\) a8. r16 | \noBreak
@@ -2412,7 +2412,7 @@
   \mark \markup { "1.74" }
     c'8. c'8\( b8\) | \noBreak
     c'8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     b8. c'4 | \noBreak
     b8. b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -2709,7 +2709,7 @@
   \mark \markup { "1.83" }
     c'8. c'8\( b8\) | \noBreak
     b8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -2814,7 +2814,7 @@
     c'8. c'4 | \noBreak
     b8. b4 | \noBreak
     b8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line86" {
@@ -2842,7 +2842,7 @@
   \mark \markup { "1.87" }
     c'8. b8 c'8 | \noBreak
     c'8. e'8\( c'8\) | \noBreak
-    c'8. b8 b8 | \noBreak
+    b8. b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -2876,7 +2876,7 @@
     b8. b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line88" {
@@ -2938,7 +2938,7 @@
     c'8. c'8 e'8 | \noBreak
     c'8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line90" {
@@ -2978,7 +2978,7 @@
     c'8. b8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     c'8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line91" {
@@ -3173,7 +3173,7 @@
     c'8. c'8 e'8 | \noBreak
     c'8. c'8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line97" {
@@ -3201,7 +3201,7 @@
   \mark \markup { "1.98" }
     c'8. c'8 c'8 | \noBreak
     e'8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) c'8 e'8 | \noBreak
+    e'16.\( c'16.\) c'8 e'8 | \noBreak
     c'8. b4 | \noBreak
     c'16.\( b16.\) b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -3363,9 +3363,9 @@
   
     % Line 103: στῆ δ’Ἰθάκης ἐνὶ δήμῳ ἐπὶ προθύροις Ὀδυσῆος,
   \mark \markup { "1.103" }
-    c'16.\( b16.\) b8 c'8 | \noBreak
-    b8. c'8 e'8 | \noBreak
-    c'8. b8 b8 | \noBreak
+    c'16.\( b16.\) c'8 e'8 | \noBreak
+    c'8. b8 c'8 | \noBreak
+    e'8. c'8 b8 | \noBreak
     c'8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
     c'16.\( b16.\) a8. r16 | \noBreak
@@ -3395,7 +3395,7 @@
     % Line 104: οὐδοῦ ἐπ’ αὐλείου· παλάμῃ δ’ἔχε χάλκεον ἔγχος,
   \mark \markup { "1.104" }
     c'8. e'8.\( c'8\) | \noBreak
-    c'8 c'8. e'4 | \noBreak
+    b8 c'8. e'4 | \noBreak
     c'8. c'8 | \noBreak
     e'8 c'8. c'8 | \noBreak
     b8 c'8. b8 | \noBreak
@@ -3468,7 +3468,7 @@
   \mark \markup { "1.106" }
     c'16.\( b16.\) b8 c'8 | \noBreak
     b8. c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. c'8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -3498,7 +3498,7 @@
     % Line 107: πεσσοῖσι προπάροιθε θυράων θυμὸν ἔτερπον
   \mark \markup { "1.107" }
     c'8. e'8\( c'8\) | \noBreak
-    c'8. b8 c'8 | \noBreak
+    b8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
     c'8. b4 | \noBreak
     b8. c'8 c'8 | \noBreak
@@ -3530,10 +3530,10 @@
   \mark \markup { "1.108" }
     c'8. b8 b8 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'16.\( b16.\) c'4 | \noBreak
     c'8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line108" {
@@ -3561,7 +3561,7 @@
   \mark \markup { "1.109" }
     c'8. b4 | \noBreak
     b8. c'4 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     b8. b4 | \noBreak
     c'8. b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -3591,7 +3591,7 @@
     % Line 110: οἱ μὲν οἶνον ἔμισγον ἐνὶ κρητῆρσι καὶ ὕδωρ,
   \mark \markup { "1.110" }
     c'8. c'4 | \noBreak
-    e'16.\( c'16.\) c'8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
     c'8. b4 | \noBreak
     c'16.\( b16.\) b8 c'8 | \noBreak
@@ -3694,10 +3694,10 @@
   \mark \markup { "1.113" }
     c'8. c'8 b8 | \noBreak
     c'8. e'8\( c'8\) | \noBreak
-    c'8. c'8 b8 | \noBreak
+    b8. c'8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     b8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line113" {
@@ -3725,7 +3725,7 @@
   \mark \markup { "1.114" }
     c'16.\( b16.\) b8 c'8 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) c'8 e'8 | \noBreak
+    e'16.\( c'16.\) c'8 e'8 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     c'16.\( b16.\) a8. r16 | \noBreak
@@ -3759,7 +3759,7 @@
     c'8. e'8 c'8 | \noBreak
     c'8. b8 c'8 | \noBreak
     c'8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line115" {
@@ -3858,7 +3858,7 @@
   \mark \markup { "1.118" }
     c'8. c'8 e'8 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -3887,8 +3887,8 @@
   
     % Line 119: βῆ δ’ἰθὺς προθύροιο, νεμεσσήθη δ’ἐνὶ θυμῷ
   \mark \markup { "1.119" }
-    c'16.\( b16.\) b4 | \noBreak
-    c'8. c'8 e'8 | \noBreak
+    c'16.\( b16.\) c'4 | \noBreak
+    e'8. c'8 e'8 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. c'4 | \noBreak
     b8. b8 c'8 | \noBreak
@@ -3923,7 +3923,7 @@
     c'8. b8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line120" {
@@ -4021,7 +4021,7 @@
     % Line 123: χαῖρε, ξεῖνε, παρ’ ἄμμι φιλήσεαι· αὐτὰρ ἔπειτα
   \mark \markup { "1.123" }
     c'16.\( b16.\) c'4 | \noBreak
-    e'16.\( c'16.\) c'8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     e'8. c'8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. c'8 c'8 | \noBreak
@@ -4056,7 +4056,7 @@
     b8. b4 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 c'8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line124" {
@@ -4158,7 +4158,7 @@
     c'8. c'8 e'8 | \noBreak
     c'8. c'4 | \noBreak
     c'8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line127" {
@@ -4217,10 +4217,10 @@
   \mark \markup { "1.129" }
     c'8. b8 c'8 | \noBreak
     c'8. e'8\( c'8\) | \noBreak
+    b8. b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
-    c'8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line129" {
@@ -4350,7 +4350,7 @@
   \mark \markup { "1.133" }
     c'8. e'4 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     b8. b4 | \noBreak
     c'8. b8 b8 | \noBreak
     a8. c'16.\( a16.\) r16 | \noBreak
@@ -4384,7 +4384,7 @@
     b8. b8 b8 | \noBreak
     b8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line134" {
@@ -4576,7 +4576,7 @@
   \mark \markup { "1.140" }
     c'8. c'8 c'8 | \noBreak
     e'8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     b8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -4616,7 +4616,7 @@
   \mark \markup { "1.141" }
     c'8. e'4 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) c'8 b8 | \noBreak
+    e'16.\( c'16.\) e'8 c'8 | \noBreak
     b8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -4677,7 +4677,7 @@
     % Line 143: κῆρυξ δ’αὐτοῖσιν θάμ’ ἐπᾐχετο οἰνοχοεύων.
   \mark \markup { "1.143" }
     c'16.\( b16.\) b4 | \noBreak
-    c'8. c'8\( b8\) | \noBreak
+    c'8. e'8\( c'8\) | \noBreak
     b8. c'8 b8 | \noBreak
     b8. b8 b8 | \noBreak
     b8. b8 b8 | \noBreak
@@ -4709,7 +4709,7 @@
   \mark \markup { "1.144" }
     c'8. c'8\( b8\) | \noBreak
     b8. c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. c'8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -4842,7 +4842,7 @@
   \mark \markup { "1.148" }
     c'16.\( b16.\) b4 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     b8. c'4 | \noBreak
     b8. b8 b8 | \noBreak
     c'16.\( b16.\) a8. r16 | \noBreak
@@ -4873,7 +4873,7 @@
   \mark \markup { "1.149" }
     c'8. c'8 c'8 | \noBreak
     e'8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'16.\( b16.\) b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -4944,7 +4944,7 @@
   \mark \markup { "1.151" }
     c'8. e'8\( c'8\) | \noBreak
     c'8. e'8\( c'8\) | \noBreak
-    c'8. c'8 b8 | \noBreak
+    b8. c'8 b8 | \noBreak
     c'8. b8 c'8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -4978,7 +4978,7 @@
     e'8. c'8 c'8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line152" {
@@ -5201,10 +5201,10 @@
   \mark \markup { "1.159" }
     c'8. b4 | \noBreak
     b8. c'4 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     b8. c'8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line159" {
@@ -5333,7 +5333,7 @@
     % Line 163: εἰ κεῖνόν γ’Ἰθάκηνδε ἰδοίατο νοστήσαντα,
   \mark \markup { "1.163" }
     c'8. e'8\( c'8\) | \noBreak
-    c'8. b8 c'8 | \noBreak
+    e'8. c'8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. c'4 | \noBreak
@@ -5560,7 +5560,7 @@
   \mark \markup { "1.170" }
     c'8. e'8 c'8 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) c'8 b8 | \noBreak
+    e'16.\( c'16.\) c'8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     c'16.\( b16.\) a8. r16 | \noBreak
@@ -5795,9 +5795,9 @@
   \mark \markup { "1.177" }
     c'8. b8 c'8 | \noBreak
     e'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
-    c'16.\( b16.\) b4 | \noBreak
+    c'16.\( b16.\) a4 | \noBreak
     c'8. a8. r16 | \noBreak
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
       }
@@ -5857,7 +5857,7 @@
   \mark \markup { "1.179" }
     c'8. e'8 c'8 | \noBreak
     e'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     b8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -6122,8 +6122,8 @@
     % Line 187: ξεῖνοι δ’ἀλλήλων πατρώιοι εὐχόμεθ’ εἶναι
   \mark \markup { "1.187" }
     c'16.\( b16.\) b4 | \noBreak
-    b8. c'4 | \noBreak
-    b8. b4 | \noBreak
+    c'8. e'4 | \noBreak
+    c'8. b4 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     c'16.\( b16.\) a8. r16 | \noBreak
@@ -6157,7 +6157,7 @@
     c'8. c'8 e'8 | \noBreak
     c'8. c'4 | \noBreak
     b8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line188" {
@@ -6424,7 +6424,7 @@
     b8. b8 b8 | \noBreak
     c'8. b8 c'8 | \noBreak
     c'16.\( b16.\) b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line196" {
@@ -6514,7 +6514,7 @@
   \mark \markup { "1.199" }
     c'8. c'8 c'8 | \noBreak
     e'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     b8. b8 c'8 | \noBreak
     b8. b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -6619,7 +6619,7 @@
     e'8. c'4 | \noBreak
     b8. b4 | \noBreak
     c'16.\( b16.\) c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line202" {
@@ -6780,7 +6780,7 @@
   \mark \markup { "1.207" }
     c'8. c'4 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) c'8 e'8 | \noBreak
+    e'16.\( c'16.\) c'8 e'8 | \noBreak
     c'8. c'8 b8 | \noBreak
     b8. b8 b8 | \noBreak
     c'16.\( b16.\) a8. r16 | \noBreak
@@ -6916,7 +6916,7 @@
     c'8. c'8 c'8 | \noBreak
     b8. c'4 | \noBreak
     b8. b8 c'8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line211" {
@@ -6944,7 +6944,7 @@
   \mark \markup { "1.212" }
     c'8. c'8\( b8\) | \noBreak
     c'8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. c'8 b8 | \noBreak
     c'8. c'8 b8 | \noBreak
     c'16.\( b16.\) a8. r16 | \noBreak
@@ -7006,7 +7006,7 @@
   \mark \markup { "1.214" }
     c'8. e'8 c'8 | \noBreak
     e'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     b8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -7036,7 +7036,7 @@
     % Line 215: μήτηρ μέν τέ μέ φησι τοῦ ἔμμεναι, αὐτὰρ ἐγώ γε
   \mark \markup { "1.215" }
     c'8. b4 | \noBreak
-    c'8. c'8 c'8 | \noBreak
+    c'8. c'8 e'8 | \noBreak
     c'8. c'8 c'8.\( | \noBreak
     b8\) c'8. b8 | \noBreak
     b8 b8. c'8 | \noBreak
@@ -7112,7 +7112,7 @@
     c'8. e'8 c'8 | \noBreak
     c'8. c'8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line217" {
@@ -7304,7 +7304,7 @@
   \mark \markup { "1.223" }
     c'16.\( b16.\) b8 b8 | \noBreak
     c'8. e'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -7369,7 +7369,7 @@
     c'8. c'8 c'8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 c'8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line225" {
@@ -7409,7 +7409,7 @@
     e'8 c'8 b8 c'8 | \noBreak
     b8. c'8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
-    b8. c'8. | \noBreak
+    a8. c'8. | \noBreak
     r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
@@ -7468,11 +7468,11 @@
     % Line 228: δαίνυσθαι κατὰ δῶμα. νεμεσσήσαιτό κεν ἀνὴρ
   \mark \markup { "1.228" }
     c'8. b4 | \noBreak
-    b8. c'8 e'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    b8. b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     b8. c'4 | \noBreak
     b8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line228" {
@@ -7571,7 +7571,7 @@
   \mark \markup { "1.231" }
     c'16.\( b16.\) b8 c'8 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) c'8 b8 | \noBreak
+    e'16.\( c'16.\) e'8 c'8 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     a8. c'16.\( a16.\) r16 | \noBreak
@@ -7602,7 +7602,7 @@
   \mark \markup { "1.232" }
     c'8. b4 | \noBreak
     c'8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) c'8 e'8 | \noBreak
+    e'16.\( c'16.\) c'8 e'8 | \noBreak
     c'8. b4 | \noBreak
     c'8. c'8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -7633,7 +7633,7 @@
   \mark \markup { "1.233" }
     c'8. b8 b8 | \noBreak
     c'8. e'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'16.\( b16.\) a8. r16 | \noBreak
@@ -7694,7 +7694,7 @@
     % Line 235: οἳ κεῖνον μὲν ἄιστον ἐποίησαν περὶ πάντων
   \mark \markup { "1.235" }
     c'8. e'8\( c'8\) | \noBreak
-    c'8. c'8 e'8 | \noBreak
+    b8. c'8 e'8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b4 | \noBreak
     b8. b8 c'8 | \noBreak
@@ -7831,7 +7831,7 @@
     c'8. c'8 b8 | \noBreak
     c'8. b4 | \noBreak
     b8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line239" {
@@ -7961,7 +7961,7 @@
   \mark \markup { "1.243" }
     c'8. b8 b8 | \noBreak
     c'8. e'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     b8. b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -8159,7 +8159,7 @@
     b8. b8 b8 | \noBreak
     c'8. c'8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line249" {
@@ -8230,7 +8230,7 @@
     c'8. b8 b8 | \noBreak
     b8. c'4 | \noBreak
     b8. b8 c'8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line251" {
@@ -8256,9 +8256,9 @@
   
     % Line 252: τὸν δ’ἐπαλαστήσασα προσηύδα Παλλὰς Ἀθήνη·
   \mark \markup { "1.252" }
+    c'8. c'8 c'8 | \noBreak
+    c'8. e'4 | \noBreak
     c'8. b8 b8 | \noBreak
-    b8. c'4 | \noBreak
-    b8. b8 b8 | \noBreak
     c'8. b4 | \noBreak
     b8. c'8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -8320,7 +8320,7 @@
   \mark \markup { "1.254" }
     c'8. c'8 e'8 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     c'16.\( b16.\) b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -8422,7 +8422,7 @@
   \mark \markup { "1.257" }
     c'16.\( b16.\) b8 b8 | \noBreak
     c'8. e'8\( c'8\) | \noBreak
-    c'8. b8 b8 | \noBreak
+    e'8. c'8 b8 | \noBreak
     c'8. c'4 | \noBreak
     c'16.\( b16.\) b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -8518,7 +8518,7 @@
     c'16.\( b16.\) b8 b8 | \noBreak
     c'16.\( b16.\) b8 c'8 | \noBreak
     b8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line260" {
@@ -8679,10 +8679,10 @@
   \mark \markup { "1.265" }
     c'16.\( b16.\) b8 c'8 | \noBreak
     e'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     b8. c'4 | \noBreak
     b8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line265" {
@@ -8719,7 +8719,7 @@
   \mark \markup { "1.266" }
     c'8. b4 | \noBreak
     c'8. e'8 c'8 | \noBreak
-    c'8. b8 b8 | \noBreak
+    e'8. c'8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     b8. a8. r16 | \noBreak
@@ -8783,8 +8783,8 @@
     b8. c'4 | \noBreak
     b8. b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    c'16.\( b16.\) a8 c'8 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line268" {
@@ -8843,7 +8843,7 @@
   \mark \markup { "1.270" }
     c'8. b4 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -8917,7 +8917,7 @@
     e'8. c'8 e'8 | \noBreak
     c'8. c'4 | \noBreak
     b8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line272" {
@@ -8944,8 +8944,8 @@
     % Line 273: μῦθον πέφραδε πᾶσι, θεοὶ δ’ἐπὶ μάρτυροι ἔστων.
   \mark \markup { "1.273" }
     c'16.\( b16.\) b4 | \noBreak
-    c'8. b8 b8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    c'8. c'8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 c'8 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. a8. r16 | \noBreak
@@ -8975,7 +8975,7 @@
     % Line 274: μνηστῆρας μὲν ἐπὶ σφέτερα σκίδνασθαι ἄνωχθι,
   \mark \markup { "1.274" }
     c'8. e'8\( c'8\) | \noBreak
-    c'8. c'8 b8 | \noBreak
+    b8. c'8 b8 | \noBreak
     c'8. e'8 c'8 | \noBreak
     b8. c'4 | \noBreak
     b8. b8 c'8 | \noBreak
@@ -9139,7 +9139,7 @@
     % Line 279: σοὶ δ’αὐτῷ πυκινῶς ὑποθήσομαι, αἴ κε πίθηαι·
   \mark \markup { "1.279" }
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     c'16.\( b16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 c'8 | \noBreak
@@ -9437,10 +9437,10 @@
   \mark \markup { "1.288" }
     c'16.\( b16.\) c'4 | \noBreak
     c'8. e'8 c'8 | \noBreak
-    c'8. c'8 c'8 | \noBreak
+    e'8. c'8 c'8 | \noBreak
     b8. c'4 | \noBreak
     b8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line288" {
@@ -9468,7 +9468,7 @@
   \mark \markup { "1.289" }
     c'8. c'8 c'8 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b4 | \noBreak
     b8. c'8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -9601,7 +9601,7 @@
   \mark \markup { "1.293" }
     c'8. e'8 c'8 | \noBreak
     e'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     b8. c'4 | \noBreak
     b8. b8 c'8 | \noBreak
     b8. a8. r16 | \noBreak
@@ -9635,7 +9635,7 @@
     b8. b8 b8 | \noBreak
     c'8. c'8 b8 | \noBreak
     c'8. b8 c'8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line294" {
@@ -9663,7 +9663,7 @@
   \mark \markup { "1.295" }
     c'8. b4 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
     c'16.\( b16.\) a8. r16 | \noBreak
@@ -9706,7 +9706,7 @@
     c'8. c'4 | \noBreak
     b8. b8 c'8 | \noBreak
     b8. c'8 c'8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line296" {
@@ -9867,8 +9867,8 @@
   \mark \markup { "1.301" }
     c'8. c'8 e'8 | \noBreak
     c'8. e'8 c'8 | \noBreak
-    c'8. c'8 e'8 | \noBreak
-    c'8. b4 | \noBreak
+    c'8. b8 c'8 | \noBreak
+    b8. b4 | \noBreak
     c'8. b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
     \acciaccatura { b8( } a8.) c'8[ c'8] |
@@ -9928,8 +9928,8 @@
     % Line 303: αὐτὰρ ἐγὼν ἐπὶ νῆα θοὴν κατελεύσομαι ἤδη
   \mark \markup { "1.303" }
     c'8. e'8 c'8 | \noBreak
-    e'8. c'8 e'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'8. c'8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. a8. r16 | \noBreak
@@ -9990,7 +9990,7 @@
     % Line 305: σοὶ δ’αὐτῷ μελέτω, καὶ ἐμῶν ἐμπάζεο μύθων.
   \mark \markup { "1.305" }
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     b8. c'8 b8 | \noBreak
     c'16.\( b16.\) b4 | \noBreak
     c'8. b8 b8 | \noBreak
@@ -10062,7 +10062,7 @@
   \mark \markup { "1.307" }
     c'16.\( b16.\) c'8\( b8\) | \noBreak
     b8. c'4 | \noBreak
-    c'16.\( b16.\) c'8 e'8 | \noBreak
+    e'16.\( c'16.\) c'8 e'8 | \noBreak
     c'8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -10155,7 +10155,7 @@
   \mark \markup { "1.310" }
     c'8. b8 c'8 | \noBreak
     c'8. e'8 c'8 | \noBreak
-    c'8. b8 b8 | \noBreak
+    e'8. c'8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     c'8. b8 c'8 | \noBreak
     a8. c'16.\( a16.\) r16 | \noBreak
@@ -10194,8 +10194,8 @@
     % Line 311: δῶρον ἔχων ἐπὶ νῆα κίῃς, χαίρων ἐνὶ θυμῷ,
   \mark \markup { "1.311" }
     c'16.\( b16.\) c'8 e'8 | \noBreak
-    c'8. c'8 e'8 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    c'8. b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     b8. c'4 | \noBreak
     b8. b8 c'8 | \noBreak
     a8. c'16.\( a16.\) r16 | \noBreak
@@ -10225,7 +10225,7 @@
     % Line 312: τιμῆεν, μάλα καλόν, ὅ τοι κειμήλιον ἔσται
   \mark \markup { "1.312" }
     c'8. e'8\( c'8\) | \noBreak
-    c'8. e'8 c'8 | \noBreak
+    b8. c'8 b8 | \noBreak
     b8. c'8 e'8 | \noBreak
     c'8. b4 | \noBreak
     c'8. b8 b8 | \noBreak
@@ -10358,8 +10358,8 @@
   
     % Line 316: δῶρον δ’ὅττι κέ μοι δοῦναι φίλον ἦτορ ἀνώγῃ,
   \mark \markup { "1.316" }
-    c'16.\( b16.\) b4 | \noBreak
-    c'8. b8 c'8 | \noBreak
+    c'16.\( b16.\) c'4 | \noBreak
+    e'8. c'8 c'8 | \noBreak
     c'8. c'8\( b8\) | \noBreak
     b8. c'8 b8 | \noBreak
     c'16.\( b16.\) b8 b8 | \noBreak
@@ -10453,7 +10453,7 @@
   \mark \markup { "1.319" }
     c'8. c'8 c'8 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     b8. b4 | \noBreak
     c'16.\( b16.\) b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -10527,7 +10527,7 @@
     e'8. c'8 b8 | \noBreak
     c'8. b4 | \noBreak
     c'8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line321" {
@@ -10617,10 +10617,10 @@
   \mark \markup { "1.324" }
     c'8. e'8 c'8 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     b8. b8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line324" {
@@ -10753,7 +10753,7 @@
     c'8. c'8 e'8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line328" {
@@ -10811,8 +10811,8 @@
     % Line 330: κλίμακα δ’ὑψηλὴν κατεβήσετο οἷο δόμοιο,
   \mark \markup { "1.330" }
     c'8. b8 b8 | \noBreak
-    b8. b4 | \noBreak
-    c'8. b8 b8 | \noBreak
+    c'8. c'4 | \noBreak
+    e'8. c'8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'16.\( b16.\) b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -10852,7 +10852,7 @@
   \mark \markup { "1.331" }
     c'8. e'4 | \noBreak
     c'8. e'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     b8. c'8 b8 | \noBreak
     b8. c'8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -10883,7 +10883,7 @@
   \mark \markup { "1.332" }
     c'8. e'8 c'8 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'16.\( b16.\) b8 b8 | \noBreak
     a8. c'16.\( a16.\) r16 | \noBreak
@@ -11019,7 +11019,7 @@
     b8. b8 b8 | \noBreak
     c'8. b4 | \noBreak
     c'16.\( b16.\) b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line336" {
@@ -11077,11 +11077,11 @@
     % Line 338: ἔργ’ ἀνδρῶν τε θεῶν τε, τά τε κλείουσιν ἀοιδοί·
   \mark \markup { "1.338" }
     c'8. c'4 | \noBreak
-    e'16.\( c'16.\) c'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     b8. c'4 | \noBreak
     b8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line338" {
@@ -11245,7 +11245,7 @@
     e'8. c'8 c'8 | \noBreak
     b8. b4 | \noBreak
     b8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line343" {
@@ -11347,7 +11347,7 @@
     b8. b8 c'8 | \noBreak
     b8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line346" {
@@ -11378,7 +11378,7 @@
     c'8. e'8 c'8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line347" {
@@ -11437,7 +11437,7 @@
   \mark \markup { "1.349" }
     c'8. e'8 c'8 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     b8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -11570,8 +11570,8 @@
   \mark \markup { "1.353" }
     c'8. c'8 c'8 | \noBreak
     c'8. e'4 | \noBreak
-    c'8. b8 c'8 | \noBreak
-    b8. c'4 | \noBreak
+    c'8. c'8 e'8 | \noBreak
+    c'8. c'4 | \noBreak
     b8. c'8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
@@ -11599,9 +11599,9 @@
   
     % Line 354: οὐ γὰρ Ὀδυσσεὺς οἶος ἀπώλεσε νόστιμον ἦμαρ
   \mark \markup { "1.354" }
-    c'8. c'8 c'8 | \noBreak
-    c'8. e'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    c'8. c'8 b8 | \noBreak
+    b8. c'4 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'16.\( b16.\) a8. r16 | \noBreak
@@ -11671,8 +11671,8 @@
     % Line 356: ἀλλ’ εἰς οἶκον ἰοῦσα τὰ σ’αὐτῆς ἔργα κόμιζε,
   \mark \markup { "1.356" }
     c'8. c'4 | \noBreak
-    e'16.\( c'16.\) c'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     b8. c'8\( b8\) | \noBreak
     c'8. b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -11734,7 +11734,7 @@
   \mark \markup { "1.358" }
     c'8. b8 c'8 | \noBreak
     e'8. c'4 | \noBreak
-    c'8. c'8\( b8\) | \noBreak
+    c'8. e'8\( c'8\) | \noBreak
     b8. c'4 | \noBreak
     b8. b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -11764,8 +11764,8 @@
     % Line 359: πᾶσι, μάλιστα δ’ἐμοί· τοῦ γὰρ κράτος ἔστ’ ἐνὶ οἴκῳ.
   \mark \markup { "1.359" }
     c'16.\( b16.\) b8 c'8 | \noBreak
-    b8. b8 c'8 | \noBreak
-    e'8. c'8\( b8\) | \noBreak
+    b8. b8 b8 | \noBreak
+    c'8. e'8\( c'8\) | \noBreak
     c'8. c'8 b8 | \noBreak
     c'8. b8 c'8 | \noBreak
     b8. a8. r16 | \noBreak
@@ -11836,7 +11836,7 @@
   \mark \markup { "1.361" }
     c'8. e'4 | \noBreak
     c'8. e'8\( c'8\) | \noBreak
-    c'8. b4 | \noBreak
+    b8. b4 | \noBreak
     b8. c'8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     a8. c'16.\( a16.\) r16 | \noBreak
@@ -11866,11 +11866,11 @@
     % Line 362: ἐς δ’ὑπερῷ’ ἀναβᾶσα σὺν ἀμφιπόλοισι γυναιξὶ
   \mark \markup { "1.362" }
     c'8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     b8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line362" {
@@ -11898,7 +11898,7 @@
   \mark \markup { "1.363" }
     c'16.\( b16.\) b8 c'8 | \noBreak
     b8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) c'8 e'8 | \noBreak
+    e'16.\( c'16.\) c'8 e'8 | \noBreak
     c'8. c'8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. a8. r16 | \noBreak
@@ -11959,7 +11959,7 @@
     % Line 365: μνηστῆρες δ’ὁμάδησαν ἀνὰ μέγαρα σκιόεντα,
   \mark \markup { "1.365" }
     c'8. e'8\( c'8\) | \noBreak
-    c'8. b8 c'8 | \noBreak
+    b8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
     c'8. c'8 b8 | \noBreak
     b8. b8 c'8 | \noBreak
@@ -12062,7 +12062,7 @@
   \mark \markup { "1.368" }
     c'8. e'8 c'8 | \noBreak
     e'16.\( c'16.\) c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -12096,7 +12096,7 @@
     b8. b4 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line369" {
@@ -12167,7 +12167,7 @@
     c'8. c'8 b8 | \noBreak
     c'16.\( b16.\) b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line371" {
@@ -12226,7 +12226,7 @@
   \mark \markup { "1.373" }
     c'8. b8 c'8 | \noBreak
     e'8. c'4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     b8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -12328,7 +12328,7 @@
   \mark \markup { "1.376" }
     c'8. e'4 | \noBreak
     c'8. c'8 e'8 | \noBreak
-    c'8. c'8 b8 | \noBreak
+    c'8. e'8 c'8 | \noBreak
     b8. c'8 b8 | \noBreak
     b8. c'8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -12557,7 +12557,7 @@
     c'8. b8 c'8 | \noBreak
     b8. b4 | \noBreak
     c'8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line383" {
@@ -12588,7 +12588,7 @@
     c'8. b8 b8 | \noBreak
     c'8. b4 | \noBreak
     b8. b8 c'8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line384" {
@@ -12885,7 +12885,7 @@
     b8. c'4 | \noBreak
     b8. b4 | \noBreak
     c'8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line393" {
@@ -12913,7 +12913,7 @@
   \mark \markup { "1.394" }
     c'8. c'8\( b8\) | \noBreak
     b8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     b8. c'8\( b8\) | \noBreak
     b8. c'8 c'8 | \noBreak
     b8. a8. r16 | \noBreak
@@ -12947,7 +12947,7 @@
     c'8. c'8 e'8 | \noBreak
     c'8. c'8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line395" {
@@ -12987,7 +12987,7 @@
     b8. b8 b8 | \noBreak
     c'8. c'8 b8 | \noBreak
     c'16.\( b16.\) b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line396" {
@@ -13049,7 +13049,7 @@
     c'8. b4 | \noBreak
     c'8. b8 b8 | \noBreak
     c'16.\( b16.\) b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line398" {
@@ -13107,8 +13107,8 @@
     % Line 400: Τηλέμαχ’, ἦ τοι ταῦτα θεῶν ἐν γούνασι κεῖται,
   \mark \markup { "1.400" }
     c'8. e'8 c'8 | \noBreak
-    c'16.\( b16.\) b4 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    c'16.\( b16.\) c'4 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'16.\( b16.\) b4 | \noBreak
     c'8. b8 b8 | \noBreak
     c'16.\( b16.\) a8. r16 | \noBreak
@@ -13209,8 +13209,8 @@
     % Line 403: μὴ γὰρ ὅ γ’ἔλθοι ἀνὴρ ὅς τίς σ’ἀέκοντα βίηφιν
   \mark \markup { "1.403" }
     c'8. c'8 c'8 | \noBreak
-    e'8. c'8 c'8 | \noBreak
-    e'8. c'4 | \noBreak
+    e'8. c'8 b8 | \noBreak
+    c'8. e'4 | \noBreak
     c'8. b8 c'8 | \noBreak
     b8. b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -13311,7 +13311,7 @@
     % Line 406: ὁππόθεν οὗτος ἀνήρ, ποίης δ’ἐξ εὔχεται εἶναι
   \mark \markup { "1.406" }
     c'8. e'8 c'8 | \noBreak
-    e'16.\( c'16.\) c'8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     c'8. e'4 | \noBreak
     c'8. b4 | \noBreak
     c'8. b8 b8 | \noBreak
@@ -13405,7 +13405,7 @@
   \mark \markup { "1.409" }
     c'16.\( b16.\) c'4 | \noBreak
     c'8. e'8\( c'8\) | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     c'8. a8. r16 | \noBreak
@@ -13669,12 +13669,12 @@
   
     % Line 417: ξεῖνος δ’οὗτος ἐμὸς πατρώιος ἐκ Τάφου ἐστίν,
   \mark \markup { "1.417" }
-    c'16.\( b16.\) b4 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    c'16.\( b16.\) c'4 | \noBreak
+    e'16.\( c'16.\) b8 c'8 | \noBreak
     e'8. c'4 | \noBreak
     c'8. b8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line417" {
@@ -13701,8 +13701,8 @@
     % Line 418: Μέντης δ’Ἀγχιάλοιο δαΐφρονος εὔχεται εἶναι
   \mark \markup { "1.418" }
     c'8. b4 | \noBreak
-    b8. b8 c'8 | \noBreak
-    b8. b8 b8 | \noBreak
+    c'8. c'8 e'8 | \noBreak
+    c'8. b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
     c'16.\( b16.\) a8. r16 | \noBreak
@@ -13807,7 +13807,7 @@
     e'8. c'8 c'8 | \noBreak
     b8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line421" {
@@ -14030,8 +14030,8 @@
   \mark \markup { "1.428" }
     c'16.\( b16.\) c'8 c'8 | \noBreak
     c'8. c'8 e'8 | \noBreak
-    c'8. b8 c'8 | \noBreak
-    b8. c'8 b8 | \noBreak
+    c'8. c'8 e'8 | \noBreak
+    c'8. c'8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     c'16.\( b16.\) a8. r16 | \noBreak
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
@@ -14061,7 +14061,7 @@
   \mark \markup { "1.429" }
     c'8. e'4 | \noBreak
     c'8. e'8\( c'8\) | \noBreak
-    c'8. c'8 e'8 | \noBreak
+    b8. c'8 e'8 | \noBreak
     c'8. b4 | \noBreak
     b8. b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -14132,7 +14132,7 @@
   \mark \markup { "1.431" }
     c'8. e'4 | \noBreak
     c'8. c'8 c'8 | \noBreak
-    c'16.\( b16.\) b8 b8 | \noBreak
+    e'16.\( c'16.\) b8 b8 | \noBreak
     b8. b8 c'8 | \noBreak
     b8. b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -14163,7 +14163,7 @@
   \mark \markup { "1.432" }
     c'16.\( b16.\) b8 c'8 | \noBreak
     c'8. c'4 | \noBreak
-    c'16.\( b16.\) c'8 e'8 | \noBreak
+    e'16.\( c'16.\) c'8 e'8 | \noBreak
     c'8. c'8 b8 | \noBreak
     b8. b8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
@@ -14197,7 +14197,7 @@
     c'8. c'8 e'8 | \noBreak
     c'8. b8 c'8 | \noBreak
     b8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line433" {
@@ -14361,7 +14361,7 @@
     c'8. b8 b8 | \noBreak
     b8. c'8 b8 | \noBreak
     c'8. b8 b8 | \noBreak
-    b8. c'8. r16 | \noBreak
+    a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
       }
       \new Lyrics \lyricsto "line438" {
@@ -14583,10 +14583,10 @@
       \time 7/16
     c'8. b8 c'8 |
     e'8. c'8 c'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 b8 |
     c'8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. b8 b8 |
     c'8. e'4 |
@@ -14607,7 +14607,7 @@
     c'8. c'8 b8 |
     c'8. b8 b8 |
     c'8. b8 c'8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. e'8 c'8 |
     c'8. e'4 |
@@ -14631,8 +14631,8 @@
     a8. a8. r16 |
     \grace { c'16( b16 } a8.) b8[ c'8] |
     c'8. c'8 c'8 |
-    e'8. c'8 e'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'8. c'8 c'8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 b8 |
     b8. b8 c'8 |
     a8. a8. r16 |
@@ -14660,17 +14660,17 @@
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'8. b8 c'8 |
     c'8. e'8 c'8 |
-    c'8. b8 b8 |
+    e'8. c'8 b8 |
     b8. c'8 b8 |
     b8. c'8 c'8 |
     a8. a8. r16 |
     \grace { c'16( b16 } a8.) b8[ c'8] |
-    c'8. c'8\( b8\) |
+    c'8. e'8\( c'8\) |
     c'8. e'4 |
     c'8. b4 |
     b8. c'8 b8 |
     b8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'4 |
     e'8. c'8 c'8 |
@@ -14681,7 +14681,7 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. e'4 |
     c'8. c'8 c'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     b8. b8 c'8 |
     b8. c'8 b8 |
     c'16.\( b16.\) a8. r16 |
@@ -14723,7 +14723,7 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. c'8 e'8 |
     c'8. c'8 c'8 |
-    c'16.\( b16.\) b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
     b8. c'4 |
     c'16.\( b16.\) b8 b8 |
     c'8. a8. r16 |
@@ -14784,9 +14784,9 @@
     b8. c'4 |
     a8. a8. r16 |
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
-    c'8. b8 b8 |
-    b8. b8 c'8 |
-    b8. b4 |
+    c'8. c'8 c'8 |
+    c'8. c'8 e'8 |
+    c'8. b4 |
     b8. b8 c'8 |
     c'8. b8 b8 |
     c'8. a8. r16 |
@@ -14799,7 +14799,7 @@
     c'8. a8. r16 |
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'8. e'8 c'8 |
-    e'16.\( c'16.\) c'4 |
+    e'16.\( c'16.\) b4 |
     c'8. b8 b8 |
     c'8. b8 c'8 |
     b8. b8 c'8 |
@@ -14810,7 +14810,7 @@
     c'8. c'8 e'8 |
     c'8. b8 b8 |
     b8. c'8 c'8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'16.\( b16.\) b8 c'8 |
     c'8. c'8 e'8 |
@@ -14898,7 +14898,7 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. e'4 |
     c'8. e'8\( c'8\) |
-    c'8. b8 b8 |
+    e'8. c'8 b8 |
     b8. c'8 b8 |
     c'16.\( b16.\) b8 b8 |
     c'8. a8. r16 |
@@ -14912,7 +14912,7 @@
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'8. e'8 c'8 |
     c'8. c'8 c'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 b8 |
     c'8. b8 b8 |
     c'16.\( b16.\) a8. r16 |
@@ -14950,7 +14950,7 @@
     c'16.\( b16.\) b8 c'8 |
     b8. c'8 b8 |
     c'8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. e'4 |
     c'8. e'8\( c'8\) |
@@ -14968,7 +14968,7 @@
     \grace { c'16( b16 } a8.) b8[ c'8] |
     c'8. e'4 |
     c'8. c'8 c'8 |
-    c'16.\( b16.\) b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
     b8. b8 c'8 |
     b8. b8 c'8 |
     a8. a8. r16 |
@@ -14978,7 +14978,7 @@
     c'8. b8 b8 |
     c'8. b8 b8 |
     b8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. e'8 c'8 |
     c'8. c'4 |
@@ -14996,10 +14996,10 @@
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'8. e'8 c'8 |
     c'8. e'8 c'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 b8 |
     c'8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. e'4 |
     c'8. c'8 e'8 |
@@ -15020,18 +15020,18 @@
     c'8. b8 c'8 |
     b8. b8 b8 |
     b8. b8 c'8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. b8 b8 |
     c'8. e'8\( c'8\) |
-    c'8. c'8 e'8 |
-    c'8. c'8 b8 |
+    e'8. c'8 c'8 |
+    b8. c'8 b8 |
     c'8. b8 b8 |
     c'8. a8. r16 |
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'16.\( b16.\) c'8 e'8 |
     c'8. c'8 c'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. c'4 |
     b8. b8 b8 |
     c'8. a8. r16 |
@@ -15055,7 +15055,7 @@
     c'8. b4 |
     c'8. b8 b8 |
     b8. b8 c'8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. b4 |
     b8. c'8 e'8 |
@@ -15087,14 +15087,14 @@
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'8. e'4 |
     c'8. c'8 c'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     b8. c'4 |
     b8. b8 b8 |
     c'16.\( b16.\) a8. r16 |
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'8. c'8\( b8\) |
     c'8. c'8 c'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     b8. c'4 |
     b8. b8 b8 |
     c'8. a8. r16 |
@@ -15157,7 +15157,7 @@
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'8. c'8\( b8\) |
     b8. c'8 c'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 b8 |
     c'8. b8 c'8 |
     a8. a8. r16 |
@@ -15181,11 +15181,11 @@
     c'8. c'4 |
     b8. b4 |
     b8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. b8 c'8 |
     c'8. e'8\( c'8\) |
-    c'8. b8 b8 |
+    b8. b8 b8 |
     c'8. b8 b8 |
     c'8. b8 c'8 |
     a8. a8. r16 |
@@ -15195,7 +15195,7 @@
     b8. b8 b8 |
     c'8. b8 b8 |
     c'8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'16.\( b16.\) b8 c'8 |
     c'8. e'4 |
@@ -15209,14 +15209,14 @@
     c'8. c'8 e'8 |
     c'8. b8 c'8 |
     b8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'16.\( b16.\) b4 |
     c'8. e'4 |
     c'8. b8 b8 |
     b8. c'8 b8 |
     c'8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'16.\( b16.\) b8 c'8 |
     e'8. c'4 |
@@ -15258,11 +15258,11 @@
     c'8. c'8 e'8 |
     c'8. c'8 b8 |
     b8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'8 c'8 |
     e'8. c'8 c'8 |
-    c'16.\( b16.\) c'8 e'8 |
+    e'16.\( c'16.\) c'8 e'8 |
     c'8. b4 |
     c'16.\( b16.\) b8 c'8 |
     a8. a8. r16 |
@@ -15295,15 +15295,15 @@
     b8. c'4 |
     a8. a8. r16 |
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
-    c'16.\( b16.\) b8 c'8 |
-    b8. c'8 e'8 |
-    c'8. b8 b8 |
+    c'16.\( b16.\) c'8 e'8 |
+    c'8. b8 c'8 |
+    e'8. c'8 b8 |
     c'8. b8 c'8 |
     b8. b8 b8 |
     c'16.\( b16.\) a8. r16 |
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'8. e'8.\( c'8\) |
-    c'8 c'8. e'4 |
+    b8 c'8. e'4 |
     c'8. c'8 |
     e'8 c'8. c'8 |
     b8 c'8. b8 |
@@ -15319,13 +15319,13 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'16.\( b16.\) b8 c'8 |
     b8. c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 b8 |
     b8. c'8 c'8 |
     a8. a8. r16 |
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. e'8\( c'8\) |
-    c'8. b8 c'8 |
+    b8. b8 c'8 |
     b8. b8 b8 |
     c'8. b4 |
     b8. c'8 c'8 |
@@ -15333,20 +15333,20 @@
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'8. b8 b8 |
     c'8. c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'16.\( b16.\) c'4 |
     c'8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. b4 |
     b8. c'4 |
-    c'16.\( b16.\) b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
     b8. b4 |
     c'8. b8 c'8 |
     a8. a8. r16 |
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'8. c'4 |
-    e'16.\( c'16.\) c'8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
     b8. b8 b8 |
     c'8. b4 |
     c'16.\( b16.\) b8 c'8 |
@@ -15368,14 +15368,14 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. c'8 b8 |
     c'8. e'8\( c'8\) |
-    c'8. c'8 b8 |
+    b8. c'8 b8 |
     b8. c'8 b8 |
     b8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'16.\( b16.\) b8 c'8 |
     c'8. c'4 |
-    c'16.\( b16.\) c'8 e'8 |
+    e'16.\( c'16.\) c'8 e'8 |
     c'8. b8 b8 |
     b8. c'8 b8 |
     c'16.\( b16.\) a8. r16 |
@@ -15385,7 +15385,7 @@
     c'8. e'8 c'8 |
     c'8. b8 c'8 |
     c'8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. e'4 |
     c'8. c'8\( b8\) |
@@ -15403,13 +15403,13 @@
     \grace { c'16( b16 } a8.) b8[ c'8] |
     c'8. c'8 e'8 |
     c'8. c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 b8 |
     c'8. b8 b8 |
     c'8. a8. r16 |
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
-    c'16.\( b16.\) b4 |
-    c'8. c'8 e'8 |
+    c'16.\( b16.\) c'4 |
+    e'8. c'8 e'8 |
     c'8. b8 b8 |
     b8. c'4 |
     b8. b8 c'8 |
@@ -15420,7 +15420,7 @@
     c'8. b8 b8 |
     b8. c'8 b8 |
     b8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'16.\( b16.\) c'8 b8 |
     c'8. c'8 c'8 |
@@ -15437,7 +15437,7 @@
     c'8. a8. r16 |
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'16.\( b16.\) c'4 |
-    e'16.\( c'16.\) c'8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
     e'8. c'8 b8 |
     c'8. b8 b8 |
     b8. c'8 c'8 |
@@ -15448,7 +15448,7 @@
     b8. b4 |
     c'8. b8 b8 |
     c'8. b8 c'8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'4 |
     e'8. c'4 |
@@ -15469,7 +15469,7 @@
     c'8. c'8 e'8 |
     c'8. c'4 |
     c'8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'8 e'8 |
     c'8. c'4 |
@@ -15480,10 +15480,10 @@
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'8. b8 c'8 |
     c'8. e'8\( c'8\) |
+    b8. b8 b8 |
     c'8. b8 b8 |
     c'8. b8 b8 |
-    c'8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. e'4 |
     c'8. e'8 c'8 |
@@ -15508,7 +15508,7 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. e'4 |
     c'8. c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     b8. b4 |
     c'8. b8 b8 |
     a8. c'16.\( a16.\) r16 |
@@ -15518,7 +15518,7 @@
     b8. b8 b8 |
     b8. b8 c'8 |
     b8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. e'8 c'8 |
     c'8. c'8 e'8 |
@@ -15557,14 +15557,14 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. c'8 c'8 |
     e'8. c'8 c'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     b8. b8 c'8 |
     b8. b8 b8 |
     c'8. a8. r16 |
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'8. e'4 |
     c'8. c'4 |
-    c'16.\( b16.\) c'8 b8 |
+    e'16.\( c'16.\) e'8 c'8 |
     b8. b8 c'8 |
     b8. b8 b8 |
     c'8. a8. r16 |
@@ -15577,7 +15577,7 @@
     a8. a8. r16 |
     \grace { c'16( b16 } a8.) b8[ c'8] |
     c'16.\( b16.\) b4 |
-    c'8. c'8\( b8\) |
+    c'8. e'8\( c'8\) |
     b8. c'8 b8 |
     b8. b8 b8 |
     b8. b8 b8 |
@@ -15585,7 +15585,7 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. c'8\( b8\) |
     b8. c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 b8 |
     b8. c'8 c'8 |
     a8. a8. r16 |
@@ -15613,14 +15613,14 @@
     \grace { c'16( b16 } a8.) b8[ c'8] |
     c'16.\( b16.\) b4 |
     c'8. c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     b8. c'4 |
     b8. b8 b8 |
     c'16.\( b16.\) a8. r16 |
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. c'8 c'8 |
     e'8. c'8 c'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 b8 |
     c'16.\( b16.\) b8 c'8 |
     a8. a8. r16 |
@@ -15634,7 +15634,7 @@
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'8. e'8\( c'8\) |
     c'8. e'8\( c'8\) |
-    c'8. c'8 b8 |
+    b8. c'8 b8 |
     c'8. b8 c'8 |
     c'8. b8 b8 |
     c'8. a8. r16 |
@@ -15644,7 +15644,7 @@
     e'8. c'8 c'8 |
     c'8. b8 b8 |
     c'8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'16.\( b16.\) b4 |
     c'8. b4 |
@@ -15690,10 +15690,10 @@
     \grace { c'16( b16 } a8.) b8[ c'8] |
     c'8. b4 |
     b8. c'4 |
-    c'16.\( b16.\) b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
     b8. c'8 b8 |
     b8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'16.\( b16.\) b8 c'8 |
     c'8. e'8 c'8 |
@@ -15717,7 +15717,7 @@
     c'8. a8. r16 |
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'8. e'8\( c'8\) |
-    c'8. b8 c'8 |
+    e'8. c'8 c'8 |
     b8. b8 b8 |
     c'8. b8 b8 |
     b8. c'4 |
@@ -15767,7 +15767,7 @@
     \grace { c'16( b16 } a8.) b8[ c'8] |
     c'8. e'8 c'8 |
     c'8. c'4 |
-    c'16.\( b16.\) c'8 b8 |
+    e'16.\( c'16.\) c'8 b8 |
     b8. c'8 b8 |
     b8. c'8 b8 |
     c'16.\( b16.\) a8. r16 |
@@ -15816,9 +15816,9 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. b8 c'8 |
     e'8. c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 b8 |
-    c'16.\( b16.\) b4 |
+    c'16.\( b16.\) a4 |
     c'8. a8. r16 |
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'8. c'8\( b8\) |
@@ -15830,7 +15830,7 @@
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'8. e'8 c'8 |
     e'8. c'4 |
-    c'16.\( b16.\) b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
     b8. b8 c'8 |
     b8. b8 b8 |
     c'8. a8. r16 |
@@ -15885,8 +15885,8 @@
     a8. a8. r16 |
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'16.\( b16.\) b4 |
-    b8. c'4 |
-    b8. b4 |
+    c'8. e'4 |
+    c'8. b4 |
     c'8. b8 b8 |
     b8. c'8 b8 |
     c'16.\( b16.\) a8. r16 |
@@ -15896,7 +15896,7 @@
     c'8. c'8 e'8 |
     c'8. c'4 |
     b8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. e'4 |
     c'8. e'4 |
@@ -15953,7 +15953,7 @@
     b8. b8 b8 |
     c'8. b8 c'8 |
     c'16.\( b16.\) b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. e'8 c'8 |
     c'8. c'4 |
@@ -15971,7 +15971,7 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. c'8 c'8 |
     e'8. c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     b8. b8 c'8 |
     b8. b8 c'8 |
     a8. a8. r16 |
@@ -15995,7 +15995,7 @@
     e'8. c'4 |
     b8. b4 |
     c'16.\( b16.\) c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'8 e'8 |
     c'8. c'4 |
@@ -16027,7 +16027,7 @@
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'8. c'4 |
     c'8. c'4 |
-    c'16.\( b16.\) c'8 e'8 |
+    e'16.\( c'16.\) c'8 e'8 |
     c'8. c'8 b8 |
     b8. b8 b8 |
     c'16.\( b16.\) a8. r16 |
@@ -16058,11 +16058,11 @@
     c'8. c'8 c'8 |
     b8. c'4 |
     b8. b8 c'8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'8\( b8\) |
     c'8. c'8 c'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. c'8 b8 |
     c'8. c'8 b8 |
     c'16.\( b16.\) a8. r16 |
@@ -16076,13 +16076,13 @@
     \grace { c'16( b16 } a8.) b8[ c'8] |
     c'8. e'8 c'8 |
     e'8. c'4 |
-    c'16.\( b16.\) b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
     b8. b8 c'8 |
     b8. b8 b8 |
     c'8. a8. r16 |
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. b4 |
-    c'8. c'8 c'8 |
+    c'8. c'8 e'8 |
     c'8. c'8 c'8.\( |
     b8\) c'8. b8 |
     b8 b8. c'8 |
@@ -16101,7 +16101,7 @@
     c'8. e'8 c'8 |
     c'8. c'8 b8 |
     c'8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. e'8 c'8 |
     e'8. c'8 e'8 |
@@ -16140,7 +16140,7 @@
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'16.\( b16.\) b8 b8 |
     c'8. e'8 c'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 b8 |
     b8. b8 c'8 |
     a8. a8. r16 |
@@ -16157,14 +16157,14 @@
     c'8. c'8 c'8 |
     c'8. b8 b8 |
     c'8. b8 c'8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'8. e'8. |
     c'8. c'8 |
     e'8 c'8 b8 c'8 |
     b8. c'8 b8 |
     b8. c'8 b8 |
-    b8. c'8. |
+    a8. c'8. |
     r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'8 c'8 |
@@ -16175,11 +16175,11 @@
     a8. a8. r16 |
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. b4 |
-    b8. c'8 e'8 |
-    c'16.\( b16.\) b8 b8 |
+    b8. b8 c'8 |
+    e'16.\( c'16.\) b8 b8 |
     b8. c'4 |
     b8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'8 c'8 |
     e'8. c'8 e'8 |
@@ -16197,21 +16197,21 @@
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'16.\( b16.\) b8 c'8 |
     c'8. c'4 |
-    c'16.\( b16.\) c'8 b8 |
+    e'16.\( c'16.\) e'8 c'8 |
     c'8. b8 b8 |
     b8. c'8 b8 |
     a8. c'16.\( a16.\) r16 |
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'8. b4 |
     c'8. c'8 c'8 |
-    c'16.\( b16.\) c'8 e'8 |
+    e'16.\( c'16.\) c'8 e'8 |
     c'8. b4 |
     c'8. c'8 b8 |
     c'8. a8. r16 |
     \grace { c'16( b16 } a8.) b8[ c'8] |
     c'8. b8 b8 |
     c'8. e'8 c'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 b8 |
     c'8. b8 b8 |
     c'16.\( b16.\) a8. r16 |
@@ -16224,7 +16224,7 @@
     a8. a8. r16 |
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. e'8\( c'8\) |
-    c'8. c'8 e'8 |
+    b8. c'8 e'8 |
     c'8. b8 b8 |
     c'8. b4 |
     b8. b8 c'8 |
@@ -16256,7 +16256,7 @@
     c'8. c'8 b8 |
     c'8. b4 |
     b8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. e'8 c'8 |
     c'8. e'8\( c'8\) |
@@ -16281,7 +16281,7 @@
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'8. b8 b8 |
     c'8. e'8 c'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     b8. c'8 b8 |
     b8. b8 b8 |
     c'8. a8. r16 |
@@ -16326,7 +16326,7 @@
     b8. b8 b8 |
     c'8. c'8 b8 |
     c'8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'8\( b8\) |
     b8. c'8 c'8 |
@@ -16340,11 +16340,11 @@
     c'8. b8 b8 |
     b8. c'4 |
     b8. b8 c'8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
+    c'8. c'8 c'8 |
+    c'8. e'4 |
     c'8. b8 b8 |
-    b8. c'4 |
-    b8. b8 b8 |
     c'8. b4 |
     b8. c'8 b8 |
     c'8. a8. r16 |
@@ -16358,7 +16358,7 @@
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'8. c'8 e'8 |
     c'8. c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     b8. c'8 b8 |
     c'16.\( b16.\) b8 b8 |
     c'8. a8. r16 |
@@ -16379,7 +16379,7 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'16.\( b16.\) b8 b8 |
     c'8. e'8\( c'8\) |
-    c'8. b8 b8 |
+    e'8. c'8 b8 |
     c'8. c'4 |
     c'16.\( b16.\) b8 c'8 |
     a8. a8. r16 |
@@ -16403,7 +16403,7 @@
     c'16.\( b16.\) b8 b8 |
     c'16.\( b16.\) b8 c'8 |
     b8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. b8 b8 |
     b8. b8 c'8 |
@@ -16435,14 +16435,14 @@
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'16.\( b16.\) b8 c'8 |
     e'8. c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     b8. c'4 |
     b8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. b4 |
     c'8. e'8 c'8 |
-    c'8. b8 b8 |
+    e'8. c'8 b8 |
     c'8. b8 b8 |
     b8. c'8 b8 |
     b8. a8. r16 |
@@ -16458,8 +16458,8 @@
     b8. c'4 |
     b8. b8 b8 |
     c'8. b8 b8 |
-    c'16.\( b16.\) b8 c'8 |
-    b8. c'8. r16 |
+    c'16.\( b16.\) a8 c'8 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'16.\( b16.\) b8 c'8 |
     e'8. c'8 e'8 |
@@ -16470,7 +16470,7 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. b4 |
     c'8. c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 b8 |
     b8. b8 c'8 |
     a8. a8. r16 |
@@ -16487,17 +16487,17 @@
     e'8. c'8 e'8 |
     c'8. c'4 |
     b8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'16.\( b16.\) b4 |
-    c'8. b8 b8 |
-    c'16.\( b16.\) b8 b8 |
+    c'8. c'8 c'8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 c'8 |
     c'8. b8 b8 |
     b8. a8. r16 |
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'8. e'8\( c'8\) |
-    c'8. c'8 b8 |
+    b8. c'8 b8 |
     c'8. e'8 c'8 |
     b8. c'4 |
     b8. b8 c'8 |
@@ -16532,7 +16532,7 @@
     a8. a8. r16 |
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'8. c'4 |
-    c'16.\( b16.\) b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
     c'16.\( b16.\) b8 b8 |
     c'8. b8 b8 |
     c'8. b8 c'8 |
@@ -16596,14 +16596,14 @@
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'16.\( b16.\) c'4 |
     c'8. e'8 c'8 |
-    c'8. c'8 c'8 |
+    e'8. c'8 c'8 |
     b8. c'4 |
     b8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'8 c'8 |
     c'8. c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b4 |
     b8. c'8 b8 |
     c'8. a8. r16 |
@@ -16631,7 +16631,7 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. e'8 c'8 |
     e'8. c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     b8. c'4 |
     b8. b8 c'8 |
     b8. a8. r16 |
@@ -16641,11 +16641,11 @@
     b8. b8 b8 |
     c'8. c'8 b8 |
     c'8. b8 c'8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. b4 |
     c'8. c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 c'8 |
     b8. b8 b8 |
     c'16.\( b16.\) a8. r16 |
@@ -16655,7 +16655,7 @@
     c'8. c'4 |
     b8. b8 c'8 |
     b8. c'8 c'8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'8 e'8 |
     c'8. c'8 e'8 |
@@ -16687,8 +16687,8 @@
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'8. c'8 e'8 |
     c'8. e'8 c'8 |
-    c'8. c'8 e'8 |
-    c'8. b4 |
+    c'8. b8 c'8 |
+    b8. b4 |
     c'8. b8 c'8 |
     a8. a8. r16 |
     \acciaccatura { b8( } a8.) c'8[ c'8] |
@@ -16700,8 +16700,8 @@
     b8. a8. r16 |
     \grace { c'16( b16 } a8.) b8[ c'8] |
     c'8. e'8 c'8 |
-    e'8. c'8 e'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'8. c'8 c'8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 b8 |
     c'8. b8 b8 |
     b8. a8. r16 |
@@ -16714,7 +16714,7 @@
     a8. a8. r16 |
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. c'4 |
-    c'16.\( b16.\) b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
     b8. c'8 b8 |
     c'16.\( b16.\) b4 |
     c'8. b8 b8 |
@@ -16729,7 +16729,7 @@
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'16.\( b16.\) c'8\( b8\) |
     b8. c'4 |
-    c'16.\( b16.\) c'8 e'8 |
+    e'16.\( c'16.\) c'8 e'8 |
     c'8. b8 c'8 |
     b8. b8 b8 |
     c'8. a8. r16 |
@@ -16750,20 +16750,20 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. b8 c'8 |
     c'8. e'8 c'8 |
-    c'8. b8 b8 |
+    e'8. c'8 b8 |
     b8. c'8 b8 |
     c'8. b8 c'8 |
     a8. c'16.\( a16.\) r16 |
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'16.\( b16.\) c'8 e'8 |
-    c'8. c'8 e'8 |
-    c'16.\( b16.\) b8 c'8 |
+    c'8. b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
     b8. c'4 |
     b8. b8 c'8 |
     a8. c'16.\( a16.\) r16 |
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'8. e'8\( c'8\) |
-    c'8. e'8 c'8 |
+    b8. c'8 b8 |
     b8. c'8 e'8 |
     c'8. b4 |
     c'8. b8 b8 |
@@ -16791,8 +16791,8 @@
     c'8. b8 b8 |
     c'16.\( b16.\) a8. r16 |
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
-    c'16.\( b16.\) b4 |
-    c'8. b8 c'8 |
+    c'16.\( b16.\) c'4 |
+    e'8. c'8 c'8 |
     c'8. c'8\( b8\) |
     b8. c'8 b8 |
     c'16.\( b16.\) b8 b8 |
@@ -16814,7 +16814,7 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. c'8 c'8 |
     c'8. c'4 |
-    c'16.\( b16.\) b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
     b8. b4 |
     c'16.\( b16.\) b8 b8 |
     c'8. a8. r16 |
@@ -16831,7 +16831,7 @@
     e'8. c'8 b8 |
     c'8. b4 |
     c'8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'16.\( b16.\) b8 c'8 |
     c'8. c'8 c'8 |
@@ -16849,10 +16849,10 @@
     \grace { c'16( b16 } a8.) b8[ c'8] |
     c'8. e'8 c'8 |
     c'8. c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     b8. b8 b8 |
     b8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'16.\( b16.\) b8 c'8 |
     c'8. e'8 c'8 |
@@ -16880,7 +16880,7 @@
     c'8. c'8 e'8 |
     c'8. b8 b8 |
     c'8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. b4 |
     c'8. c'8 e'8 |
@@ -16890,22 +16890,22 @@
     a8. a8. r16 |
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'8. b8 b8 |
-    b8. b4 |
-    c'8. b8 b8 |
+    c'8. c'4 |
+    e'8. c'8 b8 |
     c'8. b8 b8 |
     c'16.\( b16.\) b8 c'8 |
     a8. a8. r16 |
     \grace { c'16( b16 } a8.) b8[ c'8] |
     c'8. e'4 |
     c'8. e'8 c'8 |
-    c'16.\( b16.\) b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
     b8. c'8 b8 |
     b8. c'8 c'8 |
     a8. a8. r16 |
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. e'8 c'8 |
     c'8. c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 b8 |
     c'16.\( b16.\) b8 b8 |
     a8. c'16.\( a16.\) r16 |
@@ -16936,7 +16936,7 @@
     b8. b8 b8 |
     c'8. b4 |
     c'16.\( b16.\) b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. b8 b8 |
     c'8. e'8 c'8 |
@@ -16946,11 +16946,11 @@
     c'16.\( b16.\) a8. r16 |
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. c'4 |
-    e'16.\( c'16.\) c'8 c'8 |
-    c'16.\( b16.\) b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
     b8. c'4 |
     b8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'16.\( b16.\) c'4 |
     c'8. c'8 c'8 |
@@ -16985,7 +16985,7 @@
     e'8. c'8 c'8 |
     b8. b4 |
     b8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'4 |
     e'16.\( c'16.\) e'8 c'8 |
@@ -17006,14 +17006,14 @@
     b8. b8 c'8 |
     b8. b8 c'8 |
     b8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. b4 |
     c'8. b4 |
     c'8. e'8 c'8 |
     c'8. b8 b8 |
     c'8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. b8 b8 |
     c'8. e'8 c'8 |
@@ -17024,7 +17024,7 @@
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'8. e'8 c'8 |
     c'8. c'4 |
-    c'16.\( b16.\) b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
     b8. b8 c'8 |
     b8. b8 b8 |
     c'8. a8. r16 |
@@ -17052,14 +17052,14 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. c'8 c'8 |
     c'8. e'4 |
-    c'8. b8 c'8 |
-    b8. c'4 |
+    c'8. c'8 e'8 |
+    c'8. c'4 |
     b8. c'8 b8 |
     c'8. a8. r16 |
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
-    c'8. c'8 c'8 |
-    c'8. e'4 |
-    c'16.\( b16.\) b8 b8 |
+    c'8. c'8 b8 |
+    b8. c'4 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 b8 |
     c'8. b8 b8 |
     c'16.\( b16.\) a8. r16 |
@@ -17072,8 +17072,8 @@
     a8. a8. r16 |
     \grace { c'16( b16 } a8.) b8[ c'8] |
     c'8. c'4 |
-    e'16.\( c'16.\) c'8 c'8 |
-    c'16.\( b16.\) b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
     b8. c'8\( b8\) |
     c'8. b8 c'8 |
     a8. a8. r16 |
@@ -17087,14 +17087,14 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. b8 c'8 |
     e'8. c'4 |
-    c'8. c'8\( b8\) |
+    c'8. e'8\( c'8\) |
     b8. c'4 |
     b8. b8 b8 |
     c'8. a8. r16 |
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'16.\( b16.\) b8 c'8 |
-    b8. b8 c'8 |
-    e'8. c'8\( b8\) |
+    b8. b8 b8 |
+    c'8. e'8\( c'8\) |
     c'8. c'8 b8 |
     c'8. b8 c'8 |
     b8. a8. r16 |
@@ -17108,21 +17108,21 @@
     \grace { c'16( b16 } a8.) b8[ c'8] |
     c'8. e'4 |
     c'8. e'8\( c'8\) |
-    c'8. b4 |
+    b8. b4 |
     b8. c'8 b8 |
     c'8. b8 b8 |
     a8. c'16.\( a16.\) r16 |
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. c'8 c'8 |
-    c'16.\( b16.\) b8 c'8 |
-    c'16.\( b16.\) b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
+    e'16.\( c'16.\) b8 c'8 |
     b8. b8 c'8 |
     b8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'16.\( b16.\) b8 c'8 |
     b8. c'8 c'8 |
-    c'16.\( b16.\) c'8 e'8 |
+    e'16.\( c'16.\) c'8 e'8 |
     c'8. c'8 b8 |
     c'8. b8 b8 |
     b8. a8. r16 |
@@ -17135,7 +17135,7 @@
     c'8. a8. r16 |
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'8. e'8\( c'8\) |
-    c'8. b8 c'8 |
+    b8. b8 c'8 |
     b8. b8 b8 |
     c'8. c'8 b8 |
     b8. b8 c'8 |
@@ -17157,7 +17157,7 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. e'8 c'8 |
     e'16.\( c'16.\) c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. b8 b8 |
     c'8. b8 c'8 |
     a8. a8. r16 |
@@ -17167,7 +17167,7 @@
     b8. b4 |
     c'8. b8 b8 |
     b8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. b8 b8 |
     c'8. e'8 c'8 |
@@ -17181,7 +17181,7 @@
     c'8. c'8 b8 |
     c'16.\( b16.\) b8 b8 |
     c'8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'8\( b8\) |
     b8. b8 b8 |
@@ -17192,7 +17192,7 @@
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'8. b8 c'8 |
     e'8. c'4 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     b8. b8 c'8 |
     b8. b8 b8 |
     c'8. a8. r16 |
@@ -17213,7 +17213,7 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. e'4 |
     c'8. c'8 e'8 |
-    c'8. c'8 b8 |
+    c'8. e'8 c'8 |
     b8. c'8 b8 |
     b8. c'8 c'8 |
     a8. a8. r16 |
@@ -17265,14 +17265,14 @@
     c'8. b8 c'8 |
     b8. b4 |
     c'8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. e'8 c'8 |
     c'16.\( b16.\) c'8 b8 |
     c'8. b8 b8 |
     c'8. b4 |
     b8. b8 c'8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'8 e'8 |
     c'8. e'8 c'8 |
@@ -17335,11 +17335,11 @@
     b8. c'4 |
     b8. b4 |
     c'8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'8\( b8\) |
     b8. c'8 c'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     b8. c'8\( b8\) |
     b8. c'8 c'8 |
     b8. a8. r16 |
@@ -17349,14 +17349,14 @@
     c'8. c'8 e'8 |
     c'8. c'8 b8 |
     b8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'16.\( b16.\) c'4 |
     c'8. e'8 c'8 |
     b8. b8 b8 |
     c'8. c'8 b8 |
     c'16.\( b16.\) b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. e'8 c'8 |
     c'8. e'4 |
@@ -17370,7 +17370,7 @@
     c'8. b4 |
     c'8. b8 b8 |
     c'16.\( b16.\) b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'8\( b8\) |
     c'8. e'8 c'8 |
@@ -17380,8 +17380,8 @@
     b8. a8. r16 |
     \grace { c'16( b16 } a8.) b8[ c'8] |
     c'8. e'8 c'8 |
-    c'16.\( b16.\) b4 |
-    c'16.\( b16.\) b8 b8 |
+    c'16.\( b16.\) c'4 |
+    e'16.\( c'16.\) b8 b8 |
     c'16.\( b16.\) b4 |
     c'8. b8 b8 |
     c'16.\( b16.\) a8. r16 |
@@ -17401,8 +17401,8 @@
     c'8. a8. r16 |
     \acciaccatura { b8( } a8.) \grace { c'16 b16 } a8[ c'8] |
     c'8. c'8 c'8 |
-    e'8. c'8 c'8 |
-    e'8. c'4 |
+    e'8. c'8 b8 |
+    c'8. e'4 |
     c'8. b8 c'8 |
     b8. b8 c'8 |
     a8. a8. r16 |
@@ -17422,7 +17422,7 @@
     c'8. a8. r16 |
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. e'8 c'8 |
-    e'16.\( c'16.\) c'8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     c'8. e'4 |
     c'8. b4 |
     c'8. b8 b8 |
@@ -17444,7 +17444,7 @@
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'16.\( b16.\) c'4 |
     c'8. e'8\( c'8\) |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     b8. c'8 b8 |
     b8. c'8 b8 |
     c'8. a8. r16 |
@@ -17498,16 +17498,16 @@
     b8. b8 c'8 |
     a8. a8. r16 |
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
-    c'16.\( b16.\) b4 |
-    c'16.\( b16.\) b8 c'8 |
+    c'16.\( b16.\) c'4 |
+    e'16.\( c'16.\) b8 c'8 |
     e'8. c'4 |
     c'8. b8 b8 |
     b8. c'8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. b4 |
-    b8. b8 c'8 |
-    b8. b8 b8 |
+    c'8. c'8 e'8 |
+    c'8. b8 b8 |
     c'8. b8 b8 |
     c'8. b8 b8 |
     c'16.\( b16.\) a8. r16 |
@@ -17531,7 +17531,7 @@
     e'8. c'8 c'8 |
     b8. b8 c'8 |
     b8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. e'8 c'8 |
     c'8. e'4 |
@@ -17577,14 +17577,14 @@
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'16.\( b16.\) c'8 c'8 |
     c'8. c'8 e'8 |
-    c'8. b8 c'8 |
-    b8. c'8 b8 |
+    c'8. c'8 e'8 |
+    c'8. c'8 b8 |
     b8. c'8 b8 |
     c'16.\( b16.\) a8. r16 |
     \grace { c'16( b16 } a8.) \grace { c'16( b16 } a8)[ c'8] |
     c'8. e'4 |
     c'8. e'8\( c'8\) |
-    c'8. c'8 e'8 |
+    b8. c'8 e'8 |
     c'8. b4 |
     b8. b8 c'8 |
     a8. a8. r16 |
@@ -17598,14 +17598,14 @@
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'8. e'4 |
     c'8. c'8 c'8 |
-    c'16.\( b16.\) b8 b8 |
+    e'16.\( c'16.\) b8 b8 |
     b8. b8 c'8 |
     b8. b8 c'8 |
     a8. a8. r16 |
     \grace { c'16( b16 } a8.) b8[ c'8] |
     c'16.\( b16.\) b8 c'8 |
     c'8. c'4 |
-    c'16.\( b16.\) c'8 e'8 |
+    e'16.\( c'16.\) c'8 e'8 |
     c'8. c'8 b8 |
     b8. b8 c'8 |
     a8. a8. r16 |
@@ -17615,7 +17615,7 @@
     c'8. c'8 e'8 |
     c'8. b8 c'8 |
     b8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'8 c'8 |
     c'8. c'8 e'8 |
@@ -17650,7 +17650,7 @@
     c'8. b8 b8 |
     b8. c'8 b8 |
     c'8. b8 b8 |
-    b8. c'8. r16 |
+    a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
     c'8. c'4 |
     c'8. e'4 |

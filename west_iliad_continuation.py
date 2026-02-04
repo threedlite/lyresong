@@ -7,8 +7,6 @@ with POS data from the Perseus Ancient Greek Dependency Treebank (AGDT).
 Key rules implemented:
 - H1-H6: Hard constraints (circumflex descent, acute peak, c' opening, etc.)
 - E1-E4: Elevation rules (foot position gate, POS-based, circumflex form)
-- F2: Circumflex stricter position gate (feet 1-2 only, vs 1-3 for acute)
-- G2: One e' per word maximum
 - CAD1/CAD2: Cadence patterns
 
 Output: LilyPond (.ly) and MusicXML (.musicxml) files.
@@ -492,7 +490,7 @@ def _normalize_word(word: str) -> str:
 
 
 def find_pos_for_word_in_line(
-    target_word: str, tb_line_words: List[Dict[str, str]]
+    target_word: str, tb_line_words: List[Dict[str, str]], word_num: int = None
 ) -> Tuple[Optional[str], Optional[Dict[str, str]]]:
     """Find POS tag for a word using text similarity matching.
 
@@ -500,26 +498,48 @@ def find_pos_for_word_in_line(
     rather than word number alignment (which fails when mora grid and
     treebank tokenize elided words differently).
 
+    If word_num is provided, prefers matches closer to that position.
+
     Returns (postag, treebank_word_dict) or (None, None).
     """
     target_norm = _normalize_word(target_word)
     if not target_norm:
         return None, None
 
-    for tb_word in tb_line_words:
+    # Collect all matches with scores
+    matches = []
+    for idx, tb_word in enumerate(tb_line_words):
         tb_norm = _normalize_word(tb_word['form'])
+        score = 0
 
-        # Exact match
+        # Exact match: highest score
         if target_norm == tb_norm:
-            return tb_word['postag'], tb_word
-
+            score = 100
         # Elided match: target is prefix or suffix of treebank word
-        if tb_norm.startswith(target_norm) or tb_norm.endswith(target_norm):
-            return tb_word['postag'], tb_word
-
+        elif tb_norm.startswith(target_norm) or tb_norm.endswith(target_norm):
+            score = 50
         # Substring match (for partial forms)
-        if target_norm in tb_norm or tb_norm in target_norm:
-            return tb_word['postag'], tb_word
+        elif target_norm in tb_norm or tb_norm in target_norm:
+            score = 25
+        else:
+            continue
+
+        # Length bonus: prefer longer treebank words (more specific matches)
+        # This helps prefer ἰφθίμους over δ' when both match δ'ἰφθίμους
+        score += len(tb_norm) * 2
+
+        # Position bonus: prefer matches closer to expected word_num
+        if word_num is not None:
+            position_diff = abs(idx - (word_num - 1))  # word_num is 1-indexed
+            # Subtract position penalty (closer = higher score)
+            score -= position_diff * 3
+
+        matches.append((score, tb_word))
+
+    if matches:
+        # Return the best match (highest score)
+        matches.sort(key=lambda x: x[0], reverse=True)
+        return matches[0][1]['postag'], matches[0][1]
 
     return None, None
 
@@ -657,7 +677,7 @@ class WestMelodyGenerator:
                               line_num, reasons, circ_reasons)
 
         # Step 4: Fill unaccented syllables (U1-U6)
-        self._fill_unaccented(syllables, pitches, circ_second, reasons)
+        self._fill_unaccented(syllables, pitches, circ_second, tb_words, line_num, reasons)
 
         # Step 5: Post-check repair loop — enforce all prosody constraints
         self._repair_violations(syllables, pitches, circ_second, reasons)
@@ -757,9 +777,9 @@ class WestMelodyGenerator:
             if reasons is not None:
                 reasons[-1] = "CAD2: final acute → c'"
             if n > 1 and syllables[-2]['accent'] != 3:
-                pitches[-2] = "b"
+                pitches[-2] = "a"
                 if reasons is not None:
-                    reasons[-2] = "CAD2: penultimate before final acute → b"
+                    reasons[-2] = "CAD2: penultimate → a"
         else:  # Standard cadence (CAD1)
             pitches[-1] = "a"
             if reasons is not None:
@@ -780,12 +800,10 @@ class WestMelodyGenerator:
 
     def _elevate_accents(self, syllables, pitches, circ_second, tb_words,
                          line_num, reasons=None, circ_reasons=None):
-        """Apply accent elevation rules E1-E4, F2, G2 (unified for acutes and circumflexes).
+        """Apply accent elevation rules E1-E4 (unified for acutes and circumflexes).
 
         Position gating:
         - E1: Accents in feet 4-6 (or hemistich 2) → c'
-        - F2: Circumflex accents have STRICTER cutoff: feet 1-2 only (not 1-3)
-        - G2: Maximum one e' per word
 
         POS-based elevation (E3):
         - Content words (nouns, adjectives, participles, pronouns) → e'
@@ -793,7 +811,6 @@ class WestMelodyGenerator:
         """
         e_count = 0
         used_tb = set()
-        words_with_e = set()  # G2: track words that already have e'
 
         # First pass: collect word texts for POS lookup
         word_texts = {}
@@ -836,39 +853,29 @@ class WestMelodyGenerator:
 
             # Determine position gating
             # E1: Accents in second half (hemi2 or feet 4-6) → c'
-            # F2: Circumflex has stricter cutoff — feet 1-2 only for e'
             in_second_half = False
             if hemi is not None:
                 in_second_half = (hemi == 2)
             else:
                 in_second_half = (foot > 3)
 
-            # F2: Circumflex stricter position gate
-            circ_position_blocks = is_circumflex and foot > 2
-
             reason = None
             if in_second_half:
                 base_pitch = "c'"  # E1: second half always c'
                 reason = f"E1: {accent_type} in foot {foot} (second half) → c'"
-            elif circ_position_blocks:
-                base_pitch = "c'"  # F2: circumflex in foot 3+ → c'
-                reason = f"F2: circumflex in foot {foot} > 2 → c'"
             elif e_count >= MAX_EPRIME_PER_LINE:
                 base_pitch = "c'"  # E2: cap reached
                 reason = f"E2: e' cap (3) reached → c'"
             elif i == 0:
                 base_pitch = "c'"  # H3: first syllable
                 reason = f"H3: first syllable {accent_type} → c'"
-            elif syl['word_num'] in words_with_e:
-                base_pitch = "c'"  # G2: word already has e'
-                reason = f"G2: word already has e' → c'"
             else:
                 # E3: POS-based decision (within eligible position)
                 # Reconstruct word text for similarity matching
                 word_text = ''.join(word_texts.get(syl['word_num'], []))
 
-                # Primary: word text similarity matching
-                postag, tb_word = find_pos_for_word_in_line(word_text, tb_words)
+                # Primary: word text similarity matching (with position hint)
+                postag, tb_word = find_pos_for_word_in_line(word_text, tb_words, syl['word_num'])
                 lookup_method = "word-text"
 
                 if postag is None:
@@ -888,7 +895,6 @@ class WestMelodyGenerator:
                 if postag and TreebankPOS.is_content_word(postag):
                     base_pitch = "e'"
                     e_count += 1
-                    words_with_e.add(syl['word_num'])  # G2: mark word as having e'
                     reason = f"E3: {accent_type} on content word '{tb_form}' ({pos_desc}) → e'"
                 else:
                     base_pitch = "c'"
@@ -924,9 +930,17 @@ class WestMelodyGenerator:
             return "participle"
         return base
 
-    def _fill_unaccented(self, syllables, pitches, circ_second, reasons=None):
+    def _fill_unaccented(self, syllables, pitches, circ_second, tb_words, line_num, reasons=None):
         """Apply unaccented syllable rules U1-U6."""
         n = len(syllables)
+
+        # Build word texts for POS lookup
+        word_texts = {}
+        for syl in syllables:
+            wn = syl['word_num']
+            if wn not in word_texts:
+                word_texts[wn] = []
+            word_texts[wn].append(syl['text'])
 
         for i in range(n):
             if pitches[i] is not None:
@@ -939,15 +953,44 @@ class WestMelodyGenerator:
             if i + 1 < n and pitches[i + 1] == "e'":
                 pitches[i] = "c'"
                 reason = "U1/H6: launch pad before e' → c'"
-            # U2: Post-e' descent
+            # U3: Post-circumflex continuation (checked before U2 since circumflex starts with e')
+            elif i > 0 and syllables[i - 1]['accent'] == 3 and (i - 1) in circ_second:
+                circ_first = pitches[i - 1]
+                landing = circ_second[i - 1]
+                prev_foot = syllables[i - 1]['foot']
+                prev_word_num = syllables[i - 1]['word_num']
+
+                # Check if circumflex word is a function word
+                prev_word_text = ''.join(word_texts.get(prev_word_num, []))
+                postag, _ = find_pos_for_word_in_line(prev_word_text, tb_words, prev_word_num)
+                is_function_word = postag and not TreebankPOS.is_content_word(postag)
+
+                # Check if next syllable has accent or is in cadence position
+                next_has_accent_or_cadence = False
+                if i + 1 < n:
+                    next_has_accent_or_cadence = syllables[i + 1]['accent'] > 0
+                if i >= n - 3:  # In cadence position
+                    next_has_accent_or_cadence = True
+
+                # U3 rules:
+                # 1. After prominent circumflex (e'→c'): step down to b
+                # 2. Function word in feet 4-6 with next accent: descend to a
+                if circ_first == "e'" and landing == "c'":
+                    # Prominent circumflex: step down to b
+                    pitches[i] = "b"
+                    reason = f"U3: post-prominent-circumflex (e'→c') → b"
+                elif is_function_word and prev_foot >= 4 and next_has_accent_or_cadence:
+                    # Function word exception in feet 4-6
+                    pitches[i] = "a"
+                    reason = f"U3: post-circumflex function word in foot {prev_foot}, next has accent → a"
+                else:
+                    # Standard: stay at landing pitch
+                    pitches[i] = landing
+                    reason = f"U3: post-circumflex continuation → {landing}"
+            # U2: Post-e' descent (for non-circumflex e')
             elif i > 0 and pitches[i - 1] == "e'":
                 pitches[i] = "c'"
                 reason = "U2: post-e' descent → c'"
-            # U3: Post-circumflex continuation
-            elif i > 0 and syllables[i - 1]['accent'] == 3 and (i - 1) in circ_second:
-                landing = circ_second[i - 1]
-                pitches[i] = landing  # Stay at circumflex landing pitch
-                reason = f"U3: post-circumflex continuation → {landing}"
             # U4: Position-based default
             elif foot <= 2:
                 pitches[i] = "c'"
@@ -1028,6 +1071,7 @@ class WestMelodyGenerator:
                 # Lower any non-acute syllable that exceeds the accent pitch.
                 # Circumflex peaks may be at or above the acute level
                 # (Pöhlmann & West, DAGM p.93 — Mesomedes Hymn to the Muse).
+                n = len(syllables)
                 for i in indices:
                     if i in accent_indices:
                         continue
@@ -1036,7 +1080,13 @@ class WestMelodyGenerator:
                     p_val = PITCH_ORDER.get(pitches[i], 0)
                     if p_val > accent_max:
                         old_pitch = pitches[i]
-                        pitches[i] = VALUE_TO_PITCH[accent_max]
+                        new_pitch = VALUE_TO_PITCH[accent_max]
+                        # H4 constraint: don't set 'a' outside cadence zone (last 3 positions)
+                        # When cadence forces accent to 'a', unaccented syllables may stay higher
+                        if new_pitch == 'a' and i < n - 3:
+                            # Skip this repair to avoid H4 violation
+                            continue
+                        pitches[i] = new_pitch
                         changed = True
                         if reasons is not None:
                             reasons[i] = (reasons[i] or "") + f" [repair H2: {old_pitch}→{pitches[i]}]"
@@ -1121,9 +1171,6 @@ class WestMelodyGenerator:
         1. Try raising the accent pitch (c'→e') if all rules still pass.
         2. If that fails, try lowering the tied unaccented syllables (c'→b).
         3. Only keep changes that pass full validation.
-
-        IMPORTANT: Respects G2 (one e' per word) - won't raise an accent to e'
-        if the word already has e' at another position (e.g., circumflex).
         """
         STEP_ABOVE = {"a": "b", "b": "c'", "c'": "e'"}
         n = len(syllables)
@@ -1146,10 +1193,6 @@ class WestMelodyGenerator:
             accent_max = max(PITCH_ORDER.get(pitches[i], 0)
                              for i in accent_indices)
 
-            # G2 check: does this word already have e' at any position?
-            # (including circumflex first notes)
-            word_has_e = any(pitches[i] == "e'" for i in indices)
-
             # Find unaccented non-circumflex syllables that tie with accent
             tied = [i for i in indices
                     if syllables[i]['accent'] not in (1, 2, 3)
@@ -1166,8 +1209,6 @@ class WestMelodyGenerator:
                 # Quick pre-checks
                 if new_pitch == "e'" and syllables[ai]['foot'] > 3:
                     continue  # E1: no e' in feet 4-6
-                if new_pitch == "e'" and word_has_e:
-                    continue  # G2: word already has e'
                 if new_pitch == "e'":
                     e_count = sum(1 for p in pitches if p == "e'")
                     e_count += sum(1 for v in circ_second.values()
@@ -1260,6 +1301,16 @@ class WestMelodyGenerator:
         for wn, group in word_groups.items():
             accented = [(i, s, p) for i, s, p in group if s['accent'] in (1, 2)]
             if accented:
+                # Skip H2 check if accent is in cadence zone with mandatory 'a'
+                # (CAD2 forces penultimate to 'a', which may be lower than
+                # syllables outside the cadence zone — this is expected)
+                accent_in_cadence_at_a = any(
+                    i >= n - 3 and p == 'a'
+                    for i, _, p in accented
+                )
+                if accent_in_cadence_at_a:
+                    continue  # H4 takes priority over H2 for cadence words
+
                 accent_max = max(PITCH_ORDER.get(p, 0) for _, _, p in accented)
                 # Only compare against non-circumflex syllables
                 non_circ = [(i, s, p) for i, s, p in group
@@ -1278,11 +1329,17 @@ class WestMelodyGenerator:
             errors.append(f"H3: Line does not open on c' (got {pitches[0]})")
 
         # H4: 'a' is cadential only — only in the last 3 syllable positions
+        # Exception: 'a' may appear after circumflex in feet 4-6 (U3 rule)
         for i in range(n - 3):
             if pitches[i] == "a":
-                errors.append(
-                    f"H4: 'a' at non-cadential position {i} "
-                    f"(syl '{syllables[i]['text']}')")
+                # Check if exception applies: previous syllable is circumflex in feet 4-6
+                exception = False
+                if i > 0 and syllables[i - 1]['accent'] == 3 and syllables[i - 1]['foot'] >= 4:
+                    exception = True
+                if not exception:
+                    errors.append(
+                        f"H4: 'a' at non-cadential position {i} "
+                        f"(syl '{syllables[i]['text']}')")
 
         # H5: Stepwise motion / allowed transitions
         all_notes = []
@@ -2396,11 +2453,9 @@ def write_analysis(analyses, output_path, book=1, epic='iliad'):
     lines_out.append("  E1: Feet 4-6 (second half) → c'")
     lines_out.append("  E2: Maximum 3 e' per line")
     lines_out.append("  E3: Content words (noun/adj/part/pron) → e'; function words → c'")
-    lines_out.append("  F2: Circumflex stricter gate (feet 1-2 only for e')")
-    lines_out.append("  G2: One e' per word maximum")
     lines_out.append("  U1-U4: Unaccented syllable rules")
     lines_out.append("  CAD1: Standard cadence (→ a,a)")
-    lines_out.append("  CAD2: Final acute cadence (→ b,c')")
+    lines_out.append("  CAD2: Final acute cadence (→ a,c')")
     lines_out.append("")
 
     for line_num in sorted(analyses.keys()):

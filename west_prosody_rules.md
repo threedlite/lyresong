@@ -1,5 +1,19 @@
 # West-Style Homeric Melody Generation
 
+## Fundamental Principle
+
+**The melody must follow the pitch contours of Greek speech.**
+
+Ancient Greek was a pitch-accent language. The melodic contour of sung text must reflect the tonal patterns of spoken Greek:
+
+- **Acute accent (ὀξεῖα)**: High pitch — the melody rises
+- **Circumflex accent (περισπωμένη)**: High-then-falling — the melody rises then descends
+- **Grave/unaccented**: Lower pitch — the melody stays below accented syllables
+
+This principle supersedes all other considerations. Every rule in this document exists to implement this fundamental requirement. If a rule conflicts with following the pitch contour, the pitch contour wins.
+
+---
+
 ## Background
 
 This document describes the complete rule set for `west_iliad_continuation.py`, which generates melodies for both the **Iliad** (24 books, ~15,693 lines) and **Odyssey** (24 books, ~12,109 lines) in the style of M. L. West's reconstruction of Homeric singing.
@@ -77,6 +91,10 @@ The first syllable of every line is `c'`. No exceptions.
 ### H4. `a` is Cadential Only
 `a` appears only in the final 2-3 syllable positions. Never mid-line.
 
+**Exception**: `a` may appear after function-word circumflex in feet 4-6 (see U3).
+
+**Evidence**: Line 4 τεῦ(`c'`→`b`) χε(`a`) κύ(`c'`) — the verb τεῦχε in foot 5 allows descent to `a`.
+
 ### H5. Stepwise Motion
 No melodic leaps larger than a third:
 
@@ -99,7 +117,7 @@ Last 2 syllables: `a`, `a`
 
 ### CAD2. Final-Acute Cadence
 - Last syllable: `c'` (the acute)
-- Penultimate: `b`
+- Penultimate: `a`
 
 Evidence: Line 5 ends βου(`a`) λή(`c'`).
 
@@ -194,14 +212,9 @@ The central question: which accents get `e'` vs `c'`?
 ### E1. Foot-Position Gate
 Only accents in **feet 1-3** are eligible for `e'`. Feet 4-6 always get `c'`.
 
-### F2. Circumflex Stricter Cutoff
-Circumflex accents use a **stricter** position rule:
-- **Acute/Grave**: e' eligible in feet 1-3
-- **Circumflex**: e' eligible in feet 1-2 ONLY
+This applies equally to acute, grave, and circumflex accents.
 
-**Rationale**: Circumflex already contains melodic movement (high→low). Starting at e' in foot 3+ would create rise-then-fall, disrupting the descent phase.
-
-**Evidence**: χὰς (ψυχάς, line 3) — noun, foot 3, circumflex — gets `c'`→`b`, not `e'`→`c'`.
+**Evidence**: West's Line 5 shows πᾶ (circumflex in foot 3) receiving `e'`→`c'`.
 
 ### E2. Cap Enforcement
 Maximum ~3 `e'` per line. If cap reached, remaining eligible accents get `c'`.
@@ -221,15 +234,12 @@ Maximum ~3 `e'` per line. If cap reached, remaining eligible accents get `c'`.
 | **Prepositions** | `c'` | Function word |
 | **Adverbs** | `c'` | Function word |
 
-### G2. One e' Per Word Maximum
-If a word already has one syllable elevated to `e'`, additional accented syllables in that word get `c'`.
-
-**Evidence**: οἰωνοῖσί (line 5) — νοῖ gets `e'`, σί gets `c'`.
-
 ### E4. Circumflex Form Selection
-Follows from E1-F2-E3:
+Follows from E1-E3:
 - If rules assign `e'` → circumflex = `e'`→`c'` (prominent)
 - If rules assign `c'` → circumflex = `c'`→`b` (standard)
+
+**Note on multiple accents per word**: West's Line 5 shows οἰωνοῖσί with both νοῖ (circumflex) and σί (acute from enclitic) receiving `e'`. Multiple `e'` per word is allowed.
 
 ---
 
@@ -244,8 +254,21 @@ If next syllable is `e'`, assign `c'` (H6).
 After `e'`, assign `c'` (H5).
 
 ### U3. Post-Circumflex Continuation
+
+The behavior depends on POS and position, but also on what the **next pitch** will be (H5 constraint: `a` can only transition to `a` or `c'`).
+
+**Standard rule:**
 - After standard circumflex (`c'`→`b`): stay at `b`
-- After prominent circumflex (`e'`→`c'`): stay at `c'` or step to `b`
+- After prominent circumflex (`e'`→`c'`): step down to `b`
+
+**Function word exception (feet 4-6 only):**
+If the circumflex word is a **function word** (verb, particle, adverb, etc.) in **feet 4-6**, descend to `a` — but **ONLY IF** the next syllable will have `a` or `c'` (i.e., has an accent or is in cadence position). This is required by H5 since `a`→`b` is not allowed.
+
+**Evidence**:
+- Line 1: μῆ(`c'`→`b`) νιν(`b`) — noun in foot 1, stays at b
+- Line 4: τεῦ(`c'`→`b`) χε(`a`) κύ(`c'`) — verb in foot 5, next has accent → descends to a
+- Line 5: πᾶ(`e'`→`c'`) σι(`b`) — adjective in foot 3, steps down to b
+- Line 27: αὖ(`c'`→`b`) τις(`b`) ἰ(`b`) — adverb in foot 5, but next is unaccented → stays at b
 
 ### U4. Position-Based Default
 
@@ -311,8 +334,8 @@ def find_pos_for_word_in_line(target_word, tb_line_words):
 | H3 | μῆ gets c' (first syllable) |
 | E3 | ἄειδε gets c' (finite verb) |
 | E1 | All feet 4-6 accents get c' |
-| F2 | χὰς gets c'→b (circumflex foot 3) |
-| G2 | σί gets c' (word already has e') |
+| E1 | χὰς gets c' (foot 4, acute/grave not circumflex) |
+| E3 | σί gets e' (content word, foot 2) |
 | E3 | δὲ gets c' (particle) |
 
 ### Remaining Mismatches (2)
@@ -331,11 +354,11 @@ Both involve **discourse/pragmatics**, not prosodic rules:
 
 Both lines follow all rules correctly:
 - H3 (opens on c')
-- E1/F2 (foot position gates)
+- E1 (foot position gates)
 - E3 (content words elevated)
 - CAD1/CAD2 (proper cadences)
 
-Line 7 correctly uses CAD2 (ends `b`→`c'`) for final acute λεύς.
+Line 7 correctly uses CAD2 (ends `a`→`c'`) for final acute λεύς.
 
 ---
 
@@ -379,7 +402,7 @@ For each hexameter line:
 1. PARSE: Read mora grid + POS data
 
 2. CADENCE:
-   if final acute → CAD2: last = c', penultimate = b
+   if final acute → CAD2: last = c', penultimate = a
    else → CAD1: last 2 = a, a
 
 3. OPEN: First syllable = c' (H3)
@@ -388,8 +411,6 @@ For each hexameter line:
    for each accented syllable:
      if foot > 3: c'                    // E1
      elif first syllable: c'            // H3
-     elif circumflex and foot > 2: c'   // F2
-     elif word already has e': c'       // G2
      elif function word: c'             // E3
      elif e_count >= 3: c'              // E2
      else: e', e_count++                // E3: content word
@@ -441,14 +462,27 @@ Output directories:
 
 ---
 
-## 15. Rule Confidence Summary
+## 15. Implementation Requirements
+
+**CRITICAL: Never skip lines.** Every line in the Iliad and Odyssey must be successfully processed. If a line fails validation, the underlying bug in the pitch assignment logic must be fixed.
+
+**NEVER add error handling to continue past failures.** The validation errors are correct and intentional—they identify bugs that must be fixed.
+
+This requirement ensures:
+- Complete coverage of all ~27,800 lines of Homer
+- No gaps in the musical output
+- Validation errors surface bugs that need fixing
+
+**Error Handling**: The validation system correctly identifies prosody rule violations and raises errors with detailed diagnostic information (line number, syllable position, pitch values). This is working as designed.
+
+---
+
+## 16. Rule Confidence Summary
 
 | Rule | Confidence | Evidence |
 |------|------------|----------|
 | H1-H6 | **High** | Universal in West's 5 lines |
 | CAD1-CAD2 | **High** | Clear pattern in all lines |
-| E1 | **High** | All e' in feet 1-3 |
+| E1 | **High** | All e' in feet 1-3 (acute and circumflex alike) |
 | E3 | **High** | Content/function distinction clear |
-| F2 | **Medium** | 7 circumflexes support pattern |
-| G2 | **Medium** | 1 clear case (οἰωνοῖσί) |
 | E2 | **Medium** | Implicit cap of ~3 observed |
