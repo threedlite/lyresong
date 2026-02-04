@@ -9,7 +9,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 1-5 (continuation in West's style)"
+    subtitle = "Iliad 1, 1-5 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -173,7 +173,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 6-10 (continuation in West's style)"
+    subtitle = "Iliad 1, 6-10 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -337,7 +337,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 11-15 (continuation in West's style)"
+    subtitle = "Iliad 1, 11-15 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -501,7 +501,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 16-20 (continuation in West's style)"
+    subtitle = "Iliad 1, 16-20 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -665,7 +665,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 21-25 (continuation in West's style)"
+    subtitle = "Iliad 1, 21-25 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -829,7 +829,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 26-30 (continuation in West's style)"
+    subtitle = "Iliad 1, 26-30 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -993,7 +993,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 31-35 (continuation in West's style)"
+    subtitle = "Iliad 1, 31-35 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -1157,7 +1157,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 36-40 (continuation in West's style)"
+    subtitle = "Iliad 1, 36-40 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -1321,7 +1321,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 41-45 (continuation in West's style)"
+    subtitle = "Iliad 1, 41-45 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -1485,7 +1485,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 46-50 (continuation in West's style)"
+    subtitle = "Iliad 1, 46-50 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -1649,7 +1649,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 51-55 (continuation in West's style)"
+    subtitle = "Iliad 1, 51-55 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -1813,7 +1813,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 56-60 (continuation in West's style)"
+    subtitle = "Iliad 1, 56-60 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -1977,7 +1977,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 61-65 (continuation in West's style)"
+    subtitle = "Iliad 1, 61-65 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -2141,7 +2141,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 66-70 (continuation in West's style)"
+    subtitle = "Iliad 1, 66-70 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -2305,7 +2305,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 71-75 (continuation in West's style)"
+    subtitle = "Iliad 1, 71-75 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -2469,7 +2469,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 76-80 (continuation in West's style)"
+    subtitle = "Iliad 1, 76-80 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -2633,7 +2633,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 81-85 (continuation in West's style)"
+    subtitle = "Iliad 1, 81-85 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -2797,7 +2797,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 86-90 (continuation in West's style)"
+    subtitle = "Iliad 1, 86-90 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -2961,7 +2961,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 91-95 (continuation in West's style)"
+    subtitle = "Iliad 1, 91-95 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -3125,7 +3125,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 96-100 (continuation in West's style)"
+    subtitle = "Iliad 1, 96-100 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -3289,7 +3289,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 101-105 (continuation in West's style)"
+    subtitle = "Iliad 1, 101-105 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -3453,7 +3453,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 106-110 (continuation in West's style)"
+    subtitle = "Iliad 1, 106-110 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -3617,7 +3617,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 111-115 (continuation in West's style)"
+    subtitle = "Iliad 1, 111-115 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -3781,7 +3781,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 116-120 (continuation in West's style)"
+    subtitle = "Iliad 1, 116-120 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -3945,7 +3945,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 121-125 (continuation in West's style)"
+    subtitle = "Iliad 1, 121-125 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -4109,7 +4109,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 126-130 (continuation in West's style)"
+    subtitle = "Iliad 1, 126-130 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -4273,7 +4273,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 131-135 (continuation in West's style)"
+    subtitle = "Iliad 1, 131-135 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -4437,7 +4437,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 136-140 (continuation in West's style)"
+    subtitle = "Iliad 1, 136-140 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -4601,7 +4601,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 141-145 (continuation in West's style)"
+    subtitle = "Iliad 1, 141-145 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -4765,7 +4765,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 146-150 (continuation in West's style)"
+    subtitle = "Iliad 1, 146-150 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -4929,7 +4929,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 151-155 (continuation in West's style)"
+    subtitle = "Iliad 1, 151-155 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -5093,7 +5093,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 156-160 (continuation in West's style)"
+    subtitle = "Iliad 1, 156-160 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -5257,7 +5257,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 161-165 (continuation in West's style)"
+    subtitle = "Iliad 1, 161-165 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -5421,7 +5421,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 166-170 (continuation in West's style)"
+    subtitle = "Iliad 1, 166-170 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -5585,7 +5585,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 171-175 (continuation in West's style)"
+    subtitle = "Iliad 1, 171-175 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -5749,7 +5749,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 176-180 (continuation in West's style)"
+    subtitle = "Iliad 1, 176-180 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -5913,7 +5913,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 181-185 (continuation in West's style)"
+    subtitle = "Iliad 1, 181-185 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -6077,7 +6077,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 186-190 (continuation in West's style)"
+    subtitle = "Iliad 1, 186-190 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -6241,7 +6241,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 191-195 (continuation in West's style)"
+    subtitle = "Iliad 1, 191-195 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -6405,7 +6405,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 196-200 (continuation in West's style)"
+    subtitle = "Iliad 1, 196-200 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -6569,7 +6569,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 201-205 (continuation in West's style)"
+    subtitle = "Iliad 1, 201-205 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -6733,7 +6733,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 206-210 (continuation in West's style)"
+    subtitle = "Iliad 1, 206-210 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -6897,7 +6897,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 211-215 (continuation in West's style)"
+    subtitle = "Iliad 1, 211-215 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -7061,7 +7061,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 216-220 (continuation in West's style)"
+    subtitle = "Iliad 1, 216-220 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -7225,7 +7225,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 221-225 (continuation in West's style)"
+    subtitle = "Iliad 1, 221-225 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -7389,7 +7389,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 226-230 (continuation in West's style)"
+    subtitle = "Iliad 1, 226-230 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -7553,7 +7553,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 231-235 (continuation in West's style)"
+    subtitle = "Iliad 1, 231-235 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -7717,7 +7717,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 236-240 (continuation in West's style)"
+    subtitle = "Iliad 1, 236-240 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -7881,7 +7881,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 241-245 (continuation in West's style)"
+    subtitle = "Iliad 1, 241-245 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -8045,7 +8045,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 246-250 (continuation in West's style)"
+    subtitle = "Iliad 1, 246-250 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -8209,7 +8209,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 251-255 (continuation in West's style)"
+    subtitle = "Iliad 1, 251-255 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -8373,7 +8373,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 256-260 (continuation in West's style)"
+    subtitle = "Iliad 1, 256-260 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -8537,7 +8537,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 261-265 (continuation in West's style)"
+    subtitle = "Iliad 1, 261-265 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -8701,7 +8701,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 266-270 (continuation in West's style)"
+    subtitle = "Iliad 1, 266-270 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -8865,7 +8865,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 271-275 (continuation in West's style)"
+    subtitle = "Iliad 1, 271-275 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -9029,7 +9029,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 276-280 (continuation in West's style)"
+    subtitle = "Iliad 1, 276-280 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -9193,7 +9193,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 281-285 (continuation in West's style)"
+    subtitle = "Iliad 1, 281-285 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -9357,7 +9357,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 286-290 (continuation in West's style)"
+    subtitle = "Iliad 1, 286-290 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -9521,7 +9521,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 291-295 (continuation in West's style)"
+    subtitle = "Iliad 1, 291-295 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -9685,7 +9685,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 296-300 (continuation in West's style)"
+    subtitle = "Iliad 1, 296-300 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -9849,7 +9849,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 301-305 (continuation in West's style)"
+    subtitle = "Iliad 1, 301-305 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -10013,7 +10013,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 306-310 (continuation in West's style)"
+    subtitle = "Iliad 1, 306-310 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -10177,7 +10177,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 311-315 (continuation in West's style)"
+    subtitle = "Iliad 1, 311-315 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -10341,7 +10341,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 316-320 (continuation in West's style)"
+    subtitle = "Iliad 1, 316-320 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -10505,7 +10505,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 321-325 (continuation in West's style)"
+    subtitle = "Iliad 1, 321-325 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -10669,7 +10669,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 326-330 (continuation in West's style)"
+    subtitle = "Iliad 1, 326-330 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -10833,7 +10833,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 331-335 (continuation in West's style)"
+    subtitle = "Iliad 1, 331-335 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -10997,7 +10997,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 336-340 (continuation in West's style)"
+    subtitle = "Iliad 1, 336-340 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -11161,7 +11161,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 341-345 (continuation in West's style)"
+    subtitle = "Iliad 1, 341-345 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -11325,7 +11325,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 346-350 (continuation in West's style)"
+    subtitle = "Iliad 1, 346-350 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -11489,7 +11489,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 351-355 (continuation in West's style)"
+    subtitle = "Iliad 1, 351-355 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -11653,7 +11653,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 356-360 (continuation in West's style)"
+    subtitle = "Iliad 1, 356-360 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -11817,7 +11817,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 361-365 (continuation in West's style)"
+    subtitle = "Iliad 1, 361-365 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -11981,7 +11981,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 366-370 (continuation in West's style)"
+    subtitle = "Iliad 1, 366-370 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -12145,7 +12145,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 371-375 (continuation in West's style)"
+    subtitle = "Iliad 1, 371-375 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -12309,7 +12309,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 376-380 (continuation in West's style)"
+    subtitle = "Iliad 1, 376-380 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -12473,7 +12473,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 381-385 (continuation in West's style)"
+    subtitle = "Iliad 1, 381-385 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -12637,7 +12637,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 386-390 (continuation in West's style)"
+    subtitle = "Iliad 1, 386-390 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -12801,7 +12801,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 391-395 (continuation in West's style)"
+    subtitle = "Iliad 1, 391-395 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -12965,7 +12965,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 396-400 (continuation in West's style)"
+    subtitle = "Iliad 1, 396-400 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -13129,7 +13129,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 401-405 (continuation in West's style)"
+    subtitle = "Iliad 1, 401-405 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -13293,7 +13293,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 406-410 (continuation in West's style)"
+    subtitle = "Iliad 1, 406-410 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -13457,7 +13457,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 411-415 (continuation in West's style)"
+    subtitle = "Iliad 1, 411-415 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -13621,7 +13621,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 416-420 (continuation in West's style)"
+    subtitle = "Iliad 1, 416-420 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -13785,7 +13785,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 421-425 (continuation in West's style)"
+    subtitle = "Iliad 1, 421-425 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -13949,7 +13949,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 426-430 (continuation in West's style)"
+    subtitle = "Iliad 1, 426-430 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -14113,7 +14113,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 431-435 (continuation in West's style)"
+    subtitle = "Iliad 1, 431-435 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -14277,7 +14277,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 436-440 (continuation in West's style)"
+    subtitle = "Iliad 1, 436-440 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -14441,7 +14441,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 441-445 (continuation in West's style)"
+    subtitle = "Iliad 1, 441-445 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -14605,7 +14605,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 446-450 (continuation in West's style)"
+    subtitle = "Iliad 1, 446-450 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -14769,7 +14769,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 451-455 (continuation in West's style)"
+    subtitle = "Iliad 1, 451-455 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -14933,7 +14933,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 456-460 (continuation in West's style)"
+    subtitle = "Iliad 1, 456-460 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -15097,7 +15097,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 461-465 (continuation in West's style)"
+    subtitle = "Iliad 1, 461-465 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -15261,7 +15261,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 466-470 (continuation in West's style)"
+    subtitle = "Iliad 1, 466-470 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -15425,7 +15425,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 471-475 (continuation in West's style)"
+    subtitle = "Iliad 1, 471-475 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -15589,7 +15589,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 476-480 (continuation in West's style)"
+    subtitle = "Iliad 1, 476-480 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -15753,7 +15753,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 481-485 (continuation in West's style)"
+    subtitle = "Iliad 1, 481-485 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -15917,7 +15917,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 486-490 (continuation in West's style)"
+    subtitle = "Iliad 1, 486-490 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -16082,7 +16082,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 491-495 (continuation in West's style)"
+    subtitle = "Iliad 1, 491-495 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -16246,7 +16246,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 496-500 (continuation in West's style)"
+    subtitle = "Iliad 1, 496-500 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -16410,7 +16410,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 501-505 (continuation in West's style)"
+    subtitle = "Iliad 1, 501-505 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -16574,7 +16574,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 506-510 (continuation in West's style)"
+    subtitle = "Iliad 1, 506-510 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -16738,7 +16738,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 511-515 (continuation in West's style)"
+    subtitle = "Iliad 1, 511-515 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -16902,7 +16902,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 516-520 (continuation in West's style)"
+    subtitle = "Iliad 1, 516-520 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -17066,7 +17066,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 521-525 (continuation in West's style)"
+    subtitle = "Iliad 1, 521-525 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -17230,7 +17230,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 526-530 (continuation in West's style)"
+    subtitle = "Iliad 1, 526-530 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -17394,7 +17394,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 531-535 (continuation in West's style)"
+    subtitle = "Iliad 1, 531-535 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -17558,7 +17558,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 536-540 (continuation in West's style)"
+    subtitle = "Iliad 1, 536-540 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -17722,7 +17722,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 541-545 (continuation in West's style)"
+    subtitle = "Iliad 1, 541-545 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -17886,7 +17886,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 546-550 (continuation in West's style)"
+    subtitle = "Iliad 1, 546-550 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -18050,7 +18050,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 551-555 (continuation in West's style)"
+    subtitle = "Iliad 1, 551-555 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -18214,7 +18214,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 556-560 (continuation in West's style)"
+    subtitle = "Iliad 1, 556-560 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -18378,7 +18378,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 561-565 (continuation in West's style)"
+    subtitle = "Iliad 1, 561-565 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -18542,7 +18542,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 566-570 (continuation in West's style)"
+    subtitle = "Iliad 1, 566-570 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -18706,7 +18706,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 571-575 (continuation in West's style)"
+    subtitle = "Iliad 1, 571-575 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -18870,7 +18870,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 576-580 (continuation in West's style)"
+    subtitle = "Iliad 1, 576-580 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -19034,7 +19034,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 581-585 (continuation in West's style)"
+    subtitle = "Iliad 1, 581-585 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -19198,7 +19198,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 586-590 (continuation in West's style)"
+    subtitle = "Iliad 1, 586-590 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -19362,7 +19362,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 591-595 (continuation in West's style)"
+    subtitle = "Iliad 1, 591-595 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -19526,7 +19526,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 596-600 (continuation in West's style)"
+    subtitle = "Iliad 1, 596-600 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -19690,7 +19690,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 601-605 (continuation in West's style)"
+    subtitle = "Iliad 1, 601-605 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -19854,7 +19854,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 606-610 (continuation in West's style)"
+    subtitle = "Iliad 1, 606-610 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }
@@ -20018,7 +20018,7 @@
 \bookpart {
   \header {
     title = "The Singing of Homer"
-    subtitle = "Iliad I, 611-611 (continuation in West's style)"
+    subtitle = "Iliad 1, 611-611 (continuation in West's style)"
     composer = "After M. L. West"
     tagline = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
   }

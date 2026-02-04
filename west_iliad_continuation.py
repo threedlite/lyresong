@@ -31,6 +31,34 @@ import sys
 import argparse
 import unicodedata
 import subprocess
+from typing import Optional, Dict, List, Tuple, Set, Any
+
+
+# === Custom Exceptions ===
+
+class WestMelodyError(Exception):
+    """Base exception for West melody generation errors."""
+    pass
+
+
+class CorruptedSourceError(WestMelodyError):
+    """Raised when source data is corrupted or invalid."""
+    pass
+
+
+class ValidationError(WestMelodyError):
+    """Raised when prosody validation fails after all repair attempts."""
+    pass
+
+
+class MissingDataError(WestMelodyError):
+    """Raised when required data files are not found."""
+    pass
+
+
+class LilyPondError(WestMelodyError):
+    """Raised when LilyPond compilation fails."""
+    pass
 
 
 # === Constants ===
@@ -74,6 +102,19 @@ TYPE_MAP = {12: '16th', 18: '16th', 24: 'eighth', 36: 'eighth', 48: 'quarter'}
 
 # Content-word POS categories (position 0 of AGDT postag)
 CONTENT_POS_CHARS = {'n', 'a', 'p'}  # noun, adjective, pronoun
+
+# Melody generation limits
+MAX_EPRIME_PER_LINE = 3        # E2: Maximum e' pitches per line
+MAX_REPAIR_ITERATIONS = 20     # Max iterations for repair loop convergence
+MAX_TRANSITION_FIX_PASSES = 10 # Max passes for transition fixing
+
+# Rhythm constants
+MEASURE_SIXTEENTHS = 7         # 7/16 time signature
+MELODY_MEASURES = 6            # Measures per hexameter line (excluding interlude)
+TOTAL_MELODY_SIXTEENTHS = 41   # Total sixteenths for melody (6 * 7 - 1 for final rest)
+
+# Hexameter validation
+MIN_HEXAMETER_SYLLABLES = 10   # Minimum syllables for valid hexameter
 
 # Treebank data path
 TREEBANK_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
@@ -230,17 +271,17 @@ WEST_INTRO_NOTES = [
 class TreebankPOS:
     """Look up POS tags from Perseus AGDT treebank data."""
 
-    def __init__(self, book=1, epic='iliad'):
-        self.words_by_line = {}
+    def __init__(self, book: int = 1, epic: str = 'iliad') -> None:
+        self.words_by_line: Dict[int, List[Dict[str, str]]] = {}
         tlg_work = 'tlg001' if epic == 'iliad' else 'tlg002'
         filename = f'tlg0012.{tlg_work}.perseus-grc1_{book}.tb.xml'
         filepath = os.path.join(TREEBANK_DIR, filename)
 
         if not os.path.exists(filepath):
-            print(f"Warning: Treebank file not found: {filepath}")
-            return
+            raise MissingDataError(f"Treebank file not found: {filepath}")
 
-        tree = ET.parse(filepath)
+        with open(filepath, 'r', encoding='utf-8') as f:
+            tree = ET.parse(f)
         root = tree.getroot()
 
         for sentence in root.findall('.//sentence'):
@@ -258,13 +299,13 @@ class TreebankPOS:
                         'relation': word.get('relation', ''),
                     })
 
-    def get_words(self, line_num):
+    def get_words(self, line_num: int) -> List[Dict[str, str]]:
         """Get treebank words for a line, excluding punctuation."""
         words = self.words_by_line.get(line_num, [])
         return [w for w in words if len(w['postag']) > 0 and w['postag'][0] != 'u']
 
     @staticmethod
-    def is_content_word(postag):
+    def is_content_word(postag: Optional[str]) -> bool:
         """Determine if a POS tag indicates a content word (eligible for e').
 
         Content: nouns, adjectives, participles, pronouns
@@ -285,16 +326,15 @@ class TreebankPOS:
 class ChamberlainHTML:
     """Parse hemistich and metrical data from Chamberlain's HTML files."""
 
-    def __init__(self, book=1, epic='iliad'):
-        self.syllables_by_line = {}
+    def __init__(self, book: int = 1, epic: str = 'iliad') -> None:
+        self.syllables_by_line: Dict[int, List[Dict[str, Any]]] = {}
         html_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                 'homer_texts', epic, 'html')
         filename = f'{epic}{book}.html'
         filepath = os.path.join(html_dir, filename)
 
         if not os.path.exists(filepath):
-            print(f"Warning: HTML file not found: {filepath}")
-            return
+            raise MissingDataError(f"Chamberlain HTML file not found: {filepath}")
 
         with open(filepath, 'r', encoding='utf-8') as f:
             html = f.read()
@@ -306,7 +346,7 @@ class ChamberlainHTML:
             line_html = match.group(2)
             self.syllables_by_line[line_num] = self._parse_line(line_html)
 
-    def _parse_line(self, line_html):
+    def _parse_line(self, line_html: str) -> List[Dict[str, Any]]:
         """Parse syllables from a line's HTML."""
         span_pattern = r'<span class="([^"]+)"[^>]*>([^<]+)</span>'
         spans = re.findall(span_pattern, line_html)
@@ -333,7 +373,7 @@ class ChamberlainHTML:
             })
         return syllables
 
-    def get_hemistich_for_syllable(self, line_num, syllable_text):
+    def get_hemistich_for_syllable(self, line_num: int, syllable_text: str) -> Optional[int]:
         """Get hemistich (1 or 2) for a syllable by text matching."""
         syllables = self.syllables_by_line.get(line_num, [])
         clean_text = syllable_text.rstrip(".,;·:'᾽'")
@@ -346,7 +386,7 @@ class ChamberlainHTML:
         # Fallback: not found
         return None
 
-    def get_line_data(self, line_num):
+    def get_line_data(self, line_num: int) -> List[Dict[str, Any]]:
         """Get all syllable data for a line."""
         return self.syllables_by_line.get(line_num, [])
 
@@ -356,11 +396,11 @@ class ChamberlainHTML:
 class MoraGrid:
     """Parse the enhanced mora grid format."""
 
-    def __init__(self, filepath):
-        self.lines = {}
+    def __init__(self, filepath: str) -> None:
+        self.lines: Dict[int, Dict[str, List[Any]]] = {}
         self._parse(filepath)
 
-    def _parse(self, filepath):
+    def _parse(self, filepath: str) -> None:
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
 
@@ -382,7 +422,7 @@ class MoraGrid:
                     self.lines[line_num] = self._parse_rows(rows[:5])
             i += 2
 
-    def _parse_rows(self, rows):
+    def _parse_rows(self, rows: List[str]) -> Dict[str, List[Any]]:
         """Parse 5 rows of mora grid data."""
         syllables = rows[0].split('\t')
         word_starts = rows[1].split('\t')
@@ -405,7 +445,7 @@ class MoraGrid:
             'word_nums': [int(w.strip()) if w.strip().isdigit() else 0 for w in word_nums],
         }
 
-    def get_syllable_data(self, line_num):
+    def get_syllable_data(self, line_num: int) -> Optional[List[Dict[str, Any]]]:
         """Extract syllable-level data from mora grid.
 
         Returns list of dicts with: text, duration, accent, word_num,
@@ -444,14 +484,16 @@ class MoraGrid:
 
 # === POS Matching ===
 
-def _normalize_word(word):
+def _normalize_word(word: str) -> str:
     """Normalize a Greek word for comparison, stripping elision marks."""
     elision_chars = "'᾽''\u1fbd\u2019"
     w = unicodedata.normalize('NFC', word)
     return w.rstrip(elision_chars).lower()
 
 
-def find_pos_for_word_in_line(target_word, tb_line_words):
+def find_pos_for_word_in_line(
+    target_word: str, tb_line_words: List[Dict[str, str]]
+) -> Tuple[Optional[str], Optional[Dict[str, str]]]:
     """Find POS tag for a word using text similarity matching.
 
     This is the primary POS lookup method, using word text similarity
@@ -482,7 +524,9 @@ def find_pos_for_word_in_line(target_word, tb_line_words):
     return None, None
 
 
-def find_pos_for_word(word_num, tb_words):
+def find_pos_for_word(
+    word_num: int, tb_words: List[Dict[str, str]]
+) -> Tuple[Optional[str], Optional[Dict[str, str]]]:
     """Look up POS tag by word number (1-indexed).
 
     Returns (postag, treebank_word_dict) or (None, None).
@@ -495,7 +539,9 @@ def find_pos_for_word(word_num, tb_words):
     return None, None
 
 
-def find_pos_for_accented_syllable(syllable_text, tb_words, used_indices):
+def find_pos_for_accented_syllable(
+    syllable_text: str, tb_words: List[Dict[str, str]], used_indices: Set[int]
+) -> Tuple[Optional[str], Optional[Dict[str, str]]]:
     """Find the POS tag for the treebank word containing this accented syllable.
 
     Searches treebank words by substring match on the syllable text.
@@ -553,13 +599,20 @@ def find_pos_for_accented_syllable(syllable_text, tb_words, used_indices):
 class WestMelodyGenerator:
     """Generate melodies using West's style rules."""
 
-    def __init__(self, treebank, mora_grid, html_data=None):
+    def __init__(
+        self,
+        treebank: TreebankPOS,
+        mora_grid: MoraGrid,
+        html_data: Optional[ChamberlainHTML] = None
+    ) -> None:
         self.treebank = treebank
         self.html_data = html_data  # ChamberlainHTML for hemistich data
         self.mora_grid = mora_grid
-        self.last_analysis = None  # Store analysis from most recent generation
+        self.last_analysis: Optional[Dict[str, Any]] = None
 
-    def generate_line(self, line_num, track_reasons=False):
+    def generate_line(
+        self, line_num: int, track_reasons: bool = False
+    ) -> Optional[List[Dict[str, Any]]]:
         """Generate a complete melody for one hexameter line.
 
         Returns list of note dicts ready for output, or None on failure.
@@ -571,9 +624,10 @@ class WestMelodyGenerator:
             return None
 
         # Check for corrupted source data (hexameter should have 12-17 syllables)
-        if len(syllables) < 10:
-            print(f"  WARNING: Line {line_num} has only {len(syllables)} syllables "
-                  f"(corrupted source data). Outputting rests.")
+        # These are known to exist in the Chamberlain HTML - output rests to preserve line numbering
+        if len(syllables) < MIN_HEXAMETER_SYLLABLES:
+            print(f"  Note: Line {line_num} has only {len(syllables)} syllables "
+                  f"(corrupted source). Outputting rests.")
             return self._generate_rest_line(line_num)
 
         # Fix grave accents: upgrade accent=0 to accent=2 (word-final acute)
@@ -641,7 +695,7 @@ class WestMelodyGenerator:
 
         return notes
 
-    def _generate_rest_line(self, line_num):
+    def _generate_rest_line(self, line_num: int) -> List[Dict[str, Any]]:
         """Generate a line of rests for corrupted source data.
 
         Returns a list of rest notes spanning 6 measures in 7/16 time.
@@ -667,7 +721,7 @@ class WestMelodyGenerator:
         })
         return notes
 
-    def _fix_graves(self, syllables):
+    def _fix_graves(self, syllables: List[Dict[str, Any]]) -> None:
         """Detect grave accents in syllable text and restore as accent=2.
 
         In continuous Greek text, word-final acutes become graves (θεά → θεὰ).
@@ -683,7 +737,12 @@ class WestMelodyGenerator:
             # Grave found — this is a word-final acute written as grave
             syl['accent'] = 2
 
-    def _apply_cadence(self, syllables, pitches, reasons=None):
+    def _apply_cadence(
+        self,
+        syllables: List[Dict[str, Any]],
+        pitches: List[Optional[str]],
+        reasons: Optional[List[Optional[str]]] = None
+    ) -> None:
         """Apply cadence rules (CAD1/CAD2).
 
         Does NOT override the penultimate syllable if it has a circumflex —
@@ -794,7 +853,7 @@ class WestMelodyGenerator:
             elif circ_position_blocks:
                 base_pitch = "c'"  # F2: circumflex in foot 3+ → c'
                 reason = f"F2: circumflex in foot {foot} > 2 → c'"
-            elif e_count >= 3:
+            elif e_count >= MAX_EPRIME_PER_LINE:
                 base_pitch = "c'"  # E2: cap reached
                 reason = f"E2: e' cap (3) reached → c'"
             elif i == 0:
@@ -926,7 +985,7 @@ class WestMelodyGenerator:
         """
         VALUE_TO_PITCH = {v: k for k, v in PITCH_ORDER.items()}
 
-        for iteration in range(20):
+        for iteration in range(MAX_REPAIR_ITERATIONS):
             changed = False
 
             # 1. Repair circumflex descent
@@ -990,8 +1049,10 @@ class WestMelodyGenerator:
         else:
             # Exhausted iterations without converging
             pitch_str = ' '.join(p or '?' for p in pitches)
-            print(f"  WARNING: Repair loop did not converge after 20 iterations")
-            print(f"    Pitches: {pitch_str}")
+            greek_text = ' '.join(s['text'] for s in syllables)
+            raise ValidationError(
+                f"Repair loop did not converge after {MAX_REPAIR_ITERATIONS} iterations. "
+                f"Text: {greek_text}, Pitches: {pitch_str}")
 
     def _fix_transitions(self, pitches, circ_second=None, reasons=None):
         """Fix illegal transitions (H5) with minimal changes.
@@ -1003,7 +1064,7 @@ class WestMelodyGenerator:
         if circ_second is None:
             circ_second = {}
         n = len(pitches)
-        for _ in range(10):  # Iterate until stable
+        for _ in range(MAX_TRANSITION_FIX_PASSES):  # Iterate until stable
             changed = False
             for i in range(n - 1):
                 # For circumflex at position i, the outgoing pitch is
@@ -1021,11 +1082,13 @@ class WestMelodyGenerator:
                             pitches[i] = "c'"  # Need launch pad
                         changed = True
                     elif p1_out == "a" and p2 == "e'":
-                        pitches[i + 1] = "c'" if i in circ_second else "c'"
-                        if i not in circ_second:
-                            pitches[i] = "c'"
-                        else:
+                        # a→e' is illegal; e' needs c' launch pad (H6)
+                        if i in circ_second:
+                            # Can't change circumflex second note; demote e' to c'
                             pitches[i + 1] = "c'"
+                        else:
+                            # Raise 'a' to 'c'' to create launch pad, preserving e'
+                            pitches[i] = "c'"
                         changed = True
                     elif p1_out == "a" and p2 == "b":
                         pitches[i + 1] = "c'"
@@ -1109,7 +1172,7 @@ class WestMelodyGenerator:
                     e_count = sum(1 for p in pitches if p == "e'")
                     e_count += sum(1 for v in circ_second.values()
                                    if v == "e'")
-                    if e_count >= 3:
+                    if e_count >= MAX_EPRIME_PER_LINE:
                         continue  # E2: max 3 e' per line
                 old_pitch = pitches[ai]
                 pitches[ai] = new_pitch
@@ -1155,7 +1218,12 @@ class WestMelodyGenerator:
                         if pitches[i] != originals[i]:
                             reasons[i] = (reasons[i] or "") + f" [strict H2: lowered {originals[i]}→{pitches[i]}]"
 
-    def _validate(self, syllables, pitches, circ_second):
+    def _validate(
+        self,
+        syllables: List[Dict[str, Any]],
+        pitches: List[Optional[str]],
+        circ_second: Dict[int, str]
+    ) -> List[str]:
         """Validate ALL prosody rules. Returns list of error strings.
 
         Checks: H1 (circumflex descent), H2 (acute peak), H3 (opens on c'),
@@ -1235,7 +1303,12 @@ class WestMelodyGenerator:
 
         return errors
 
-    def _assign_rhythm(self, syllables, pitches, circ_second):
+    def _assign_rhythm(
+        self,
+        syllables: List[Dict[str, Any]],
+        pitches: List[Optional[str]],
+        circ_second: Dict[int, str]
+    ) -> List[Dict[str, Any]]:
         """Assign durations and build the note list."""
         n = len(syllables)
 
@@ -1244,8 +1317,8 @@ class WestMelodyGenerator:
         for syl in syllables:
             base_dur.append(3 if syl['duration'] == 'long' else 2)
 
-        # Total needed: 41 (6 measures × 7 sixteenths - 1 for final rest)
-        total_needed = 41
+        # Total needed: MELODY_MEASURES * MEASURE_SIXTEENTHS - 1 for final rest
+        total_needed = TOTAL_MELODY_SIXTEENTHS
         current = sum(base_dur)
         deficit = total_needed - current
 
@@ -1303,8 +1376,15 @@ class WestMelodyGenerator:
 
         return notes
 
-    def _make_note(self, pitch, lily_dur, syllable, slur_start=False,
-                   slur_stop=False, is_melisma=False):
+    def _make_note(
+        self,
+        pitch: Optional[str],
+        lily_dur: str,
+        syllable: Dict[str, Any],
+        slur_start: bool = False,
+        slur_stop: bool = False,
+        is_melisma: bool = False
+    ) -> Dict[str, Any]:
         """Create a note dict."""
         sixteenths = {'16': 1, '16.': 1.5, '8': 2, '8.': 3, '4': 4}.get(lily_dur, 2)
         return {
@@ -1547,7 +1627,7 @@ def _get_interlude_notes(notes, line_num, mode=None, cad1_index=None):
 
 # === LilyPond Output ===
 
-def _notes_to_lily_measures(notes):
+def _notes_to_lily_measures(notes: List[Dict[str, Any]]) -> List[str]:
     """Convert a line's notes to a list of LilyPond measure strings."""
     measures = []
     current_measure = notes[0]['measure'] if notes else 1
@@ -1576,8 +1656,15 @@ def _notes_to_lily_measures(notes):
     return measures
 
 
-def write_lilypond(lines_data, output_path, book=1, line_range=(6, 7),
-                   with_intro=False, interlude_mode=None, epic='iliad'):
+def write_lilypond(
+    lines_data: Dict[int, List[Dict[str, Any]]],
+    output_path: str,
+    book: int = 1,
+    line_range: Tuple[int, int] = (6, 7),
+    with_intro: bool = False,
+    interlude_mode: Optional[str] = None,
+    epic: str = 'iliad'
+) -> None:
     """Write LilyPond file for the generated melodies.
 
     Each line gets its own \\score block with 6 melody measures plus
@@ -1834,8 +1921,80 @@ def _build_lyric_tokens(notes):
 
 # === MusicXML Output ===
 
-def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7),
-                   with_intro=False, interlude_mode=None, epic='iliad'):
+def _create_musicxml_header(
+    root: ET.Element,
+    title: str,
+    start: int,
+    end: int
+) -> None:
+    """Create MusicXML header elements (work, identification, defaults)."""
+    # Work info
+    work = ET.SubElement(root, 'work')
+    ET.SubElement(work, 'work-title').text = title
+
+    ET.SubElement(root, 'movement-title').text = title
+
+    # Identification
+    ident = ET.SubElement(root, 'identification')
+    ET.SubElement(ident, 'creator', type='composer').text = 'After M. L. West'
+    encoding = ET.SubElement(ident, 'encoding')
+    ET.SubElement(encoding, 'software').text = 'west_iliad_continuation.py'
+
+    # Defaults
+    defaults = ET.SubElement(root, 'defaults')
+    scaling = ET.SubElement(defaults, 'scaling')
+    ET.SubElement(scaling, 'millimeters').text = '7.05556'
+    ET.SubElement(scaling, 'tenths').text = '40'
+    page_layout = ET.SubElement(defaults, 'page-layout')
+    ET.SubElement(page_layout, 'page-height').text = '1683'
+    ET.SubElement(page_layout, 'page-width').text = '1190'
+    ET.SubElement(defaults, 'measure-numbering').text = 'none'
+
+
+def _add_musicxml_credits(
+    root: ET.Element,
+    pages: List[List[int]],
+    book: int,
+    epic: str
+) -> None:
+    """Add credit elements for each page (title at top, citation at bottom)."""
+    for pg_idx, page_lines in enumerate(pages):
+        pg_start = page_lines[0]
+        pg_end = page_lines[-1]
+
+        # Title credit (top)
+        credit = ET.SubElement(root, 'credit', page=str(pg_idx + 1))
+        credit_words = ET.SubElement(credit, 'credit-words')
+        credit_words.set('default-x', '595')
+        credit_words.set('default-y', '1626')
+        credit_words.set('justify', 'center')
+        credit_words.set('valign', 'top')
+        credit_words.set('font-size', '24')
+        credit_words.text = f"The Singing of Homer - {epic.title()} {book}, {pg_start}-{pg_end}"
+
+        # Citation credit (bottom)
+        citation = ET.SubElement(root, 'credit', page=str(pg_idx + 1))
+        citation_words = ET.SubElement(citation, 'credit-words')
+        citation_words.set('default-x', '595')
+        citation_words.set('default-y', '50')
+        citation_words.set('justify', 'center')
+        citation_words.set('valign', 'bottom')
+        citation_words.set('font-size', '8')
+        citation_words.text = (
+            "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); "
+            "pitch mapping from AGM p. 328"
+        )
+
+
+def write_musicxml(
+    lines_data: Dict[int, List[Dict[str, Any]]],
+    output_path: str,
+    book: int = 1,
+    line_range: Tuple[int, int] = (6, 7),
+    with_intro: bool = False,
+    interlude_mode: Optional[str] = None,
+    epic: str = 'iliad'
+) -> None:
     """Write MusicXML file for the generated melodies.
 
     Groups lines into pages of 5, with page breaks and title credits per page.
@@ -1868,51 +2027,10 @@ def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7),
     root = ET.Element('score-partwise')
     root.set('version', '3.1')
 
-    # Work info (overall title uses full range)
-    work = ET.SubElement(root, 'work')
-    ET.SubElement(work, 'work-title').text = f"The Singing of Homer - {epic.title()} {book}, {start}-{end}"
-
-    ET.SubElement(root, 'movement-title').text = (
-        f"The Singing of Homer - {epic.title()} {book}, {start}-{end}")
-
-    # Identification
-    ident = ET.SubElement(root, 'identification')
-    ET.SubElement(ident, 'creator', type='composer').text = 'After M. L. West'
-    encoding = ET.SubElement(ident, 'encoding')
-    ET.SubElement(encoding, 'software').text = 'west_iliad_continuation.py'
-
-    # Defaults
-    defaults = ET.SubElement(root, 'defaults')
-    scaling = ET.SubElement(defaults, 'scaling')
-    ET.SubElement(scaling, 'millimeters').text = '7.05556'
-    ET.SubElement(scaling, 'tenths').text = '40'
-    page_layout = ET.SubElement(defaults, 'page-layout')
-    ET.SubElement(page_layout, 'page-height').text = '1683'
-    ET.SubElement(page_layout, 'page-width').text = '1190'
-    ET.SubElement(defaults, 'measure-numbering').text = 'none'
-
-    # Credit elements for each page (title at top, citation at bottom)
-    for pg_idx, page_lines in enumerate(pages):
-        pg_start = page_lines[0]
-        pg_end = page_lines[-1]
-        # Title credit (top)
-        credit = ET.SubElement(root, 'credit', page=str(pg_idx + 1))
-        credit_words = ET.SubElement(credit, 'credit-words')
-        credit_words.set('default-x', '595')
-        credit_words.set('default-y', '1626')
-        credit_words.set('justify', 'center')
-        credit_words.set('valign', 'top')
-        credit_words.set('font-size', '24')
-        credit_words.text = f"The Singing of Homer - {epic.title()} {book}, {pg_start}-{pg_end}"
-        # Citation credit (bottom)
-        citation = ET.SubElement(root, 'credit', page=str(pg_idx + 1))
-        citation_words = ET.SubElement(citation, 'credit-words')
-        citation_words.set('default-x', '595')
-        citation_words.set('default-y', '50')
-        citation_words.set('justify', 'center')
-        citation_words.set('valign', 'bottom')
-        citation_words.set('font-size', '8')
-        citation_words.text = "After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328"
+    # Create header and credits
+    title = f"The Singing of Homer - {epic.title()} {book}, {start}-{end}"
+    _create_musicxml_header(root, title, start, end)
+    _add_musicxml_credits(root, pages, book, epic)
 
     # Part list
     part_list = ET.SubElement(root, 'part-list')
@@ -2032,37 +2150,10 @@ def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7),
 
         # Handle intro measures (instrumental introduction)
         if m_num in intro_measures:
-            intro_m_notes = intro_measures[m_num]
-            for note_data in intro_m_notes:
+            for note_data in intro_measures[m_num]:
                 pitch_letter, octave, dur_sixteenths, is_grace, grace_type = note_data
-                note_elem = ET.SubElement(m_elem, 'note')
-
-                if is_grace:
-                    grace_elem = ET.SubElement(note_elem, 'grace')
-                    if grace_type == 'acciaccatura':
-                        grace_elem.set('slash', 'yes')
-
-                pitch_elem = ET.SubElement(note_elem, 'pitch')
-                ET.SubElement(pitch_elem, 'step').text = pitch_letter
-                ET.SubElement(pitch_elem, 'octave').text = str(octave)
-
-                if not is_grace:
-                    ET.SubElement(note_elem, 'duration').text = str(dur_sixteenths * 12)
-
-                ET.SubElement(note_elem, 'voice').text = '1'
-
-                if is_grace:
-                    ET.SubElement(note_elem, 'type').text = '16th'
-                elif dur_sixteenths == 2:
-                    ET.SubElement(note_elem, 'type').text = 'eighth'
-                elif dur_sixteenths == 3:
-                    ET.SubElement(note_elem, 'type').text = 'eighth'
-                    ET.SubElement(note_elem, 'dot')
-                elif dur_sixteenths == 4:
-                    ET.SubElement(note_elem, 'type').text = 'quarter'
-                else:
-                    ET.SubElement(note_elem, 'type').text = '16th'
-
+                _add_musicxml_note(m_elem, pitch_letter, octave, dur_sixteenths,
+                                   is_grace, grace_type)
             continue
 
         # Handle interlude measures (melodic interludes in West style)
@@ -2085,36 +2176,8 @@ def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7),
 
             for note_data in measure_notes:
                 pitch_letter, octave, dur_sixteenths, is_grace, grace_type = note_data
-                note_elem = ET.SubElement(m_elem, 'note')
-
-                if is_grace:
-                    grace_elem = ET.SubElement(note_elem, 'grace')
-                    if grace_type == 'acciaccatura':
-                        grace_elem.set('slash', 'yes')
-
-                pitch_elem = ET.SubElement(note_elem, 'pitch')
-                ET.SubElement(pitch_elem, 'step').text = pitch_letter
-                ET.SubElement(pitch_elem, 'octave').text = str(octave)
-
-                if not is_grace:
-                    # Grace notes have no duration in MusicXML
-                    ET.SubElement(note_elem, 'duration').text = str(dur_sixteenths * 12)
-
-                ET.SubElement(note_elem, 'voice').text = '1'
-
-                # Determine note type
-                if is_grace:
-                    ET.SubElement(note_elem, 'type').text = '16th'
-                elif dur_sixteenths == 2:
-                    ET.SubElement(note_elem, 'type').text = 'eighth'
-                elif dur_sixteenths == 3:
-                    ET.SubElement(note_elem, 'type').text = 'eighth'
-                    ET.SubElement(note_elem, 'dot')
-                elif dur_sixteenths == 4:
-                    ET.SubElement(note_elem, 'type').text = 'quarter'
-                else:
-                    ET.SubElement(note_elem, 'type').text = '16th'
-
+                _add_musicxml_note(m_elem, pitch_letter, octave, dur_sixteenths,
+                                   is_grace, grace_type)
             continue
 
         # Compute beam groups for this measure.
@@ -2220,6 +2283,53 @@ def write_musicxml(lines_data, output_path, book=1, line_range=(6, 7),
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(xml_str)
     print(f"Written MusicXML: {output_path}")
+
+
+def _add_musicxml_note(parent, pitch_letter, octave, dur_sixteenths, is_grace=False, grace_type=None):
+    """Add a note element to MusicXML parent (measure).
+
+    Args:
+        parent: Parent XML element (measure)
+        pitch_letter: Note letter (A, B, C, E)
+        octave: Octave number (3 or 4)
+        dur_sixteenths: Duration in sixteenths (0 for grace notes)
+        is_grace: Whether this is a grace note
+        grace_type: 'grace' or 'acciaccatura' (only if is_grace)
+
+    Returns:
+        The created note element.
+    """
+    note_elem = ET.SubElement(parent, 'note')
+
+    if is_grace:
+        grace_elem = ET.SubElement(note_elem, 'grace')
+        if grace_type == 'acciaccatura':
+            grace_elem.set('slash', 'yes')
+
+    pitch_elem = ET.SubElement(note_elem, 'pitch')
+    ET.SubElement(pitch_elem, 'step').text = pitch_letter
+    ET.SubElement(pitch_elem, 'octave').text = str(octave)
+
+    if not is_grace:
+        # Duration in divisions (12 divisions per sixteenth)
+        ET.SubElement(note_elem, 'duration').text = str(dur_sixteenths * 12)
+
+    ET.SubElement(note_elem, 'voice').text = '1'
+
+    # Note type
+    if is_grace:
+        ET.SubElement(note_elem, 'type').text = '16th'
+    elif dur_sixteenths == 2:
+        ET.SubElement(note_elem, 'type').text = 'eighth'
+    elif dur_sixteenths == 3:
+        ET.SubElement(note_elem, 'type').text = 'eighth'
+        ET.SubElement(note_elem, 'dot')
+    elif dur_sixteenths == 4:
+        ET.SubElement(note_elem, 'type').text = 'quarter'
+    else:
+        ET.SubElement(note_elem, 'type').text = '16th'
+
+    return note_elem
 
 
 def _build_musicxml_lyrics(all_notes):
@@ -2343,7 +2453,11 @@ def write_analysis(analyses, output_path, book=1, epic='iliad'):
 # === PDF Compilation ===
 
 def compile_lilypond(ly_path):
-    """Compile a LilyPond file to PDF. Returns True on success."""
+    """Compile a LilyPond file to PDF.
+
+    Raises:
+        LilyPondError: If LilyPond is not installed, times out, or fails to produce a PDF.
+    """
     output_dir = os.path.dirname(ly_path) or '.'
     basename = os.path.basename(ly_path)
     out_base = os.path.splitext(basename)[0]
@@ -2351,32 +2465,37 @@ def compile_lilypond(ly_path):
         result = subprocess.run(
             ['lilypond', '-o', out_base, basename],
             capture_output=True, text=True, cwd=output_dir, timeout=300)
+        pdf_path = os.path.splitext(ly_path)[0] + '.pdf'
         if result.returncode == 0:
-            pdf_path = os.path.splitext(ly_path)[0] + '.pdf'
             print(f"Compiled PDF: {pdf_path}")
-            return True
+            return
         else:
-            print(f"  LilyPond warning/error (exit {result.returncode}):")
-            for line in result.stderr.strip().split('\n')[-5:]:
-                print(f"    {line}")
-            # LilyPond often returns 0 even with warnings; check if PDF exists
-            pdf_path = os.path.splitext(ly_path)[0] + '.pdf'
+            # LilyPond often returns non-zero with warnings; check if PDF exists
             if os.path.exists(pdf_path):
-                print(f"  PDF generated despite warnings: {pdf_path}")
-                return True
-            return False
+                print(f"Compiled PDF (with warnings): {pdf_path}")
+                return
+            # PDF was not generated - this is an error
+            stderr_lines = result.stderr.strip().split('\n')[-5:]
+            raise LilyPondError(
+                f"LilyPond failed to compile {ly_path} (exit {result.returncode}): "
+                f"{'; '.join(stderr_lines)}")
     except FileNotFoundError:
-        print("  Warning: lilypond not found in PATH, skipping PDF compilation")
-        return False
+        raise LilyPondError(
+            "LilyPond is not installed or not found in PATH. "
+            "Please install LilyPond: https://lilypond.org/")
     except subprocess.TimeoutExpired:
-        print("  Warning: lilypond timed out after 300s")
-        return False
+        raise LilyPondError(
+            f"LilyPond timed out after 300 seconds while compiling {ly_path}")
 
 
 # === Main ===
 
 def find_enhanced_file(book, epic='iliad'):
-    """Find the enhanced mora grid file for a given book number and epic."""
+    """Find the enhanced mora grid file for a given book number and epic.
+
+    Raises:
+        MissingDataError: If no enhanced file is found in any candidate location.
+    """
     candidates = [
         f'output/run_1/{epic}/book{book}/{epic}_book{book}_full_enhanced.txt',
         f'output/{epic}/book{book}/{epic}_book{book}_full_enhanced.txt',
@@ -2385,7 +2504,9 @@ def find_enhanced_file(book, epic='iliad'):
     for c in candidates:
         if os.path.exists(c):
             return c
-    return None
+    raise MissingDataError(
+        f"Enhanced mora grid file not found for {epic} book {book}. "
+        f"Searched: {', '.join(candidates)}")
 
 
 def _print_line_summary(notes):
@@ -2408,10 +2529,19 @@ def _print_line_summary(notes):
     print(f"  Pitches:   {' '.join(pitches)}")
 
 
-def process_book(book, output_dir=None, lines=None, verbose=True,
-                 enhanced_path=None, output_basename=None, track_analysis=False,
-                 with_intro=False, interlude_mode=None, epic='iliad'):
-    """Process a single book. Returns (success, line_count).
+def process_book(
+    book: int,
+    output_dir: Optional[str] = None,
+    lines: Optional[Tuple[int, int]] = None,
+    verbose: bool = True,
+    enhanced_path: Optional[str] = None,
+    output_basename: Optional[str] = None,
+    track_analysis: bool = False,
+    with_intro: bool = False,
+    interlude_mode: Optional[str] = None,
+    epic: str = 'iliad'
+) -> int:
+    """Process a single book. Returns the number of lines generated.
 
     Args:
         book: book number (1-24)
@@ -2424,14 +2554,23 @@ def process_book(book, output_dir=None, lines=None, verbose=True,
         with_intro: if True, prepend West's 7-measure instrumental introduction
         interlude_mode: 'cycle' or 'melodic' for CAD1 pattern selection
         epic: 'iliad' or 'odyssey'
+
+    Returns:
+        int: Number of lines successfully generated.
+
+    Raises:
+        MissingDataError: If required data files are not found.
+        ValidationError: If prosody validation fails.
+        LilyPondError: If PDF compilation fails.
+        WestMelodyError: For other melody generation errors.
+
+    Note:
+        Corrupted source lines (< 10 syllables) are output as rests, not errors.
     """
     if interlude_mode is None:
         interlude_mode = DEFAULT_INTERLUDE_MODE
     if not enhanced_path:
         enhanced_path = find_enhanced_file(book, epic=epic)
-    if not enhanced_path:
-        print(f"  Error: Cannot find enhanced file for {epic} book {book}.")
-        return False, 0
 
     # Load data
     treebank = TreebankPOS(book=book, epic=epic)
@@ -2444,8 +2583,7 @@ def process_book(book, output_dir=None, lines=None, verbose=True,
         # Use all lines available in the enhanced file
         available = sorted(mora_grid.lines.keys())
         if not available:
-            print(f"  Error: No lines found in {enhanced_path}")
-            return False, 0
+            raise MissingDataError(f"No lines found in {enhanced_path}")
         start, end = available[0], available[-1]
 
     # Generate melodies
@@ -2467,8 +2605,7 @@ def process_book(book, output_dir=None, lines=None, verbose=True,
             print(f"  No data available for line {line_num}")
 
     if not lines_data:
-        print(f"  No melodies generated for book {book}.")
-        return False, 0
+        raise WestMelodyError(f"No melodies generated for {epic} book {book}")
 
     # Determine output paths
     book_str = f'{book:02d}'
@@ -2493,7 +2630,7 @@ def process_book(book, output_dir=None, lines=None, verbose=True,
     if track_analysis and analyses:
         write_analysis(analyses, analysis_path, book=book, epic=epic)
 
-    return True, len(lines_data)
+    return len(lines_data)
 
 
 def main():
@@ -2542,17 +2679,18 @@ def main():
             print(f"\n{'='*60}")
             print(f"{epic.title()} Book {book}")
             print(f"{'='*60}")
-            success, count = process_book(
-                book, output_dir=output_dir, verbose=not args.quiet,
-                track_analysis=args.analysis,
-                with_intro=args.with_intro,
-                interlude_mode=args.interlude_mode,
-                epic=epic)
-            if success:
+            try:
+                count = process_book(
+                    book, output_dir=output_dir, verbose=not args.quiet,
+                    track_analysis=args.analysis,
+                    with_intro=args.with_intro,
+                    interlude_mode=args.interlude_mode,
+                    epic=epic)
                 total_books += 1
                 total_lines += count
                 print(f"\n  Book {book}: {count} lines generated")
-            else:
+            except WestMelodyError as e:
+                print(f"\n  FAILED: {e}")
                 failed_books.append(book)
 
         print(f"\n{'='*60}")
@@ -2580,18 +2718,15 @@ def main():
           + (f", lines {line_range[0]}-{line_range[1]}" if line_range else
              " (all lines)"))
     try:
-        success, count = process_book(
+        count = process_book(
             args.book, output_dir=args.output_dir, lines=line_range,
             verbose=not args.quiet, enhanced_path=args.enhanced,
             output_basename=args.output, track_analysis=args.analysis,
             with_intro=args.with_intro,
             interlude_mode=args.interlude_mode,
             epic=args.epic)
-        if success:
-            print(f"\nDone. {count} lines generated.")
-        else:
-            sys.exit(1)
-    except ValueError as e:
+        print(f"\nDone. {count} lines generated.")
+    except WestMelodyError as e:
         print(f"\nFAILED: {e}")
         sys.exit(1)
 

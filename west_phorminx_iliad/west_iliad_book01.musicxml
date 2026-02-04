@@ -2,9 +2,9 @@
 <!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 3.1 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
 <score-partwise version="3.1">
   <work>
-    <work-title>The Singing of Homer - Iliad I, 1-611</work-title>
+    <work-title>The Singing of Homer - Iliad 1, 1-611</work-title>
   </work>
-  <movement-title>The Singing of Homer - Iliad I, 1-611</movement-title>
+  <movement-title>The Singing of Homer - Iliad 1, 1-611</movement-title>
   <identification>
     <creator type="composer">After M. L. West</creator>
     <encoding>
@@ -23,739 +23,739 @@
     <measure-numbering>none</measure-numbering>
   </defaults>
   <credit page="1">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 1-5</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 1-5</credit-words>
   </credit>
   <credit page="1">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="2">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 6-10</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 6-10</credit-words>
   </credit>
   <credit page="2">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="3">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 11-15</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 11-15</credit-words>
   </credit>
   <credit page="3">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="4">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 16-20</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 16-20</credit-words>
   </credit>
   <credit page="4">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="5">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 21-25</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 21-25</credit-words>
   </credit>
   <credit page="5">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="6">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 26-30</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 26-30</credit-words>
   </credit>
   <credit page="6">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="7">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 31-35</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 31-35</credit-words>
   </credit>
   <credit page="7">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="8">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 36-40</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 36-40</credit-words>
   </credit>
   <credit page="8">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="9">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 41-45</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 41-45</credit-words>
   </credit>
   <credit page="9">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="10">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 46-50</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 46-50</credit-words>
   </credit>
   <credit page="10">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="11">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 51-55</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 51-55</credit-words>
   </credit>
   <credit page="11">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="12">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 56-60</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 56-60</credit-words>
   </credit>
   <credit page="12">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="13">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 61-65</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 61-65</credit-words>
   </credit>
   <credit page="13">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="14">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 66-70</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 66-70</credit-words>
   </credit>
   <credit page="14">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="15">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 71-75</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 71-75</credit-words>
   </credit>
   <credit page="15">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="16">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 76-80</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 76-80</credit-words>
   </credit>
   <credit page="16">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="17">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 81-85</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 81-85</credit-words>
   </credit>
   <credit page="17">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="18">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 86-90</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 86-90</credit-words>
   </credit>
   <credit page="18">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="19">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 91-95</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 91-95</credit-words>
   </credit>
   <credit page="19">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="20">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 96-100</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 96-100</credit-words>
   </credit>
   <credit page="20">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="21">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 101-105</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 101-105</credit-words>
   </credit>
   <credit page="21">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="22">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 106-110</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 106-110</credit-words>
   </credit>
   <credit page="22">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="23">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 111-115</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 111-115</credit-words>
   </credit>
   <credit page="23">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="24">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 116-120</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 116-120</credit-words>
   </credit>
   <credit page="24">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="25">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 121-125</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 121-125</credit-words>
   </credit>
   <credit page="25">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="26">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 126-130</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 126-130</credit-words>
   </credit>
   <credit page="26">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="27">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 131-135</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 131-135</credit-words>
   </credit>
   <credit page="27">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="28">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 136-140</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 136-140</credit-words>
   </credit>
   <credit page="28">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="29">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 141-145</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 141-145</credit-words>
   </credit>
   <credit page="29">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="30">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 146-150</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 146-150</credit-words>
   </credit>
   <credit page="30">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="31">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 151-155</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 151-155</credit-words>
   </credit>
   <credit page="31">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="32">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 156-160</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 156-160</credit-words>
   </credit>
   <credit page="32">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="33">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 161-165</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 161-165</credit-words>
   </credit>
   <credit page="33">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="34">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 166-170</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 166-170</credit-words>
   </credit>
   <credit page="34">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="35">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 171-175</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 171-175</credit-words>
   </credit>
   <credit page="35">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="36">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 176-180</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 176-180</credit-words>
   </credit>
   <credit page="36">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="37">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 181-185</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 181-185</credit-words>
   </credit>
   <credit page="37">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="38">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 186-190</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 186-190</credit-words>
   </credit>
   <credit page="38">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="39">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 191-195</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 191-195</credit-words>
   </credit>
   <credit page="39">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="40">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 196-200</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 196-200</credit-words>
   </credit>
   <credit page="40">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="41">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 201-205</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 201-205</credit-words>
   </credit>
   <credit page="41">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="42">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 206-210</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 206-210</credit-words>
   </credit>
   <credit page="42">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="43">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 211-215</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 211-215</credit-words>
   </credit>
   <credit page="43">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="44">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 216-220</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 216-220</credit-words>
   </credit>
   <credit page="44">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="45">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 221-225</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 221-225</credit-words>
   </credit>
   <credit page="45">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="46">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 226-230</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 226-230</credit-words>
   </credit>
   <credit page="46">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="47">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 231-235</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 231-235</credit-words>
   </credit>
   <credit page="47">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="48">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 236-240</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 236-240</credit-words>
   </credit>
   <credit page="48">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="49">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 241-245</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 241-245</credit-words>
   </credit>
   <credit page="49">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="50">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 246-250</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 246-250</credit-words>
   </credit>
   <credit page="50">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="51">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 251-255</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 251-255</credit-words>
   </credit>
   <credit page="51">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="52">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 256-260</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 256-260</credit-words>
   </credit>
   <credit page="52">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="53">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 261-265</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 261-265</credit-words>
   </credit>
   <credit page="53">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="54">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 266-270</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 266-270</credit-words>
   </credit>
   <credit page="54">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="55">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 271-275</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 271-275</credit-words>
   </credit>
   <credit page="55">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="56">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 276-280</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 276-280</credit-words>
   </credit>
   <credit page="56">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="57">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 281-285</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 281-285</credit-words>
   </credit>
   <credit page="57">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="58">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 286-290</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 286-290</credit-words>
   </credit>
   <credit page="58">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="59">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 291-295</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 291-295</credit-words>
   </credit>
   <credit page="59">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="60">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 296-300</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 296-300</credit-words>
   </credit>
   <credit page="60">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="61">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 301-305</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 301-305</credit-words>
   </credit>
   <credit page="61">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="62">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 306-310</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 306-310</credit-words>
   </credit>
   <credit page="62">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="63">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 311-315</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 311-315</credit-words>
   </credit>
   <credit page="63">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="64">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 316-320</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 316-320</credit-words>
   </credit>
   <credit page="64">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="65">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 321-325</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 321-325</credit-words>
   </credit>
   <credit page="65">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="66">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 326-330</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 326-330</credit-words>
   </credit>
   <credit page="66">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="67">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 331-335</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 331-335</credit-words>
   </credit>
   <credit page="67">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="68">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 336-340</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 336-340</credit-words>
   </credit>
   <credit page="68">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="69">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 341-345</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 341-345</credit-words>
   </credit>
   <credit page="69">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="70">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 346-350</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 346-350</credit-words>
   </credit>
   <credit page="70">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="71">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 351-355</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 351-355</credit-words>
   </credit>
   <credit page="71">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="72">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 356-360</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 356-360</credit-words>
   </credit>
   <credit page="72">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="73">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 361-365</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 361-365</credit-words>
   </credit>
   <credit page="73">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="74">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 366-370</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 366-370</credit-words>
   </credit>
   <credit page="74">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="75">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 371-375</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 371-375</credit-words>
   </credit>
   <credit page="75">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="76">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 376-380</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 376-380</credit-words>
   </credit>
   <credit page="76">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="77">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 381-385</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 381-385</credit-words>
   </credit>
   <credit page="77">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="78">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 386-390</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 386-390</credit-words>
   </credit>
   <credit page="78">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="79">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 391-395</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 391-395</credit-words>
   </credit>
   <credit page="79">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="80">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 396-400</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 396-400</credit-words>
   </credit>
   <credit page="80">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="81">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 401-405</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 401-405</credit-words>
   </credit>
   <credit page="81">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="82">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 406-410</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 406-410</credit-words>
   </credit>
   <credit page="82">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="83">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 411-415</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 411-415</credit-words>
   </credit>
   <credit page="83">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="84">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 416-420</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 416-420</credit-words>
   </credit>
   <credit page="84">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="85">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 421-425</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 421-425</credit-words>
   </credit>
   <credit page="85">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="86">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 426-430</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 426-430</credit-words>
   </credit>
   <credit page="86">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="87">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 431-435</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 431-435</credit-words>
   </credit>
   <credit page="87">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="88">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 436-440</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 436-440</credit-words>
   </credit>
   <credit page="88">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="89">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 441-445</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 441-445</credit-words>
   </credit>
   <credit page="89">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="90">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 446-450</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 446-450</credit-words>
   </credit>
   <credit page="90">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="91">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 451-455</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 451-455</credit-words>
   </credit>
   <credit page="91">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="92">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 456-460</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 456-460</credit-words>
   </credit>
   <credit page="92">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="93">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 461-465</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 461-465</credit-words>
   </credit>
   <credit page="93">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="94">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 466-470</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 466-470</credit-words>
   </credit>
   <credit page="94">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="95">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 471-475</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 471-475</credit-words>
   </credit>
   <credit page="95">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="96">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 476-480</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 476-480</credit-words>
   </credit>
   <credit page="96">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="97">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 481-485</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 481-485</credit-words>
   </credit>
   <credit page="97">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="98">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 486-490</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 486-490</credit-words>
   </credit>
   <credit page="98">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="99">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 491-495</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 491-495</credit-words>
   </credit>
   <credit page="99">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="100">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 496-500</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 496-500</credit-words>
   </credit>
   <credit page="100">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="101">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 501-505</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 501-505</credit-words>
   </credit>
   <credit page="101">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="102">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 506-510</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 506-510</credit-words>
   </credit>
   <credit page="102">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="103">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 511-515</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 511-515</credit-words>
   </credit>
   <credit page="103">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="104">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 516-520</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 516-520</credit-words>
   </credit>
   <credit page="104">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="105">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 521-525</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 521-525</credit-words>
   </credit>
   <credit page="105">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="106">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 526-530</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 526-530</credit-words>
   </credit>
   <credit page="106">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="107">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 531-535</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 531-535</credit-words>
   </credit>
   <credit page="107">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="108">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 536-540</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 536-540</credit-words>
   </credit>
   <credit page="108">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="109">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 541-545</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 541-545</credit-words>
   </credit>
   <credit page="109">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="110">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 546-550</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 546-550</credit-words>
   </credit>
   <credit page="110">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="111">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 551-555</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 551-555</credit-words>
   </credit>
   <credit page="111">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="112">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 556-560</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 556-560</credit-words>
   </credit>
   <credit page="112">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="113">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 561-565</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 561-565</credit-words>
   </credit>
   <credit page="113">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="114">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 566-570</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 566-570</credit-words>
   </credit>
   <credit page="114">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="115">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 571-575</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 571-575</credit-words>
   </credit>
   <credit page="115">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="116">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 576-580</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 576-580</credit-words>
   </credit>
   <credit page="116">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="117">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 581-585</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 581-585</credit-words>
   </credit>
   <credit page="117">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="118">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 586-590</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 586-590</credit-words>
   </credit>
   <credit page="118">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="119">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 591-595</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 591-595</credit-words>
   </credit>
   <credit page="119">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="120">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 596-600</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 596-600</credit-words>
   </credit>
   <credit page="120">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="121">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 601-605</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 601-605</credit-words>
   </credit>
   <credit page="121">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="122">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 606-610</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 606-610</credit-words>
   </credit>
   <credit page="122">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
   </credit>
   <credit page="123">
-    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad I, 611-611</credit-words>
+    <credit-words default-x="595" default-y="1626" justify="center" valign="top" font-size="24">The Singing of Homer - Iliad 1, 611-611</credit-words>
   </credit>
   <credit page="123">
     <credit-words default-x="595" default-y="50" justify="center" valign="bottom" font-size="8">After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328</credit-words>
