@@ -3203,7 +3203,7 @@
     e'8. c'8 c'8 | \noBreak
     e'16.\( c'16.\) c'8 e'8 | \noBreak
     c'8. b4 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    c'16.\( b16.\) a8 c'8 | \noBreak
     a8. a8. r16 | \noBreak
     \acciaccatura { b8( } a8.) c'8[ c'8] |
       }
@@ -8516,7 +8516,7 @@
     c'8. b8 b8 | \noBreak
     c'8. e'4 | \noBreak
     c'16.\( b16.\) b8 b8 | \noBreak
-    c'16.\( b16.\) b8 c'8 | \noBreak
+    c'16.\( b16.\) a8 c'8 | \noBreak
     b8. c'8 b8 | \noBreak
     a8. c'8. r16 | \noBreak
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
@@ -8751,7 +8751,7 @@
     c'8. c'8\( b8\) | \noBreak
     b8. c'4 | \noBreak
     c'16.\( b16.\) b8 b8 | \noBreak
-    c'16.\( b16.\) b4 | \noBreak
+    c'16.\( b16.\) a4 | \noBreak
     c'8. b8 b8 | \noBreak
     c'16.\( b16.\) a8. r16 | \noBreak
     \grace { c'16( b16 } a8.) b8[ c'8] |
@@ -15264,7 +15264,7 @@
     e'8. c'8 c'8 |
     e'16.\( c'16.\) c'8 e'8 |
     c'8. b4 |
-    c'16.\( b16.\) b8 c'8 |
+    c'16.\( b16.\) a8 c'8 |
     a8. a8. r16 |
     \acciaccatura { b8( } a8.) c'8[ c'8] |
     c'8. b8 b8 |
@@ -16401,7 +16401,7 @@
     c'8. b8 b8 |
     c'8. e'4 |
     c'16.\( b16.\) b8 b8 |
-    c'16.\( b16.\) b8 c'8 |
+    c'16.\( b16.\) a8 c'8 |
     b8. c'8 b8 |
     a8. c'8. r16 |
     e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |
@@ -16450,7 +16450,7 @@
     c'8. c'8\( b8\) |
     b8. c'4 |
     c'16.\( b16.\) b8 b8 |
-    c'16.\( b16.\) b4 |
+    c'16.\( b16.\) a4 |
     c'8. b8 b8 |
     c'16.\( b16.\) a8. r16 |
     \grace { c'16( b16 } a8.) b8[ c'8] |

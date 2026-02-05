@@ -29,9 +29,8 @@ from typing import Optional, Dict, List, Tuple, Set, Any
 # === Constants ===
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-TREEBANK_DIR_V21 = os.path.join(SCRIPT_DIR, 'data-sources', 'treebank_data',
-                                'v2.1', 'Greek', 'texts')
-DEFAULT_TEI_PATH = os.path.join(SCRIPT_DIR, 'tlg0020.tlg001.perseus-grc2.xml')
+DATA_SOURCES = os.path.join(SCRIPT_DIR, 'data-sources')
+CANONICAL_GREEPLIT = os.path.join(DATA_SOURCES, 'canonical-greekLit')
 
 # Greek phonology character sets (lowercase, base forms)
 VOWELS = set('αεηιουω')
@@ -1346,7 +1345,7 @@ def _write_analysis_file(
 
 
 def generate_enhanced_file(
-    treebank_path: str,
+    treebank_path: Optional[str],
     output_path: str,
     tei_path: Optional[str] = None,
     line_range: Optional[Tuple[int, int]] = None,
@@ -1458,14 +1457,49 @@ def generate_enhanced_file(
     return len(all_line_data)
 
 
+def get_tei_path(epic: str, book: int = 1) -> Optional[str]:
+    """Resolve the TEI file path within data-sources/canonical-greekLit.
+
+    Returns None for epics without TEI data.
+    """
+    if epic == 'theogony':
+        return os.path.join(CANONICAL_GREEPLIT, 'data', 'tlg0020', 'tlg001',
+                            'tlg0020.tlg001.perseus-grc2.xml')
+    elif epic == 'homeric_hymns':
+        return os.path.join(
+            CANONICAL_GREEPLIT, 'data', 'tlg0013',
+            f'tlg{book:03d}',
+            f'tlg0013.tlg{book:03d}.perseus-grc2.xml')
+    return None
+
+
+def get_treebank_path(epic: str, book: int = 1) -> Optional[str]:
+    """Resolve the treebank file path within data-sources/treebank_data.
+
+    Returns None for epics without usable treebank data.
+    """
+    if epic == 'theogony':
+        return os.path.join(DATA_SOURCES, 'treebank_data', 'v2.1',
+                            'Greek', 'texts',
+                            'tlg0020.tlg001.perseus-grc1.tb.xml')
+    elif epic == 'homeric_hymns':
+        return None  # Hymns treebank words lack cite attributes
+    return None  # Homer treebank handled by west_iliad_continuation.py
+
+
 def main():
     parser = argparse.ArgumentParser(
         description='Convert Perseus treebank XML to enhanced mora grid format')
+    parser.add_argument('--epic', type=str, default='theogony',
+                        choices=['theogony', 'homeric_hymns'],
+                        help='Which text to scan (default: theogony)')
+    parser.add_argument('--book', type=int, default=None,
+                        help='Hymn/book number (for homeric_hymns; omit for all)')
     parser.add_argument('--treebank', type=str, default=None,
-                        help='Path to treebank XML file (default: Theogony)')
+                        help='Path to treebank XML file (required for treebank-driven mode)')
     parser.add_argument('--tei', type=str, default=None,
-                        help='Path to TEI text XML (drives line numbering; '
-                             'default: tlg0020.tlg001.perseus-grc2.xml)')
+                        help='Path to TEI text XML within data-sources/ '
+                             '(required for theogony; auto-resolved for hymns)')
     parser.add_argument('--output', type=str, default=None,
                         help='Output path for enhanced file')
     parser.add_argument('--lines', type=str, default=None,
@@ -1473,20 +1507,6 @@ def main():
     parser.add_argument('--quiet', action='store_true',
                         help='Suppress per-line output')
     args = parser.parse_args()
-
-    # Default treebank: Theogony
-    treebank_path = args.treebank or os.path.join(
-        TREEBANK_DIR_V21, 'tlg0020.tlg001.perseus-grc1.tb.xml')
-
-    # Default TEI text: Theogony (use --tei none to disable)
-    if args.tei and args.tei.lower() == 'none':
-        tei_path = None
-    else:
-        tei_path = args.tei or DEFAULT_TEI_PATH
-
-    # Default output path
-    output_path = args.output or os.path.join(
-        'west_phorminx_theogony', 'theogony_full_enhanced.txt')
 
     # Parse line range
     line_range = None
@@ -1497,6 +1517,62 @@ def main():
         else:
             n = int(args.lines)
             line_range = (n, n)
+
+    if args.epic == 'homeric_hymns':
+        # --- Homeric Hymns mode: one enhanced file per hymn ---
+        output_dir = 'west_phorminx_homeric_hymns'
+        hymns = [args.book] if args.book else list(range(1, 34))
+        total_lines = 0
+        failed_hymns = []
+
+        for h in hymns:
+            tei_path = args.tei or get_tei_path('homeric_hymns', h)
+            if not os.path.exists(tei_path):
+                print(f"  Hymn {h}: TEI file not found, skipping: {tei_path}")
+                failed_hymns.append(h)
+                continue
+
+            out_path = args.output or os.path.join(
+                output_dir, f'hymn_{h:02d}_enhanced.txt')
+            print(f"\n{'='*50}")
+            print(f"Hymn {h}")
+            print(f"{'='*50}")
+            try:
+                count = generate_enhanced_file(
+                    None, out_path,
+                    tei_path=tei_path,
+                    line_range=line_range,
+                    verbose=not args.quiet)
+                total_lines += count
+                print(f"  Hymn {h}: {count} lines")
+            except (ValueError, FileNotFoundError) as e:
+                print(f"  Hymn {h}: FAILED - {e}")
+                failed_hymns.append(h)
+
+        print(f"\n{'='*50}")
+        print(f"SUMMARY: {len(hymns) - len(failed_hymns)}/{len(hymns)} hymns, "
+              f"{total_lines} total lines")
+        if failed_hymns:
+            print(f"Failed hymns: {failed_hymns}")
+        print(f"Output directory: {output_dir}/")
+        return
+
+    # --- Theogony mode (default) ---
+    treebank_path = args.treebank or get_treebank_path('theogony')
+    if not treebank_path:
+        parser.error('--treebank is required (e.g. --treebank '
+                     'data-sources/treebank_data/v2.1/Greek/texts/'
+                     'tlg0020.tlg001.perseus-grc1.tb.xml)')
+
+    tei_path = args.tei or get_tei_path('theogony')
+    if not tei_path:
+        parser.error('--tei is required (e.g. --tei '
+                     'data-sources/canonical-greekLit/data/tlg0020/tlg001/'
+                     'tlg0020.tlg001.perseus-grc2.xml)')
+
+    # Default output path
+    output_path = args.output or os.path.join(
+        'west_phorminx_theogony', 'theogony_full_enhanced.txt')
 
     try:
         count = generate_enhanced_file(

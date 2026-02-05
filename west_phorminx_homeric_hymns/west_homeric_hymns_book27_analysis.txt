@@ -1,0 +1,523 @@
+West-Style Melody Analysis - Homeric_Hymns Book 27
+============================================================
+
+Rule Key:
+  H1: Circumflex descent (two notes, high→low)
+  H3: Line opens on c'
+  H5: Stepwise motion only
+  E1: Feet 4-6 (second half) → c'
+  E2: Maximum 3 e' per line
+  E3: Content words (noun/adj/part/pron) → e'; function words → c'
+  U1-U4: Unaccented syllable rules
+  CAD1: Standard cadence (→ a,a)
+  CAD2: Final acute cadence (→ a,c')
+
+------------------------------------------------------------
+Line 1: Ἄρ τε μιν ἀ εί δω χρυ ση λά κα τον κε λα δει νήν
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   Ἄρ           1     acute    c'         H3: line opens on c'
+1   τε           1     -        b          U4: unaccented in foot 1 ≤ 2 → c' [strict H2: lowered c'→b]
+2   μιν          1     -        b          U4: unaccented in foot 1 ≤ 2 → c' [strict H2: lowered c'→b]
+3   ἀ            2     -        b          U4: unaccented in foot 2 ≤ 2 → c' [strict H2: lowered c'→b]
+4   εί           2     acute    c'         E3: heuristic (default-function) 'ἀείδω' → c'
+5   δω           3     -        b          U4: foot 3 after accent → b
+6   χρυ          3     -        b          U4: foot 3 after accent → b
+7   ση           4     -        b          U4: unaccented in foot 4 (4-5) → b
+8   λά           4     acute    c'         E1: acute in foot 4 (second half) → c'
+9   κα           4     -        b          U4: unaccented in foot 4 (4-5) → b
+10  τον          5     -        b          U4: unaccented in foot 5 (4-5) → b
+11  κε           5     -        b          U4: unaccented in foot 5 (4-5) → b
+12  λα           5     -        b          U4: unaccented in foot 5 (4-5) → b
+13  δει          6     -        a          CAD2: penultimate → a
+14  νήν          6     fin-acu  c'         CAD2: final acute → c'
+
+------------------------------------------------------------
+Line 2: παρ θέ νον αἰ δοί ην ἐ λα φη βό λον ἰ ο χέ αι ραν
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   παρ          1     -        c'         H3: line opens on c'
+1   θέ           1     acute    e'         E3: heuristic (default-function) 'παρθένον' → c' [strict H2: raised c'→e']
+2   νον          1     -        c'         U4: unaccented in foot 1 ≤ 2 → c'
+3   αἰ           2     -        b          U4: unaccented in foot 2 ≤ 2 → c' [strict H2: lowered c'→b]
+4   δοί          2     acute    c'         E3: heuristic (default-function) 'αἰδοίην' → c'
+5   ην           3     -        b          U4: foot 3 after accent → b
+6   ἐ            3     -        b          U4: foot 3 after accent → b
+7   λα           3     -        b          U4: foot 3 after accent → b
+8   φη           4     -        b          U4: unaccented in foot 4 (4-5) → b
+9   βό           4     acute    c'         E1: acute in foot 4 (second half) → c'
+10  λον          4     -        b          U4: unaccented in foot 4 (4-5) → b
+11  ἰ            5     -        b          U4: unaccented in foot 5 (4-5) → b
+12  ο            5     -        b          U4: unaccented in foot 5 (4-5) → b
+13  χέ           5     acute    c'         E1: acute in foot 5 (second half) → c'
+14  αι           6     -        a          CAD1: penultimate unaccented → a
+15  ραν          6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 3: αὐ το κα σι γνή την χρυ σα ό ρου Ἀ πόλ λω νος
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   αὐ           1     -        c'         H3: line opens on c'
+1   το           1     -        c'         U4: unaccented in foot 1 ≤ 2 → c'
+2   κα           1     -        c'         U4: unaccented in foot 1 ≤ 2 → c'
+3   σι           2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+4   γνή          2     acute    c'         E3: heuristic (default-function) 'αὐτοκασιγνήτην' → c'
+5   την          3     -        b          U4: foot 3 after accent → b
+6   χρυ          3     -        b          U4: foot 3 after accent → b
+7   σα           4     -        b          U4: unaccented in foot 4 (4-5) → b
+8   ό            4     acute    c'         E1: acute in foot 4 (second half) → c'
+9   ρου          4     -        b          U4: unaccented in foot 4 (4-5) → b
+10  Ἀ            5     -        b          U4: unaccented in foot 5 (4-5) → b
+11  πόλ          5     acute    c'         E1: acute in foot 5 (second half) → c'
+12  λω           6     -        a          CAD1: penultimate unaccented → a
+13  νος          6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 4: ἣ κατ ὄ ρη σκι ό εν τα καὶ ἄ κρι ας ἠ νε μο έ σσας
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   ἣ            1     fin-acu  c'         H3: line opens on c'
+1   κατ          1     -        c'         U4: unaccented in foot 1 ≤ 2 → c'
+2   ὄ            1     acute    e'         E3: heuristic (default-function) 'ὄρη' → c' [strict H2: raised c'→e']
+3   ρη           2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+4   σκι          2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+5   ό            2     acute    e'         E3: heuristic (default-function) 'σκιόεντα' → c' [strict H2: raised c'→e']
+6   εν           3     -        c'         U4: foot 3 before accent → c'
+7   τα           3     -        c'         U4: foot 3 before accent → c'
+8   καὶ          3     fin-acu  c'         E3: heuristic (func-word-list) 'καὶ' → c'
+9   ἄ            4     acute    c'         E1: acute in foot 4 (second half) → c'
+10  κρι          4     -        b          U4: unaccented in foot 4 (4-5) → b
+11  ας           4     -        b          U4: unaccented in foot 4 (4-5) → b
+12  ἠ            5     -        b          U4: unaccented in foot 5 (4-5) → b
+13  νε           5     -        b          U4: unaccented in foot 5 (4-5) → b
+14  μο           5     -        b          U4: unaccented in foot 5 (4-5) → b
+15  έ            6     acute    c'         CAD1: penultimate accent → b (H4 compat) [strict H2: raised b→c']
+16  σσας         6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 5: ἄ γρῃ τερ πο μέ νη παγ χρύ σε α τό ξα τι ταί νει
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   ἄ            1     acute    c'         H3: line opens on c'
+1   γρῃ          1     -        b          U4: unaccented in foot 1 ≤ 2 → c' [strict H2: lowered c'→b]
+2   τερ          2     -        b          U4: unaccented in foot 2 ≤ 2 → c' [strict H2: lowered c'→b]
+3   πο           2     -        b          U4: unaccented in foot 2 ≤ 2 → c' [strict H2: lowered c'→b]
+4   μέ           2     acute    c'         E3: heuristic (default-function) 'τερπομένη' → c'
+5   νη           3     -        b          U4: foot 3 after accent → b
+6   παγ          3     -        b          U4: foot 3 after accent → b
+7   χρύ          4     acute    c'         E1: acute in foot 4 (second half) → c'
+8   σε           4     -        b          U4: unaccented in foot 4 (4-5) → b
+9   α            4     -        b          U4: unaccented in foot 4 (4-5) → b
+10  τό           5     acute    c'         E1: acute in foot 5 (second half) → c'
+11  ξα           5     -        b          U4: unaccented in foot 5 (4-5) → b
+12  τι           5     -        b          U4: unaccented in foot 5 (4-5) → b
+13  ταί          6     acute    c'         CAD1: penultimate accent → b (H4 compat) [strict H2: raised b→c']
+14  νει          6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 6: πέμ που σα στο νό εν τα βέ λη τρο μέ ει δὲ κά ρη να
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   πέμ          1     acute    c'         H3: line opens on c'
+1   που          1     -        b          U4: unaccented in foot 1 ≤ 2 → c' [strict H2: lowered c'→b]
+2   σα           2     -        b          U4: unaccented in foot 2 ≤ 2 → c' [strict H2: lowered c'→b]
+3   στο          2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+4   νό           2     acute    e'         E3: heuristic (default-function) 'στονόεντα' → c' [strict H2: raised c'→e']
+5   εν           3     -        c'         U4: foot 3 before accent → c'
+6   τα           3     -        c'         U4: foot 3 before accent → c'
+7   βέ           3     acute    c'         E3: heuristic (default-function) 'βέλη' → c'
+8   λη           4     -        b          U4: unaccented in foot 4 (4-5) → b
+9   τρο          4     -        b          U4: unaccented in foot 4 (4-5) → b
+10  μέ           4     acute    c'         E1: acute in foot 4 (second half) → c'
+11  ει           5     -        b          U4: unaccented in foot 5 (4-5) → b
+12  δὲ           5     fin-acu  c'         E1: final-acute in foot 5 (second half) → c'
+13  κά           5     acute    c'         E1: acute in foot 5 (second half) → c'
+14  ρη           6     -        a          CAD1: penultimate unaccented → a
+15  να           6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 7: ὑ ψη λῶν ὀ ρέ ων ἰ ά χει δἔ πι δά σκι ος ὕ λη
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   ὑ            1     -        c'         H3: line opens on c'
+1   ψη           1     -        c'         U4: unaccented in foot 1 ≤ 2 → c'
+2   λῶν          2     circ     c'→b       E3: heuristic (default-function) 'ὑψηλῶν' → c'
+                                           ↳ H1/E4: circumflex descent c'→b
+3   ὀ            2     -        b          U3: post-circumflex continuation → b
+4   ρέ           2     acute    c'         E3: heuristic (default-function) 'ὀρέων' → c'
+5   ων           3     -        b          U4: foot 3 before accent → c' [strict H2: lowered c'→b]
+6   ἰ            3     -        b          U4: foot 3 before accent → c' [strict H2: lowered c'→b]
+7   ά            3     acute    c'         E3: heuristic (default-function) 'ἰάχει' → c'
+8   χει          4     -        b          U4: unaccented in foot 4 (4-5) → b
+9   δἔ           4     acute    c'         E1: acute in foot 4 (second half) → c'
+10  πι           4     -        b          U4: unaccented in foot 4 (4-5) → b
+11  δά           5     acute    c'         E1: acute in foot 5 (second half) → c'
+12  σκι          5     -        b          U4: unaccented in foot 5 (4-5) → b
+13  ος           5     -        b          U4: unaccented in foot 5 (4-5) → b
+14  ὕ            6     acute    b          CAD1: penultimate accent → b (H4 compat)
+15  λη           6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 8: δει νὸν ὑ πὸ κλαγ γῆς θη ρῶν φρί σσει δέ τε γαῖ α
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   δει          1     -        c'         H3: line opens on c'
+1   νὸν          1     fin-acu  e'         E3: heuristic (default-function) 'δεινὸν' → c' [strict H2: raised c'→e']
+2   ὑ            1     -        c'         U4: unaccented in foot 1 ≤ 2 → c'
+3   πὸ           2     fin-acu  e'         E3: heuristic (func-word-list) 'ὑπὸ' → c' [strict H2: raised c'→e']
+4   κλαγ         2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+5   γῆς          3     circ     c'→b       E3: heuristic (default-function) 'κλαγγῆς' → c'
+                                           ↳ H1/E4: circumflex descent c'→b
+6   θη           3     -        b          U3: post-circumflex continuation → b
+7   ρῶν          4     circ     c'→b       E1: circumflex in foot 4 (second half) → c'
+                                           ↳ H1/E4: circumflex descent c'→b
+8   φρί          4     acute    c'         E1: acute in foot 4 (second half) → c'
+9   σσει         5     -        b          U4: unaccented in foot 5 (4-5) → b
+10  δέ           5     fin-acu  c'         E1: final-acute in foot 5 (second half) → c'
+11  τε           5     -        b          U4: unaccented in foot 5 (4-5) → b
+12  γαῖ          6     circ     c'→b       E1: circumflex in foot 6 (second half) → c'
+                                           ↳ H1/E4: circumflex descent c'→b
+13  α            6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 9: πόν τος τἰχ θυ ό εις ἣ δἄλ κι μον ἦ τορ ἔ χου σα
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   πόν          1     acute    c'         H3: line opens on c'
+1   τος          1     -        b          U4: unaccented in foot 1 ≤ 2 → c' [strict H2: lowered c'→b]
+2   τἰχ          2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+3   θυ           2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+4   ό            2     acute    e'         E3: heuristic (default-function) 'τἰχθυόεις' → c' [strict H2: raised c'→e']
+5   εις          3     -        c'         U4: foot 3 before accent → c'
+6   ἣ            3     fin-acu  c'         E3: heuristic (func-word-list) 'ἣ' → c'
+7   δἄλ          4     acute    c'         E1: acute in foot 4 (second half) → c'
+8   κι           4     -        b          U4: unaccented in foot 4 (4-5) → b
+9   μον          4     -        b          U4: unaccented in foot 4 (4-5) → b
+10  ἦ            5     circ     c'→b       E1: circumflex in foot 5 (second half) → c'
+                                           ↳ H1/E4: circumflex descent c'→b
+11  τορ          5     -        a          U3: post-circumflex function word in foot 5, next has accent → a
+12  ἔ            5     acute    c'         E1: acute in foot 5 (second half) → c'
+13  χου          6     -        a          CAD1: penultimate unaccented → a
+14  σα           6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 10: πάν τη ἐ πι στρέ φε ται θη ρῶν ὀ λέ κου σα γε νέ θλην
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   πάν          1     acute    c'         H3: line opens on c'
+1   τη           1     -        b          U4: unaccented in foot 1 ≤ 2 → c' [strict H2: lowered c'→b]
+2   ἐ            1     -        c'         U4: unaccented in foot 1 ≤ 2 → c'
+3   πι           2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+4   στρέ         2     acute    e'         E3: heuristic (default-function) 'ἐπιστρέφεται' → c' [strict H2: raised c'→e']
+5   φε           2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+6   ται          3     -        b          U4: foot 3 after accent → b
+7   θη           3     -        b          U4: foot 3 after accent → b
+8   ρῶν          4     circ     c'→b       E1: circumflex in foot 4 (second half) → c'
+                                           ↳ H1/E4: circumflex descent c'→b
+9   ὀ            4     -        a          U3: post-circumflex function word in foot 4, next has accent → a
+10  λέ           4     acute    c'         E1: acute in foot 4 (second half) → c'
+11  κου          5     -        b          U4: unaccented in foot 5 (4-5) → b
+12  σα           5     -        b          U4: unaccented in foot 5 (4-5) → b
+13  γε           5     -        b          U4: unaccented in foot 5 (4-5) → b
+14  νέ           6     acute    c'         CAD1: penultimate accent → b (H4 compat) [strict H2: raised b→c']
+15  θλην         6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 11: αὐ τὰρ ἐ πὴν τερφ θῇ θη ρο σκό πος ἰ ο χέ αι ρα
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   αὐ           1     -        c'         H3: line opens on c'
+1   τὰρ          1     fin-acu  e'         E3: heuristic (func-word-list) 'αὐτὰρ' → c' [strict H2: raised c'→e']
+2   ἐ            1     -        c'         U4: unaccented in foot 1 ≤ 2 → c'
+3   πὴν          2     fin-acu  e'         E3: heuristic (default-function) 'ἐπὴν' → c' [strict H2: raised c'→e']
+4   τερφ         2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+5   θῇ           3     circ     c'→b       E3: heuristic (default-function) 'τερφθῇ' → c'
+                                           ↳ H1/E4: circumflex descent c'→b
+6   θη           3     -        b          U3: post-circumflex continuation → b
+7   ρο           4     -        b          U4: unaccented in foot 4 (4-5) → b
+8   σκό          4     acute    c'         E1: acute in foot 4 (second half) → c'
+9   πος          4     -        b          U4: unaccented in foot 4 (4-5) → b
+10  ἰ            5     -        b          U4: unaccented in foot 5 (4-5) → b
+11  ο            5     -        b          U4: unaccented in foot 5 (4-5) → b
+12  χέ           5     acute    c'         E1: acute in foot 5 (second half) → c'
+13  αι           6     -        a          CAD1: penultimate unaccented → a
+14  ρα           6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 12: εὐ φρή νῃ δὲ νό ον χα λά σασ εὐ καμ πέ α τό ξα
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   εὐ           1     -        c'         H3: line opens on c'
+1   φρή          1     acute    e'         E3: heuristic (default-function) 'εὐφρήνῃ' → c' [strict H2: raised c'→e']
+2   νῃ           2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+3   δὲ           2     fin-acu  c'         E3: heuristic (func-word-list) 'δὲ' → c'
+4   νό           2     acute    e'         E3: heuristic (default-function) 'νόον' → c' [strict H2: raised c'→e']
+5   ον           3     -        c'         U4: foot 3 before accent → c'
+6   χα           3     -        b          U4: foot 3 before accent → c' [strict H2: lowered c'→b]
+7   λά           3     acute    c'         E3: heuristic (default-function) 'χαλάσασ' → c'
+8   σασ          4     -        b          U4: unaccented in foot 4 (4-5) → b
+9   εὐ           4     -        b          U4: unaccented in foot 4 (4-5) → b
+10  καμ          5     -        b          U4: unaccented in foot 5 (4-5) → b
+11  πέ           5     acute    c'         E1: acute in foot 5 (second half) → c'
+12  α            5     -        b          U4: unaccented in foot 5 (4-5) → b
+13  τό           6     acute    b          CAD1: penultimate accent → b (H4 compat)
+14  ξα           6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 13: ἔρ χε ται ἐς μέ γα δῶ μα κα σι γνή τοι ο φί λοι ο
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   ἔρ           1     acute    c'         H3: line opens on c'
+1   χε           1     -        b          U4: unaccented in foot 1 ≤ 2 → c' [strict H2: lowered c'→b]
+2   ται          1     -        b          U4: unaccented in foot 1 ≤ 2 → c' [strict H2: lowered c'→b]
+3   ἐς           2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+4   μέ           2     acute    e'         E3: heuristic (default-function) 'μέγα' → c' [strict H2: raised c'→e']
+5   γα           2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+6   δῶ           3     circ     c'→b       E3: heuristic (default-function) 'δῶμα' → c'
+                                           ↳ H1/E4: circumflex descent c'→b
+7   μα           3     -        b          U3: post-circumflex continuation → b
+8   κα           3     -        b          U4: foot 3 after accent → b
+9   σι           4     -        b          U4: unaccented in foot 4 (4-5) → b
+10  γνή          4     acute    c'         E1: acute in foot 4 (second half) → c'
+11  τοι          5     -        b          U4: unaccented in foot 5 (4-5) → b
+12  ο            5     -        b          U4: unaccented in foot 5 (4-5) → b
+13  φί           5     acute    c'         E1: acute in foot 5 (second half) → c'
+14  λοι          6     -        a          CAD1: penultimate unaccented → a
+15  ο            6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 14: Φοί βου Ἀ πόλ λω νος Δελ φῶν ἐς πί ο να δῆ μον
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   Φοί          1     acute    c'         H3: line opens on c'
+1   βου          1     -        b          U4: unaccented in foot 1 ≤ 2 → c' [strict H2: lowered c'→b]
+2   Ἀ            1     -        c'         U1/H6: launch pad before e' → c'
+3   πόλ          2     acute    e'         E3: heuristic (capital-proper-noun) 'Ἀπόλλωνος' → e'
+4   λω           2     -        c'         U2: post-e' descent → c'
+5   νος          3     -        b          U4: foot 3 after accent → b
+6   Δελ          3     -        b          U4: foot 3 after accent → b
+7   φῶν          4     circ     c'→b       E1: circumflex in foot 4 (second half) → c'
+                                           ↳ H1/E4: circumflex descent c'→b
+8   ἐς           4     -        b          U3: post-circumflex continuation → b
+9   πί           5     acute    c'         E1: acute in foot 5 (second half) → c'
+10  ο            5     -        b          U4: unaccented in foot 5 (4-5) → b
+11  να           5     -        b          U4: unaccented in foot 5 (4-5) → b
+12  δῆ           6     circ     c'→b       E1: circumflex in foot 6 (second half) → c'
+                                           ↳ H1/E4: circumflex descent c'→b
+13  μον          6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 15: Μου σῶν καὶ Χα ρί των κα λὸν χο ρὸν ἀρ τυ νέ ου σα
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   Μου          1     -        c'         H3: line opens on c'
+1   σῶν          1     circ     c'→b       E3: heuristic (default-function) 'Μουσῶν' → c'
+                                           ↳ H1/E4: circumflex descent c'→b
+2   καὶ          2     fin-acu  c'         E3: heuristic (func-word-list) 'καὶ' → c'
+3   Χα           2     -        c'         U1/H6: launch pad before e' → c'
+4   ρί           2     acute    e'         E3: heuristic (capital-proper-noun) 'Χαρίτων' → e'
+5   των          3     -        c'         U2: post-e' descent → c'
+6   κα           3     -        b          U4: foot 3 after accent → b
+7   λὸν          4     fin-acu  c'         E1: final-acute in foot 4 (second half) → c'
+8   χο           4     -        b          U4: unaccented in foot 4 (4-5) → b
+9   ρὸν          4     fin-acu  c'         E1: final-acute in foot 4 (second half) → c'
+10  ἀρ           5     -        b          U4: unaccented in foot 5 (4-5) → b
+11  τυ           5     -        b          U4: unaccented in foot 5 (4-5) → b
+12  νέ           5     acute    c'         E1: acute in foot 5 (second half) → c'
+13  ου           6     -        a          CAD1: penultimate unaccented → a
+14  σα           6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 16: ἔν θα κα τα κρε μά σα σα πα λίν το να τό ξα καὶ ἰ οὺς
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   ἔν           1     acute    c'         H3: line opens on c'
+1   θα           1     -        b          U4: unaccented in foot 1 ≤ 2 → c' [strict H2: lowered c'→b]
+2   κα           1     -        b          U4: unaccented in foot 1 ≤ 2 → c' [strict H2: lowered c'→b]
+3   τα           2     -        b          U4: unaccented in foot 2 ≤ 2 → c' [strict H2: lowered c'→b]
+4   κρε          2     -        b          U4: unaccented in foot 2 ≤ 2 → c' [strict H2: lowered c'→b]
+5   μά           2     acute    c'         E3: heuristic (default-function) 'κατακρεμάσασα' → c'
+6   σα           3     -        b          U4: foot 3 after accent → b
+7   σα           3     -        b          U4: foot 3 after accent → b
+8   πα           3     -        b          U4: foot 3 after accent → b
+9   λίν          4     acute    c'         E1: acute in foot 4 (second half) → c'
+10  το           4     -        b          U4: unaccented in foot 4 (4-5) → b
+11  να           4     -        b          U4: unaccented in foot 4 (4-5) → b
+12  τό           5     acute    c'         E1: acute in foot 5 (second half) → c'
+13  ξα           5     -        b          U4: unaccented in foot 5 (4-5) → b
+14  καὶ          5     fin-acu  c'         E1: final-acute in foot 5 (second half) → c'
+15  ἰ            6     -        a          CAD2: penultimate → a
+16  οὺς          6     fin-acu  c'         CAD2: final acute → c'
+
+------------------------------------------------------------
+Line 17: ἡ γεῖ ται χα ρί εν τα πε ρὶ χρο ῒ κό σμον ἔ χου σα
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   ἡ            1     -        c'         H3: line opens on c'
+1   γεῖ          1     circ     c'→b       E3: heuristic (default-function) 'ἡγεῖται' → c'
+                                           ↳ H1/E4: circumflex descent c'→b
+2   ται          2     -        b          U3: post-circumflex continuation → b
+3   χα           2     -        b          U4: unaccented in foot 2 ≤ 2 → c' [strict H2: lowered c'→b]
+4   ρί           2     acute    c'         E3: heuristic (default-function) 'χαρίεντα' → c'
+5   εν           3     -        b          U4: foot 3 after accent → b
+6   τα           3     -        b          U4: foot 3 after accent → b
+7   πε           3     -        b          U4: foot 3 after accent → b
+8   ρὶ           4     fin-acu  c'         E1: final-acute in foot 4 (second half) → c'
+9   χρο          4     -        b          U4: unaccented in foot 4 (4-5) → b
+10  ῒ            4     fin-acu  c'         E1: final-acute in foot 4 (second half) → c'
+11  κό           5     acute    c'         E1: acute in foot 5 (second half) → c'
+12  σμον         5     -        b          U4: unaccented in foot 5 (4-5) → b
+13  ἔ            5     acute    c'         E1: acute in foot 5 (second half) → c'
+14  χου          6     -        a          CAD1: penultimate unaccented → a
+15  σα           6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 18: ἐ ξάρ χου σα χο ρούς αἳ δἀμ βρο σί ην ὄπ ἰ εῖ σαι
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   ἐ            1     -        c'         H3: line opens on c'
+1   ξάρ          1     acute    e'         E3: heuristic (default-function) 'ἐξάρχουσα' → c' [strict H2: raised c'→e']
+2   χου          2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+3   σα           2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+4   χο           2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+5   ρούς         3     fin-acu  e'         E3: heuristic (default-function) 'χορούς' → c' [strict H2: raised c'→e']
+6   αἳ           3     fin-acu  c'         E3: heuristic (func-word-list) 'αἳ' → c'
+7   δἀμ          4     -        b          U4: unaccented in foot 4 (4-5) → b
+8   βρο          4     -        b          U4: unaccented in foot 4 (4-5) → b
+9   σί           4     acute    c'         E1: acute in foot 4 (second half) → c'
+10  ην           5     -        b          U4: unaccented in foot 5 (4-5) → b
+11  ὄπ           5     fin-acu  c'         E1: final-acute in foot 5 (second half) → c'
+12  ἰ            5     -        b          U4: unaccented in foot 5 (4-5) → b
+13  εῖ           6     circ     c'→b       E1: circumflex in foot 6 (second half) → c'
+                                           ↳ H1/E4: circumflex descent c'→b
+14  σαι          6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 19: ὑμ νεῦ σιν Λη τὼ καλ λί σφυ ρον ὡς τέ κε παῖ δας
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   ὑμ           1     -        c'         H3: line opens on c'
+1   νεῦ          1     circ     c'→b       E3: heuristic (default-function) 'ὑμνεῦσιν' → c'
+                                           ↳ H1/E4: circumflex descent c'→b
+2   σιν          2     -        b          U3: post-circumflex continuation → b
+3   Λη           2     -        c'         U1/H6: launch pad before e' → c'
+4   τὼ           3     fin-acu  e'         E3: heuristic (capital-proper-noun) 'Λητὼ' → e'
+5   καλ          3     -        c'         U2: post-e' descent → c'
+6   λί           4     acute    c'         E1: acute in foot 4 (second half) → c'
+7   σφυ          4     -        b          U4: unaccented in foot 4 (4-5) → b
+8   ρον          4     -        b          U4: unaccented in foot 4 (4-5) → b
+9   ὡς           5     -        b          U4: unaccented in foot 5 (4-5) → b
+10  τέ           5     acute    c'         E1: acute in foot 5 (second half) → c'
+11  κε           5     -        b          U4: unaccented in foot 5 (4-5) → b
+12  παῖ          6     circ     c'→b       E1: circumflex in foot 6 (second half) → c'
+                                           ↳ H1/E4: circumflex descent c'→b
+13  δας          6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 20: ἀ θα νά των βου λῇ τε καὶ ἔρ γμα σιν ἔ ξοχ ἀ ρί στους
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   ἀ            1     -        c'         H3: line opens on c'
+1   θα           1     -        c'         U4: unaccented in foot 1 ≤ 2 → c'
+2   νά           1     acute    e'         E3: heuristic (default-function) 'ἀθανάτων' → c' [strict H2: raised c'→e']
+3   των          2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+4   βου          2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+5   λῇ           3     circ     c'→b       E3: heuristic (default-function) 'βουλῇ' → c'
+                                           ↳ H1/E4: circumflex descent c'→b
+6   τε           3     -        b          U3: post-circumflex continuation → b
+7   καὶ          3     fin-acu  c'         E3: heuristic (func-word-list) 'καὶ' → c'
+8   ἔρ           4     acute    c'         E1: acute in foot 4 (second half) → c'
+9   γμα          4     -        b          U4: unaccented in foot 4 (4-5) → b
+10  σιν          4     -        b          U4: unaccented in foot 4 (4-5) → b
+11  ἔ            5     acute    c'         E1: acute in foot 5 (second half) → c'
+12  ξοχ          5     -        b          U4: unaccented in foot 5 (4-5) → b
+13  ἀ            5     -        b          U4: unaccented in foot 5 (4-5) → b
+14  ρί           6     acute    c'         CAD1: penultimate accent → b (H4 compat) [strict H2: raised b→c']
+15  στους        6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 21: χαί ρε τε τέ κνα Δι ὸς καὶ Λη τοῦς ἠ υ κό μοι ο
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   χαί          1     acute    c'         H3: line opens on c'
+1   ρε           1     -        b          U4: unaccented in foot 1 ≤ 2 → c' [strict H2: lowered c'→b]
+2   τε           1     -        b          U4: unaccented in foot 1 ≤ 2 → c' [strict H2: lowered c'→b]
+3   τέ           2     acute    c'         E3: heuristic (default-function) 'τέκνα' → c'
+4   κνα          2     -        b          U4: unaccented in foot 2 ≤ 2 → c' [strict H2: lowered c'→b]
+5   Δι           2     -        c'         U1/H6: launch pad before e' → c'
+6   ὸς           3     fin-acu  e'         E3: heuristic (capital-proper-noun) 'Διὸς' → e'
+7   καὶ          3     fin-acu  c'         E3: heuristic (func-word-list) 'καὶ' → c'
+8   Λη           4     -        b          U4: unaccented in foot 4 (4-5) → b
+9   τοῦς         4     circ     c'→b       E1: circumflex in foot 4 (second half) → c'
+                                           ↳ H1/E4: circumflex descent c'→b
+10  ἠ            5     -        b          U3: post-circumflex continuation → b
+11  υ            5     -        b          U4: unaccented in foot 5 (4-5) → b
+12  κό           5     acute    c'         E1: acute in foot 5 (second half) → c'
+13  μοι          6     -        a          CAD1: penultimate unaccented → a
+14  ο            6     -        a          CAD1: standard cadence → a
+
+------------------------------------------------------------
+Line 22: αὐ τὰρ ἐ γὼν ὑ μέ ων τε καὶ ἄλ λης μνή σομ ἀ οι δῆς
+------------------------------------------------------------
+
+#   Syllable     Foot  Accent   Pitch      Reason
+--- ------------ ----- -------- ---------- ----------------------------------------
+0   αὐ           1     -        c'         H3: line opens on c'
+1   τὰρ          1     fin-acu  e'         E3: heuristic (func-word-list) 'αὐτὰρ' → c' [strict H2: raised c'→e']
+2   ἐ            1     -        c'         U4: unaccented in foot 1 ≤ 2 → c'
+3   γὼν          2     fin-acu  e'         E3: heuristic (default-function) 'ἐγὼν' → c' [strict H2: raised c'→e']
+4   ὑ            2     -        c'         U4: unaccented in foot 2 ≤ 2 → c'
+5   μέ           2     acute    e'         E3: heuristic (default-function) 'ὑμέων' → c' [strict H2: raised c'→e']
+6   ων           3     -        c'         U4: foot 3 before accent → c'
+7   τε           3     -        c'         U4: foot 3 before accent → c'
+8   καὶ          3     fin-acu  c'         E3: heuristic (func-word-list) 'καὶ' → c'
+9   ἄλ           4     acute    c'         E1: acute in foot 4 (second half) → c'
+10  λης          4     -        b          U4: unaccented in foot 4 (4-5) → b
+11  μνή          5     acute    c'         E1: acute in foot 5 (second half) → c'
+12  σομ          5     -        b          U4: unaccented in foot 5 (4-5) → b
+13  ἀ            5     -        b          U4: unaccented in foot 5 (4-5) → b
+14  οι           6     -        a          CAD1: penultimate unaccented → a
+15  δῆς          6     circ     c'→a       CAD1: standard cadence → a + raised to b for circ descent [H5 fix: a→b illegal, now c']
+                                           ↳ H1: circumflex descent b→a (raised from a)

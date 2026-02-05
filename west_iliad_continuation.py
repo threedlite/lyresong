@@ -3,6 +3,8 @@
 
 Uses the prosody rules from west_prosody_rules.md (derived from West 1981/1992),
 with POS data from the Perseus Ancient Greek Dependency Treebank (AGDT).
+When treebank POS is unavailable (e.g. Homeric Hymns), a heuristic classifier
+uses a closed function-word list and capital-letter proper-noun detection.
 
 Key rules implemented:
 - H1-H6: Hard constraints (circumflex descent, acute peak, c' opening, etc.)
@@ -19,6 +21,8 @@ Usage:
     python3 west_iliad_continuation.py --epic odyssey --book 1  # Odyssey Book 1
     python3 west_iliad_continuation.py --all-iliad        # All 24 books of Iliad
     python3 west_iliad_continuation.py --all-odyssey      # All 24 books of Odyssey
+    python3 west_iliad_continuation.py --epic homeric_hymns --book 2  # Hymn to Demeter
+    python3 west_iliad_continuation.py --all-hymns        # All 33 Homeric Hymns
 """
 
 import xml.etree.ElementTree as ET
@@ -101,6 +105,108 @@ TYPE_MAP = {12: '16th', 18: '16th', 24: 'eighth', 36: 'eighth', 48: 'quarter'}
 # Content-word POS categories (position 0 of AGDT postag)
 CONTENT_POS_CHARS = {'n', 'a', 'p'}  # noun, adjective, pronoun
 
+# --- Heuristic POS: closed-class Greek function words ---
+# Used when no treebank POS data is available (e.g. Homeric Hymns).
+# The two melody classes are: content word → e', function word → c'.
+# Function words are a closed class; everything else defaults to content.
+_GREEK_ARTICLES = {
+    'ὁ', 'ἡ', 'τό', 'τοῦ', 'τῆς', 'τῷ', 'τῇ', 'τόν', 'τήν',
+    'τῶν', 'τοῖς', 'ταῖς', 'τούς', 'τάς', 'τά', 'τοῖσι', 'τοῖσιν',
+    'τῇσι', 'τῇσιν',
+}
+_GREEK_PARTICLES = {
+    'μέν', 'δέ', 'δὲ', 'γάρ', 'ἄρα', 'ἄρ', 'ῥα', 'ῥά',
+    'οὖν', 'δή', 'δὴ', 'τε', 'γε', 'περ', 'κε', 'κεν', 'ἄν',
+    'μή', 'μὴ', 'οὐ', 'οὐκ', 'οὐχ', 'μήν', 'νυ', 'νύ',
+    'αὖ', 'αὖτε', 'αὐτάρ', 'αὐτὰρ', 'ἀτάρ', 'ἀτὰρ',
+    'τοι', 'τοί', 'ἦ',
+}
+_GREEK_PREPOSITIONS = {
+    'ἐν', 'ἐπί', 'ἐπὶ', 'πρός', 'πρὸς', 'κατά', 'κατὰ',
+    'ἀπό', 'ἀπὸ', 'ἐκ', 'ἐξ', 'εἰς', 'ἐς', 'σύν', 'σὺν',
+    'ὑπό', 'ὑπὸ', 'ἀνά', 'ἀνὰ', 'διά', 'διὰ', 'μετά', 'μετὰ',
+    'παρά', 'παρὰ', 'περί', 'περὶ', 'πρό', 'πρὸ', 'ἀμφί', 'ἀμφὶ',
+    'ἀντί', 'ἀντὶ', 'ὑπέρ', 'ὑπὲρ',
+}
+_GREEK_CONJUNCTIONS = {
+    'καί', 'καὶ', 'ἀλλά', 'ἀλλὰ', 'ἤ', 'ἢ', 'εἰ', 'εἴ',
+    'ὅτε', 'ὅτι', 'ἵνα', 'ὡς', 'ὥς', 'ἐπεί', 'ἐπεὶ',
+    'ὥστε', 'ὅπως', 'εἴτε', 'ἠδέ', 'ἠδὲ', 'οὐδέ', 'οὐδὲ',
+    'μηδέ', 'μηδὲ', 'ὄφρα', 'πρίν', 'πρὶν',
+}
+_GREEK_ADVERBS = {
+    'νῦν', 'νυν', 'τότε', 'οὕτω', 'οὕτως', 'ἔτι', 'ἔνθα',
+    'ἐνθάδε', 'αὐτοῦ', 'ἤδη', 'νόσφι', 'νόσφιν', 'πάλιν',
+    'ἄλλοτε', 'αἰεί', 'αἰεὶ',
+}
+_GREEK_RELATIVES = {
+    'ὅς', 'ὃς', 'ἥ', 'ὅ', 'ὃ', 'οὗ', 'ἧς', 'ᾧ', 'ᾗ',
+    'ὅν', 'ὃν', 'ἥν', 'ἣν', 'οἵ', 'οἳ', 'αἵ', 'αἳ', 'ὧν',
+    'οἷς', 'αἷς', 'οὕς', 'οὓς', 'ἅς', 'ἃς', 'ἅ', 'ἃ',
+}
+GREEK_FUNCTION_WORDS = (_GREEK_ARTICLES | _GREEK_PARTICLES | _GREEK_PREPOSITIONS
+                        | _GREEK_CONJUNCTIONS | _GREEK_ADVERBS | _GREEK_RELATIVES)
+
+
+def _normalize_for_func_lookup(word: str) -> str:
+    """Normalize a Greek word for function-word list lookup.
+
+    Strips trailing elision marks and converts grave to acute accent.
+    """
+    # Strip trailing elision apostrophe variants
+    clean = word.rstrip("'\u02bc\u2019\u1fbd\u0313\u0315")
+    # Grave → acute for lookup (running-text graves replace acutes)
+    nfd = unicodedata.normalize('NFD', clean)
+    nfd = nfd.replace('\u0300', '\u0301')  # grave → acute
+    return unicodedata.normalize('NFC', nfd)
+
+
+def _is_greek_capital_initial(word: str) -> bool:
+    """Check if word starts with an uppercase Greek letter (proper noun signal)."""
+    nfd = unicodedata.normalize('NFD', word)
+    for ch in nfd:
+        cat = unicodedata.category(ch)
+        if not cat.startswith('M'):  # skip combining marks
+            return cat == 'Lu'  # uppercase letter
+    return False
+
+
+def heuristic_is_content_word(word_text: str, word_num: int) -> Tuple[bool, str]:
+    """Classify word as content or function without treebank POS data.
+
+    Returns (is_content, method_description).
+
+    Rules:
+      1. Capital letter mid-line → proper noun → content
+      2. Match in closed function-word list → function
+      3. Default → function (conservative: cost of wrong e' > cost of wrong c')
+    """
+    # Rule 1: Capital initial not at line start = proper noun
+    if word_num > 1 and _is_greek_capital_initial(word_text):
+        return True, "capital-proper-noun"
+
+    # Rule 2: Closed function-word list
+    normalized = _normalize_for_func_lookup(word_text)
+    if normalized in GREEK_FUNCTION_WORDS:
+        return False, "func-word-list"
+
+    # Rule 3: Default to function (avoids spurious e' on verbs etc.)
+    return False, "default-function"
+
+
+# Homeric Hymn deity names (traditional numbering 1-33)
+HYMN_DEITIES = {
+    1: "Dionysus", 2: "Demeter", 3: "Apollo", 4: "Hermes",
+    5: "Aphrodite", 6: "Aphrodite", 7: "Dionysus", 8: "Ares",
+    9: "Artemis", 10: "Aphrodite", 11: "Athena", 12: "Hera",
+    13: "Demeter", 14: "Mother of the Gods", 15: "Heracles",
+    16: "Asclepius", 17: "Dioscuri", 18: "Hermes", 19: "Pan",
+    20: "Hephaestus", 21: "Apollo", 22: "Poseidon", 23: "Zeus",
+    24: "Hestia", 25: "Muses and Apollo", 26: "Dionysus",
+    27: "Artemis", 28: "Athena", 29: "Hestia", 30: "Earth",
+    31: "Helios", 32: "Selene", 33: "Dioscuri",
+}
+
 # Melody generation limits
 MAX_EPRIME_PER_LINE = 3        # E2: Maximum e' pitches per line
 MAX_REPAIR_ITERATIONS = 20     # Max iterations for repair loop convergence
@@ -114,11 +220,10 @@ TOTAL_MELODY_SIXTEENTHS = 41   # Total sixteenths for melody (6 * 7 - 1 for fina
 # Hexameter validation
 MIN_HEXAMETER_SYLLABLES = 10   # Minimum syllables for valid hexameter
 
-# Treebank data paths
-TREEBANK_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                            'data-sources', 'treebank_data', 'v1.6', 'greek', 'data')
-TREEBANK_DIR_V21 = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                                'data-sources', 'treebank_data', 'v2.1', 'Greek', 'texts')
+# Data source paths (git repos checked out under data-sources/)
+DATA_SOURCES = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data-sources')
+TREEBANK_DIR = os.path.join(DATA_SOURCES, 'treebank_data', 'v1.6', 'greek', 'data')
+TREEBANK_DIR_V21 = os.path.join(DATA_SOURCES, 'treebank_data', 'v2.1', 'Greek', 'texts')
 
 # === West-style Melodic Interludes (from west_iliad_opening.ly) ===
 #
@@ -268,24 +373,35 @@ WEST_INTRO_NOTES = [
 
 # === Treebank POS Lookup ===
 
+def get_treebank_path(book: int, epic: str) -> Optional[str]:
+    """Resolve the treebank file path for a given book and epic.
+
+    Returns None for epics without usable treebank data (e.g. Homeric Hymns).
+    """
+    if epic == 'homeric_hymns':
+        return None
+    elif epic == 'theogony':
+        return os.path.join(TREEBANK_DIR_V21,
+                            'tlg0020.tlg001.perseus-grc1.tb.xml')
+    else:
+        tlg_work = 'tlg001' if epic == 'iliad' else 'tlg002'
+        filename = f'tlg0012.{tlg_work}.perseus-grc1_{book}.tb.xml'
+        return os.path.join(TREEBANK_DIR, filename)
+
+
 class TreebankPOS:
     """Look up POS tags from Perseus AGDT treebank data."""
 
-    def __init__(self, book: int = 1, epic: str = 'iliad') -> None:
+    def __init__(self, treebank_path: Optional[str]) -> None:
         self.words_by_line: Dict[int, List[Dict[str, str]]] = {}
-        if epic == 'theogony':
-            # Hesiod's Theogony: single file in v2.1 treebank
-            filename = 'tlg0020.tlg001.perseus-grc1.tb.xml'
-            filepath = os.path.join(TREEBANK_DIR_V21, filename)
-        else:
-            tlg_work = 'tlg001' if epic == 'iliad' else 'tlg002'
-            filename = f'tlg0012.{tlg_work}.perseus-grc1_{book}.tb.xml'
-            filepath = os.path.join(TREEBANK_DIR, filename)
+        if treebank_path is None:
+            # No treebank available — POS uses heuristic_is_content_word().
+            return
 
-        if not os.path.exists(filepath):
-            raise MissingDataError(f"Treebank file not found: {filepath}")
+        if not os.path.exists(treebank_path):
+            raise MissingDataError(f"Treebank file not found: {treebank_path}")
 
-        with open(filepath, 'r', encoding='utf-8') as f:
+        with open(treebank_path, 'r', encoding='utf-8') as f:
             tree = ET.parse(f)
         root = tree.getroot()
 
@@ -903,9 +1019,18 @@ class WestMelodyGenerator:
                     base_pitch = "e'"
                     e_count += 1
                     reason = f"E3: {accent_type} on content word '{tb_form}' ({pos_desc}) → e'"
-                else:
+                elif postag:
                     base_pitch = "c'"
                     reason = f"E3: {accent_type} on function word '{tb_form}' ({pos_desc}) → c'"
+                else:
+                    # No treebank data — use heuristic classifier
+                    is_content, method = heuristic_is_content_word(word_text, syl['word_num'])
+                    if is_content:
+                        base_pitch = "e'"
+                        e_count += 1
+                    else:
+                        base_pitch = "c'"
+                    reason = f"E3: heuristic ({method}) '{word_text}' → {base_pitch}"
 
             # Apply circumflex descent (E4)
             if is_circumflex:
@@ -970,7 +1095,11 @@ class WestMelodyGenerator:
                 # Check if circumflex word is a function word
                 prev_word_text = ''.join(word_texts.get(prev_word_num, []))
                 postag, _ = find_pos_for_word_in_line(prev_word_text, tb_words, prev_word_num)
-                is_function_word = postag and not TreebankPOS.is_content_word(postag)
+                if postag:
+                    is_function_word = not TreebankPOS.is_content_word(postag)
+                else:
+                    is_content, _ = heuristic_is_content_word(prev_word_text, prev_word_num)
+                    is_function_word = not is_content
 
                 # Check if next syllable has accent or is in cadence position
                 next_has_accent_or_cadence = False
@@ -1850,8 +1979,8 @@ def write_lilypond(
         bookpart = (
             f'\\bookpart {{\n'
             f'  \\header {{\n'
-            f'    title = "The Singing of {"Hesiod" if epic == "theogony" else "Homer"}"\n'
-            f'    subtitle = "{"Theogony" if epic == "theogony" else epic.title() + " " + str(book)}, {page_start}-{page_end}'
+            f'    title = "The Singing of {"the Homeric Hymns" if epic == "homeric_hymns" else "Hesiod" if epic == "theogony" else "Homer"}"\n'
+            f'    subtitle = "{"To " + HYMN_DEITIES.get(book, "Hymn " + str(book)) + " (Hymn " + str(book) + ")" if epic == "homeric_hymns" else "Theogony" if epic == "theogony" else epic.title() + " " + str(book)}, {page_start}-{page_end}'
             f' (continuation in West\'s style)"\n'
             f'    composer = "After M. L. West"\n'
             f"    tagline = \"After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328\"\n"
@@ -2034,7 +2163,10 @@ def _add_musicxml_credits(
         credit_words.set('justify', 'center')
         credit_words.set('valign', 'top')
         credit_words.set('font-size', '24')
-        if epic == 'theogony':
+        if epic == 'homeric_hymns':
+            deity = HYMN_DEITIES.get(book, f"Hymn {book}")
+            credit_words.text = f"The Singing of the Homeric Hymns - To {deity}, {pg_start}-{pg_end}"
+        elif epic == 'theogony':
             credit_words.text = f"The Singing of Hesiod - Theogony, {pg_start}-{pg_end}"
         else:
             credit_words.text = f"The Singing of Homer - {epic.title()} {book}, {pg_start}-{pg_end}"
@@ -2095,7 +2227,10 @@ def write_musicxml(
     root.set('version', '3.1')
 
     # Create header and credits
-    if epic == 'theogony':
+    if epic == 'homeric_hymns':
+        deity = HYMN_DEITIES.get(book, f"Hymn {book}")
+        title = f"The Singing of the Homeric Hymns - To {deity}, {start}-{end}"
+    elif epic == 'theogony':
         title = f"The Singing of Hesiod - Theogony, {start}-{end}"
     else:
         title = f"The Singing of Homer - {epic.title()} {book}, {start}-{end}"
@@ -2564,7 +2699,13 @@ def find_enhanced_file(book, epic='iliad'):
     Raises:
         MissingDataError: If no enhanced file is found in any candidate location.
     """
-    if epic == 'theogony':
+    if epic == 'homeric_hymns':
+        candidates = [
+            f'west_phorminx_homeric_hymns/hymn_{book:02d}_enhanced.txt',
+            f'output/homeric_hymns/hymn_{book:02d}_enhanced.txt',
+            f'hymn_{book:02d}_enhanced.txt',
+        ]
+    elif epic == 'theogony':
         candidates = [
             'west_phorminx_theogony/theogony_full_enhanced.txt',
             'output/theogony/theogony_full_enhanced.txt',
@@ -2614,7 +2755,8 @@ def process_book(
     track_analysis: bool = False,
     with_intro: bool = False,
     interlude_mode: Optional[str] = None,
-    epic: str = 'iliad'
+    epic: str = 'iliad',
+    treebank_path: Optional[str] = None
 ) -> int:
     """Process a single book. Returns the number of lines generated.
 
@@ -2629,6 +2771,7 @@ def process_book(
         with_intro: if True, prepend West's 7-measure instrumental introduction
         interlude_mode: 'cycle' or 'melodic' for CAD1 pattern selection
         epic: 'iliad' or 'odyssey'
+        treebank_path: path to treebank XML file, or None for heuristic POS
 
     Returns:
         int: Number of lines successfully generated.
@@ -2648,7 +2791,7 @@ def process_book(
         enhanced_path = find_enhanced_file(book, epic=epic)
 
     # Load data
-    treebank = TreebankPOS(book=book, epic=epic)
+    treebank = TreebankPOS(treebank_path)
     mora_grid = MoraGrid(enhanced_path)
 
     # Determine line range
@@ -2714,7 +2857,7 @@ def main():
     parser.add_argument('--book', type=int, default=1,
                         help='Book number (default: 1)')
     parser.add_argument('--epic', type=str, default='iliad',
-                        choices=['iliad', 'odyssey', 'theogony'],
+                        choices=['iliad', 'odyssey', 'theogony', 'homeric_hymns'],
                         help='Epic to process (default: iliad)')
     parser.add_argument('--lines', type=str, default=None,
                         help='Line range, e.g. "6-7" or "1-611" (default: all lines)')
@@ -2728,12 +2871,16 @@ def main():
                         help='Process all 24 books of the Iliad')
     parser.add_argument('--all-odyssey', action='store_true',
                         help='Process all 24 books of the Odyssey')
+    parser.add_argument('--all-hymns', action='store_true',
+                        help='Process all 33 Homeric Hymns')
     parser.add_argument('--quiet', action='store_true',
                         help='Suppress per-line output')
     parser.add_argument('--analysis', action='store_true',
                         help='Output detailed analysis file explaining each note')
     parser.add_argument('--with-intro', action='store_true',
                         help='Prepend West\'s 7-measure instrumental introduction to each book')
+    parser.add_argument('--treebank', type=str, default=None,
+                        help='Path to treebank XML file (overrides auto-resolved path)')
     parser.add_argument('--interlude-mode', type=str, default=DEFAULT_INTERLUDE_MODE,
                         choices=[INTERLUDE_MODE_CYCLE, INTERLUDE_MODE_MELODIC],
                         help=f'Interlude pattern selection mode: '
@@ -2741,6 +2888,45 @@ def main():
                              f'"{INTERLUDE_MODE_MELODIC}" (based on penultimate pitch). '
                              f'Default: {DEFAULT_INTERLUDE_MODE}')
     args = parser.parse_args()
+
+    if args.all_hymns or (args.epic == 'homeric_hymns' and args.book is None
+                          and not args.lines):
+        # Process all 33 Homeric Hymns
+        output_dir = args.output_dir or 'west_phorminx_homeric_hymns'
+        print(f"Processing all 33 Homeric Hymns → {output_dir}/")
+        total_lines = 0
+        total_hymns = 0
+        failed_hymns = []
+
+        for hymn_num in range(1, 34):
+            deity = HYMN_DEITIES.get(hymn_num, f"Hymn {hymn_num}")
+            print(f"\n{'='*60}")
+            print(f"Hymn {hymn_num}: To {deity}")
+            print(f"{'='*60}")
+            try:
+                tb_path = args.treebank or get_treebank_path(hymn_num, 'homeric_hymns')
+                count = process_book(
+                    hymn_num, output_dir=output_dir, verbose=not args.quiet,
+                    track_analysis=args.analysis,
+                    with_intro=args.with_intro,
+                    interlude_mode=args.interlude_mode,
+                    epic='homeric_hymns',
+                    treebank_path=tb_path)
+                total_hymns += 1
+                total_lines += count
+                print(f"\n  Hymn {hymn_num}: {count} lines generated")
+            except WestMelodyError as e:
+                print(f"\n  FAILED: {e}")
+                failed_hymns.append(hymn_num)
+
+        print(f"\n{'='*60}")
+        print(f"SUMMARY: {total_hymns}/33 hymns, {total_lines} total lines")
+        if failed_hymns:
+            print(f"Failed hymns: {failed_hymns}")
+        else:
+            print("All hymns generated successfully.")
+        print(f"Output directory: {output_dir}/")
+        return
 
     if args.all_iliad or args.all_odyssey:
         epic = 'odyssey' if args.all_odyssey else 'iliad'
@@ -2755,12 +2941,14 @@ def main():
             print(f"{epic.title()} Book {book}")
             print(f"{'='*60}")
             try:
+                tb_path = args.treebank or get_treebank_path(book, epic)
                 count = process_book(
                     book, output_dir=output_dir, verbose=not args.quiet,
                     track_analysis=args.analysis,
                     with_intro=args.with_intro,
                     interlude_mode=args.interlude_mode,
-                    epic=epic)
+                    epic=epic,
+                    treebank_path=tb_path)
                 total_books += 1
                 total_lines += count
                 print(f"\n  Book {book}: {count} lines generated")
@@ -2791,13 +2979,47 @@ def main():
               + (f", lines {line_range[0]}-{line_range[1]}" if line_range else
                  " (all lines)"))
         try:
+            tb_path = args.treebank or get_treebank_path(1, 'theogony')
             count = process_book(
                 1, output_dir=output_dir, lines=line_range,
                 verbose=not args.quiet, enhanced_path=args.enhanced,
                 output_basename=args.output, track_analysis=args.analysis,
                 with_intro=args.with_intro,
                 interlude_mode=args.interlude_mode,
-                epic='theogony')
+                epic='theogony',
+                treebank_path=tb_path)
+            print(f"\nDone. {count} lines generated.")
+            print(f"Output directory: {output_dir}/")
+        except WestMelodyError as e:
+            print(f"\nFAILED: {e}")
+            sys.exit(1)
+        return
+
+    # Homeric Hymns single-hymn mode
+    if args.epic == 'homeric_hymns':
+        output_dir = args.output_dir or 'west_phorminx_homeric_hymns'
+        line_range = None
+        if args.lines:
+            if '-' in args.lines:
+                start, end = map(int, args.lines.split('-'))
+            else:
+                start = end = int(args.lines)
+            line_range = (start, end)
+        hymn_num = args.book or 1
+        deity = HYMN_DEITIES.get(hymn_num, f"Hymn {hymn_num}")
+        print(f"Generating melodies for Homeric Hymn {hymn_num}: To {deity}"
+              + (f", lines {line_range[0]}-{line_range[1]}" if line_range else
+                 " (all lines)"))
+        try:
+            tb_path = args.treebank or get_treebank_path(hymn_num, 'homeric_hymns')
+            count = process_book(
+                hymn_num, output_dir=output_dir, lines=line_range,
+                verbose=not args.quiet, enhanced_path=args.enhanced,
+                output_basename=args.output, track_analysis=args.analysis,
+                with_intro=args.with_intro,
+                interlude_mode=args.interlude_mode,
+                epic='homeric_hymns',
+                treebank_path=tb_path)
             print(f"\nDone. {count} lines generated.")
             print(f"Output directory: {output_dir}/")
         except WestMelodyError as e:
@@ -2821,13 +3043,15 @@ def main():
           + (f", lines {line_range[0]}-{line_range[1]}" if line_range else
              " (all lines)"))
     try:
+        tb_path = args.treebank or get_treebank_path(args.book, args.epic)
         count = process_book(
             args.book, output_dir=args.output_dir, lines=line_range,
             verbose=not args.quiet, enhanced_path=args.enhanced,
             output_basename=args.output, track_analysis=args.analysis,
             with_intro=args.with_intro,
             interlude_mode=args.interlude_mode,
-            epic=args.epic)
+            epic=args.epic,
+            treebank_path=tb_path)
         print(f"\nDone. {count} lines generated.")
     except WestMelodyError as e:
         print(f"\nFAILED: {e}")
