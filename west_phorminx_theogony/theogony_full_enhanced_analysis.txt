@@ -1,0 +1,9 @@
+Treebank Scanner Analysis
+============================================================
+
+Total lines in output: 1022
+Successfully scanned:  1022
+Placeholder lines:     0
+  - Missing from treebank: 0
+  - Scan failures:         0
+

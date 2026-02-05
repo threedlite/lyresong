@@ -114,9 +114,11 @@ TOTAL_MELODY_SIXTEENTHS = 41   # Total sixteenths for melody (6 * 7 - 1 for fina
 # Hexameter validation
 MIN_HEXAMETER_SYLLABLES = 10   # Minimum syllables for valid hexameter
 
-# Treebank data path
+# Treebank data paths
 TREEBANK_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                             'data-sources', 'treebank_data', 'v1.6', 'greek', 'data')
+TREEBANK_DIR_V21 = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                'data-sources', 'treebank_data', 'v2.1', 'Greek', 'texts')
 
 # === West-style Melodic Interludes (from west_iliad_opening.ly) ===
 #
@@ -271,9 +273,14 @@ class TreebankPOS:
 
     def __init__(self, book: int = 1, epic: str = 'iliad') -> None:
         self.words_by_line: Dict[int, List[Dict[str, str]]] = {}
-        tlg_work = 'tlg001' if epic == 'iliad' else 'tlg002'
-        filename = f'tlg0012.{tlg_work}.perseus-grc1_{book}.tb.xml'
-        filepath = os.path.join(TREEBANK_DIR, filename)
+        if epic == 'theogony':
+            # Hesiod's Theogony: single file in v2.1 treebank
+            filename = 'tlg0020.tlg001.perseus-grc1.tb.xml'
+            filepath = os.path.join(TREEBANK_DIR_V21, filename)
+        else:
+            tlg_work = 'tlg001' if epic == 'iliad' else 'tlg002'
+            filename = f'tlg0012.{tlg_work}.perseus-grc1_{book}.tb.xml'
+            filepath = os.path.join(TREEBANK_DIR, filename)
 
         if not os.path.exists(filepath):
             raise MissingDataError(f"Treebank file not found: {filepath}")
@@ -1843,8 +1850,8 @@ def write_lilypond(
         bookpart = (
             f'\\bookpart {{\n'
             f'  \\header {{\n'
-            f'    title = "The Singing of Homer"\n'
-            f'    subtitle = "{epic.title()} {book}, {page_start}-{page_end}'
+            f'    title = "The Singing of {"Hesiod" if epic == "theogony" else "Homer"}"\n'
+            f'    subtitle = "{"Theogony" if epic == "theogony" else epic.title() + " " + str(book)}, {page_start}-{page_end}'
             f' (continuation in West\'s style)"\n'
             f'    composer = "After M. L. West"\n'
             f"    tagline = \"After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328\"\n"
@@ -2027,7 +2034,10 @@ def _add_musicxml_credits(
         credit_words.set('justify', 'center')
         credit_words.set('valign', 'top')
         credit_words.set('font-size', '24')
-        credit_words.text = f"The Singing of Homer - {epic.title()} {book}, {pg_start}-{pg_end}"
+        if epic == 'theogony':
+            credit_words.text = f"The Singing of Hesiod - Theogony, {pg_start}-{pg_end}"
+        else:
+            credit_words.text = f"The Singing of Homer - {epic.title()} {book}, {pg_start}-{pg_end}"
 
         # Citation credit (bottom)
         citation = ET.SubElement(root, 'credit', page=str(pg_idx + 1))
@@ -2085,7 +2095,10 @@ def write_musicxml(
     root.set('version', '3.1')
 
     # Create header and credits
-    title = f"The Singing of Homer - {epic.title()} {book}, {start}-{end}"
+    if epic == 'theogony':
+        title = f"The Singing of Hesiod - Theogony, {start}-{end}"
+    else:
+        title = f"The Singing of Homer - {epic.title()} {book}, {start}-{end}"
     _create_musicxml_header(root, title, start, end)
     _add_musicxml_credits(root, pages, book, epic)
 
@@ -2551,11 +2564,18 @@ def find_enhanced_file(book, epic='iliad'):
     Raises:
         MissingDataError: If no enhanced file is found in any candidate location.
     """
-    candidates = [
-        f'output/run_1/{epic}/book{book}/{epic}_book{book}_full_enhanced.txt',
-        f'output/{epic}/book{book}/{epic}_book{book}_full_enhanced.txt',
-        f'{epic}_book{book}_full_enhanced.txt',
-    ]
+    if epic == 'theogony':
+        candidates = [
+            'west_phorminx_theogony/theogony_full_enhanced.txt',
+            'output/theogony/theogony_full_enhanced.txt',
+            'theogony_full_enhanced.txt',
+        ]
+    else:
+        candidates = [
+            f'output/run_1/{epic}/book{book}/{epic}_book{book}_full_enhanced.txt',
+            f'output/{epic}/book{book}/{epic}_book{book}_full_enhanced.txt',
+            f'{epic}_book{book}_full_enhanced.txt',
+        ]
     for c in candidates:
         if os.path.exists(c):
             return c
@@ -2694,7 +2714,7 @@ def main():
     parser.add_argument('--book', type=int, default=1,
                         help='Book number (default: 1)')
     parser.add_argument('--epic', type=str, default='iliad',
-                        choices=['iliad', 'odyssey'],
+                        choices=['iliad', 'odyssey', 'theogony'],
                         help='Epic to process (default: iliad)')
     parser.add_argument('--lines', type=str, default=None,
                         help='Line range, e.g. "6-7" or "1-611" (default: all lines)')
@@ -2755,6 +2775,34 @@ def main():
         else:
             print("All books generated successfully.")
         print(f"Output directory: {output_dir}/")
+        return
+
+    # Theogony mode: single work, processed as book 1
+    if args.epic == 'theogony':
+        output_dir = args.output_dir or 'west_phorminx_theogony'
+        line_range = None
+        if args.lines:
+            if '-' in args.lines:
+                start, end = map(int, args.lines.split('-'))
+            else:
+                start = end = int(args.lines)
+            line_range = (start, end)
+        print(f"Generating melodies for Hesiod's Theogony"
+              + (f", lines {line_range[0]}-{line_range[1]}" if line_range else
+                 " (all lines)"))
+        try:
+            count = process_book(
+                1, output_dir=output_dir, lines=line_range,
+                verbose=not args.quiet, enhanced_path=args.enhanced,
+                output_basename=args.output, track_analysis=args.analysis,
+                with_intro=args.with_intro,
+                interlude_mode=args.interlude_mode,
+                epic='theogony')
+            print(f"\nDone. {count} lines generated.")
+            print(f"Output directory: {output_dir}/")
+        except WestMelodyError as e:
+            print(f"\nFAILED: {e}")
+            sys.exit(1)
         return
 
     # Single book mode

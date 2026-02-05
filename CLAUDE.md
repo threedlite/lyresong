@@ -114,7 +114,10 @@ The script now supports processing all 48 books of Homer's epics with full HTML 
 ## Project Structure
 - `venv/` - Virtual environment with Python dependencies
 - `lyresong_complete.py` - All-in-one pipeline script (the only Python file needed)
+- `west_iliad_continuation.py` - West-style melody generator (supports Iliad, Odyssey, and Theogony)
+- `text_scanner.py` - Greek metrical scanner (converts Perseus treebank XML to enhanced mora grid)
 - `homer_texts/` - Directory containing HTML source files for all books
+- `data-sources/treebank_data/` - Perseus AGDT treebank XML files (v1.6 for Homer, v2.1 for Hesiod)
 - `output/` - Directory where all generated files are saved
 
 ## Output Files (per book)
@@ -172,6 +175,15 @@ source venv/bin/activate && python3 lyresong_complete.py all
 
 # Run 3 complete passes of all 48 books to test validation consistency
 source venv/bin/activate && python3 lyresong_complete.py all3
+
+# Generate Theogony enhanced file from treebank
+source venv/bin/activate && python3 text_scanner.py
+
+# Process Hesiod's Theogony (all 985 lines)
+source venv/bin/activate && python3 west_iliad_continuation.py --epic theogony
+
+# Process Theogony lines 1-50 only
+source venv/bin/activate && python3 west_iliad_continuation.py --epic theogony --lines 1-50
 
 # Just view the tabulature
 cat lyresong_iliad_book_1.tab | less
