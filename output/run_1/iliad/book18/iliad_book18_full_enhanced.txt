@@ -4310,3 +4310,10 @@ long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	l
 1	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
 1	1	1	1	2	2	2	2	2	2	2	3	4	4	4	4	4	4	4	5	5	5	5	5
 
+Line 617
+τεύ		χε	α	μαρ		μαί		ρον		τα	παρ	Ἡ		φαί		στοι		ο	φέ	ρου		σα		
+1	0	0	0	1	0	0	0	0	0	0	1	1	0	0	0	0	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+1	1	1	1	2	2	2	2	2	2	2	3	4	4	4	4	4	4	4	5	5	5	5	5
+

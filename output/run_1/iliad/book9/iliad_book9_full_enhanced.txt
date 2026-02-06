@@ -4961,3 +4961,31 @@ long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	l
 1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	3	0	0	1	0	0	0	0
 1	1	1	2	3	3	3	3	3	3	3	4	5	5	5	5	6	6	6	7	7	7	7	7
 
+Line 710
+ὣς		ἔ	φαθ	οἳ		δἄ	ρα	πάν		τες	ἐ	πῄ		νη		σαν		βα	σι	λῆ		ες		
+1	0	1	0	1	0	1	0	1	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+2	0	1	0	2	0	1	0	1	0	0	0	1	0	0	0	0	0	0	0	3	0	0	0
+1	1	2	2	3	3	4	4	5	5	5	6	6	6	6	6	6	6	7	7	7	7	7	7
+
+Line 711
+μῦ		θον	ἀ	γα		σσά	με	νοι		Δι	ο	μή		δε	ος	ἱπ		πο	δά	μοι		ο		
+1	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+3	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0
+1	1	1	2	2	2	2	2	2	2	3	3	3	3	3	3	4	4	4	4	4	4	4	4
+
+Line 712
+καὶ		τό	τε	δὴ		σπεί		σαν		τες	ἔ	βαν		κλι	σί	ην		δὲ	ἕ	κα		στος		
+1	0	1	0	1	0	1	0	0	0	0	1	0	0	1	0	0	0	1	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+2	0	1	0	2	0	1	0	0	0	0	1	0	0	0	1	0	0	2	1	0	0	0	0
+1	1	2	2	3	3	4	4	4	4	4	5	5	5	6	6	6	6	7	8	8	8	8	8
+
+Line 713
+ἔν		θα	δὲ	κοι		μή		σαν		το	καὶ	ὕ		πνου		δῶ		ρον	ἕ	λον		το		
+1	0	0	1	1	0	0	0	0	0	0	1	1	0	0	0	1	0	0	1	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long	long	long	short	short	long	long	long	long
+1	0	0	2	0	0	1	0	0	0	0	2	1	0	0	0	3	0	0	1	0	0	0	0
+1	1	1	2	3	3	3	3	3	3	3	4	5	5	5	5	6	6	6	7	7	7	7	7
+

@@ -3925,3 +3925,31 @@ long	long	short	short	long	long	short	short	long	long	short	short	long	long	shor
 0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0	0	3	0	1	0	0	0
 1	1	1	1	1	1	2	3	3	3	3	4	4	4	4	4	5	5	5	5	6	6	6	6
 
+Line 562
+χί		λι	ἄρ	ἐν		πε	δί	ῳ		πυ	ρὰ	καί		ε	το	πὰρ		δὲ	ἑ	κά		στῳ		
+1	0	0	1	1	0	1	0	0	0	1	0	1	0	0	0	1	0	1	1	0	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	2	0	0	0	1	0	0	0	2	1	0	0	0	2	0	2	0	1	0	0	0
+1	1	1	2	3	3	4	4	4	4	5	5	6	6	6	6	7	7	8	9	9	9	9	9
+
+Line 563
+εἴ		α	το	πεν		τή		κον		τα	σέ	λᾳ		πυ	ρὸς	αἰ		θο	μέ	νοι		ο		
+1	0	0	0	1	0	0	0	0	0	0	1	0	0	1	0	1	0	0	0	0	0	0	0
+long	long	short	short	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	2	0	0	0	1	0	0	0	0
+1	1	1	1	2	2	2	2	2	2	2	3	3	3	4	4	5	5	5	5	5	5	5	5
+
+Line 564
+ἵπ		ποι		δὲ		κρῖ		λευ		κὸν	ἐ	ρεπ		τό	με	νοι		καὶ	ὀ	λύ		ρας		
+1	0	0	0	1	0	1	0	1	0	0	1	0	0	0	0	0	0	1	1	0	0	0	0
+long	long	long	long	long	long	long	long	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long
+1	0	0	0	2	0	3	0	0	0	2	0	0	0	1	0	0	0	2	0	1	0	0	0
+1	1	1	1	2	2	3	3	4	4	4	5	5	5	5	5	5	5	6	7	7	7	7	7
+
+Line 565
+ἑ		στα	ό	τες		παρ	ὄ	χε		σφιν	ἐ	ΰ		θρο	νον	Ἠ		ῶ		μίμ		νον		
+1	0	0	0	0	0	1	1	0	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0
+long	long	short	short	long	long	short	short	long	long	short	short	long	long	short	short	long	long	long	long	long	long	long	long
+0	0	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0	0	3	0	1	0	0	0
+1	1	1	1	1	1	2	3	3	3	3	4	4	4	4	4	5	5	5	5	6	6	6	6
+
