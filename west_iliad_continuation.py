@@ -106,7 +106,7 @@ TYPE_MAP = {12: '16th', 18: '16th', 24: 'eighth', 36: 'eighth', 48: 'quarter',
             72: 'quarter', 96: 'half'}
 
 # Duration in half-sixteenths (for internal measure assignment; integer arithmetic)
-HALF_SIXTEENTHS = {'16': 2, '16.': 3, '8': 4, '8.': 6, '4': 8}
+HALF_SIXTEENTHS = {'16': 2, '16.': 3, '8': 4, '8.': 6, '4': 8, '4.': 12, '2': 16}
 
 # LilyPond duration doubling map (7/16 → 7/8)
 LILY_DUR_DOUBLE = {'16': '8', '16.': '8.', '8': '4', '8.': '4.', '4': '2'}
@@ -2129,6 +2129,7 @@ def write_lilypond(
         f'\\bookpart {{\n'
         f'  \\score {{\n'
         f'    \\new Voice {{\n'
+        f'      \\set Staff.midiInstrument = "orchestral harp"\n'
         f'      \\clef "treble_8"\n'
         f'      \\time {time_sig}\n'
         f'{midi_body}\n'
@@ -2509,12 +2510,10 @@ def write_musicxml(
             d = n.get('lily_dur', '')
             if double:
                 d = LILY_DUR_DOUBLE.get(d, d)
-            if d == '8':
+            if d in ('8', '8.'):
                 return 'eighth'
             if d in ('16', '16.'):
                 return 'sixteenth'
-            if double and d in ('8', '8.'):
-                return 'eighth'
             return None
 
         i_b = 0
@@ -3024,7 +3023,8 @@ def main():
                         help='Double note values (7/16 → 7/8) for readability')
     args = parser.parse_args()
 
-    if args.all_hymns:
+    if args.all_hymns or (args.epic == 'homeric_hymns' and args.book is None
+                          and not args.lines):
         # Process all 33 Homeric Hymns
         output_dir = args.output_dir or 'west_phorminx_homeric_hymns'
         print(f"Processing all 33 Homeric Hymns → {output_dir}/")

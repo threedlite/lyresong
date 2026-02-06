@@ -1,0 +1,18 @@
+SoundFont License Attribution
+=============================
+
+Harp.sf2
+--------
+Extracted from FluidR3_GM.sf2 using extract_harp_sf2.py.
+Contains only the Orchestral Harp preset (bank 0, program 46): 1 preset,
+1 instrument, 28 samples (14 stereo pairs), ~1.7 MB.
+
+FluidR3_GM.sf2 (source, not committed — gitignored)
+----------------------------------------------------
+Title:    FluidR3 General MIDI SoundFont (GM)
+Author:   Frank Wen
+License:  Creative Commons Attribution 4.0 International (CC-BY-4.0)
+          https://creativecommons.org/licenses/by/4.0/
+Source:   https://musical-artifacts.com/artifacts/738
+
+Attribution: Audio rendered using samples from FluidR3_GM.sf2 by Frank Wen, licensed under CC-BY-4.0.

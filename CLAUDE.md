@@ -1,5 +1,8 @@
 # Important Environment Notes for Claude
 
+## Git Policy
+**NEVER run any mutating git commands (add, reset, commit, push, checkout, rebase, stash, etc.) without explicit user permission.** Only read-only git commands (status, log, diff, show) may be run freely.
+
 ## Two Pipelines
 
 This project has two independent melody generation pipelines:
