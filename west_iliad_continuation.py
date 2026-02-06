@@ -97,10 +97,19 @@ DURATION_MAP = {
     '8':   24,   # eighth
     '8.':  36,   # dotted eighth
     '4':   48,   # quarter
+    '4.':  72,   # dotted quarter (doubled mode)
+    '2':   96,   # half (doubled mode)
 }
 
 # Note type names for MusicXML
-TYPE_MAP = {12: '16th', 18: '16th', 24: 'eighth', 36: 'eighth', 48: 'quarter'}
+TYPE_MAP = {12: '16th', 18: '16th', 24: 'eighth', 36: 'eighth', 48: 'quarter',
+            72: 'quarter', 96: 'half'}
+
+# Duration in half-sixteenths (for internal measure assignment; integer arithmetic)
+HALF_SIXTEENTHS = {'16': 2, '16.': 3, '8': 4, '8.': 6, '4': 8}
+
+# LilyPond duration doubling map (7/16 → 7/8)
+LILY_DUR_DOUBLE = {'16': '8', '16.': '8.', '8': '4', '8.': '4.', '4': '2'}
 
 # Content-word POS categories (position 0 of AGDT postag)
 CONTENT_POS_CHARS = {'n', 'a', 'p'}  # noun, adjective, pronoun
@@ -287,6 +296,25 @@ CAD2_INTERLUDE = r"e'8. c'8[ b8] | \grace { c'16([ b16] } a8.) c'4 |"
 WEST_INTRO = r"""c'8. a8[ a8] | b8. c'4 | e'8. c'8[ c'8] | b8. c'8[ b8] |
   \grace { c'16( b16 } a8.) c'8[ e'8] | \grace { c'16( b16 } a8.) b4 |
   b8. b8[ c'8] |"""
+
+# === Doubled LilyPond strings (7/16 → 7/8, grace notes unchanged) ===
+
+CAD1_INTERLUDES_DOUBLE = [
+    # Pattern 0: double grace descent (durations doubled: 8.→4., 8→4)
+    r"\grace { c'16( b16 } a4.) \grace { c'16( b16 } a4)[ c'4] |",
+    # Pattern 1: acciaccatura + grace
+    r"\acciaccatura { b8( } a4.) \grace { c'16 b16 } a4[ c'4] |",
+    # Pattern 2: simple acciaccatura
+    r"\acciaccatura { b8( } a4.) c'4[ c'4] |",
+    # Pattern 3: rising variation
+    r"\grace { c'16( b16 } a4.) b4[ c'4] |",
+]
+
+CAD2_INTERLUDE_DOUBLE = r"e'4. c'4[ b4] | \grace { c'16([ b16] } a4.) c'2 |"
+
+WEST_INTRO_DOUBLE = r"""c'4. a4[ a4] | b4. c'2 | e'4. c'4[ c'4] | b4. c'4[ b4] |
+  \grace { c'16( b16 } a4.) c'4[ e'4] | \grace { c'16( b16 } a4.) b2 |
+  b4. b4[ c'4] |"""
 
 # Interlude note data for MusicXML/MIDI generation
 # Each entry: (pitch_letter, octave, duration_sixteenths, is_grace, grace_type)
@@ -501,7 +529,9 @@ class ChamberlainHTML:
 
         for syl in syllables:
             syl_clean = syl['text'].rstrip(".,;·:'᾽'")
-            if clean_text == syl_clean or clean_text in syl_clean or syl_clean in clean_text:
+            if clean_text == syl_clean:
+                return syl['hemi']
+            if len(clean_text) >= 2 and (clean_text in syl_clean or syl_clean in clean_text):
                 return syl['hemi']
 
         # Fallback: not found
@@ -603,6 +633,43 @@ class MoraGrid:
         return syllables
 
 
+# === Word Grouping Helpers ===
+
+def _group_indices_by_word(
+    syllables: List[Dict[str, Any]]
+) -> Dict[int, List[int]]:
+    """Group syllable indices by word number."""
+    groups: Dict[int, List[int]] = {}
+    for i, syl in enumerate(syllables):
+        wn = syl['word_num']
+        if wn not in groups:
+            groups[wn] = []
+        groups[wn].append(i)
+    return groups
+
+
+def _group_texts_by_word(
+    syllables: List[Dict[str, Any]]
+) -> Dict[int, List[str]]:
+    """Group syllable texts by word number."""
+    groups: Dict[int, List[str]] = {}
+    for syl in syllables:
+        wn = syl['word_num']
+        if wn not in groups:
+            groups[wn] = []
+        groups[wn].append(syl['text'])
+    return groups
+
+
+def _parse_line_range(line_str: str) -> Tuple[int, int]:
+    """Parse a line range string like '1-50' or '42' into (start, end) tuple."""
+    if '-' in line_str:
+        start, end = map(int, line_str.split('-'))
+    else:
+        start = end = int(line_str)
+    return (start, end)
+
+
 # === POS Matching ===
 
 def _normalize_word(word: str) -> str:
@@ -613,7 +680,7 @@ def _normalize_word(word: str) -> str:
 
 
 def find_pos_for_word_in_line(
-    target_word: str, tb_line_words: List[Dict[str, str]], word_num: int = None
+    target_word: str, tb_line_words: List[Dict[str, str]], word_num: Optional[int] = None
 ) -> Tuple[Optional[str], Optional[Dict[str, str]]]:
     """Find POS tag for a word using text similarity matching.
 
@@ -818,7 +885,7 @@ class WestMelodyGenerator:
                 print(f"    {e}")
             print(f"    Text:    {greek_text}")
             print(f"    Pitches: {pitch_str}")
-            raise ValueError(
+            raise ValidationError(
                 f"Line {line_num} failed validation: {errors}")
 
         # Step 7: Assign rhythm and build note list
@@ -847,19 +914,19 @@ class WestMelodyGenerator:
         """
         notes = []
         for measure in range(6):
-            # Dotted eighth rest (3 sixteenths)
+            # Dotted eighth rest (3 sixteenths = 6 half-sixteenths)
             notes.append({
-                'pitch': None, 'lily_dur': '8.', 'sixteenths': 3,
+                'pitch': None, 'lily_dur': '8.', 'sixteenths': 6,
                 'is_rest': True, 'measure': measure + 1,
             })
-            # Quarter rest (4 sixteenths)
+            # Quarter rest (4 sixteenths = 8 half-sixteenths)
             notes.append({
-                'pitch': None, 'lily_dur': '4', 'sixteenths': 4,
+                'pitch': None, 'lily_dur': '4', 'sixteenths': 8,
                 'is_rest': True, 'measure': measure + 1,
             })
         # Final sixteenth rest (standard line ending)
         notes.append({
-            'pitch': None, 'lily_dur': '16', 'sixteenths': 1,
+            'pitch': None, 'lily_dur': '16', 'sixteenths': 2,
             'is_rest': True, 'measure': 0,
         })
         return notes
@@ -921,8 +988,16 @@ class WestMelodyGenerator:
                     if reasons is not None:
                         reasons[-2] = "CAD1: penultimate unaccented → a"
 
-    def _elevate_accents(self, syllables, pitches, circ_second, tb_words,
-                         line_num, reasons=None, circ_reasons=None):
+    def _elevate_accents(
+        self,
+        syllables: List[Dict[str, Any]],
+        pitches: List[Optional[str]],
+        circ_second: Dict[int, str],
+        tb_words: List[Dict[str, str]],
+        line_num: int,
+        reasons: Optional[List[Optional[str]]] = None,
+        circ_reasons: Optional[Dict[int, str]] = None
+    ) -> None:
         """Apply accent elevation rules E1-E4 (unified for acutes and circumflexes).
 
         Position gating:
@@ -935,13 +1010,8 @@ class WestMelodyGenerator:
         e_count = 0
         used_tb = set()
 
-        # First pass: collect word texts for POS lookup
-        word_texts = {}
-        for syl in syllables:
-            wn = syl['word_num']
-            if wn not in word_texts:
-                word_texts[wn] = []
-            word_texts[wn].append(syl['text'])
+        # Collect word texts for POS lookup
+        word_texts = _group_texts_by_word(syllables)
 
         for i, syl in enumerate(syllables):
             if syl['accent'] == 0:
@@ -1035,11 +1105,16 @@ class WestMelodyGenerator:
             # Apply circumflex descent (E4)
             if is_circumflex:
                 pitches[i] = base_pitch
-                circ_second[i] = STEP_BELOW[base_pitch]
+                if base_pitch in STEP_BELOW:
+                    circ_second[i] = STEP_BELOW[base_pitch]
+                else:
+                    # Can't descend from 'a'; raise to 'b'
+                    pitches[i] = "b"
+                    circ_second[i] = "a"
                 if reasons is not None:
                     reasons[i] = reason
                 if circ_reasons is not None:
-                    circ_reasons[i] = f"H1/E4: circumflex descent {base_pitch}→{circ_second[i]}"
+                    circ_reasons[i] = f"H1/E4: circumflex descent {pitches[i]}→{circ_second[i]}"
             else:
                 pitches[i] = base_pitch
                 if reasons is not None:
@@ -1062,17 +1137,20 @@ class WestMelodyGenerator:
             return "participle"
         return base
 
-    def _fill_unaccented(self, syllables, pitches, circ_second, tb_words, line_num, reasons=None):
+    def _fill_unaccented(
+        self,
+        syllables: List[Dict[str, Any]],
+        pitches: List[Optional[str]],
+        circ_second: Dict[int, str],
+        tb_words: List[Dict[str, str]],
+        line_num: int,
+        reasons: Optional[List[Optional[str]]] = None
+    ) -> None:
         """Apply unaccented syllable rules U1-U6."""
         n = len(syllables)
 
         # Build word texts for POS lookup
-        word_texts = {}
-        for syl in syllables:
-            wn = syl['word_num']
-            if wn not in word_texts:
-                word_texts[wn] = []
-            word_texts[wn].append(syl['text'])
+        word_texts = _group_texts_by_word(syllables)
 
         for i in range(n):
             if pitches[i] is not None:
@@ -1156,7 +1234,13 @@ class WestMelodyGenerator:
         # U6: Fix any illegal transitions
         self._fix_transitions(pitches, circ_second, reasons)
 
-    def _repair_violations(self, syllables, pitches, circ_second, reasons=None):
+    def _repair_violations(
+        self,
+        syllables: List[Dict[str, Any]],
+        pitches: List[Optional[str]],
+        circ_second: Dict[int, str],
+        reasons: Optional[List[Optional[str]]] = None
+    ) -> None:
         """Post-check repair loop: fix all prosody violations iteratively.
 
         Repairs acute-is-highest, circumflex descent, and transition violations
@@ -1187,12 +1271,7 @@ class WestMelodyGenerator:
                             reasons[i] = (reasons[i] or "") + " [repair: raised a→b for circ]"
 
             # 2. Repair acute-is-highest per word
-            word_groups = {}
-            for i, syl in enumerate(syllables):
-                wn = syl['word_num']
-                if wn not in word_groups:
-                    word_groups[wn] = []
-                word_groups[wn].append(i)
+            word_groups = _group_indices_by_word(syllables)
 
             for wn, indices in word_groups.items():
                 # Find syllables with acute accent (types 1 and 2)
@@ -1300,7 +1379,13 @@ class WestMelodyGenerator:
             if not changed:
                 break
 
-    def _enforce_strict_h2(self, syllables, pitches, circ_second, reasons=None):
+    def _enforce_strict_h2(
+        self,
+        syllables: List[Dict[str, Any]],
+        pitches: List[Optional[str]],
+        circ_second: Dict[int, str],
+        reasons: Optional[List[Optional[str]]] = None
+    ) -> None:
         """Try to make accented syllables strictly highest in their word.
 
         For each word where an acute accent ties with unaccented syllables:
@@ -1312,12 +1397,7 @@ class WestMelodyGenerator:
         n = len(syllables)
 
         # Group syllables by word
-        word_groups = {}
-        for i, syl in enumerate(syllables):
-            wn = syl['word_num']
-            if wn not in word_groups:
-                word_groups[wn] = []
-            word_groups[wn].append(i)
+        word_groups = _group_indices_by_word(syllables)
 
         for wn in sorted(word_groups.keys()):
             indices = word_groups[wn]
@@ -1560,7 +1640,7 @@ class WestMelodyGenerator:
 
         # Final rest
         notes.append({
-            'pitch': None, 'lily_dur': '16', 'sixteenths': 1,
+            'pitch': None, 'lily_dur': '16', 'sixteenths': 2,
             'is_rest': True, 'measure': 0,
         })
 
@@ -1579,7 +1659,7 @@ class WestMelodyGenerator:
         is_melisma: bool = False
     ) -> Dict[str, Any]:
         """Create a note dict."""
-        sixteenths = {'16': 1, '16.': 1.5, '8': 2, '8.': 3, '4': 4}.get(lily_dur, 2)
+        sixteenths = HALF_SIXTEENTHS.get(lily_dur, 4)
         return {
             'pitch': pitch,
             'lily_dur': lily_dur,
@@ -1629,15 +1709,15 @@ class WestMelodyGenerator:
 
         return sorted(promoted)[:deficit]
 
-    def _assign_measures(self, notes):
+    def _assign_measures(self, notes: List[Dict[str, Any]]) -> None:
         """Assign measure numbers based on 7-sixteenth grouping."""
-        total = 0.0
+        total = 0
         measure = 1
         for note in notes:
             note['measure'] = measure
             total += note['sixteenths']
-            if total >= 7.0 - 0.01:  # Float tolerance
-                total -= 7.0
+            if total >= MEASURE_SIXTEENTHS * 2:  # half-sixteenths per measure
+                total -= MEASURE_SIXTEENTHS * 2
                 measure += 1
 
 
@@ -1820,7 +1900,7 @@ def _get_interlude_notes(notes, line_num, mode=None, cad1_index=None):
 
 # === LilyPond Output ===
 
-def _notes_to_lily_measures(notes: List[Dict[str, Any]]) -> List[str]:
+def _notes_to_lily_measures(notes: List[Dict[str, Any]], double: bool = False) -> List[str]:
     """Convert a line's notes to a list of LilyPond measure strings."""
     measures = []
     current_measure = notes[0]['measure'] if notes else 1
@@ -1833,10 +1913,12 @@ def _notes_to_lily_measures(notes: List[Dict[str, Any]]) -> List[str]:
             current_measure = note['measure']
 
         if note.get('is_rest'):
-            measure_notes.append('r16')
+            measure_notes.append('r8' if double else 'r16')
         else:
             pitch = note['pitch']
             dur = note['lily_dur']
+            if double:
+                dur = LILY_DUR_DOUBLE.get(dur, dur)
             s = f"{pitch}{dur}"
             if note.get('slur_start'):
                 s += '\\('
@@ -1856,7 +1938,8 @@ def write_lilypond(
     line_range: Tuple[int, int] = (6, 7),
     with_intro: bool = False,
     interlude_mode: Optional[str] = None,
-    epic: str = 'iliad'
+    epic: str = 'iliad',
+    double: bool = False
 ) -> None:
     """Write LilyPond file for the generated melodies.
 
@@ -1883,6 +1966,12 @@ def write_lilypond(
     # Build bookpart blocks — one bookpart per page, one \score per line
     bookparts = []
 
+    # Select time signature and interlude/intro strings based on double mode
+    time_sig = '7/8' if double else '7/16'
+    intro_str = WEST_INTRO_DOUBLE if double else WEST_INTRO
+    cad1_interludes = CAD1_INTERLUDES_DOUBLE if double else CAD1_INTERLUDES
+    cad2_interlude = CAD2_INTERLUDE_DOUBLE if double else CAD2_INTERLUDE
+
     # Optional: Add intro score before the first bookpart
     intro_score = None
     if with_intro and available_lines and available_lines[0] == 1:
@@ -1891,9 +1980,9 @@ def write_lilypond(
             f'    <<\n'
             f'      \\new Voice = "intro" {{\n'
             f'        \\clef "treble_8"\n'
-            f'        \\time 7/16\n'
+            f'        \\time {time_sig}\n'
             f'  \\mark \\markup {{ "Intro" }}\n'
-            f'  {WEST_INTRO}\n'
+            f'  {intro_str}\n'
             f'      }}\n'
             f'    >>\n'
             f'    \\layout {{\n'
@@ -1917,7 +2006,7 @@ def write_lilypond(
         for line_num in page_lines:
             notes = lines_data[line_num]
             greek_text = _reconstruct_greek_line(notes)
-            measures = _notes_to_lily_measures(notes)
+            measures = _notes_to_lily_measures(notes, double=double)
 
             # Determine cadence type for CAD1 counting
             cadence_type = _get_cadence_type(notes)
@@ -1933,6 +2022,13 @@ def write_lilypond(
             # 7th measure: melodic interlude (West style)
             interlude, is_cad2 = _select_interlude(
                 notes, line_num, mode=interlude_mode, cad1_index=current_cad1_index)
+            if double:
+                # Swap to doubled interlude strings
+                if is_cad2:
+                    interlude = cad2_interlude
+                else:
+                    idx = _select_cad1_pattern(notes, line_num, mode=interlude_mode, cad1_index=current_cad1_index)
+                    interlude = cad1_interludes[idx]
             melody_lines.append(f'    {interlude}')
 
             # Increment CAD1 count after using it
@@ -1950,7 +2046,7 @@ def write_lilypond(
                 f'    <<\n'
                 f'      \\new Voice = "line{line_num}" {{\n'
                 f'        \\clef "treble_8"\n'
-                f'        \\time 7/16\n'
+                f'        \\time {time_sig}\n'
                 f'  \n'
                 f'{melody_body}\n'
                 f'      }}\n'
@@ -1976,11 +2072,21 @@ def write_lilypond(
             scores.insert(0, intro_score)
 
         scores_body = '\n'.join(scores)
+        if epic == 'homeric_hymns':
+            ly_title_author = "the Homeric Hymns"
+            ly_subtitle_work = (
+                f"To {HYMN_DEITIES.get(book, 'Hymn ' + str(book))} (Hymn {book})")
+        elif epic == 'theogony':
+            ly_title_author = "Hesiod"
+            ly_subtitle_work = "Theogony"
+        else:
+            ly_title_author = "Homer"
+            ly_subtitle_work = f"{epic.title()} {book}"
         bookpart = (
             f'\\bookpart {{\n'
             f'  \\header {{\n'
-            f'    title = "The Singing of {"the Homeric Hymns" if epic == "homeric_hymns" else "Hesiod" if epic == "theogony" else "Homer"}"\n'
-            f'    subtitle = "{"To " + HYMN_DEITIES.get(book, "Hymn " + str(book)) + " (Hymn " + str(book) + ")" if epic == "homeric_hymns" else "Theogony" if epic == "theogony" else epic.title() + " " + str(book)}, {page_start}-{page_end}'
+            f'    title = "The Singing of {ly_title_author}"\n'
+            f'    subtitle = "{ly_subtitle_work}, {page_start}-{page_end}'
             f' (continuation in West\'s style)"\n'
             f'    composer = "After M. L. West"\n'
             f"    tagline = \"After M. L. West, 'The Singing of Homer' (JHS 101, 1981); pitch mapping from AGM p. 328\"\n"
@@ -1994,12 +2100,12 @@ def write_lilypond(
     all_midi_lines = []
     # Add intro to MIDI if requested
     if with_intro and available_lines and available_lines[0] == 1:
-        all_midi_lines.append(f'  {WEST_INTRO}')
+        all_midi_lines.append(f'  {intro_str}')
     # Reset CAD1 count for MIDI generation (same sequence as scores)
     midi_cad1_count = 0
     for line_num in available_lines:
         notes = lines_data[line_num]
-        measures = _notes_to_lily_measures(notes)
+        measures = _notes_to_lily_measures(notes, double=double)
         for m in measures:
             all_midi_lines.append(f'    {m} |')
         # Melodic interlude between lines (West style)
@@ -2007,20 +2113,27 @@ def write_lilypond(
         current_cad1_index = midi_cad1_count if cadence_type == 'CAD1' else None
         interlude, is_cad2 = _select_interlude(
             notes, line_num, mode=interlude_mode, cad1_index=current_cad1_index)
+        if double:
+            if is_cad2:
+                interlude = cad2_interlude
+            else:
+                idx = _select_cad1_pattern(notes, line_num, mode=interlude_mode, cad1_index=current_cad1_index)
+                interlude = cad1_interludes[idx]
         all_midi_lines.append(f'    {interlude}')
         if cadence_type == 'CAD1':
             midi_cad1_count += 1
 
+    tempo_unit = '2' if double else '4'
     midi_body = '\n'.join(all_midi_lines)
     midi_bookpart = (
         f'\\bookpart {{\n'
         f'  \\score {{\n'
         f'    \\new Voice {{\n'
         f'      \\clef "treble_8"\n'
-        f'      \\time 7/16\n'
+        f'      \\time {time_sig}\n'
         f'{midi_body}\n'
         f'    }}\n'
-        f'    \\midi {{ \\tempo 4 = 80 }}\n'
+        f'    \\midi {{ \\tempo {tempo_unit} = 80 }}\n'
         f'  }}\n'
         f'}}'
     )
@@ -2061,7 +2174,7 @@ def _build_lyric_tokens(notes):
     tokens = []
     pending_hyphen = False
 
-    for note in notes:
+    for idx, note in enumerate(notes):
         if note.get('is_rest'):
             continue
 
@@ -2083,7 +2196,6 @@ def _build_lyric_tokens(notes):
 
         # Check if next non-melisma note is in the same word
         next_same_word = False
-        idx = notes.index(note)
         for j in range(idx + 1, len(notes)):
             nj = notes[j]
             if nj.get('is_rest') or nj.get('is_melisma'):
@@ -2192,7 +2304,8 @@ def write_musicxml(
     line_range: Tuple[int, int] = (6, 7),
     with_intro: bool = False,
     interlude_mode: Optional[str] = None,
-    epic: str = 'iliad'
+    epic: str = 'iliad',
+    double: bool = False
 ) -> None:
     """Write MusicXML file for the generated melodies.
 
@@ -2255,7 +2368,7 @@ def write_musicxml(
     new_page_measures = set()
     line_num_at_measure = {}
 
-    interlude_measures = {}  # measure_num → (interlude_notes, is_cad2, line_num)
+    interlude_measures = {}  # measure_num → (interlude_notes, is_cad2, line_num, measure_in_pair)
     intro_measures = {}  # measure_num → list of note tuples (for intro)
 
     # Add intro measures if requested
@@ -2286,10 +2399,10 @@ def write_musicxml(
         interlude_notes, is_cad2 = _get_interlude_notes(
             notes, line_num, mode=interlude_mode, cad1_index=current_cad1_index)
         interlude_m = measure_offset + max_m + 1
-        interlude_measures[interlude_m] = (interlude_notes, is_cad2, line_num)
+        interlude_measures[interlude_m] = (interlude_notes, is_cad2, line_num, 1)
         if is_cad2:
             # CAD2 spans 2 measures
-            interlude_measures[interlude_m + 1] = (interlude_notes, is_cad2, line_num)
+            interlude_measures[interlude_m + 1] = (interlude_notes, is_cad2, line_num, 2)
             measure_offset += max_m + 2
         else:
             measure_offset += max_m + 1
@@ -2321,7 +2434,7 @@ def write_musicxml(
             ET.SubElement(attrs, 'divisions').text = str(DIVISIONS)
             time_elem = ET.SubElement(attrs, 'time')
             ET.SubElement(time_elem, 'beats').text = '7'
-            ET.SubElement(time_elem, 'beat-type').text = '16'
+            ET.SubElement(time_elem, 'beat-type').text = '8' if double else '16'
             clef = ET.SubElement(attrs, 'clef')
             ET.SubElement(clef, 'sign').text = 'G'
             ET.SubElement(clef, 'line').text = '2'
@@ -2358,19 +2471,15 @@ def write_musicxml(
             for note_data in intro_measures[m_num]:
                 pitch_letter, octave, dur_sixteenths, is_grace, grace_type = note_data
                 _add_musicxml_note(m_elem, pitch_letter, octave, dur_sixteenths,
-                                   is_grace, grace_type)
+                                   is_grace, grace_type, double=double)
             continue
 
         # Handle interlude measures (melodic interludes in West style)
         if m_num in interlude_measures:
-            interlude_notes, is_cad2, src_line = interlude_measures[m_num]
+            interlude_notes, is_cad2, src_line, measure_in_pair = interlude_measures[m_num]
             # Determine which notes go in this measure
             if is_cad2:
-                # CAD2 spans 2 measures: first 3 notes in m1, rest in m2
-                # Find which measure of the pair this is
-                first_interlude_m = min(k for k, v in interlude_measures.items()
-                                        if v[2] == src_line and v[1])
-                if m_num == first_interlude_m:
+                if measure_in_pair == 1:
                     # First measure: e'8. c'8 b8
                     measure_notes = interlude_notes[:3]
                 else:
@@ -2382,13 +2491,14 @@ def write_musicxml(
             for note_data in measure_notes:
                 pitch_letter, octave, dur_sixteenths, is_grace, grace_type = note_data
                 _add_musicxml_note(m_elem, pitch_letter, octave, dur_sixteenths,
-                                   is_grace, grace_type)
+                                   is_grace, grace_type, double=double)
             continue
 
         # Compute beam groups for this measure.
-        # Beamable: 8th (non-dotted), 16th, dotted-16th.
-        # NOT beamable: dotted-8th, quarter, rests.
-        # Beam groups break when note type changes (16th↔8th).
+        # In normal mode: Beamable: 8th (non-dotted), 16th, dotted-16th.
+        # In double mode: Beamable: 8th (was 16th), dotted-8th (was dotted-16th).
+        # NOT beamable: dotted-8th/quarter (normal) or quarter/half (double), rests.
+        # Beam groups break when note type changes.
         m_notes = measures[m_num]
         beam_map = {}  # note index → 'begin'|'continue'|'end'
 
@@ -2397,10 +2507,14 @@ def write_musicxml(
             if n.get('is_rest'):
                 return None
             d = n.get('lily_dur', '')
+            if double:
+                d = LILY_DUR_DOUBLE.get(d, d)
             if d == '8':
                 return 'eighth'
             if d in ('16', '16.'):
                 return 'sixteenth'
+            if double and d in ('8', '8.'):
+                return 'eighth'
             return None
 
         i_b = 0
@@ -2423,9 +2537,14 @@ def write_musicxml(
         for note_idx, note in enumerate(m_notes):
             note_elem = ET.SubElement(m_elem, 'note')
 
+            # Apply duration doubling for melody notes
+            lily_dur = note['lily_dur']
+            if double:
+                lily_dur = LILY_DUR_DOUBLE.get(lily_dur, lily_dur)
+
             if note.get('is_rest'):
                 ET.SubElement(note_elem, 'rest')
-                dur_val = DURATION_MAP.get(note['lily_dur'], 12)
+                dur_val = DURATION_MAP.get(lily_dur, 12)
                 ET.SubElement(note_elem, 'duration').text = str(dur_val)
                 ET.SubElement(note_elem, 'voice').text = '1'
                 ET.SubElement(note_elem, 'type').text = TYPE_MAP.get(dur_val, '16th')
@@ -2436,12 +2555,12 @@ def write_musicxml(
                 ET.SubElement(pitch_elem, 'step').text = step
                 ET.SubElement(pitch_elem, 'octave').text = str(octave)
 
-                dur_val = DURATION_MAP.get(note['lily_dur'], 24)
+                dur_val = DURATION_MAP.get(lily_dur, 24)
                 ET.SubElement(note_elem, 'duration').text = str(dur_val)
                 ET.SubElement(note_elem, 'voice').text = '1'
                 ET.SubElement(note_elem, 'type').text = TYPE_MAP.get(dur_val, 'eighth')
 
-                if '.' in note['lily_dur']:
+                if '.' in lily_dur:
                     ET.SubElement(note_elem, 'dot')
 
                 # Beam
@@ -2490,7 +2609,7 @@ def write_musicxml(
     print(f"Written MusicXML: {output_path}")
 
 
-def _add_musicxml_note(parent, pitch_letter, octave, dur_sixteenths, is_grace=False, grace_type=None):
+def _add_musicxml_note(parent, pitch_letter, octave, dur_sixteenths, is_grace=False, grace_type=None, double=False):
     """Add a note element to MusicXML parent (measure).
 
     Args:
@@ -2500,6 +2619,7 @@ def _add_musicxml_note(parent, pitch_letter, octave, dur_sixteenths, is_grace=Fa
         dur_sixteenths: Duration in sixteenths (0 for grace notes)
         is_grace: Whether this is a grace note
         grace_type: 'grace' or 'acciaccatura' (only if is_grace)
+        double: If True, double non-grace note durations (7/16 → 7/8)
 
     Returns:
         The created note element.
@@ -2515,22 +2635,32 @@ def _add_musicxml_note(parent, pitch_letter, octave, dur_sixteenths, is_grace=Fa
     ET.SubElement(pitch_elem, 'step').text = pitch_letter
     ET.SubElement(pitch_elem, 'octave').text = str(octave)
 
+    # Double non-grace note durations when in double mode
+    effective_dur = dur_sixteenths
+    if double and not is_grace and dur_sixteenths > 0:
+        effective_dur = dur_sixteenths * 2
+
     if not is_grace:
         # Duration in divisions (12 divisions per sixteenth)
-        ET.SubElement(note_elem, 'duration').text = str(dur_sixteenths * 12)
+        ET.SubElement(note_elem, 'duration').text = str(effective_dur * 12)
 
     ET.SubElement(note_elem, 'voice').text = '1'
 
     # Note type
     if is_grace:
         ET.SubElement(note_elem, 'type').text = '16th'
-    elif dur_sixteenths == 2:
+    elif effective_dur == 2:
         ET.SubElement(note_elem, 'type').text = 'eighth'
-    elif dur_sixteenths == 3:
+    elif effective_dur == 3:
         ET.SubElement(note_elem, 'type').text = 'eighth'
         ET.SubElement(note_elem, 'dot')
-    elif dur_sixteenths == 4:
+    elif effective_dur == 4:
         ET.SubElement(note_elem, 'type').text = 'quarter'
+    elif effective_dur == 6:
+        ET.SubElement(note_elem, 'type').text = 'quarter'
+        ET.SubElement(note_elem, 'dot')
+    elif effective_dur == 8:
+        ET.SubElement(note_elem, 'type').text = 'half'
     else:
         ET.SubElement(note_elem, 'type').text = '16th'
 
@@ -2756,7 +2886,8 @@ def process_book(
     with_intro: bool = False,
     interlude_mode: Optional[str] = None,
     epic: str = 'iliad',
-    treebank_path: Optional[str] = None
+    treebank_path: Optional[str] = None,
+    double: bool = False
 ) -> int:
     """Process a single book. Returns the number of lines generated.
 
@@ -2840,9 +2971,11 @@ def process_book(
     analysis_path = basename + '_analysis.txt'
 
     write_lilypond(lines_data, ly_path, book=book, line_range=(start, end),
-                   with_intro=with_intro, interlude_mode=interlude_mode, epic=epic)
+                   with_intro=with_intro, interlude_mode=interlude_mode, epic=epic,
+                   double=double)
     write_musicxml(lines_data, xml_path, book=book, line_range=(start, end),
-                   with_intro=with_intro, interlude_mode=interlude_mode, epic=epic)
+                   with_intro=with_intro, interlude_mode=interlude_mode, epic=epic,
+                   double=double)
     compile_lilypond(ly_path)
 
     if track_analysis and analyses:
@@ -2887,10 +3020,11 @@ def main():
                              f'"{INTERLUDE_MODE_CYCLE}" (reproduces West\'s 0,0,1,2,3 sequence) or '
                              f'"{INTERLUDE_MODE_MELODIC}" (based on penultimate pitch). '
                              f'Default: {DEFAULT_INTERLUDE_MODE}')
+    parser.add_argument('--double', action='store_true',
+                        help='Double note values (7/16 → 7/8) for readability')
     args = parser.parse_args()
 
-    if args.all_hymns or (args.epic == 'homeric_hymns' and args.book is None
-                          and not args.lines):
+    if args.all_hymns:
         # Process all 33 Homeric Hymns
         output_dir = args.output_dir or 'west_phorminx_homeric_hymns'
         print(f"Processing all 33 Homeric Hymns → {output_dir}/")
@@ -2911,7 +3045,8 @@ def main():
                     with_intro=args.with_intro,
                     interlude_mode=args.interlude_mode,
                     epic='homeric_hymns',
-                    treebank_path=tb_path)
+                    treebank_path=tb_path,
+                    double=args.double)
                 total_hymns += 1
                 total_lines += count
                 print(f"\n  Hymn {hymn_num}: {count} lines generated")
@@ -2948,7 +3083,8 @@ def main():
                     with_intro=args.with_intro,
                     interlude_mode=args.interlude_mode,
                     epic=epic,
-                    treebank_path=tb_path)
+                    treebank_path=tb_path,
+                    double=args.double)
                 total_books += 1
                 total_lines += count
                 print(f"\n  Book {book}: {count} lines generated")
@@ -2970,11 +3106,7 @@ def main():
         output_dir = args.output_dir or 'west_phorminx_theogony'
         line_range = None
         if args.lines:
-            if '-' in args.lines:
-                start, end = map(int, args.lines.split('-'))
-            else:
-                start = end = int(args.lines)
-            line_range = (start, end)
+            line_range = _parse_line_range(args.lines)
         print(f"Generating melodies for Hesiod's Theogony"
               + (f", lines {line_range[0]}-{line_range[1]}" if line_range else
                  " (all lines)"))
@@ -2987,7 +3119,8 @@ def main():
                 with_intro=args.with_intro,
                 interlude_mode=args.interlude_mode,
                 epic='theogony',
-                treebank_path=tb_path)
+                treebank_path=tb_path,
+                double=args.double)
             print(f"\nDone. {count} lines generated.")
             print(f"Output directory: {output_dir}/")
         except WestMelodyError as e:
@@ -3000,11 +3133,7 @@ def main():
         output_dir = args.output_dir or 'west_phorminx_homeric_hymns'
         line_range = None
         if args.lines:
-            if '-' in args.lines:
-                start, end = map(int, args.lines.split('-'))
-            else:
-                start = end = int(args.lines)
-            line_range = (start, end)
+            line_range = _parse_line_range(args.lines)
         hymn_num = args.book or 1
         deity = HYMN_DEITIES.get(hymn_num, f"Hymn {hymn_num}")
         print(f"Generating melodies for Homeric Hymn {hymn_num}: To {deity}"
@@ -3019,7 +3148,8 @@ def main():
                 with_intro=args.with_intro,
                 interlude_mode=args.interlude_mode,
                 epic='homeric_hymns',
-                treebank_path=tb_path)
+                treebank_path=tb_path,
+                double=args.double)
             print(f"\nDone. {count} lines generated.")
             print(f"Output directory: {output_dir}/")
         except WestMelodyError as e:
@@ -3030,11 +3160,7 @@ def main():
     # Single book mode
     line_range = None
     if args.lines:
-        if '-' in args.lines:
-            start, end = map(int, args.lines.split('-'))
-        else:
-            start = end = int(args.lines)
-        line_range = (start, end)
+        line_range = _parse_line_range(args.lines)
 
     if args.enhanced:
         print(f"Enhanced file: {args.enhanced}")
@@ -3051,7 +3177,8 @@ def main():
             with_intro=args.with_intro,
             interlude_mode=args.interlude_mode,
             epic=args.epic,
-            treebank_path=tb_path)
+            treebank_path=tb_path,
+            double=args.double)
         print(f"\nDone. {count} lines generated.")
     except WestMelodyError as e:
         print(f"\nFAILED: {e}")
