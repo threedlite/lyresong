@@ -265,6 +265,8 @@ The script now supports processing all 48 books of Homer's epics with full HTML 
 - `venv/` - Virtual environment with Python dependencies
 - `west_iliad_continuation.py` - West-style melody generator (Iliad, Odyssey, Theogony, Homeric Hymns)
 - `text_scanner.py` - Greek metrical scanner (treebank/TEI XML → enhanced mora grid)
+- `render_audio.py` - MIDI humanization and WAV rendering (FluidSynth/TiMidity)
+- `merge_perline.py` - Merge spoken recitation with per-line harp melody from .ly files
 - `lyresong_complete.py` - Legacy pipeline (HTML → 4/4 melody with harmony)
 - `homer_texts/` - HTML source files for legacy pipeline
 - `data-sources/treebank_data/` - Perseus AGDT treebank XML (v1.6 Homer, v2.1 Hesiod)

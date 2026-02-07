@@ -236,6 +236,10 @@ def render_wav(midi_path, wav_path, soundfont=None, reverb=True):
         if result.returncode != 0:
             print(f'FluidSynth error: {result.stderr}', file=sys.stderr)
             sys.exit(1)
+        # FluidSynth returns 0 even when it rejects a soundfont — check stderr
+        if 'error' in result.stderr.lower():
+            print(f'FluidSynth error: {result.stderr}', file=sys.stderr)
+            sys.exit(1)
         return wav_path
 
     if timidity:

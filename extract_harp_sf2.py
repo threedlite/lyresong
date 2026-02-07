@@ -437,8 +437,10 @@ def extract_preset(input_path, output_path, bank=TARGET_BANK, program=TARGET_PRO
     info_body += make_chunk('ifil', struct.pack('<HH', 2, 1))
     # isng
     info_body += make_chunk('isng', b'EMU8000\x00')
-    # INAM
-    inam = f'Harp (extracted from FluidR3_GM)\x00'.encode('ascii')
+    # INAM — pad to even length (FluidSynth rejects odd-sized INFO sub-chunks)
+    inam = b'Harp (extracted from FluidR3_GM)\x00'
+    if len(inam) % 2:
+        inam += b'\x00'
     info_body += make_chunk('INAM', inam)
 
     # Build sdta list (sample data)
