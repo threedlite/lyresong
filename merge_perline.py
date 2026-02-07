@@ -5,22 +5,28 @@ Each line's harp is generated from its own LilyPond file, compiled to MIDI,
 rendered at a tempo matched to that line's speech duration, peak-normalized,
 and mixed with the voice. Lines are joined with silence gaps.
 
+Two modes:
+  - Uniform tempo (default): each line's harp runs at a single BPM
+  - Contour (--contour): per-note timing from voice onset detection
+
 Usage:
-    python3 merge_perline.py \
-      --ly west_iliad_book01_lines1-5.ly \
-      --voice-dir west_phorminx_iliad \
-      --voice-pattern 'iliad_book01_line_{}.mp4' \
-      --lines 5 \
+    # Uniform tempo mode:
+    python3 merge_perline.py \\
+      --ly west_phorminx_iliad/west_iliad_book01.ly \\
+      --voice-dir audio/Homer/Iliad/book_1 \\
+      --voice-pattern 'line_{}.mp4' \\
+      --lines 5 \\
       -o merged.wav
 
-    # Adjust relative levels:
-    python3 merge_perline.py \
-      --ly west_iliad_book01_lines1-5.ly \
-      --voice-dir west_phorminx_iliad \
-      --voice-pattern 'iliad_book01_line_{}.mp4' \
-      --lines 5 \
-      --harp-level 1.0 --voice-level 1.0 \
-      -o merged.wav
+    # Contour mode (voice-guided timing):
+    python3 merge_perline.py \\
+      --ly west_phorminx_iliad/west_iliad_book01.ly \\
+      --voice-dir audio/Homer/Iliad/book_1 \\
+      --voice-pattern 'line_{}.mp4' \\
+      --lines 5 \\
+      --contour \\
+      --enhanced output/run_1/iliad/book1/iliad_book1_full_enhanced.txt \\
+      -o merged_contour.wav
 """
 
 import argparse
@@ -239,6 +245,97 @@ def render_line_harp(melody, time_sig, speech_dur, soundfont, tmpdir, line_id):
     return audio_f, bpm
 
 
+def render_line_harp_contour(melody_ly, note_onsets, soundfont, tmpdir, line_id):
+    """Render harp with per-note timing from contour alignment.
+
+    1. Parse pitches from LilyPond string
+    2. Validate: len(pitches) == len(note_onsets)
+    3. Build MIDI with per-note deltas (reference tempo=120 BPM for tick conversion)
+    4. humanize_midi → render_wav → load, trim, normalize
+
+    Returns (float64 array in [-1, 1], metadata_dict) or None on error.
+    """
+    from contour import parse_melody_pitches
+
+    pitches = parse_melody_pitches(melody_ly)
+    if len(pitches) != len(note_onsets):
+        print(f'  Warning: pitch count ({len(pitches)}) != onset count '
+              f'({len(note_onsets)}) for line {line_id}', file=sys.stderr)
+        return None
+
+    # Build MIDI with per-note timing
+    REFERENCE_BPM = 120
+    TICKS_PER_BEAT = 480
+
+    def sec_to_ticks(sec):
+        return max(0, int(sec * TICKS_PER_BEAT * REFERENCE_BPM / 60))
+
+    mid = mido.MidiFile(ticks_per_beat=TICKS_PER_BEAT)
+
+    # Track 0: control track (required for humanize_midi)
+    ctrl = mido.MidiTrack()
+    ctrl.append(mido.MetaMessage('set_tempo',
+                                  tempo=mido.bpm2tempo(REFERENCE_BPM), time=0))
+    ctrl.append(mido.MetaMessage('end_of_track', time=0))
+    mid.tracks.append(ctrl)
+
+    # Track 1: note data
+    track = mido.MidiTrack()
+    track.append(mido.Message('program_change', program=46, time=0))  # harp
+
+    prev_end = 0.0
+    for i, (pitch, onset) in enumerate(zip(pitches, note_onsets)):
+        # Duration = gap to next onset (last note: 300ms)
+        if i < len(note_onsets) - 1:
+            dur = note_onsets[i + 1] - onset
+        else:
+            dur = 0.3
+        dur = max(dur, 0.02)  # minimum 20ms note
+
+        gap_before = max(0, onset - prev_end)
+        # note_on with velocity > 0
+        track.append(mido.Message('note_on', note=pitch, velocity=80,
+                                   time=sec_to_ticks(gap_before)))
+        # note_on with velocity=0 as note-off (LilyPond convention)
+        track.append(mido.Message('note_on', note=pitch, velocity=0,
+                                   time=sec_to_ticks(dur)))
+        prev_end = onset + dur
+
+    track.append(mido.MetaMessage('end_of_track', time=0))
+    mid.tracks.append(track)
+
+    # Save, humanize, render
+    linedir = os.path.join(tmpdir, f'contour_line_{line_id}')
+    os.makedirs(linedir)
+
+    raw_path = os.path.join(linedir, 'raw.midi')
+    mid.save(raw_path)
+
+    hum_path = os.path.join(linedir, 'hum.midi')
+    humanize_midi(raw_path, hum_path)
+
+    wav_path = os.path.join(linedir, 'line.wav')
+    render_wav(hum_path, wav_path, soundfont=soundfont, reverb=False)
+
+    # Load, trim, peak-normalize
+    audio = load_wav(wav_path)
+    last_onset = note_onsets[-1]
+    trim_frames = int((last_onset + 0.6) * SAMPLE_RATE)
+    audio = audio[:trim_frames]
+
+    audio_f = audio.astype(np.float64)
+    peak = np.abs(audio_f).max()
+    if peak > 0:
+        audio_f = audio_f / peak
+
+    meta = {
+        'n_notes': len(pitches),
+        'first_onset': note_onsets[0],
+        'last_onset': note_onsets[-1],
+    }
+    return audio_f, meta
+
+
 def main():
     parser = argparse.ArgumentParser(
         description='Merge voice + harp with per-line tempo alignment')
@@ -260,9 +357,17 @@ def main():
                         help='Silence gap between lines in seconds (default: 0.5)')
     parser.add_argument('--soundfont', '-sf', default='soundfonts/Harp.sf2',
                         help='Soundfont for harp rendering (default: soundfonts/Harp.sf2)')
+    parser.add_argument('--contour', action='store_true',
+                        help='Use per-note timing via voice onset detection')
+    parser.add_argument('--enhanced',
+                        help='Enhanced text file for contour alignment')
     parser.add_argument('-o', '--output', default=None,
                         help='Output WAV path (default: derived from .ly filename)')
     args = parser.parse_args()
+
+    if args.contour and not args.enhanced:
+        print('Error: --contour requires --enhanced', file=sys.stderr)
+        sys.exit(1)
 
     # Derive output name from .ly if not specified
     if args.output is None:
@@ -310,22 +415,91 @@ def main():
         print(f'  Line {i}: {pcm.shape[0]/SAMPLE_RATE:.3f}s (speech end: {dur:.3f}s)')
 
     # Step 3: Render each line's harp
-    print('\nRendering per-line harp...')
     tmpdir = tempfile.mkdtemp(prefix='merge_perline_')
     harp_wavs = []
 
-    try:
-        for idx, (line_num, melody) in enumerate(melodies):
-            result = render_line_harp(
-                melody, time_sig, speech_durs[idx], sf_path, tmpdir, line_num)
-            if result is None:
-                print(f'Error rendering line {line_num}', file=sys.stderr)
-                sys.exit(1)
-            audio, bpm = result
-            harp_wavs.append(audio)
-            print(f'  Line {line_num}: {bpm:.0f} BPM, {audio.shape[0]/SAMPLE_RATE:.3f}s')
-    finally:
-        shutil.rmtree(tmpdir, ignore_errors=True)
+    if args.contour:
+        from west_iliad_continuation import MoraGrid
+        from contour import align_line
+
+        print(f'\nContour mode: loading enhanced file {args.enhanced}...')
+        mora_grid = MoraGrid(args.enhanced)
+
+        print('Rendering per-line harp (contour)...')
+        contour_ok = 0
+        contour_fallback = 0
+        fallback_lines = []
+
+        try:
+            for idx, (line_num, melody) in enumerate(melodies):
+                voice_file = args.voice_pattern.format(start + idx)
+                voice_path = os.path.join(args.voice_dir, voice_file)
+
+                # Try contour alignment
+                fallback_reason = None
+                syllable_data = mora_grid.get_syllable_data(line_num)
+                if syllable_data is None:
+                    fallback_reason = 'no syllable data'
+                else:
+                    note_onsets, diag = align_line(voice_path, syllable_data)
+                    if note_onsets is None:
+                        fallback_reason = diag.get('error', 'alignment failed')
+                    else:
+                        result = render_line_harp_contour(
+                            melody, note_onsets, sf_path, tmpdir, line_num)
+                        if result is None:
+                            fallback_reason = 'contour render failed'
+
+                if fallback_reason:
+                    contour_fallback += 1
+                    fallback_lines.append((line_num, fallback_reason))
+                    print(f'  Line {line_num}: FALLBACK ({fallback_reason})')
+                    result = render_line_harp(
+                        melody, time_sig, speech_durs[idx],
+                        sf_path, tmpdir, line_num)
+                    if result is None:
+                        print(f'Error rendering line {line_num}',
+                              file=sys.stderr)
+                        sys.exit(1)
+                    audio, bpm = result
+                    harp_wavs.append(audio)
+                else:
+                    contour_ok += 1
+                    audio, meta = result
+                    harp_wavs.append(audio)
+                    gap_info = ''
+                    if 'gap_ratio' in diag:
+                        gap_info = f', gap={diag["gap_ratio"]:.1f}x'
+                    print(f'  Line {line_num}: {meta["n_notes"]} notes '
+                          f'(contour){gap_info}, '
+                          f'{audio.shape[0]/SAMPLE_RATE:.3f}s')
+        finally:
+            shutil.rmtree(tmpdir, ignore_errors=True)
+
+        # Contour alignment summary
+        total = contour_ok + contour_fallback
+        print(f'\nContour alignment: {contour_ok}/{total} lines '
+              f'({100*contour_ok/max(total,1):.1f}%), '
+              f'{contour_fallback} fallback')
+        if fallback_lines:
+            for ln, reason in fallback_lines:
+                print(f'  Line {ln}: {reason}')
+    else:
+        print('\nRendering per-line harp (uniform tempo)...')
+        try:
+            for idx, (line_num, melody) in enumerate(melodies):
+                result = render_line_harp(
+                    melody, time_sig, speech_durs[idx],
+                    sf_path, tmpdir, line_num)
+                if result is None:
+                    print(f'Error rendering line {line_num}', file=sys.stderr)
+                    sys.exit(1)
+                audio, bpm = result
+                harp_wavs.append(audio)
+                print(f'  Line {line_num}: {bpm:.0f} BPM, '
+                      f'{audio.shape[0]/SAMPLE_RATE:.3f}s')
+        finally:
+            shutil.rmtree(tmpdir, ignore_errors=True)
 
     # Step 4: Mix each line and join
     print(f'\nMixing (harp={args.harp_level}, voice={args.voice_level})...')

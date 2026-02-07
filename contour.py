@@ -1,0 +1,316 @@
+#!/usr/bin/env python3
+"""Three-layer mapping: voice-guided harp timing.
+
+Detects syllable onsets in spoken voice recordings and maps them through
+the mora grid to per-note onset times for harp melody rendering.
+
+Layer 0: Adaptive onset detection in voice audio
+Layer 2: Syllable onsets → 24 mora timestamps (via enhanced file long/short grid)
+Layer 3: Mora timestamps → per-note onset times (via circumflex splits)
+
+Usage:
+    from contour import align_line
+    from west_iliad_continuation import MoraGrid
+
+    grid = MoraGrid('iliad_book1_full_enhanced.txt')
+    syllable_data = grid.get_syllable_data(5)
+    note_onsets, diag = align_line('audio/line_5.mp4', syllable_data)
+"""
+
+import re
+import subprocess
+import sys
+
+import numpy as np
+
+SR = 22050  # analysis sample rate (librosa default)
+SILENCE_THRESH = 0.03  # same as merge_perline.py
+
+# Adaptive onset detection parameter grid
+DELTAS = [0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.10,
+          0.11, 0.12, 0.13, 0.14, 0.15, 0.18, 0.20, 0.25, 0.30]
+WAITS = [30, 50, 80, 100, 120, 140, 160, 180, 200, 220, 250]
+
+# West pitches: LilyPond name → MIDI note number
+LILY_TO_MIDI = {"a": 57, "b": 59, "c'": 60, "e'": 64}
+
+
+def load_voice_mono(mp4_path, sr=SR):
+    """Load MP4 as mono float32, trimmed of trailing silence.
+
+    Returns (audio_array, speech_end_seconds).
+    Uses ffmpeg + SILENCE_THRESH (same logic as merge_perline.py's load_voice).
+    """
+    cmd = ['ffmpeg', '-v', 'quiet', '-i', mp4_path,
+           '-f', 'f32le', '-acodec', 'pcm_f32le',
+           '-ar', str(sr), '-ac', '1', 'pipe:1']
+    result = subprocess.run(cmd, capture_output=True)
+    if result.returncode != 0:
+        raise RuntimeError(f'ffmpeg error loading {mp4_path}')
+    y = np.frombuffer(result.stdout, dtype=np.float32)
+
+    if len(y) == 0:
+        return y, 0.0
+
+    # Trim trailing silence (same logic as merge_perline.py)
+    peak = np.max(np.abs(y))
+    if peak > 0:
+        threshold = peak * SILENCE_THRESH
+        above = np.where(np.abs(y) > threshold)[0]
+        if len(above) > 0:
+            # Add 50ms buffer after last above-threshold sample
+            end_sample = min(len(y), above[-1] + int(0.05 * sr))
+            speech_end = end_sample / sr
+            y = y[:end_sample]
+            return y, speech_end
+
+    speech_end = len(y) / sr
+    return y, speech_end
+
+
+def detect_syllable_onsets(y, expected_count, sr=SR):
+    """Layer 0: Adaptive onset detection.
+
+    Sweeps DELTAS x WAITS grid, filters to combos matching expected_count,
+    selects by lowest IOI CV (after removing largest gap).
+
+    Returns (onset_times_array, diagnostics_dict).
+    If no combo matches exactly, falls back to closest count.
+    """
+    import librosa
+
+    matches = []
+    all_counts = {}
+
+    for delta in DELTAS:
+        for wait_ms in WAITS:
+            wait_frames = max(1, int(wait_ms / 1000 * sr / 512))
+            onset_env = librosa.onset.onset_strength(y=y, sr=sr)
+            onsets = librosa.onset.onset_detect(
+                y=y, sr=sr, onset_envelope=onset_env,
+                delta=delta, wait=wait_frames, units='time')
+            count = len(onsets)
+            all_counts[(delta, wait_ms)] = count
+            if count == expected_count:
+                matches.append((delta, wait_ms, onsets))
+
+    diag = {
+        'expected': expected_count,
+        'n_combos_total': len(DELTAS) * len(WAITS),
+        'n_matches': len(matches),
+        'exact_match': len(matches) > 0,
+    }
+
+    if matches:
+        # Select combo with most uniform IOIs (lowest CV after removing largest gap)
+        best = None
+        best_cv = float('inf')
+        for delta, wait_ms, onsets in matches:
+            if len(onsets) < 3:
+                cv = 0.0
+            else:
+                gaps = np.diff(onsets)
+                gaps_no_max = np.sort(gaps)[:-1]
+                mean = np.mean(gaps_no_max)
+                cv = np.std(gaps_no_max) / mean if mean > 0 else float('inf')
+            if cv < best_cv:
+                best_cv = cv
+                best = (delta, wait_ms, onsets)
+
+        diag['selected_delta'] = best[0]
+        diag['selected_wait'] = best[1]
+        diag['cv'] = best_cv
+        diag['found_count'] = len(best[2])
+        return best[2], diag
+
+    # Fallback: find closest count
+    best_diff = float('inf')
+    best_params = None
+    for (delta, wait_ms), count in all_counts.items():
+        diff = abs(count - expected_count)
+        if diff < best_diff:
+            best_diff = diff
+            # Re-detect to get actual onset times
+            wait_frames = max(1, int(wait_ms / 1000 * sr / 512))
+            onset_env = librosa.onset.onset_strength(y=y, sr=sr)
+            onsets = librosa.onset.onset_detect(
+                y=y, sr=sr, onset_envelope=onset_env,
+                delta=delta, wait=wait_frames, units='time')
+            best_params = (delta, wait_ms, onsets)
+
+    diag['selected_delta'] = best_params[0]
+    diag['selected_wait'] = best_params[1]
+    diag['cv'] = None
+    diag['found_count'] = len(best_params[2])
+    diag['fallback'] = True
+    diag['count_diff'] = len(best_params[2]) - expected_count
+    return best_params[2], diag
+
+
+def syllable_onsets_to_mora_times(syllable_onsets, syllable_data, speech_end):
+    """Layer 2: Map N syllable onsets → 24 mora timestamps.
+
+    syllable_data: list of dicts from MoraGrid.get_syllable_data()
+
+    For each syllable:
+      - Short (1 mora): mora_time = syllable_onset
+      - Long (2 morae): mora_1 = syllable_onset
+                         mora_2 = syllable_onset + gap_to_next/2
+        (last syllable uses speech_end instead of next onset)
+
+    Returns list of 24 floats.
+    """
+    n_syl = len(syllable_data)
+    n_onsets = len(syllable_onsets)
+
+    if n_onsets != n_syl:
+        raise ValueError(
+            f'Syllable count mismatch: {n_onsets} onsets vs {n_syl} syllables')
+
+    mora_times = [None] * 24
+
+    for i, syl in enumerate(syllable_data):
+        onset = syllable_onsets[i]
+        mora_start = syl['mora_start']
+
+        if syl['duration'] == 'short':
+            # Short syllable: 1 mora
+            mora_times[mora_start] = onset
+        else:
+            # Long syllable: 2 morae
+            mora_times[mora_start] = onset
+            # Split point: midpoint of gap to next syllable
+            if i < n_syl - 1:
+                next_onset = syllable_onsets[i + 1]
+            else:
+                next_onset = speech_end
+            gap = next_onset - onset
+            # Clamp minimum gap to 30ms
+            split = onset + max(gap / 2, 0.015)
+            mora_times[mora_start + 1] = split
+
+    # Validate: all 24 timestamps should be filled
+    for j in range(24):
+        if mora_times[j] is None:
+            raise ValueError(f'Mora {j} has no timestamp assigned')
+
+    # Ensure monotonically increasing (clamp small inversions)
+    for j in range(1, 24):
+        if mora_times[j] <= mora_times[j - 1]:
+            mora_times[j] = mora_times[j - 1] + 0.001
+
+    return mora_times
+
+
+def mora_times_to_note_onsets(mora_times, syllable_data):
+    """Layer 3: Map 24 mora timestamps → per-note onset times.
+
+    For each syllable:
+      - Short or non-circumflex long → 1 note at mora_times[mora_start]
+      - Circumflex (accent=3) → 2 notes:
+          note_1 at mora_times[mora_start]
+          note_2 at mora_times[mora_start + 1]
+
+    Returns list of N_notes floats (N_syllables + N_circumflexes).
+    """
+    note_onsets = []
+    for syl in syllable_data:
+        mora_start = syl['mora_start']
+        note_onsets.append(mora_times[mora_start])
+
+        if syl['accent'] == 3 and syl['duration'] == 'long':
+            # Circumflex: add second note at second mora
+            note_onsets.append(mora_times[mora_start + 1])
+
+    return note_onsets
+
+
+def parse_melody_pitches(melody_ly):
+    """Parse LilyPond melody string → list of MIDI pitch numbers.
+
+    Regex captures pitch (a, b, c', e') and duration. Skips rests (r...).
+    Also skips grace notes (inside \\grace { ... }).
+
+    Returns list of ints.
+    """
+    # Remove grace note sections first
+    cleaned = re.sub(r'\\grace\s*\{[^}]*\}', '', melody_ly)
+
+    # Remove slur marks, ties, articulations
+    cleaned = cleaned.replace('\\(', '').replace('\\)', '')
+    cleaned = cleaned.replace('(', '').replace(')', '')
+
+    # Match note tokens: pitch + duration
+    # Use [a-g] but exclude 'r' which is a rest in LilyPond
+    pitches = []
+    for m in re.finditer(r"([a-gr]'?)(\d+\.?)", cleaned):
+        pitch_str = m.group(1)
+        if pitch_str.startswith('r'):
+            continue  # skip rests
+        midi = LILY_TO_MIDI.get(pitch_str)
+        if midi is not None:
+            pitches.append(midi)
+
+    return pitches
+
+
+def align_line(voice_path, syllable_data):
+    """Full pipeline for one line.
+
+    1. load_voice_mono → trim
+    2. detect_syllable_onsets(y, len(syllable_data))
+    3. syllable_onsets_to_mora_times
+    4. mora_times_to_note_onsets
+
+    Returns (note_onsets, diagnostics_dict).
+    Returns (None, diagnostics_dict) on failure.
+    """
+    diag = {'voice_path': voice_path, 'n_syllables': len(syllable_data)}
+
+    try:
+        y, speech_end = load_voice_mono(voice_path)
+        diag['speech_end'] = speech_end
+        diag['audio_samples'] = len(y)
+    except RuntimeError as e:
+        diag['error'] = str(e)
+        return None, diag
+
+    if len(y) == 0:
+        diag['error'] = 'Empty audio'
+        return None, diag
+
+    # Layer 0: onset detection
+    syllable_onsets, onset_diag = detect_syllable_onsets(
+        y, len(syllable_data))
+    diag.update(onset_diag)
+
+    # Check if count matches
+    if len(syllable_onsets) != len(syllable_data):
+        diag['error'] = (
+            f'Onset count mismatch: {len(syllable_onsets)} detected '
+            f'vs {len(syllable_data)} expected')
+        return None, diag
+
+    # Layer 2: syllable → mora
+    try:
+        mora_times = syllable_onsets_to_mora_times(
+            syllable_onsets, syllable_data, speech_end)
+        diag['mora_times'] = mora_times
+    except ValueError as e:
+        diag['error'] = str(e)
+        return None, diag
+
+    # Layer 3: mora → note
+    note_onsets = mora_times_to_note_onsets(mora_times, syllable_data)
+    diag['n_notes'] = len(note_onsets)
+
+    # Compute IOI stats
+    if len(syllable_onsets) >= 2:
+        gaps = np.diff(syllable_onsets)
+        diag['max_gap'] = float(np.max(gaps))
+        diag['max_gap_idx'] = int(np.argmax(gaps))
+        diag['median_gap'] = float(np.median(gaps))
+        diag['gap_ratio'] = float(diag['max_gap'] / diag['median_gap']) \
+            if diag['median_gap'] > 0 else 0.0
+
+    return note_onsets, diag
