@@ -351,6 +351,44 @@ def align_line(voice_path, syllable_data, speech_end=None):
             f'vs {len(syllable_data)} expected')
         return None, diag
 
+    # Post-caesura correction: if the onset right after the largest gap
+    # (caesura) falls in silence, shift it to where voice energy actually
+    # starts.  This prevents the harp from playing before the voice resumes.
+    if len(syllable_onsets) >= 4:
+        import librosa
+        gaps = np.diff(syllable_onsets)
+        caesura_idx = int(np.argmax(gaps))  # index of syllable BEFORE gap
+        post_idx = caesura_idx + 1          # syllable AFTER gap
+
+        # RMS energy (fine-grained)
+        rms_hop = 128
+        rms = librosa.feature.rms(y=y, frame_length=512, hop_length=rms_hop)[0]
+        rms_times = librosa.times_like(rms, sr=SR, hop_length=rms_hop)
+
+        onset_t = syllable_onsets[post_idx]
+        # Find RMS at the detected onset
+        rms_at_onset = rms[np.argmin(np.abs(rms_times - onset_t))]
+        # Median RMS across the whole line (excluding silence)
+        rms_median = np.median(rms[rms > np.max(rms) * 0.02])
+
+        if rms_at_onset < rms_median * 0.1:
+            # Onset is in silence — find where voice energy rises
+            threshold = rms_median * 0.15
+            mask = rms_times > onset_t
+            above = np.where(mask & (rms > threshold))[0]
+            if len(above) > 0:
+                voice_start = rms_times[above[0]]
+                # Don't shift past the next onset minus 30ms
+                if post_idx < len(syllable_onsets) - 1:
+                    limit = syllable_onsets[post_idx + 1] - 0.03
+                else:
+                    limit = speech_end - 0.03
+                new_onset = min(voice_start, limit)
+                if new_onset > onset_t:
+                    shift_ms = (new_onset - onset_t) * 1000
+                    syllable_onsets[post_idx] = new_onset
+                    diag['caesura_onset_shift'] = shift_ms
+
     # Redistribute any onsets past speech_end to fit before it.
     # Can happen when contour's audio trim is more generous than caller's.
     # Find the first onset past speech_end and spread it + all following
