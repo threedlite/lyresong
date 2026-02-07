@@ -83,13 +83,15 @@ def detect_syllable_onsets(y, expected_count, sr=SR, syllable_data=None):
     """
     import librosa
 
+    onset_env = librosa.onset.onset_strength(y=y, sr=sr)
+    env_times = librosa.times_like(onset_env, sr=sr)
+
     matches = []
     all_counts = {}
 
     for delta in DELTAS:
         for wait_ms in WAITS:
             wait_frames = max(1, int(wait_ms / 1000 * sr / 512))
-            onset_env = librosa.onset.onset_strength(y=y, sr=sr)
             onsets = librosa.onset.onset_detect(
                 y=y, sr=sr, onset_envelope=onset_env,
                 delta=delta, wait=wait_frames, units='time')
@@ -106,7 +108,13 @@ def detect_syllable_onsets(y, expected_count, sr=SR, syllable_data=None):
     }
 
     if matches:
-        # Score each combo by CV
+        def _onset_strength_sum(onsets):
+            """Sum of onset envelope values at each detected onset."""
+            return sum(
+                onset_env[np.argmin(np.abs(env_times - t))]
+                for t in onsets)
+
+        # Score each combo by CV and onset strength
         scored = []
         for delta, wait_ms, onsets in matches:
             if len(onsets) < 3:
@@ -116,7 +124,8 @@ def detect_syllable_onsets(y, expected_count, sr=SR, syllable_data=None):
                 gaps_no_max = np.sort(gaps)[:-1]
                 mean = np.mean(gaps_no_max)
                 cv = np.std(gaps_no_max) / mean if mean > 0 else float('inf')
-            scored.append((delta, wait_ms, onsets, cv))
+            strength = _onset_strength_sum(onsets)
+            scored.append((delta, wait_ms, onsets, cv, strength))
 
         # Word-boundary-aware selection: prefer combos whose largest
         # gap falls at a word boundary (between words, not within a word)
@@ -124,25 +133,27 @@ def detect_syllable_onsets(y, expected_count, sr=SR, syllable_data=None):
         best_cv = float('inf')
         if syllable_data is not None and len(syllable_data) > 2:
             wb_combos = []
-            for delta, wait_ms, onsets, cv in scored:
+            for delta, wait_ms, onsets, cv, strength in scored:
                 gaps = np.diff(onsets)
                 max_idx = int(np.argmax(gaps))
                 # Check if syllable after the gap starts a new word
                 if (max_idx + 1 < len(syllable_data) and
                         syllable_data[max_idx + 1].get('word_start', False)):
-                    wb_combos.append((delta, wait_ms, onsets, cv))
+                    wb_combos.append((delta, wait_ms, onsets, cv, strength))
             if wb_combos:
-                # Among word-boundary combos, pick lowest CV
-                wb_combos.sort(key=lambda x: x[3])
+                # Among word-boundary combos, pick highest onset strength
+                wb_combos.sort(key=lambda x: -x[4])
                 best = (wb_combos[0][0], wb_combos[0][1], wb_combos[0][2])
                 best_cv = wb_combos[0][3]
                 diag['word_boundary_selection'] = True
+                diag['onset_strength'] = wb_combos[0][4]
 
         if best is None:
-            # Fallback: lowest CV overall
-            scored.sort(key=lambda x: x[3])
+            # Fallback: highest onset strength overall
+            scored.sort(key=lambda x: -x[4])
             best = (scored[0][0], scored[0][1], scored[0][2])
             best_cv = scored[0][3]
+            diag['onset_strength'] = scored[0][4]
 
         diag['selected_delta'] = best[0]
         diag['selected_wait'] = best[1]
