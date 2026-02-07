@@ -351,53 +351,92 @@ def align_line(voice_path, syllable_data, speech_end=None):
             f'vs {len(syllable_data)} expected')
         return None, diag
 
-    # Post-caesura correction: if the onset right after the largest gap
-    # (caesura) falls in silence, shift it to where voice energy actually
-    # starts.  This prevents the harp from playing before the voice resumes.
+    # Silence-onset correction: check each detected onset against voice
+    # energy.  If an onset falls in silence (e.g., inside a caesura gap),
+    # re-detect the actual voice attack using spectral onset analysis on
+    # the post-silence segment.  This prevents the harp from playing
+    # before the voice resumes after any pause.
     if len(syllable_onsets) >= 4:
         import librosa
-        gaps = np.diff(syllable_onsets)
-        caesura_idx = int(np.argmax(gaps))  # index of syllable BEFORE gap
-        post_idx = caesura_idx + 1          # syllable AFTER gap
-
-        # RMS energy (fine-grained)
         rms_hop = 128
-        rms = librosa.feature.rms(y=y, frame_length=512, hop_length=rms_hop)[0]
+        rms = librosa.feature.rms(y=y, frame_length=512,
+                                  hop_length=rms_hop)[0]
         rms_times = librosa.times_like(rms, sr=SR, hop_length=rms_hop)
-
-        onset_t = syllable_onsets[post_idx]
-        # Find RMS at the detected onset
-        rms_at_onset = rms[np.argmin(np.abs(rms_times - onset_t))]
-        # Median RMS across the whole line (excluding silence)
         rms_median = np.median(rms[rms > np.max(rms) * 0.02])
+        silence_threshold = rms_median * 0.1
 
-        if rms_at_onset < rms_median * 0.1:
-            # Onset is in silence — find where voice energy actually rises.
-            # Use 50% of median RMS to find real phonation onset, not
-            # pre-phonation breathing or faint noise.  Fall back to 30%
-            # for lines where the post-caesura syllable starts softly.
-            mask = rms_times > onset_t
-            above = None
-            for thresh_frac in (0.5, 0.3):
-                threshold = rms_median * thresh_frac
-                above = np.where(mask & (rms > threshold))[0]
-                if len(above) > 0:
+        corrections = []
+        for idx in range(len(syllable_onsets)):
+            onset_t = syllable_onsets[idx]
+            rms_at = rms[np.argmin(np.abs(rms_times - onset_t))]
+
+            if rms_at >= silence_threshold:
+                continue  # onset is in voiced audio — no correction
+
+            # This onset is in silence.  Search forward to the next
+            # voiced onset (or speech_end) and re-detect the actual
+            # voice attack in that segment.
+            search_end_t = speech_end
+            for j in range(idx + 1, len(syllable_onsets)):
+                rms_j = rms[np.argmin(np.abs(rms_times -
+                                             syllable_onsets[j]))]
+                if rms_j >= silence_threshold:
+                    search_end_t = syllable_onsets[j]
                     break
-            if len(above) > 0:
-                voice_start = rms_times[above[0]]
-                new_onset = min(voice_start, speech_end - 0.03)
+
+            # Skip past the deep silence to where energy starts rising.
+            # This prevents onset_detect from finding false onsets in
+            # quiet regions (numerical noise in FFT spectral flux).
+            rise_mask = (rms_times > onset_t) & (rms > silence_threshold)
+            rise_indices = np.where(rise_mask)[0]
+            if len(rise_indices) == 0:
+                continue  # no voice energy found after this onset
+            # Start slightly before the first energy frame to capture
+            # the attack transient (back up 30ms, but not before onset_t)
+            energy_start_t = max(onset_t,
+                                 rms_times[rise_indices[0]] - 0.03)
+
+            seg_start_s = int(energy_start_t * SR)
+            seg_end_s = min(int(search_end_t * SR), len(y))
+            segment = y[seg_start_s:seg_end_s]
+            new_onset = None
+
+            # Primary: spectral onset detection on the voiced segment.
+            # Need at least n_fft (2048) samples for reliable FFT.
+            if len(segment) >= 2048:
+                seg_onsets = librosa.onset.onset_detect(
+                    y=segment, sr=SR, units='time',
+                    delta=0.05, wait=1)
+                if len(seg_onsets) > 0:
+                    new_onset = seg_onsets[0] + (seg_start_s / SR)
+
+            # Fallback: RMS energy threshold crossing
+            if new_onset is None:
+                fwd_mask = rms_times > onset_t
+                for frac in (0.5, 0.3, 0.2):
+                    above = np.where(fwd_mask &
+                                     (rms > rms_median * frac))[0]
+                    if len(above) > 0:
+                        new_onset = float(rms_times[above[0]])
+                        break
+
+            if new_onset is not None:
+                new_onset = min(new_onset, speech_end - 0.03)
                 if new_onset > onset_t:
                     shift_ms = (new_onset - onset_t) * 1000
-                    syllable_onsets[post_idx] = new_onset
-                    diag['caesura_onset_shift'] = shift_ms
+                    syllable_onsets[idx] = new_onset
+                    corrections.append((idx, shift_ms))
 
-                    # Enforce minimum IOI on subsequent onsets to prevent
-                    # cramming after the shift (e.g. short words spoken
-                    # quickly right after caesura)
-                    min_ioi = 0.08  # 80ms
-                    for k in range(post_idx, len(syllable_onsets) - 1):
-                        if syllable_onsets[k+1] - syllable_onsets[k] < min_ioi:
-                            syllable_onsets[k+1] = syllable_onsets[k] + min_ioi
+        if corrections:
+            diag['silence_corrections'] = corrections
+
+        # Enforce minimum spacing: when a corrected onset is too close
+        # to its neighbour, push the later onset(s) forward so each
+        # note has enough duration to be audible.
+        min_note_gap = 0.030  # 30ms
+        for k in range(1, len(syllable_onsets)):
+            if syllable_onsets[k] - syllable_onsets[k - 1] < min_note_gap:
+                syllable_onsets[k] = syllable_onsets[k - 1] + min_note_gap
 
     # Redistribute any onsets past speech_end to fit before it.
     # Can happen when contour's audio trim is more generous than caller's.
