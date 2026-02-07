@@ -372,22 +372,32 @@ def align_line(voice_path, syllable_data, speech_end=None):
         rms_median = np.median(rms[rms > np.max(rms) * 0.02])
 
         if rms_at_onset < rms_median * 0.1:
-            # Onset is in silence — find where voice energy rises
-            threshold = rms_median * 0.15
+            # Onset is in silence — find where voice energy actually rises.
+            # Use 50% of median RMS to find real phonation onset, not
+            # pre-phonation breathing or faint noise.  Fall back to 30%
+            # for lines where the post-caesura syllable starts softly.
             mask = rms_times > onset_t
-            above = np.where(mask & (rms > threshold))[0]
+            above = None
+            for thresh_frac in (0.5, 0.3):
+                threshold = rms_median * thresh_frac
+                above = np.where(mask & (rms > threshold))[0]
+                if len(above) > 0:
+                    break
             if len(above) > 0:
                 voice_start = rms_times[above[0]]
-                # Don't shift past the next onset minus 30ms
-                if post_idx < len(syllable_onsets) - 1:
-                    limit = syllable_onsets[post_idx + 1] - 0.03
-                else:
-                    limit = speech_end - 0.03
-                new_onset = min(voice_start, limit)
+                new_onset = min(voice_start, speech_end - 0.03)
                 if new_onset > onset_t:
                     shift_ms = (new_onset - onset_t) * 1000
                     syllable_onsets[post_idx] = new_onset
                     diag['caesura_onset_shift'] = shift_ms
+
+                    # Enforce minimum IOI on subsequent onsets to prevent
+                    # cramming after the shift (e.g. short words spoken
+                    # quickly right after caesura)
+                    min_ioi = 0.08  # 80ms
+                    for k in range(post_idx, len(syllable_onsets) - 1):
+                        if syllable_onsets[k+1] - syllable_onsets[k] < min_ioi:
+                            syllable_onsets[k+1] = syllable_onsets[k] + min_ioi
 
     # Redistribute any onsets past speech_end to fit before it.
     # Can happen when contour's audio trim is more generous than caller's.
