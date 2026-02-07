@@ -245,7 +245,8 @@ def render_line_harp(melody, time_sig, speech_dur, soundfont, tmpdir, line_id):
     return audio_f, bpm
 
 
-def render_line_harp_contour(melody_ly, note_onsets, soundfont, tmpdir, line_id):
+def render_line_harp_contour(melody_ly, note_onsets, speech_end,
+                             soundfont, tmpdir, line_id):
     """Render harp with per-note timing from contour alignment.
 
     1. Parse pitches from LilyPond string
@@ -285,11 +286,11 @@ def render_line_harp_contour(melody_ly, note_onsets, soundfont, tmpdir, line_id)
 
     prev_end = 0.0
     for i, (pitch, onset) in enumerate(zip(pitches, note_onsets)):
-        # Duration = gap to next onset (last note: 300ms)
+        # Duration = gap to next onset; last note ends at speech_end
         if i < len(note_onsets) - 1:
             dur = note_onsets[i + 1] - onset
         else:
-            dur = 0.3
+            dur = max(speech_end - onset, 0.05)
         dur = max(dur, 0.02)  # minimum 20ms note
 
         gap_before = max(0, onset - prev_end)
@@ -318,9 +319,9 @@ def render_line_harp_contour(melody_ly, note_onsets, soundfont, tmpdir, line_id)
     render_wav(hum_path, wav_path, soundfont=soundfont, reverb=False)
 
     # Load, trim, peak-normalize
+    # Allow natural harp decay after last note-off (at speech_end)
     audio = load_wav(wav_path)
-    last_onset = note_onsets[-1]
-    trim_frames = int((last_onset + 0.6) * SAMPLE_RATE)
+    trim_frames = int((speech_end + 0.5) * SAMPLE_RATE)
     audio = audio[:trim_frames]
 
     audio_f = audio.astype(np.float64)
@@ -441,12 +442,15 @@ def main():
                 if syllable_data is None:
                     fallback_reason = 'no syllable data'
                 else:
-                    note_onsets, diag = align_line(voice_path, syllable_data)
+                    note_onsets, diag = align_line(
+                        voice_path, syllable_data,
+                        speech_end=speech_durs[idx])
                     if note_onsets is None:
                         fallback_reason = diag.get('error', 'alignment failed')
                     else:
                         result = render_line_harp_contour(
-                            melody, note_onsets, sf_path, tmpdir, line_num)
+                            melody, note_onsets, speech_durs[idx],
+                            sf_path, tmpdir, line_num)
                         if result is None:
                             fallback_reason = 'contour render failed'
 

@@ -68,11 +68,15 @@ def load_voice_mono(mp4_path, sr=SR):
     return y, speech_end
 
 
-def detect_syllable_onsets(y, expected_count, sr=SR):
+def detect_syllable_onsets(y, expected_count, sr=SR, syllable_data=None):
     """Layer 0: Adaptive onset detection.
 
     Sweeps DELTAS x WAITS grid, filters to combos matching expected_count,
     selects by lowest IOI CV (after removing largest gap).
+
+    When syllable_data is provided, prefers combos whose largest gap falls
+    at a word boundary (caesura-aware selection). This prevents the harp
+    from pausing within a word while the voice continues.
 
     Returns (onset_times_array, diagnostics_dict).
     If no combo matches exactly, falls back to closest count.
@@ -102,9 +106,8 @@ def detect_syllable_onsets(y, expected_count, sr=SR):
     }
 
     if matches:
-        # Select combo with most uniform IOIs (lowest CV after removing largest gap)
-        best = None
-        best_cv = float('inf')
+        # Score each combo by CV
+        scored = []
         for delta, wait_ms, onsets in matches:
             if len(onsets) < 3:
                 cv = 0.0
@@ -113,9 +116,33 @@ def detect_syllable_onsets(y, expected_count, sr=SR):
                 gaps_no_max = np.sort(gaps)[:-1]
                 mean = np.mean(gaps_no_max)
                 cv = np.std(gaps_no_max) / mean if mean > 0 else float('inf')
-            if cv < best_cv:
-                best_cv = cv
-                best = (delta, wait_ms, onsets)
+            scored.append((delta, wait_ms, onsets, cv))
+
+        # Word-boundary-aware selection: prefer combos whose largest
+        # gap falls at a word boundary (between words, not within a word)
+        best = None
+        best_cv = float('inf')
+        if syllable_data is not None and len(syllable_data) > 2:
+            wb_combos = []
+            for delta, wait_ms, onsets, cv in scored:
+                gaps = np.diff(onsets)
+                max_idx = int(np.argmax(gaps))
+                # Check if syllable after the gap starts a new word
+                if (max_idx + 1 < len(syllable_data) and
+                        syllable_data[max_idx + 1].get('word_start', False)):
+                    wb_combos.append((delta, wait_ms, onsets, cv))
+            if wb_combos:
+                # Among word-boundary combos, pick lowest CV
+                wb_combos.sort(key=lambda x: x[3])
+                best = (wb_combos[0][0], wb_combos[0][1], wb_combos[0][2])
+                best_cv = wb_combos[0][3]
+                diag['word_boundary_selection'] = True
+
+        if best is None:
+            # Fallback: lowest CV overall
+            scored.sort(key=lambda x: x[3])
+            best = (scored[0][0], scored[0][1], scored[0][2])
+            best_cv = scored[0][3]
 
         diag['selected_delta'] = best[0]
         diag['selected_wait'] = best[1]
@@ -214,13 +241,23 @@ def mora_times_to_note_onsets(mora_times, syllable_data):
     Returns list of N_notes floats (N_syllables + N_circumflexes).
     """
     note_onsets = []
-    for syl in syllable_data:
+    for i, syl in enumerate(syllable_data):
         mora_start = syl['mora_start']
         note_onsets.append(mora_times[mora_start])
 
-        if syl['accent'] == 3 and syl['duration'] == 'long':
-            # Circumflex: add second note at second mora
-            note_onsets.append(mora_times[mora_start + 1])
+        if syl['accent'] == 3:
+            if syl['duration'] == 'long':
+                # Long circumflex: second note at second mora
+                note_onsets.append(mora_times[mora_start + 1])
+            else:
+                # Short circumflex (rare): split this mora's duration
+                # into two notes at onset and onset + half-gap-to-next
+                if i < len(syllable_data) - 1:
+                    next_mora = syllable_data[i + 1]['mora_start']
+                    gap = mora_times[next_mora] - mora_times[mora_start]
+                else:
+                    gap = 0.2  # fallback for last syllable
+                note_onsets.append(mora_times[mora_start] + gap / 2)
 
     return note_onsets
 
@@ -254,7 +291,7 @@ def parse_melody_pitches(melody_ly):
     return pitches
 
 
-def align_line(voice_path, syllable_data):
+def align_line(voice_path, syllable_data, speech_end=None):
     """Full pipeline for one line.
 
     1. load_voice_mono → trim
@@ -262,14 +299,26 @@ def align_line(voice_path, syllable_data):
     3. syllable_onsets_to_mora_times
     4. mora_times_to_note_onsets
 
+    Args:
+        voice_path: Path to voice MP4 file
+        syllable_data: List of dicts from MoraGrid.get_syllable_data()
+        speech_end: Caller's speech end time (seconds). If provided, used
+            instead of contour's own detection. Pass the value from
+            merge_perline's load_voice() so note onsets never exceed
+            what the listener hears as voice end.
+
     Returns (note_onsets, diagnostics_dict).
     Returns (None, diagnostics_dict) on failure.
     """
     diag = {'voice_path': voice_path, 'n_syllables': len(syllable_data)}
 
     try:
-        y, speech_end = load_voice_mono(voice_path)
+        y, contour_speech_end = load_voice_mono(voice_path)
+        # Use caller's speech_end if provided (consistent with mix audio)
+        if speech_end is None:
+            speech_end = contour_speech_end
         diag['speech_end'] = speech_end
+        diag['contour_speech_end'] = contour_speech_end
         diag['audio_samples'] = len(y)
     except RuntimeError as e:
         diag['error'] = str(e)
@@ -279,9 +328,9 @@ def align_line(voice_path, syllable_data):
         diag['error'] = 'Empty audio'
         return None, diag
 
-    # Layer 0: onset detection
+    # Layer 0: onset detection (runs on contour's own trimmed audio)
     syllable_onsets, onset_diag = detect_syllable_onsets(
-        y, len(syllable_data))
+        y, len(syllable_data), syllable_data=syllable_data)
     diag.update(onset_diag)
 
     # Check if count matches
@@ -290,6 +339,30 @@ def align_line(voice_path, syllable_data):
             f'Onset count mismatch: {len(syllable_onsets)} detected '
             f'vs {len(syllable_data)} expected')
         return None, diag
+
+    # Redistribute any onsets past speech_end to fit before it.
+    # Can happen when contour's audio trim is more generous than caller's.
+    # Find the first onset past speech_end and spread it + all following
+    # evenly between the previous valid onset and speech_end.
+    first_past = None
+    for j in range(len(syllable_onsets)):
+        if syllable_onsets[j] > speech_end:
+            first_past = j
+            break
+    if first_past is not None:
+        # Anchor: last onset still within speech_end
+        if first_past > 0:
+            anchor = syllable_onsets[first_past - 1]
+        else:
+            anchor = 0.0
+        n_redistribute = len(syllable_onsets) - first_past
+        span = speech_end - anchor
+        for k in range(n_redistribute):
+            # Spread evenly, leaving room at speech_end for the last
+            # syllable's mora split
+            frac = (k + 1) / (n_redistribute + 1)
+            syllable_onsets[first_past + k] = anchor + span * frac
+        diag['redistributed_onsets'] = n_redistribute
 
     # Layer 2: syllable → mora
     try:
